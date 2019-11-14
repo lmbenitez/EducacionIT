@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins|Ubuntu&display=swap');
+
+body{
+	margin:0;
+	border: 0;
+	padding: 0;
+	font-family: poppins, ubuntu, 'bebas neue',sans-serif;
+	box-sizing: border-box;
+}
+
+header, nav, footer{
+	color:#FFC;
+	background-color:#192168;
+	text-align: center;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+
+nav ul{
+	padding: 0;
+}
+
+nav li{
+	display: inline;
+	padding:0 5px;
+}
+
+li:hover, .active{
+	background-color: darkblue;
+	border:1px dotted white;
+	box-shadow: 0 0 5px lightblue;
+}
+
+footer img{
+	height:30px;
+}
+
+form,input, textarea{
+	width:300px;
+	margin:auto;
+	text-align:left;
+}
+
+input[type="submit"]{
+	color:white;
+	background-color: darkgreen;
+	text-align: center;
+	border:none;
+	padding: 5px;
+	width:308px;
+}
