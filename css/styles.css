@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins|Ubuntu&display=swap');
+/*
+	* = Selector Universal: Aplica a todos
+	modelo de CAJA (Box-Sizing)
+
+	Content BOX = Ancho Final = (width + Padding + Border)
+	Border BOX = Ancho Final = Width(Content - Padding - Border)
+	;
+*/
+*{	
+	box-sizing: border-box;
+}
 
 body{
 	margin:0;
 	border: 0;
 	padding: 0;
 	font-family: poppins, ubuntu, 'bebas neue',sans-serif;
-	box-sizing: border-box;
 }
 
 header, nav, footer{
@@ -24,7 +34,8 @@ nav ul{
 }
 
 nav li{
-	display: inline;
+	display: inline-block;
+	width: 150px;
 	padding:0 5px;
 }
 
@@ -50,5 +61,158 @@ input[type="submit"]{
 	text-align: center;
 	border:none;
 	padding: 5px;
-	width:308px;
+	width:300px;
 }
+
+.socialNet {
+	margin-top: 10px;
+}
+
+
+/**
+COLORES:
+hasta 140 colores
+NOMBRE: 							EJ: DarkBlue 
+
+hasta 16.777.216 colores
+HEXADECIMAL: R-G-B(valores: 0-F) 	EJ: #192168
+RGB: R-G-B(valores:0-255) 			EJ: RGB(25, 33, 104)
+
+10 posibilidades mas
+ALPHA: Transparencia de color (valores: 0 - 1)
+RBGA: RGB(25, 33, 104, .5)
+*/
+
+/* MAYORIA DE LAS MODIFICACIONES - CLASE 2 */
+body, header, nav, main,article,section, aside, footer,form{
+	color:white;
+	background-color: rgba(25, 33, 104, .5);
+	margin:1%;
+	padding:1%;
+	border-radius: 5px;
+}
+
+/*TIPOS DE ETIQUETAS:
+	linea:ocupan una porcion de la linea, no poseen alto ni ancho: por lo que generalmente se modificara el Font-size para cambiar su aspecto EJ: <strong>...</strong> - <em>...</em> - <a>...</a> - <br/> - <span>...</span> - <input /> - <label>...</label>;
+
+	Bloque: ocupa todo el ancho de la ventana, poseen alto y ancho, se utilizan para generar bloques de contenido EJ: header - nav - main footer - article - section - aside;
+
+	Linea-Bloque: ocupan una porcion de la linea, pero tambien poseen alto y ancho EJ: <img/>;
+*/
+/* FONDO COMO MARGA DE AGUA
+	body{
+		background-image: url(../img/logo.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 50%;
+	}
+*/
+
+header{
+	overflow: hidden;
+	background-image:url(../img/pbg.jpg);
+	/*primer medida X o ANCHO , segunda medida Y o ALTO */
+	background-size: cover; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #061431;
+	background-attachment: fixed;
+
+	/*IMAGENES
+
+		MAPA DE BITS: tienen un tamaño determinado, se deforman si se escalan demasiado, los formatos soportados por cualquier navegador son:
+			JPG:Joint Photographic Expert Group (Mas ligero);
+			PNG:Portable Network Graphics (Admite Transparencia);
+			GIF: Graphics Interchange Format (Admite Animacion);
+
+		VECTORIALES: son imagenes generadas por lineas y curvas, calculadas matematicamente, son completamente escalables
+			SVG: Scalable Vector Graphics;
+	*/
+}
+
+#header{
+	text-align: left;
+}
+
+#header img{
+	margin-right: 10px;
+}
+
+#header img{
+	width:150px;
+	float:left;
+}
+
+#header p, #header h1{
+	margin-top: -5px;
+	letter-spacing: .5rem;
+}
+
+/*MEDIDAS
+
+	ABSOLUTAS:son aquellas que siempre van a ser iguales, sin importar el dispositivo donde se vea la pagina;
+	px - Puntos en pantalla 
+	pt - puntos de tipografia
+	cm
+	mm
+	
+	RELATIVAS: son aquellas que dependen exclusivamente del dispositivo donde se visualizan para determinar su tamaño;
+	% - Porcentaje de la etiqueta padre
+	em - Ancho de la letra M de la etiqueta padre
+	ex - Alto de la letra X de la etiqueta padre
+	rem - Ancho de la letra M de la etiqueta Raiz (Body: 16px)
+
+*/
+
+h1, header p, .menu,footer p:last-child, label{
+	font-variant: small-caps;
+	margin:0;
+}
+
+form{
+	margin:auto;
+	width: 320px;
+}
+
+label{
+	text-transform: capitalize;
+}
+
+/*overflow
+	como se va a comportar la etiqueta padre con respecto a sus hijos.
+	VALORES:
+
+	VISIBLE: permite que las etiquetas hijas se escapen del contenedor;
+	
+	HIDDEN: contiene todas las etiquetas que desborden el contenido y las oculta dentro de si misma;
+	
+	SCROLL:el contenedor define el tamaño del contenido y agrega barras de scroll para mostrar el excedente;
+	
+	AUTO: determina cual de los valores anteriores debe aplicarse segun el tipo de contenedor y contenido;
+*/
+main{
+	overflow: hidden;
+	display: flex;
+}
+
+article{
+	width: 70%;
+}
+
+aside{
+	width: 26%;
+}
+
+.socialNet img{
+	padding: 2px;
+
+}
+
+.socialNet img:hover{
+	box-shadow: 0 0 10px white;
+	border-radius: 5px;
+	padding: 0;
+
+}
+

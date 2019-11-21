@@ -1,8 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head> 
+	<title>EMPRESA.COM</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="icon/png" href="img/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body> 
-	Inserte IMAGENES AQUI
+		<header id="header"> <!-- CABECERA: CONTENIDO INTRODUCTORIO -->
+		<img src="img/logo.png" alt="Logo de mi EMPRESA" />
+		<h1>EMPRESA.COM</h1>
+		<p>¡¡los mejores en lo que hacemos!!</p>
+	</header>
+	<nav> <!-- NAVEGACION: LINKS MAS IMPORTANTES -->
+		<ul class="menu">
+			<li><a href="index.html">inicio</a></li>
+			<li class="active"><a href="#">galeria</a></li> <!-- link interno /relativo -->
+			<li><a href="#contact">contacto</a></li> <!-- link ancla /marcador -->
+		</ul>
+	</nav>
+	<main> <!-- CONTENIDO PRINCIPAL: BUSCADO POR EL USUARIO -->
+		<article><!-- CONTENIDO INDEPENDIENTE: -->
+			<section><!-- CONTENIDO CONTEXTUALIZADO: -->
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Titulo</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>		
+		<aside><!-- CONTENIDO TANGENCIAL: -->
+			<ul>
+				<li><a href="#"><img src="img/sug-1.jpg" alt="sugerencia"></a></li>
+				<li><a href="#"><img src="img/sug-2.jpg" alt="sugerencia"></a></li>
+				<li><a href="#"><img src="img/sug-3.jpg" alt="sugerencia"></a></li>
+				<li><a href="#"><img src="img/sug-4.jpg" alt="sugerencia"></a></li>
+			</ul>
+		</aside>
+	</main>
+	<footer><!-- CONTENIDO COMPLEMENTARIO O FINAL: INFORMACION DEL AUTOR
+					DERECHOS DE AUTOR, INFORMACION DE CONTACTO, MAPA DEL SITIO, ETC. -->
+		<form id="contact" action="" method="POST">
+			<label for="nombre">nombre: </label>
+			<input 	type="text" 
+					name="nombre" 
+					placeholder="Juan Perez" 
+					pattern="[a-zA-Z]{3,50}" 
+					title="tu Nombre no debe contener numeros" />
+
+			<label for="correo">correo: </label>
+			<input type="email" name="email" placeholder="usuario@servidor" />
+			
+			<label for="consulta">consulta: </label>
+			<textarea name="consulta"></textarea>
+
+			<input type="submit" value="ENVIAR" />
+		</form>	
+		<div class="socialNet">
+			<a 	href="https://facebook.com/RacedoCristian" 
+				target="_blank">
+				<img src="img/sn-fb.png" alt="Redes Sociales">
+			</a>
+			<a 	href="https://twitter.com/RacedoCristian" 
+				target="_blank">
+				<img src="img/sn-tw.png" alt="Redes Sociales">
+			</a>
+			<a 	href="https://instagram.com/RacedoCristian" target="_blank">
+				<img src="img/sn-ig.png" alt="Redes Sociales">
+			</a>
+			<a 	href="https://ma.me/54112345678" 
+				target="_blank">
+				<img src="img/sn-ws.png" alt="Redes Sociales">
+			</a>
+		</div>		
+		<p>¡¡Muchas Gracias por su Visita!!</p>
+		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
 </body>
 </html>	
