@@ -1,0 +1,142 @@
+/*Modos de Visualizacion
+	DISPLAY:
+		-INLINE (En linea): elemento que no posee alto, ni ancho. Ocupa solamente una porcion en la linea;
+		-BLOCK (Bloque): elemento que posee alto y ancho. Ocupa todo el ancho de la ventana;
+		-INLINE-BLOCK (linea-bloque):elemento de linea que posee alto y ancho;
+		-FLEX (flexible): Forma de organizacion de los elementos de un contenedor Padre - por defecto convierte a sus hijos directos en elementos de Bloque y los organiza dentro de la misma Fila;
+*/
+body,header,nav, .menu, main, footer{
+	margin:0; 
+	border:0;
+	padding:0;
+	font-family: 'segoe ui', helvetica, sans-serif;
+}
+
+
+
+#header{
+	border: 1px solid black;
+	color:lightgrey;
+	background-color: #434353;
+}
+
+header,.banner,.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#header h1, #header p, #header ul{
+	margin: 0;
+}
+
+#header img{
+	height:50px;
+	margin:7.5px;
+}
+
+nav{
+	align-self: flex-end;
+	margin:7.5px;
+	background-color: tomato;
+}
+
+.menu li{
+	list-style: none;
+	width:100px;
+	height: 30px;
+	border:1px solid black;
+	text-align: center;
+}
+
+a{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 27.5px;
+	text-decoration:none;
+	color:lightgrey;
+}
+
+.menu a:hover, .menu a:focus{
+ 	color:tomato;
+	font-weight: bold;
+	background-color: lightgrey;
+ }
+
+ main, article{
+ 	padding:30px;
+ 	background-color: rgba(240,240,250,0.5);
+ 	display:flex;
+ 	flex-direction: row-reverse;
+ 	justify-content: center;
+ 	flex-wrap: wrap-reverse;
+ }
+
+ aside{
+ 	width:20%;
+ }
+
+ article{
+ 	width: 70%;
+ }
+
+.socialNet{
+	display: flex;
+	justify-content: center;
+	background-color: #434353;
+}
+
+.socialNet img{
+	width:50px;
+	padding:25px;
+}
+
+.socialNet a{
+	text-align: center;
+	margin: 10px 0;
+	height: 100px;
+	background-color: #434353
+}
+
+.socialNet img:hover{
+	width:100px;
+	padding:0;
+}
+
+form{
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+input, textarea{
+	resize: none;
+	border:none;
+	margin-bottom: 5px;
+	outline: none;
+	padding:2.5px 10px;
+}
+
+input:focus, textarea:focus{
+	border-bottom: 1px solid #434353;
+}
+
+input:last-child:focus,input:last-child:hover{
+	box-shadow: 0 0 10px #434353;
+}
+
+#footer p{
+	height: 30px;
+	text-align: center;
+	color:lightgrey;
+	margin:0;
+	background-color: #434353
+}
+
+h1:first-letter, label:first-letter footer{
+	text-transform: uppercase;
+	color:tomato;
+}
+

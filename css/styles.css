@@ -179,6 +179,10 @@ label{
 	text-transform: capitalize;
 }
 
+input, textarea{
+	resize: none;
+}
+
 /*overflow
 	como se va a comportar la etiqueta padre con respecto a sus hijos.
 	VALORES:
