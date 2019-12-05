@@ -1,0 +1,120 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	counter-reset: titulos;
+	font-family: 'century gothic', helvetica, sans-serif;
+	margin: 0;
+}
+
+header, nav, .menu, main, footer, form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+footer, form{
+	flex-direction: column;
+}
+
+article h1::before{
+	counter-increment: titulos;
+	content: 'Titulo ' counter(titulos);
+	background-color: #E1E9EE;
+	border-radius: 5px 5px 0 0;
+
+}
+
+article h1{
+	background-color: #E1E9EE;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	margin-top: 0;
+}
+
+article p::before{
+content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+}
+
+article p{
+	padding: 5px;
+}
+
+article{
+	border: 1px solid #E1E9EE;
+	border-radius: 5px;
+	margin:7.5px;
+	width:30%;
+	counter-reset: numItem;
+}
+
+article li{
+	list-style: circle url(../img/light.gif);
+
+}
+
+article li::before{
+	counter-increment: numItem;
+	content: 'Articulo nº: ' counter(titulos, upper-roman) '.' counter(numItem, lower-roman);
+}
+
+form::before{
+	content: attr(id);
+	font-size: 2rem;
+	margin: auto;
+}
+
+label, input[type="submit"]{
+	width:400px;
+	margin:auto;
+}
+
+ input, textarea{
+ 	width:100%;
+ }
+
+ nav, footer{
+ 	background-color: black;
+ 	color:white;
+ 	text-align: center;
+ }
+
+.SocialNet a{
+	display: inline-block;
+	width:60px;
+	height:60px;
+	background-image: url(../img/social-media.png);
+}
+
+/*Iconos Redes Sociales - SPRITES*/
+.facebook{background-position: -56.5px 0;}
+.youtube{background-position:calc(7*-56.5px) 0;}
+.google{background-position: calc(4*-56.5px) 0;}
+/*Iconos Redes Sociales HOVER*/
+.twitter:hover{background-position:0 57.5px }
+.facebook:hover{background-position: -56.5px 57.5px;}
+.youtube:hover{background-position:calc(7*-56.5px) 57.5px;}
+.google:hover{background-position: calc(4*-56.5px) 57.5px;}
+
+
+.menu li a{
+	color:white;
+	text-decoration:none;
+}
+
+.menu li{
+	width:150px;
+	height:2rem;
+	line-height: 2rem;
+	list-style: none;
+}
+
+header{
+	padding:20px;
+	justify-content: space-between;
+}
+
+header img{
+	width:150px;
+}
