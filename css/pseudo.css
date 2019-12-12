@@ -92,11 +92,14 @@ label, input[type="submit"]{
 .youtube{background-position:calc(7*-56.5px) 0;}
 .google{background-position: calc(4*-56.5px) 0;}
 /*Iconos Redes Sociales HOVER*/
-.twitter:hover{background-position:0 57.5px }
-.facebook:hover{background-position: -56.5px 57.5px;}
-.youtube:hover{background-position:calc(7*-56.5px) 57.5px;}
-.google:hover{background-position: calc(4*-56.5px) 57.5px;}
+.twitter:hover{background-position:0 58.5px }
+.facebook:hover{background-position: -56.5px 58.5px;}
+.youtube:hover{background-position:calc(7*-56.5px) 58.5px;}
+.google:hover{background-position: calc(4*-56.5px) 58.5px;}
 
+.menu{
+	margin:0;
+}
 
 .menu li a{
 	color:white;
@@ -105,8 +108,8 @@ label, input[type="submit"]{
 
 .menu li{
 	width:150px;
-	height:2rem;
-	line-height: 2rem;
+	height:3rem;
+	line-height: 3rem;
 	list-style: none;
 }
 
@@ -117,4 +120,92 @@ header{
 
 header img{
 	width:150px;
+}
+
+nav{
+	z-index: 300;
+	position: sticky;
+	top: 0;
+}
+
+.menu li:hover, .subproducto li:hover a{
+	background-color: #356;
+	z-index: 300;
+}
+
+nav li > ul{
+	display: none;
+	position:relative;
+	padding:0;
+	background-color: #356;
+}
+
+nav li:hover > ul{
+	display:block;
+}
+
+nav li > ul li{
+	position: relative;
+	left:0;
+}
+
+nav li > ul li a::after{
+	counter-increment: menues;
+	content:' ' counter(menues) ;
+}
+
+nav li > ul li:hover a{
+	background-color:black;
+	color:lightgrey; 
+	display:block;
+
+}
+
+nav li > ul li >ul{
+	position: absolute;
+	left: 150px;
+	top:0;
+}
+
+ul{
+	counter-reset: menues;
+}
+
+.cielo{
+	background-image:url(../img/social.png);
+	position: fixed;
+	z-index:9999;
+	right: 5px;
+	bottom: 5px;
+	width: 67px;
+	height:84px;
+	background-position: calc(6*-67px) calc(4*-84px)
+}
+
+table caption{
+	background-color: #192168;
+	color:white;
+	border-radius: 5px 5px 0 0;
+}
+
+table,tr, td{
+	color:white;
+	background-color: rgba(25,33,104,.5);
+	margin:auto;
+}
+
+td{
+	width:50px;
+	height:15px;
+	border:1px solid white;
+	padding:5px;
+	vertical-align:top; 
+	overflow: auto;
+}
+
+table{
+	width:150px;
+	height: 100px;
+	overflow: auto;
+	border-collapse: collapse;
 }

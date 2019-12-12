@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		/*POSITION
+			STATIC: Valor predeterminado, que utiliza la referencia relativa y no es afectado por las demas propiedades que permite manipular este atributo;
+
+			ABSOLUTE: Valor que utiliza como referencia al ancestro proximo (PADRE) que no sea estatico para establecer su posicion;
+
+			RELATIVE: Valor que utiliza como referencia a la misma etiqueta para posicionar en el FLOW (flujo de trabajo), similar a STATIC pero Valida los valores de referencia;
+
+			TOP - RIGHT - LEFT - BOTTOM
+
+			FIXED: utiliza como referencia la ventana donde se visualiza la pagina para mostrar el elemento en pantalla siempre en la misma posicion. Hay que tener en cuenta que si otro elemento posterior tiene un position ABSOLUTE/RELATIVE debemos modificar el valor de Z-index;
+
+			STICKY: Utiliza la posicion relativa en un comienzo hasta que alguno de los parametros de la etiqueta (TOP - RIGHT - BOTTOM - LEFT) sea igual al valor definido, cambiando a una posicion FIJA;
+		*/
+		body{
+			height: 3500px;
+		}
+
+		.PADRE:first-child{
+			position: absolute;
+			top: 0;
+		}
+
+
+		.PADRE{
+			width: 500px;
+			height: 500px;
+			margin:10px;
+			position: relative;
+		}
+		div{
+			border: 1px solid black;
+			background-color:darkgrey;
+			color:white;
+			position:relative;
+		}
+
+		.PADRE > div{
+			width: 100px;
+			height:100px;
+			left:30%;
+		}
+
+		.PADRE div:first-child{
+			background-color: red;
+			left:10%;
+
+		}
+
+		.PADRE div:first-child + div{
+			background-color: green;
+			position: relative;
+			top: 50px;
+			left:150px;
+		}
+
+		.PADRE div:last-child{
+			background-color: blue;
+			left:40%;
+		}
+
+		#primero{
+			position:sticky;
+			left:5px;
+			top:0;
+		}
+		#segundo{
+			position:sticky;
+			left:5px;
+			top:20px;
+		}
+		#tercero{
+			position:sticky;
+			left:5px;
+			top:40px;
+		}
+		#cuarto{
+			position:sticky;
+			left:5px;
+			top:60px;
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="PADRE">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<div class="PADRE">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<h1>Titulo</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2 id="primero"><a href="#primero">TITULO</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2 id="segundo"><a href="#segundo">TITULO </a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2 id="tercero"><a href="#tercero">TITULO</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2 id="cuarto"><a href="#cuarto">TITULO</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>
