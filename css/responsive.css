@@ -1,0 +1,101 @@
+/*ORDEN
+las reglas se aplican de arriba hacia abajo, se sobreescriben.
+Los estilos INLINE pisan cualquier Estilo.
+Los estilos BLOCK pisan generalmente las Hojas de Estilo
+El orden de las STYLESHEETS aplica a la implementacion de las Reglas
+
+JERARQUIAS
+las reglas priorizan a los elementos que son mas especificos dentro de los selectores, indistintamente del orden.
+		LOS HIJOS TIENEN PRIORIDAD SOBRE LOS PADRES
+		IMPORTANCIA
+				#ID
+				.CLASS
+				DIV
+
+				<div id="ID" class="CLASS">
+*/
+
+/*RESOLUCIONES: WIDTH
+		320 576 768 1024 1366 1920
+*/
+
+@media screen and (max-width:768px){
+	#header,#footer,main, nav, .menu, form{
+		flex-direction: column;
+	}
+
+	header{
+		text-align: center;
+		margin:auto;
+		justify-content: center;
+	}
+
+	nav{
+		margin:0;
+		padding:0;
+	}
+	.menu, ul{
+		display: none;
+		padding:0;
+		margin:0;
+	}
+
+	#drop, #drop img{
+		background-color: black;
+		padding:0;
+		margin:0;
+		border: 0;
+		border-radius: 5px;
+		outline: none;
+		width:50px;
+		height: 50px;
+		float:none;
+
+	}
+
+	.menu a, .menu li{
+		margin:0;
+		padding:0 10px;
+		width:100%;
+	}
+
+	#drop:focus + .menu{
+		display: block;
+		text-align: left;
+		margin:0;
+		padding:0 10px;
+	}
+
+	article{
+		width:90%;
+		margin:10px auto;
+	}
+
+	textarea{
+		resize:none;
+		height:80px;
+	}
+
+	form, label, input[type=submit]{
+		width: 90%;
+		margin:auto;
+	}
+
+	input, textarea{
+		max-width:500px;
+	}
+}
+
+@media screen and (min-width:768px){
+		#drop{
+			display:none;
+		}
+
+		article{
+			min-width: 250px;
+		}
+}
+
+@media print and (orientation:landscape){
+
+}

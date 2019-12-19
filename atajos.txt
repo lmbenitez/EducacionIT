@@ -1,0 +1,13 @@
+git config --global alias.cname "config --global user.name Cristian"
+git config --global alias.cmail "config --global user.email CristianDRacedo@hotmail.com"
+git config --global alias.mj10 "Maquetacion-jueves-10hs"
+git config --global alias.cm "commit -m"
+git config --global alias.c215 "https://github.com/C215714n/Educacionit"
+git config --global alias.cmail "config --global user.email CristianDRacedo@hotmail.com"
+git config --global alias.mj10 "Maquetacion-jueves-10hs"
+git config --global alias.cm "commit -m"
+git config --global alias.c215 "https://github.com/C215714n/Educacionit"
+
+git config --global alias.cg "config --global"
+git cg push c215 
+
