@@ -12,16 +12,13 @@
 		<img src="media/tree.png" alt="Arbol de Navidad Decorativo"/>
 		<h1>¡Polo Norte!</h1>
 		<div class="socialNet">
-			<a href="https://facebook.com/" target="_blank">Facebook</a>
-			<a href="https://twitter.com/" target="_blank">Twitter</a>
-			<a href="https://instagram.com/" target="_blank">Instagram</a>
-			<a href="https://wa.me/1101234567" target="_blank">Whatsapp</a>
+			<a class="facebook" href="https://facebook.com/" target="_blank"></a>
+			<a class="twitter" href="https://twitter.com/" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com/" target="_blank"></a>
+			<a class="whatsapp" href="https://wa.me/1101234567" target="_blank"></a>
 		</div>
 		<nav>
-			<button class="NavBar">
-				<img src="media/bars.png" alt="NavBar"> 
-				Menu
-			</button>
+			<button class="NavBar"> &equiv; </button>
 			<ul class="menu">
 				<li class="active"><a href="#">Inicio</a></li>
 				<li><a href="products.html">Productos</a>
@@ -117,12 +114,22 @@
 			<button>Enviar</button>
 		</form>
 		<div class="socialNet">
-			<a href="https://facebook.com/" target="_blank">Facebook</a>
-			<a href="https://twitter.com/" target="_blank">Twitter</a>
-			<a href="https://instagram.com/" target="_blank">Instagram</a>
-			<a href="https://wa.me/1101234567" target="_blank">Whatsapp</a>
+			<a class="facebook" href="https://facebook.com/" target="_blank"></a>
+			<a class="twitter" href="https://twitter.com/" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com/" target="_blank"></a>
+			<a class="whatsapp" href="https://wa.me/1101234567" target="_blank"></a>
 		</div>
 		<p>&copy; Todos los derechos resservados | Cristian Racedo &amp; Compañia</p>
 	</footer>
+
+	<script
+  			src="https://code.jquery.com/jquery-3.4.1.js"
+  			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  			crossorigin="anonymous"></script>
+  	<script type="text/javascript">
+  		$('.NavBar').click(function(){
+  			$('.menu').slideToggle();
+  		})
+  	</script>
 </body>
 </html>
