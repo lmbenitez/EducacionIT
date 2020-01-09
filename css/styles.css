@@ -111,13 +111,37 @@ header .socialNet a{
 
 
 @media screen and (min-width: 768px){
-
+	body,input,textarea,footer button{
+		font-size: 1rem;
+	}
+	main, article{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	section{
+		display: inline-block;
+		width:50%;
+		margin:0;
+	}
+	.menu{
+		display:flex;
+		flex-direction: row;
+	}
+	.menu li, .menu a{
+		font-size: 1vw;
+	}
+	button:before{
+		content:'≡';
+	}
 }
 
 @media screen and (min-width: 1280px){
 	body{
 		margin:0;
 		font-family: Raleway, Ubuntu, sans-serif;
+		font-size: 1vw;
 		background-image: url(../media/bg-main.jpg);
 		background-size: cover;
 	}
@@ -234,8 +258,8 @@ header .socialNet a{
 		background-image: url(../media/social-media.png);
 	}
 
-	header .socialNet a{
-		background-size: 150px;
+	.socialNet a{
+		background-size: 600px;
 		width:50px; 
 		height:50px;
 	}

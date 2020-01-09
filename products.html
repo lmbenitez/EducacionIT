@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+	<link rel="icon" type="ico/png" href="media/tree.png">
+	<title>Responsive Web Design</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/miestilo.css">
+</head>
+<body class="container">
+	<header id="header" class="text-center jumbotron">
+		<img 	class="	rounded-circle 
+						col-3 
+						col-md-2 
+						col-lg-1
+						float-lg-left
+						float-md-right
+						m-auto 
+						d-block" 
+
+				src="media/tree.png" alt="Arbol de Navidad Decorativo"/>
+		<h1>¡Polo Norte!</h1>
+		<div class="socialNet">
+			<a class="facebook" href="https://facebook.com/" target="_blank"></a>
+			<a class="twitter" href="https://twitter.com/" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com/" target="_blank"></a>
+			<a class="whatsapp" href="https://wa.me/1101234567" target="_blank"></a>
+		</div>
+		<nav class="bg-dark rounded">
+			<ul class="d-md-flex flex-wrap align-items-start">
+				<li  class="btn col-12 col-md-6 col-lg-3"><a class="text-light" href="#">Inicio</a></li>
+				<li  class="btn col-12 col-md-6 col-lg-3"><a class="text-light" href="products.html">Productos</a>
+					<ul >
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+					</ul>
+				</li>
+				<li class="btn col-12 col-md-6 col-lg-3"><a class="text-light" href="services.html">Servicios</a>
+					<ul >
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+						<li class="btn-sm"><a class="text-light" href="#">item</a></li>
+					</ul>
+				</li>
+				<li class="btn col-12 col-md-6 col-lg-3"><a class="text-light" href="#contact">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article class="row">
+			<section class="col-sm-12 col-md-6 col-lg-4">
+				<header>
+					<h1>Llego Papa Noel</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-sm-12 col-md-6 col-lg-4">
+				<header>
+					<h1>Las Compras el Dia de las Fiestas</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-sm-12 col-md-12 col-lg-4">
+				<header>
+					<h1>Que nos espera para el 2020</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>
+		<article class="row">
+			<div id="map" class="col-sm-12 col-md-8 col-lg-8">
+				mapa
+			</div>
+			<div  class="col-sm-12 col-md-4 col-lg-4">
+				<h1>Accesibilidad</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla impedit quam nesciunt ea, corrupti repellendus fuga nemo laborum. Adipisci sunt harum mollitia cupiditate, incidunt repellendus. Eum illo adipisci praesentium saepe.</p>
+			</div>
+		</article>
+	</main>
+	<footer id="footer">
+		<form id="contact" class="text-center">
+			<input 	class="d-block col-sm-12 col-md-8 col-lg-6 m-auto"
+					type="text" 
+					name="nombre"
+					pattern="[a-zA-Z]{3,50}" 
+					title="Solamente debe Ingresar letras como parte de su Nombre, con un minimo de 3 caracteres" 
+					placeholder="Ingrese su Nombre: Juan Perez"
+					/>
+			<input 	class="d-block col-sm-12 col-md-8 col-lg-6 m-auto"
+					type="text" 
+					name="tel" 
+					placeholder="Ingrese su Numero de Telefono: 011-2345-6789" 
+					/>
+			<input 	class="d-block col-sm-12 col-md-8 col-lg-6 m-auto"
+					type="email" 
+					name="correo" 
+					placeholder="Ingrese su Correo: jp@mimail.com" 
+					/>
+			<textarea  	class="
+						d-block 
+						col-sm-12 
+						col-md-8
+						col-lg-6 
+						m-auto"
+					name="consulta"></textarea>
+			<button class="
+					btn-block 
+					col-sm-12 
+					col-md-8 
+					col-lg-6 
+					btn btn-outline-success 
+					m-auto"
+					>Enviar</button>
+		</form>
+		<div >
+			<a class="facebook" href="https://facebook.com/" target="_blank"></a>
+			<a class="twitter" href="https://twitter.com/" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com/" target="_blank"></a>
+			<a class="whatsapp" href="https://wa.me/1101234567" target="_blank"></a>
+		</div>
+		<p>&copy; Todos los derechos resservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
+
+	<script
+  			src="https://code.jquery.com/jquery-3.4.1.js"
+  			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  			crossorigin="anonymous"></script>
+  	<script type="text/javascript">
+  		$('.NavBar').click(function(){
+  			$('.menu').slideToggle();
+  		})
+  	</script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+</html>
