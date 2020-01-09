@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime|Inconsolata|Raleway|Ubuntu&display=swap');
+@font-face{
+	src: url(../fonts/sherlyn.otf),url(../fonts/sherlyn.eot),url(../fonts/sherlyn.ttf);
+	font-family: 'sherlyn';
+}
+
+@font-face{
+	src: url(../fonts/white-smith.otf),url(../fonts/white-smith.eot),url(../fonts/white-smith.ttf);
+	font-family: 'white-smith';
+}
 
 *{
 	box-sizing: border-box;
@@ -18,12 +27,29 @@ body{
 
 #header,#footer,nav, #menu{
 	color:white;
-	background-color: rgba(50,50,150,.5);
+	background-color: hsla(240deg,60%,40%,.5);
 }
 
 #header{
 	flex-direction: row;
 	align-items: center;
+	background:	linear-gradient(to left,hsl(240deg,60%,80%), hsl(240deg,40%,30%)), 
+				url(../media/fender.png), 
+				url(../media/fender.jpg);
+	background-position:center, right top, left top;
+	background-repeat: no-repeat;
+	background-size: cover, 300px, 30%;
+	background-blend-mode: multiply;
+	margin:1rem; /*root em (BODY)*/
+	padding:.5rem;
+	border:2px solid black;
+	border-radius: 20px 20px 0 0;
+	overflow: auto;
+}
+
+p{
+	height:100px;
+	overflow: auto;
 }
 
 #header img{
@@ -61,8 +87,6 @@ nav{
 	text-decoration: none;
 }
 
-
-
 /* BOX-SIZING
 	Content-box:
 		Ancho Final => Width+Padding*2+Border*2;
@@ -70,3 +94,77 @@ nav{
 		Ancho Final = Width
 		Content-width => width-Padding*2-Border*2;
 */
+
+/*Reglas Universales*/
+form{
+	width:90%;
+	margin: auto;
+}
+
+input,textarea,select,button{
+	resize: none;
+	height: 30px;
+	padding:0 10px;
+	border-radius: 5px;
+}
+
+textarea{
+	height: 80px;
+}
+
+.social-media{
+	text-align: center;
+}
+
+.social-media a{
+	font-size: 2rem;
+	color:white;
+	text-decoration: none;
+}
+
+a.icon-fb{
+	color:#3b5999;
+}
+
+a.icon-fb:hover{
+	color:white;
+	text-shadow: 0 0 5px #192168 !important;
+}
+
+/*Reglas cuando el Ancho es Mayor e igual a 768px*/
+@media screen and (min-width:768px){
+	form{
+		width:600px;
+	}
+	article{
+		display: flex;
+		flex-direction: column;
+	}
+}
+/*Reglas cuando el Ancho es Mayor e igual a 992px - Pisa los estilos del @media 768px */
+@media screen and (min-width:992px){
+	form{
+			width:800px;
+		}
+	article{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	section{
+		width:50%;
+	}
+}
+/*Reglas cuando el Ancho es Mayor e igual a 1200px - */
+@media screen and (min-width:1200px){
+	form{
+			width:900px;
+	}
+	article{
+		flex-direction: row-reverse;
+	}
+
+	section{
+		width:30%;
+	}
+}
