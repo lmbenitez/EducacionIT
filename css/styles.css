@@ -87,10 +87,14 @@
 		display: inline-block;
 		text-align: justify;
 		width:390px;
-		padding:10px;
+		padding:12.5px;
 		margin:10px auto;
 		background-color:#EEE;
 		border-radius: 10px;
+	}
+
+	article header h1{
+		padding:0;
 	}
 
 /*Formulario de Contacto*/
@@ -100,6 +104,7 @@
 		margin:5px auto;
 		outline: none;
 		border:0;
+		border-radius: 10px;
 		padding:10px 5px;
 		resize: none;
 		text-align: left;
@@ -108,13 +113,14 @@
 	textarea{
 		height:80px;
 		margin-bottom: 0;
+		border-radius: 10px 10px 0 0;
 	}
 
 	#contacto button{
 		font:bold 16px century gothic, segoe ui, sans-serif;
 		margin:-5px auto 10px;
 		border: 2px solid #EEE;
-		border-radius: 0 0 5px 5px;
+		border-radius: 0 0 10px 10px;
 		padding:5px;
 		width:410px;
 		color:#EEE;
