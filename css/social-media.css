@@ -1,0 +1,71 @@
+.social-media a{
+	display: inline-block;
+	width:62px;
+	height: 62px;
+	background-image: url(../media/social-media.png);
+	background-size: 620px;
+}
+/*Redes Sociales*/
+	.facebook{
+		background-position: -2px -3px;
+	}
+	.twitter{
+		background-position: -2px -64px;
+	}
+	.instagram{
+		background-position: -244px -125px;
+	}
+	.linkedin{
+		background-position: -63px -64px;
+	}
+	.youtube{
+		background-position: -2px -125px;
+	}
+	.whatsapp{
+		background-position: -2px calc(4*-61.75px)
+	}
+
+/*Redes Sociales - HOVER*/
+	.facebook:hover{
+		background-position: -305px -3px;
+	}
+	.twitter:hover{
+		background-position: -305px -64px;
+	}
+	.instagram:hover{
+		background-position: -549px -125px;
+	}
+	.linkedin:hover{
+		background-position: -366px -64px;
+	}
+	.youtube:hover{
+		background-position: -305px -125px;
+	}
+	.whatsapp:hover{
+		background-position: -305px calc(4*-61.75px)
+	}
+
+
+/*Estilos de los DIVS*/
+	section div{
+		width:300px;
+		height:100px;
+		color:white;
+		border:1px solid black;
+	}
+
+	section div:first-child{
+		background-color: darkblue;
+	}
+
+	section div:nth-child(2){
+		background-color: darkgreen;
+	}
+
+	section div:nth-child(3){
+		background-color: darkred;
+	}
+	section div:last-child{
+		background-color: black;
+	}
+
