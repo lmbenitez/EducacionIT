@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Roboto|Indie+Flower|Raleway|Shadows+Into+Light|Titillium+Web|Ubuntu&display=swap');
+
+/* Version para Celulares < 768px */
+	*{
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: ubuntu, century gothic, sans-serif;
+		margin: 	0;
+		border:		0;
+		padding:	0;
+	}
+
+	#header,#footer,.menu,main,article,section, form{
+		margin:		0;
+		border: 	0;
+		padding:	0;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+	}
+
+	#header{
+		padding:1rem;
+		color: #CCC;
+		background-image: url('../media/logo-icon.png');
+		background-repeat: no-repeat;
+		background-size: 75px;
+		background-position: 5px 5px;
+		background-color: #333;
+	}
+
+	#header h1{
+		padding-left:60px;
+		margin:0 0 20px; /*Top Right Bottom Left*/
+	}
+	
+	nav a, nav .menu{
+		color:#ccc;
+		text-decoration: none;
+		list-style: none;
+		background-color: rgba(50,50,50,.5);
+	}
+	#menu{
+		margin:0;
+		border: 0;
+		padding: 0;
+		width: 100%;
+	}
+	#menu a{
+		display: block;
+		width: 100%;
+		height:30px;
+		line-height: 30px;
+	}
+
+	.menu{
+		display: none;
+	}
+
+	#navegacion:target{
+		display:block;
+	}
+
+	section:nth-child(odd){
+		color:#333;
+		background-color: lightgrey;
+	}
+
+	section{
+		color:lightgrey;
+		background-color: #333;
+		padding:.5rem 2rem;
+	}
+	section img{
+		display:none;
+	}
+
+	form{
+		width:80%;
+		margin:2rem auto;
+	}
+
+	label{
+		display: none;	
+	}
+
+	input, select, textarea{
+		margin:.5rem;
+		border:0;
+		border-bottom: 2px solid black;
+		padding:.5rem;
+		font-family: ubuntu,sans-serif;
+		height: 25px;
+		resize: none;
+		outline: none;
+	}
+
+	textarea{
+		height: 80px;
+	}
+
+	input[type="submit"]{
+		color:darkgreen;
+		background-color: limegreen;
+		border: 0;
+	}
+
+	input[type="submit"]:hover,input[type="submit"]:focus{
+		color:white;
+		background-color: darkgreen;
+	}
+
+/* Version para Tablets < 1200px */
+	@media screen and (min-width:768px){
+
+	}
+/* Version para Escritorio >=1200 */
+	@media screen and (min-width: 1200px){
+
+	}
