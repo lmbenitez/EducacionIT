@@ -1,0 +1,84 @@
+#header {
+  color: #012;
+  background-color: #999;
+  background-image: url("../media/fender.png"), url("../media/fender.jpg");
+}
+@media screen and (min-width: 768px) {
+  #header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.col-1 {
+  width: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-12 {
+  width: 100%;
+}
+header {
+  background-size: 25% auto, auto 75%;
+  background-position: 100% 10px, center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+header nav {
+  background-color: rgba(0, 17, 34, 0.7);
+}
+@media screen and (min-width: 576px) {
+  header nav {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  header nav {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  header nav {
+    width: 25%;
+  }
+}
+header nav button {
+  width: 100%;
+}
+header nav ul li a {
+  border: 2px solid #012;
+  border-radius: 5px;
+  color: #012;
+  background-color: #999;
+}
+header nav ul li a:hover {
+  color: #2290ff;
+  background-color: #191919;
+}

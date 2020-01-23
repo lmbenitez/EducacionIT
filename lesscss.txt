@@ -1,0 +1,30 @@
+lesscss.org => Libreria de JS que funciona como un PreProcesador 		de CSS (Permite utilizar CSS como si fuese un 		lenguaje de programacion para luego compilarlo y 		crear nuestra hoja de estilo en CSS)
+		El formato/extension de las hojas de estilo de 		less es .less
+
+	CARACTERISTICAS
+		Declaracion de Variables:Espacio reservado en la 				memoria utilizado para almacenar valores 			como numeros,texto,etc.
+			EJ: @ancho: 600px;
+
+		Admite Iteraciones y Operaciones Matematicas: 					Podemos utilizar nuestras variables dentro 			de operaciones, sin necesidad de 					implementar la funcion calc()
+			EJ: padding: @ancho / 50%*@ancho
+				margin:50mm -2cm + 0.01m
+
+		Anidacion de Estilos y Mixins: Podemos diseñar 			nuestras hojas de estilo de la misma forma 			que tenemos armado nuestro HTML y Less al 			compilar entiende que cada anidacion es un 			elemento especifico con sus atributos.
+		EJ: 	
+			.redondeado(){
+				border-radius:5px;
+			
+			header{
+				color:blue;
+				h1{ background-color:white; }
+			}
+
+			.menu a{
+				.redondeado;
+				color:white;
+				text-decoration:none;
+				&:hover{
+					background-color:blue;
+				}
+			}
+					

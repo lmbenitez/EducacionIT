@@ -1,0 +1,92 @@
+//Variables Globales
+	@color-primario:#012;
+	@color-secundario:#999;
+	@sm:576px;
+	@md:768px;
+	@lg:992px;
+	@xl:1200px;
+	@ancho:100%;
+	@bg: "../media/fender.jpg";
+	@logo: "../media/fender.png";
+
+//estilos con LESS
+	#header{
+		color:@color-primario;
+		background-color: @color-secundario;
+		background-image: url(@logo), url(@bg);
+		@media screen and (min-width:@md){
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+//Mixins
+	.bordes-redondeados(){
+		border:2px solid @color-primario;
+		border-radius: 5px;
+		color:@color-primario;
+		background-color:@color-secundario;
+	}
+
+.fondos(){
+	background-size: @ancho/4 auto, auto @ancho*3/4;
+	background-position: @ancho 10px, center;
+	background-repeat:no-repeat;
+	overflow: hidden;
+}
+
+//Funcion de Tamaños
+	.medidas(@ancho, @alto:100px){
+		width:@ancho;
+		height:@alto;
+	}
+//Funcion Disposicion en Pantalla
+	.disposicion(@display:column, @wrap:no-wrap, @flex-j:space-evenly){
+		display: flex;
+		flex-direction: @display;
+		flex-wrap: @wrap;
+		justify-content: @flex-j;
+	}
+	
+//Pasamos parametros de Columnnas al Bucle
+.columna(12);
+
+//Bucle para generar tamaños de Columna con % y 2 variables
+//@n:cantidad de Columnas - @i:Columna Actual
+.columna(@n, @i: 1) when (@i =< @n) {
+  //Tamaño para la columna Actual
+  .col-@{i} {
+    width: (@i * 100% / @n);
+  }
+  //repetimos la funcion sumando 1 a @i
+  .columna(@n, (@i + 1));
+}
+	header {
+		.fondos;
+		nav{
+			background-color: fadeout(@color-primario, 30%);
+			@media screen and(min-width:@sm){
+				.col-12;
+				}
+			@media screen and(min-width:@md){
+				.col-6;
+			}
+			@media screen and(min-width:@lg){
+				.col-3;
+			}
+			button{
+				width:@ancho;
+			}
+			ul{
+				li{
+					a{
+					.bordes-redondeados;
+						&:hover{
+							color:lighten(@color-primario,50%);
+							background-color:darken(@color-secundario,50%);
+						}	
+					}
+				}
+			}
+		}
+	}
