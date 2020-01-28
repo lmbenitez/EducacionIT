@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Maquetacion Avanzada</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3" />
+	<link rel="stylesheet" type="text/css" href="icomoon/style.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
 		<h1>Maquetando.com</h1>
 		<nav><!--Contiene los LINKS mas Importantes-->
 			<button id="menu">
-				<a href="#navegacion">&equiv; Menú</a>
+				<a href="#">&equiv; Menú</a>
 			</button>
 			<ul class="menu" id="navegacion">
 				<li class="active">
@@ -110,11 +111,11 @@
 			</section>
 			<section>
 				<header>
-					<h1>Seccion </h1>
-					<p>Subtitulo Importante</p>
+					<h1>Font-Face </h1>
+					<p>Tipografias personalizadas</p>
 				</header>
 					<img src="media/logo-it.png" alt="Imagen del Section" />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					<p class="imagenes-marcos">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -149,10 +150,48 @@
 			</section>
 			<section>
 				<header>
-					<h1>Seccion </h1>
-					<p>Subtitulo Importante</p>
+					<h1>Repaso de Colores</h1>
+					<p>Nombre - RGB - HEX - HSL</p>
 				</header>
 					<img src="media/logo-it.png" alt="Imagen del Section" />
+					<p><strong>Nombre:</strong>Existen 144 Colores definidos y no se pueden modificar sus caracteristicas</p>
+					<div id="color-nombre"> Darkblue</div>
+					<p><strong>RGB (Red - Green - Blue):</strong> Permite definir los niveles de luminosidad (intensidad) de color, dividiendolo en 3 canales (Sintesis Aditiva).
+						<br>
+					Permite la obtencion de tonalidades diferentes mediante la combinacion de Canales: donde 0 Representa la Ausencia de Luz y 255 es el valor maximo de intensidad</p>
+					<ul>
+						<li>Rojo(255,0,0)</li>
+						<li>Verde(0,255,0)</li>
+						<li>Azul(0,0,255)</li>
+						<li>Cian(0,255,255)</li>
+						<li>Magenta(255,0,255)</li>
+						<li>Amarillo(255,255,0)</li>
+					</ul>
+					<div id="color-rgb">rgb(25,33,104)</div>
+					<hr/>
+					<p><strong>Hexadecimal #RGB:</strong>Sistema de combinacion de colores destinado para web, que funciona exactamente igual que RGB, con la diferencia que utilizamos numeros Hex en lugar de Dec. 
+						<br>
+					A diferencia de RGB donde los valores van de 0 a 255, en Hex los valores van del 0 a la F</p>
+					<ul>
+						<li>Rojo #F00</li>
+						<li>Verde #0F0</li>
+						<li>Azul #00F</li>
+						<li>Cian #0FF</li>
+						<li>Magenta #F0F</li>
+						<li>Amarillo #FF0</li>
+					</ul>
+					<div id="color-hex">#192168</div>
+					<hr/>
+					<p><strong>HSL (Hue Saturation Light):</strong> Esta combinacion nos permite aprovechar el circulo crómatico, variando la intensidad y el nivel de luminosidad de los colores</p>
+					<ul>
+						<li>Rojo(0deg,100%,50%)</li>
+						<li>Verde(120deg,100%,50%)</li>
+						<li>Azul(240deg,100%,50%)</li>
+						<li>Cian(180deg,100%,50%)</li>
+						<li>Magenta(300deg,100%,50%)</li>
+						<li>Amarillo(60deg,100%,50%)</li>
+					</ul>
+					<div id="color-hsl">hsl(240deg, 80%, 40%)</div>
 				<footer>
 					<p><strong>Autor:</strong>Cristian Racedo</p>
 				</footer>
@@ -166,6 +205,18 @@
 					<progress value="70" max="100"></progress>	
 					<!--Evaluar el progreso de una Tarea-->
 					<meter 	value="70"
+							min="0"
+							max="100"
+							low="30" 
+							high="80" 
+							optimum="90"></meter>
+					<meter 	value="95"
+							min="0"
+							max="100"
+							low="30" 
+							high="80" 
+							optimum="90"></meter>
+					<meter 	value="15"
 							min="0"
 							max="100"
 							low="30" 
@@ -223,26 +274,64 @@
 	</main>
 	<footer id="footer"><!--Contenido Complementario/Despedida Copyright-->
 		<div class="social-media">
-			<a href="https://facebook.com" alt="facebook"></a>
-			<a href="https://twitter.com" alt="twitter"></a>
-			<a href="https://youtube.com" alt="youtube"></a>
-			<a href="https://instagram.com" alt="instagram"></a>
+			<a class="icon-facebook" href="https://facebook.com" alt="facebook"></a>
+			<a class="icon-twitter" href="https://twitter.com" alt="twitter"></a>
+			<a class="icon-whatsapp" href="https://youtube.com" alt="youtube"></a>
+			<a class="icon-instagram" href="https://instagram.com" alt="instagram"></a>
+
 		</div>
 		<form action="" method="POST">
 			<label for="nombre">Nombre:</label>
 			<input 	type="text" 
 					name="nombre" 
 					id="nombre"
-					placeholder="Ingrese su Nombre" 
+					pattern="[a-z]{2,50}"
+					title="Debe ingresar su nombre sin numeros ni simbolos y como minimo debe poseer entre 2 a 50 caracteres" 
+					placeholder="Ingrese su Nombre"
+					required 
 					/>
+					<div>Su nombre debe poseer por lo menos 2 caracteres y no debe tener numeros ni simbolos</div>
+			<label for="tel">Telefono:</label>
+			<input 	type="tel" 
+					name="tel"
+					id="tel"
+					pattern="[0-9]{5,20}"
+					title="Ingrese su numero telefónico sin espacios, ni guiones" 
+					placeholder="Ingrese su Telefono">
+					<div>No es necesario que ingrese simbolos u otros caracteres que no sean numeros, minimo:5</div>
 			<label for="email">Correo:</label>
 			<input 	type="email" 
 					name="email"  
 					id="email"
+					required
+					multiple 
 					placeholder="Ingrese su Correo" 
 					/>
+					<div>debe utilizar una direccion valida para el campo email, tambien puede ingresar varios correos separados por coma</div>
+			<label for="lenguajes">Lenguajes:</label>
+			<input type="text" list="lenguajes" name="lenguajes">
+				<!--Lista de Sugerencias-->
+				<datalist id="lenguajes">
+					<option value="HTML"></option>
+					<option value="CSS"></option>
+					<option value="JS"></option>
+				</datalist>
+			<label for="conocimiento">Nivel de Aprendizaje:</label>
+			<div>
+				<input 	type="range" 
+						name="conocimiento"
+						id="rango-linea" 
+						style="width:60%; display: inline-block;"/>
+				<input 	type="number" 
+						name="rango" 
+						id="rango-valor"
+						style="width:20%; display: inline-block;" />
+			</div>
 			<label for="consulta">Consulta:</label>
-			<textarea name="consulta" id="consulta">
+			<textarea 	name="consulta" 
+						placeholder="Ingrese su Consulta"
+						id="consulta"
+						>
 			</textarea>
 			<input 	type="submit" 
 					name="consulta" 
@@ -253,10 +342,27 @@
 		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; compañia</p>
 	</footer>
 	<!--SCRIPT Canvas-->
-	<script type="text/javascript">
-		var c = document.getElementById('miCanvas')
-		var ctx = c.getContext('2d')
-		ctx.fillRect(10,10,50,30)
-	</script>
+		<script type="text/javascript">
+			var c = document.getElementById('miCanvas')
+			var ctx = c.getContext('2d')
+			ctx.fillRect(10,10,50,30)
+		</script>
+	<!--JQuery Library-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		</script>
+		<!--Funciones JQuery (Menu-Slide)-->
+		<script type="text/javascript">	
+			//Evento Click Hipervinculo dentro de Boton	
+			$('#menu a').click(function(){
+				//Funcion que Intercambia entre display: None/Block (slideToggle)
+					$('.menu').slideToggle();
+				})
+		</script>
+		<script type="text/javascript">
+			var barra = document.getElementById('rango-linea');
+			var valor = document.getElementById('rango-valor');
+
+			barra.onChange() => valor.innerHTML('value') = barra.innerHTML('value')
+		</script>
 </body>
 </html>

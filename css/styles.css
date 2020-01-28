@@ -38,11 +38,18 @@
 	}
 	
 	nav a, nav .menu{
-		color:#ccc;
 		text-decoration: none;
 		list-style: none;
+		width: 100%;
+		display:inline-block;
+		color:#ccc;
 		background-color: rgba(50,50,50,.5);
 	}
+
+	nav a{
+		padding:.5px 2rem;
+	}
+
 	#menu{
 		margin:0;
 		border: 0;
@@ -60,8 +67,9 @@
 		display: none;
 	}
 
-	#navegacion:target{
-		display:block;
+	.active, .menu a{
+		width:100%;
+		background-color: rgba(100,100,100,.5);
 	}
 
 	section:nth-child(odd){
@@ -113,6 +121,44 @@
 		background-color: darkgreen;
 	}
 
+	section div{
+		border-radius: 5px;
+		padding:5px;
+		width:150px;
+		height:50px;
+	}
+		#color-nombre{background-color: darkblue;}
+		#color-rgb{background-color: rgb(25,33,104);}
+		#color-hex{background-color: #192168;}
+		#color-hsl{background-color: hsl(240deg, 60%, 20%);}
+
+	#footer{
+		background:	linear-gradient(
+						hsla(240deg,100%,75%,.8) 	10%,
+						hsla(240deg,30%,25%,.8) 	25%,
+						hsla(240deg,70%,100%,.8) 	50%,
+						hsla(240deg,40%,50%,.8) 	100%
+					) repeat,
+					url(../media/fender.png) no-repeat,
+					url(../media/fender.svg) repeat-x;
+		background-size: auto,cover, contain;
+		text-align: center;
+	}
+
+	input:invalid{
+		border:2px solid hsl(0deg, 40%, 50%);
+	}
+
+	input + div{
+		display: none;
+		color:hsl(0deg, 40%, 50%);
+		text-shadow: 1px 1px 1px white;
+	}
+
+	input:invalid + div{
+		display: block
+	}
+
 /* Version para Tablets < 1200px */
 	@media screen and (min-width:768px){
 
@@ -121,3 +167,48 @@
 	@media screen and (min-width: 1200px){
 
 	}
+
+@font-face{
+	/*OTF - TTF - EOT */	
+	src: 	url(../fonts/ornaments.ttf), 
+			url(../fonts/ornaments.otf), 
+			url(../fonts/ornaments.eot);
+	font-family: ornament;
+}
+
+.imagenes-marcos{
+	font-family: ornament;
+}
+
+#footer{
+	padding: 2rem;
+}
+
+.social-media a{
+	color:white;
+	text-decoration: none;
+	font-size: 4rem;
+	margin-top: 50px;
+	padding:1rem;
+}
+
+.social-media a{
+	border-radius: 50%;
+}
+
+.icon-facebook:hover ,.icon-facebook:focus{
+	background: linear-gradient(
+		hsl(221deg,61%,20%),hsl(221deg,61%,60%));
+}
+.icon-twitter:hover ,.icon-twitter:focus{
+	background: linear-gradient(
+		hsl(206deg,64%,20%),hsl(206deg,64%,66%));
+}
+.icon-whatsapp:hover ,.icon-whatsapp:focus{
+	background: linear-gradient(
+		hsl(142deg,82%,20%),hsl(142deg,82%,83%));
+}
+.icon-instagram:hover ,.icon-instagram:focus{
+	background: linear-gradient(
+		hsl(349deg,72%,20%),hsl(349deg,72%,89%));
+}

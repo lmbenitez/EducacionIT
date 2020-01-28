@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?okjc05');
+  src:  url('fonts/icomoon.eot?okjc05#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?okjc05') format('truetype'),
+    url('fonts/icomoon.woff?okjc05') format('woff'),
+    url('fonts/icomoon.svg?okjc05#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inicio:before {
+  content: "\e902";
+}
+.icon-lapiz:before {
+  content: "\e906";
+}
+.icon-atras:before {
+  content: "\e965";
+}
+.icon-adelante:before {
+  content: "\e966";
+}
+.icon-buscar:before {
+  content: "\e986";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-salir:before {
+  content: "\ea0f";
+}
+.icon-aceptar:before {
+  content: "\ea10";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-apple:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows:before {
+  content: "\eac2";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-html:before {
+  content: "\eae4";
+}
+.icon-html5:before {
+  content: "\eae5";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
