@@ -90,3 +90,13 @@
 			}
 		}
 	}
+
+
+.circulo (@n, @i: 0%) when (@i =< @n){
+	@{i}{
+		width:cos(@i)*3.14*50px;
+	}	
+	.circulo(@n, (@i + 10));
+}
+
+.circulo(100);

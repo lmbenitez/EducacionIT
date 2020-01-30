@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Courier Prime Regular'), local('CourierPrime-Regular'), url(https://fonts.gstatic.com/s/courierprime/v1/u-450q2lgwslOqpF_6gQ8kELawFpXw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v18/QldKNThLqRwH-OJ1UHjlKGlZ5q0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'), url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKfw7z.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+header {
+  animation-name: cambiar-color;
+  animation-duration: 10s;
+  animation-fill-mode: reverse;
+  animation-iteration-count: infinite;
+}
+@media screen and (min-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+}
+@keyframes cambiar-color {
+  from {
+    color: darkblue;
+    background-color: #ccc;
+  }
+  to {
+    color: #ccc;
+    background-color: darkblue;
+  }
+}
+main {
+  color: darkblue;
+  background-color: #ccc;
+}
+main article section div figure {
+  position: relative;
+}
+main article section div figure:hover img.girar {
+  position: absolute;
+  animation-name: sigue-girando;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+}
+@keyframes sigue-girando {
+  0% {
+    transform: rotate(Infinitydeg) translate(0%, 0);
+    transform-origin: 0%;
+  }
+  10% {
+    transform: rotate(10deg) translate(10%, 0);
+    transform-origin: 10%;
+  }
+  20% {
+    transform: rotate(5deg) translate(20%, 0);
+    transform-origin: 20%;
+  }
+  30% {
+    transform: rotate(3.33333333deg) translate(30%, 0);
+    transform-origin: 30%;
+  }
+  40% {
+    transform: rotate(2.5deg) translate(40%, 0);
+    transform-origin: 40%;
+  }
+  50% {
+    transform: rotate(2deg) translate(50%, 0);
+    transform-origin: 50%;
+  }
+  60% {
+    transform: rotate(1.66666667deg) translate(60%, 0);
+    transform-origin: 60%;
+  }
+  70% {
+    transform: rotate(1.42857143deg) translate(70%, 0);
+    transform-origin: 70%;
+  }
+  80% {
+    transform: rotate(1.25deg) translate(80%, 0);
+    transform-origin: 80%;
+  }
+  90% {
+    transform: rotate(1.11111111deg) translate(90%, 0);
+    transform-origin: 90%;
+  }
+  100% {
+    transform: rotate(1deg) translate(100%, 0);
+    transform-origin: 100%;
+  }
+}
+footer {
+  color: #ccc;
+  background-color: darkblue;
+}
+footer form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 576px) {
+  footer form {
+    width: 576px;
+    margin: auto;
+    padding: 0;
+    border: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer form {
+    width: 768px;
+    margin: auto;
+    padding: 0;
+    border: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer form {
+    width: 992px;
+    margin: auto;
+    padding: 0;
+    border: 100px;
+  }
+}
+footer form input,
+footer form textarea {
+  width: 80%;
+  margin: auto;
+  resize: none;
+}
+input:focus,textarea:focus {
+  animation-name: select;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes select {
+  from {
+    border: 0;
+    width: 80%;
+  }
+  to {
+    border: 1px solid darkgreen;
+    width: 100%;
+  }
+}
+input:valid ~ div{
+	display: none;
+}
+input:invalid ~ div{
+  dipslay:block;
+  animation-name: nousar;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes nousar {
+  from {
+  	display:none;
+    opacity: 0;
+    color: white;
+    height: 0;
+  }
+  to {
+  	display: block;
+    opacity: 1;
+    color: tomato;
+    height:50px;
+  }
+}

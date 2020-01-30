@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kqjd6o');
+  src:  url('fonts/icomoon.eot?kqjd6o#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kqjd6o') format('truetype'),
+    url('fonts/icomoon.woff?kqjd6o') format('woff'),
+    url('fonts/icomoon.svg?kqjd6o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inicio:before {
+  content: "\e902";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-correo:before {
+  content: "\e945";
+}
+.icon-imprimir:before {
+  content: "\e954";
+}
+.icon-atras:before {
+  content: "\e967";
+}
+.icon-adelante:before {
+  content: "\e968";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-cancelar:before {
+  content: "\ea0f";
+}
+.icon-ok:before {
+  content: "\ea10";
+}
+.icon-compartir:before {
+  content: "\ea82";
+}
+.icon-google-drive:before {
+  content: "\ea8f";
+}
+.icon-fb:before {
+  content: "\ea90";
+}
+.icon-fb-2:before {
+  content: "\ea91";
+}
+.icon-ig:before {
+  content: "\ea92";
+}
+.icon-ws:before {
+  content: "\ea93";
+}
+.icon-tl:before {
+  content: "\ea95";
+}
+.icon-tw:before {
+  content: "\ea96";
+}
+.icon-wifi:before {
+  content: "\ea9b";
+}
+.icon-yt:before {
+  content: "\ea9d";
+}
+.icon-yt-text:before {
+  content: "\ea9e";
+}
+.icon-apple:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows:before {
+  content: "\eac2";
+}
+.icon-in:before {
+  content: "\eac9";
+}
+.icon-in-2:before {
+  content: "\eaca";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-html:before {
+  content: "\eae4";
+}
+.icon-html-2:before {
+  content: "\eae5";
+}
+.icon-css:before {
+  content: "\eae6";
+}
+.icon-git:before {
+  content: "\eae7";
+}
