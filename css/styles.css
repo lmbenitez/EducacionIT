@@ -9,7 +9,7 @@
 	}
 
 	main,article,section{
-		padding:20px auto;
+		padding:8px auto;
 	}
 
 /*Encabezado y Pie de Pagina Principales*/
@@ -47,64 +47,121 @@
 		float:left;
 		list-style: none;
 	}
-
+	
 	.menu li{
 		display:inline-block;
 		padding:0 10px;
 		margin:0 -2.5px;
 		line-height: 50px;
 	}
-
+	
 	nav .social-media{
 		float:right;
 	}
-
+	
 	.social-media{
 		background-color:#EEE;
 		text-align: center;
 		height: 50px;
 	}
+	
 	.social-media img{
 		height:30px;
 		padding:10px;
 		opacity: .25;
 	}
-
+	
 	.social-media a:hover img, .menu li:hover, .active{
 		background-color: white;
 		opacity: 1;
+	}
+	
+	.index{
+		list-style: none;
+		width:380px;
+		margin:-10px auto 10px;
+		border: .5px solid #012;
+		border-radius: 15px;
+		padding:12.5px;
+		text-align: left;
+	}
+
+	.index p{
+		margin:5px 0;
+		color:#EEE;
+		background-color: #012;
+		padding: 0 20px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	
+	.index li{
+		padding:0 25px;
+	}
+
+	.index li:hover{
+		background-color: #EEE;
 	}
 
 /*Contenido Contextualizado == Conceptos Generales*/
 	section header h1, header h2, header h3, section header p{
 		text-align: left;
-		border: 1px solid #012;
+		border: .5px solid #012;
 		color: lightgrey;
 		background-color: #012;
 	}
 
+	section{
+		padding:10px auto;
+	}
+
 	section>p{
-		margin:16px auto;
+		margin:12px auto;
 		text-align: justify;
 		width:95%;
 	}
 
 /*Contenido Independiente == Definiciones*/
+	main{
+		padding:2%;
+	}
+	
+	main article{
+		margin:8px auto;
+		border: .5px solid #012;
+		border-radius: 15px;
+		padding: 0;
+		display:none;
+	}
+
+	main article:target{
+		display: block;
+	}
+
+	main header{
+		padding:5px 0;
+	}
+
 	section article{
 		display: inline-block;
-		text-align: justify;
-		width:390px;
-		padding:12.5px;
-		margin:10px auto;
-		background-color:#EEE;
+		margin:4px auto;
 		border-radius: 10px;
+		padding:15px;
+		width:362.5px;
+		text-align: justify;
+		background-color:#EEE;
 	}
+	
 	article h1{
 		padding:10px 2.5% 0;
 	}
 
+	main article section{
+		padding:10px;
+	}
+
 /*Formulario de Contacto*/
-	#contacto,input,textarea,select{
+	#contacto,label,input,textarea,select{
 		font:bold 16px century gothic, segoe ui, sans-serif;
 		width:400px;
 		margin:5px auto;
@@ -129,11 +186,11 @@
 		border-radius: 0 0 10px 10px;
 		padding:5px;
 		width:410px;
-		color:#EEE;
-		background-color:#012;
+		color:#012;
+		background-color:#EEE;
 	}
 
 	#contacto button:hover{
-		color:#012;
-		background-color:#EEE;
+		color:#EEE;
+		background-color:#012;
 	}
