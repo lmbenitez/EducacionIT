@@ -4,14 +4,12 @@
 	*{
 		box-sizing: border-box;
 	}
-
 	body{
 		font-family: ubuntu, century gothic, sans-serif;
 		margin: 	0;
 		border:		0;
 		padding:	0;
 	}
-
 	#header,#footer,.menu,main,article,section, form{
 		margin:		0;
 		border: 	0;
@@ -21,7 +19,6 @@
 		flex-wrap: wrap;
 
 	}
-
 	#header{
 		padding:1rem;
 		color: #CCC;
@@ -31,12 +28,13 @@
 		background-position: 5px 5px;
 		background-color: #333;
 	}
-
 	#header h1{
 		padding-left:60px;
 		margin:0 0 20px; /*Top Right Bottom Left*/
 	}
-	
+	header .social-media {
+		display: none;
+	}
 	nav a, nav .menu{
 		text-decoration: none;
 		list-style: none;
@@ -147,6 +145,7 @@
 
 	input:invalid{
 		border:2px solid hsl(0deg, 40%, 50%);
+		transition: all 1s ease-in;
 	}
 
 	input + div{
@@ -165,7 +164,89 @@
 	}
 /* Version para Escritorio >=1200 */
 	@media screen and (min-width: 1200px){
+		main{
+			background-image: url(../media/fender.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-blend-mode: screen;
+		}
+		nav{
+			text-align: center;
+		}
+		#menu{
+			display: none;
+		}
+		.menu li, .menu a, .active{
+			display: inline-block;
+			margin:0;
+			padding:0;
+			width:150px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
 
+		.menu a:after{
+			content: '';
+			display: block;
+			width:0;
+			height:.25rem;
+			background-color: rgba(100,100,100,.5);
+		}
+
+		.menu a:hover::after, .menu .active a:after{
+			content:'';
+			width:150px;
+			background-color: white;
+			transition: all 1s ease;
+		}
+
+		form{
+			width:50%;
+			max-width: 900px;
+		}
+
+		input:focus,select:focus,textarea:focus{
+			transform: scale(1.25,1.25);
+			transition: all 1.25s ease-out;
+		}
+
+		.contenedor{
+			width:500px;
+			height:300px;
+			background: hsl(90deg, 30%,80%) url(../media/fender.png) no-repeat;
+			background-size: 500px;
+		}
+		.texto-modificado{
+			opacity: 0;
+			color:black;
+			width:300px;
+			text-transform: capitalize;
+		}
+		
+		.contenedor:hover .texto-modificado{
+			opacity: 1;
+			color:white;
+			text-shadow: 1px 1px 2px black;
+			transform:translate(600px,10px);
+			transition: all 2s ease-in-out;
+		}
+
+		header .social-media{
+			display: block;
+		}
+
+		section{
+			opacity: .75;
+			width:80vw;
+			margin: 1rem auto;
+			border-radius: .5rem;
+		}
+
+		section:hover{
+			opacity: 1;
+			transform: all 1.5s ease-out;
+		}
 	}
 
 @font-face{
@@ -184,7 +265,7 @@
 	padding: 2rem;
 }
 
-.social-media a{
+footer .social-media a{
 	color:white;
 	text-decoration: none;
 	font-size: 4rem;
@@ -192,7 +273,7 @@
 	padding:1rem;
 }
 
-.social-media a{
+footer .social-media a{
 	border-radius: 50%;
 }
 
@@ -211,4 +292,57 @@
 .icon-instagram:hover ,.icon-instagram:focus{
 	background: linear-gradient(
 		hsl(349deg,72%,20%),hsl(349deg,72%,89%));
+}
+
+a:hover:before{
+	transform: rotate(50deg);
+}
+
+header .social-media{
+	position: absolute;
+	top:10px;
+	right: 10px;
+	height: 30px;
+}
+
+header .social-media a{
+	display: inline-block;
+	background-image: url(../media/social-icon.png);
+	background-size: 120px;
+	width:30px;
+	height:30px;
+}
+
+.facebook{
+	background-position: 0 0px;
+}
+.twitter{
+	background-position:-29.7px 0px;
+}
+.youtube{
+	background-position: calc(2*-29.7px) 0px;
+}
+.instagram{
+	background-position: calc(3*-29.7px) 0px;
+}
+
+.facebook:hover, .facebook:focus{
+	background-position: 0 30px;
+	transform: rotate(360deg);
+	transition: all 1s ease;
+}
+.twitter:hover, .twitter:focus{
+	background-position:-29.7px 30px;
+	transform: rotate(360deg);
+	transition: all 1s ease;
+}
+.youtube:hover, .youtube:focus{
+	background-position: calc(2*-29.8px) 30px;
+	transform: rotate(360deg);
+	transition: all 1s ease;
+}
+.instagram:hover, .instagram:focus{
+	background-position: calc(3*-29.8px) 30px;
+	transform: rotate(360deg);
+	transition: all 1s ease;
 }

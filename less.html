@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=3">
+	<title>LESS</title>
+	<link rel="stylesheet" href="css/less.css">
+</head>
+<body>
+	<header>
+		<h1>LESS</h1>
+		<p>(<span>Le</span>an 
+			<span>S</span>tyles 
+			<span>S</span>heets)</p>
+		<div class="social-media">
+			<a class="icon-facebook" href="https://facebook.com" alt="facebook"></a>
+			<a class="icon-twitter" href="https://twitter.com" alt="twitter"></a>
+			<a class="icon-whatsapp" href="https://youtube.com" alt="youtube"></a>
+			<a class="icon-instagram" href="https://instagram.com" alt="instagram"></a>
+		</div>
+	</header>
+	<nav>
+		<button class="col-16 col-sm-12 col-md-8 col-lg-6 col-xl-4" id="menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<ul class="menu col-8">
+			<li class="active"><a href="#">inicio</a></li>
+			<li><a href="#about">acerca de</a></li>
+			<li><a href="#docs">documentacion</a></li>	
+			<li><a href="#extra">extras</a></li>	
+		</ul>
+	</nav>
+	<main>
+		<article>
+			<h1 class="col-16">Preprocesadores</h1>
+			<section class="col-md-8 col-lg-4 col-xl-2">
+				<header>
+					<h1>¿Que es LESS?</h1>
+				</header>
+				<p>Less es un preprocesador css, desarrollado para dotar de dinamismo a las hojas de estilo que realizamos. Se puede utilizar tanto del lado del Cliente mediante las etiquetas de &lt;link&gt; y &lt;script&gt; respectivamente, asi como tambien del lado del servidor con herramientas como <strong>NodeJS.</strong>
+					<br> Facilita al desarrollador la escritura de codigo, permitiendo la anidacion de estilos, asi como tambien permite utilizar los estilos de manera recursiva.</p>
+			</section>
+			<section class="col-md-8 col-lg-4 col-xl-2">
+				<header>
+					<h1>¿Que son los MIXINS?</h1>
+				</header>
+				<p>Los Mixins son clases o id de CSS, aplicados de manera recursiva. Solamente debemos definir dicho elemento y luego dentro de nuestro selector, a modo de regla, aplicarlo sucedido de un punto y coma.
+				<br>Una variante de estos, son los MIXINS con parametros donde podemos establecer de manera dinamica los valores definidos en nuestras variables, ya sean locales o globales.
+				</p>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div class="social-media">
+			<a class="icon-facebook" href="https://facebook.com" alt="facebook"></a>
+			<a class="icon-twitter" href="https://twitter.com" alt="twitter"></a>
+			<a class="icon-whatsapp" href="https://youtube.com" alt="youtube"></a>
+			<a class="icon-instagram" href="https://instagram.com" alt="instagram"></a>
+
+		</div>
+		<form action="" method="POST">
+			<label for="nombre">Nombre:</label>
+			<input 	type="text" 
+					name="nombre" 
+					id="nombre"
+					pattern="[a-z]{2,50}"
+					title="Debe ingresar su nombre sin numeros ni simbolos y como minimo debe poseer entre 2 a 50 caracteres" 
+					placeholder="Ingrese su Nombre"
+					/>
+					<div>Su nombre debe poseer por lo menos 2 caracteres y no debe tener numeros ni simbolos</div>
+			<label for="tel">Telefono:</label>
+			<input 	type="tel" 
+					name="tel"
+					id="tel"
+					pattern="[0-9]{5,20}"
+					title="Ingrese su numero telefónico sin espacios, ni guiones" 
+					placeholder="Ingrese su Telefono">
+					<div>No es necesario que ingrese simbolos u otros caracteres que no sean numeros, minimo:5</div>
+			<label for="email">Correo:</label>
+			<input 	type="email" 
+					name="email"  
+					id="email"
+					multiple 
+					placeholder="Ingrese su Correo" 
+					/>
+					<div>debe utilizar una direccion valida para el campo email, tambien puede ingresar varios correos separados por coma</div>
+			<label for="lenguajes">Lenguajes:</label>
+			<input type="text" list="lenguajes" name="lenguajes">
+				<!--Lista de Sugerencias-->
+				<datalist id="lenguajes">
+					<option value="HTML"></option>
+					<option value="CSS"></option>
+					<option value="JS"></option>
+				</datalist>
+			<label for="consulta">Consulta:</label>
+			<textarea 	name="consulta" 
+						placeholder="Ingrese su Consulta"
+						id="consulta"
+						>
+			</textarea>
+			<input 	type="submit" 
+					name="consulta" 
+					id="consulta"
+					value="Realizar Consulta" 
+					/>
+		</form>
+	</footer>
+</body>
+</html>

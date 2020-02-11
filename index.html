@@ -3,13 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Maquetacion Avanzada</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3" />
+	<meta 	name="viewport" 
+			content="width=device-width, initial-scale=1.0, maximum-scale=3" />
 	<link rel="stylesheet" type="text/css" href="icomoon/style.css">
+	<link rel="stylesheet" type="text/css" href="css/transform.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<header id="header"><!--Contenido Introductorio-->
 		<h1>Maquetando.com</h1>
+		<div class="social-media">
+			<a class="facebook" href="https://facebook.com"></a>
+			<a class="twitter" href="https://twitter.com"></a>
+			<a class="youtube" href="http://www.youtube.com"></a>
+			<a class="instagram" href="https://instagram.com"></a>
+		</div>
 		<nav><!--Contiene los LINKS mas Importantes-->
 			<button id="menu">
 				<a href="#">&equiv; Menú</a>
@@ -31,16 +39,59 @@
 		<article>
 			<section>
 				<header>
-					<h1>Seccion </h1>
-					<p>Subtitulo Importante</p>
+					<h1>Transformaciones</h1>
+					<p>Modificando el aspecto de nuestras etiquetas</p>
 				</header>
 					<img src="media/logo-it.png" alt="Imagen del Section" />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Mediante este atributo podemos modificar la apariencia de nuestras etiquetas, como si trabajemos en cualquier programa de diseño. Solo basta indicar ciertos parametros que vamos a cambiar.</p>
+				<div id="transformaciones">
+					<span class="translate-x">
+						Esto es un DIV con desplazamiento Lateral
+					</span>
+					<span class="translate-y">
+						Esto es un span con desplazamiento Vertical
+					</span>
+					<span class="translate">
+						Esto es un span con desplazamiento General	
+					</span>
+					<span class="scale-x">
+						Esto es un span con Escalamiento Horizontal
+					</span>
+					<span class="scale-y">
+						Esto es un span con Escalamiento Vertical
+					</span>
+					<span class="scale">
+						Esto es un span con Escalamiento General
+					</span>
+					<span class="skew-x">
+						Esto es un span con Sesgado Horizontal
+					</span>
+					<span class="skew-y">
+						Esto es un span con Sesgado Vertical
+					</span>
+					<span class="skew">
+						Esto es un span con Sesgado General
+					</span>
+					<span class="rotate-x">
+						Esto es un span con rotacion	Lateral
+					</span>
+					<span class="rotate-y">
+						Esto es un span con rotacion	Vertical
+					</span>
+					<span class="perspective">
+						Esto es un span con Perspectiva
+					</span>
+				</div>
+
+				<div style="background-color:blue;perspective-origin: center; width:200px; height:200px;">
+					<div style=" background-color:red;transform: perspective(50px) rotateZ(10deg) rotateY(10deg) rotateX(10deg); width:100px; height:100px; ">
+						Perspectiva
+					</div>
+
+				<div style="width:100%; height:300px; perspective-origin: top center">
+					<p class="star-wars">STAR WARS</p>
+				</div>
+				</div>
 				<footer>
 					<p><strong>Autor:</strong>Cristian Racedo</p>
 				</footer>
@@ -51,12 +102,14 @@
 					<p>Subtitulo Importante</p>
 				</header>
 					<img src="media/logo-it.png" alt="Imagen del Section" />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					<div class="contenedor">
+						<p class="texto-modificado">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
 				<footer>
 					<p><strong>Autor:</strong>Cristian Racedo</p>
 				</footer>

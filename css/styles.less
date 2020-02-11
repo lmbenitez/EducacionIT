@@ -1,0 +1,159 @@
+//comentario LESS
+/*comentario CSS*/
+
+@sm:576px;
+@md:768px;
+@lg:992px;
+@xl:1200px;
+
+//colores
+@primary:#018;
+@secondary:#CCC;
+
+//Mixins Estatico
+.rounded(@br:50%){
+	-webkit-border-radius:@br;
+	-mzl-webkit-border-radius:@br;
+	-ms-webkit-border-radius:@br;
+	-o-webkit-border-radius:@br;
+	border-radius:@br;
+}
+
+//Mixin con parametros
+.flex(@fd:column;@fw:nowrap;@fj:center){
+	display:flex;
+	flex-direction: @fd;
+	flex-wrap: @fw;
+	justify-content: @fj;
+}
+
+.normalize(@m:0;@b:0;@p:0){
+	margin:@m;
+	border:@b;
+	padding:@p;
+}
+
+.padding(@t:.5rem;@r:.5rem;@b:.5rem;@l:.5rem){
+	padding:@t @r @b @l;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	.normalize;
+	@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Slabo+27px&display=swap');
+	font-family: Monserrat, Roboto,sans-serif;
+header{
+	color: @secondary;
+	background-color: @primary;
+	.media-query;
+	.padding(1rem;.5rem;0;5rem);
+	h1{
+
+	}
+	.social-media{
+		a{
+			.rounded;
+			color:darken(@secondary, 30%);
+			background-color:lighten(@primary,20%);
+			display: inline-block;
+			width:@xl/10*1/4;
+			height:@xl/10*1/4;
+			&:hover{
+				color:darken(@secondary, 60%);
+				background-color:lighten(@primary,40%);
+			}
+		}
+	}
+}
+nav{
+	.media-query;
+	ul{
+		li{
+			a{
+				&:hover{
+
+				}
+			}
+		}
+	}
+}
+main{
+	.media-query;
+	article{
+		.media-query;
+		section{
+			opacity: .7;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+
+}
+footer{
+	.social-media{}
+	.media-query;
+	form{
+		.flex;
+		label{
+
+		}
+		input,textarea,select{
+			.rounded(.25rem);
+			width:85%;
+			min-width:@sm/2; 
+			max-width:@xl*3/4;
+			.normalize(.25rem auto;0;.25rem 1rem);
+			&:invalid + div{
+					display: block;
+			}
+		}
+		div{
+			display: none;
+			}
+	}
+}
+}
+
+//Bucle para grilla Universal
+.grilla(@n,@i:1) when(@i<=@n){
+	.col-@{i}{
+		width:percentage(@i/@n);	
+	};
+	.grilla(@n,@i+1);
+}
+.grilla(16);
+
+///Bucle para sistema de grilla segun Viewport
+.viewport(@view,@vname) when (@view<=@view){
+	@media screen and (min-width: @view){
+		.grilla(@n,@i:1) when(@i<=@n){
+			.col-@{vname}-@{i}{
+				width:percentage(@i/@n);	
+			};
+			.grilla(@n,@i+1);
+		}
+	.grilla(16);
+	}
+}
+.viewport(@sm,sm);
+.viewport(@md,md);
+.viewport(@lg,lg);
+.viewport(@xl,xl);
+
+//Reglas Media Query para elementos principales
+.media-query(){
+	@media screen and (min-width: @sm){
+		.flex;
+	}
+	@media screen and (min-width: @md){
+		.flex(row;wrap;space-around);
+	}
+	@media screen and (min-width: @lg){
+		.flex(row;nowrap;center);
+		.normalize(1rem;.25rem solid @primary; 1rem)
+	}
+}
