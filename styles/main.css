@@ -21,6 +21,7 @@ body, #header,#footer,.menu,main,article,section,#contacto{
 #header{
 	position: sticky;
 	top:0;
+	z-index: 999;
 }
 
 nav a{
@@ -64,10 +65,36 @@ section, article, main{
 }
 #contacto input, #contacto textarea,#contacto button{
 	margin:.25rem;
-	padding:.2rem;
+	padding:.5rem;
+}
+
+#contacto textarea{
+	height: 5rem;
 }
 #contacto button{
 	margin-top: -.25rem;
+}
+
+#contacto div, #contacto label{
+	display: none;
+	text-align: left;
+	width: 60%;
+	margin:auto;
+	padding: .5rem;
+	text-shadow: 2px 2px 2px black;
+}
+
+#contacto input, #contacto textarea{
+	outline: none;
+	border: 0;
+}
+
+#contacto input:invalid:focus{
+	border-bottom: .25rem solid darkred;
+}
+
+#contacto input:invalid:focus + div{
+	display: block;
 }
 
 @media screen and (min-width: 768px){

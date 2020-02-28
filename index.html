@@ -53,9 +53,38 @@
 			</section>
 			<section>
 				<header>
-					<h1>Titulo</h1>
+					<h1>Elementos de Medición</h1>
 				</header>
-				<p></p>
+				<p>Existen dos elementos en HTML5 que permiten marcar un seguimiento, estos son <strong> &lt;progress&gt; &amp; &lt;meter&gt;</strong> que permite evaluar en nivel de realizacion de una tarea y los valores finales en comparacion, respectivamente</p>
+				<progress value="40" min="0" max="100">
+					Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
+				</progress>
+				<ul>
+					<li>
+						<meter 	value="90" 
+								min="0" 
+								max="100"
+								low="40"
+								high="70"
+								optimum="90"></meter> HTML
+					</li>
+					<li>
+						<meter 	value="60" 
+								min="0" 
+								max="100"
+								low="40"
+								high="70"
+								optimum="90"></meter> CSS
+					</li>
+					<li>
+						<meter 	value="30" 
+								min="0" 
+								max="100"
+								low="40"
+								high="79"
+								optimum="90"></meter> JS
+					</li>
+				</ul>
 				<footer>
 					<p><strong>Autor:</strong></p>
 				</footer>
@@ -127,15 +156,38 @@
 			<a class="whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
 		</div>
 		<form action="" id="contacto">
-			<label for=""></label>
-			<input type="text">
-			<label for=""></label>
-			<input type="text">
-			<label for=""></label>
-			<input type="text">
-			<textarea name=""></textarea>
-			<button>Consultar</button>
+			<label for="name">Nombre</label>
+			<input 
+				type="text" 
+				name="name" 
+				id="name" 
+				placeholder="Nombre: Cristian *"
+				pattern="[A-Za-z]{3,20}"
+				title="Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres" 
+				required>
+			<div>Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres</div>
+			<label for="tel">Telefono</label>
+			<input 
+				type="tel" 
+				name="tel"
+				id="tel"
+				placeholder="Telefono: 011-2345-6789" 
+				pattern="\d{3}[\-]\d{4}[\-]\d{4}"
+				title="Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres">
+			<div>Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres</div>
+			<label for="email">Correo</label>
+			<input 
+				type="email" 
+				name="email" 
+				id="email"
+				placeholder="Correo: CristianDRacedo@hotmail.com *"
+				required>
+			<div>Escriba una direccion de correo valida con nombre de usuario seguido de un @ y luego el dominio (servidor)</div>
+			<label for="consulta">Consulta</label>
+			<textarea name="consulta" id="consulta" placeholder="Consulta: Realice su Consulta *" required></textarea>
+			<button type="submit">Consultar</button>
 		</form>
+		<div>Los campos con * son obligatorios</div>
 		<p>&copy; Todos los derechos Reservados | Cristian Racedo &amp; Compañia</p>
 	</footer>
 </body>
