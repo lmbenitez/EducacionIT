@@ -36,19 +36,33 @@ class Nav extends Component{
     render(){ 
      // Renderiza el Componente 
      return(
-     <ul className="menu">
-         {this.props.nombre}
-        {   Links.map((link) => (
-                <li key={link.id}>
-                    <a  href={link.direccion}
-                        className={link.clase} >
-                        {link.nombre}
-                    </a>
-                </li> )
-        )}
+     <ul className="navbar navbar-dark bg-dark">
+         {this.props.Nombre}
+        {   
+            Links.map((link) => (
+                <Link 
+                    key={link.id} 
+                    Dir={link.direccion}
+                    Clase={link.clase} 
+                    RedSocial={link.nombre} />
+            ))
+        }
      </ul>   
      );
    }
+ };
+
+class Link extends Component{
+    render(){
+         return(
+             <li>
+                 <a 
+                    className={this.props.Clase}
+                    href={this.props.Dir}>
+                    {this.props.RedSocial}</a>
+             </li>
+         )
+     }
  }
 
  export default Nav;
