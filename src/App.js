@@ -6,10 +6,14 @@ import './App.css';
 import Buscador from './components/Buscador';
 import Resultado from './components/Resultado';
 
+import {Card} from '@material-ui/core';
+import { white } from 'color-name';
+
 class App extends Component{
   //definimos los Estados 
   state = {
     termino: '',
+    total:1,
     cantidad:0,
     imagenes:[],
     pagina:0
@@ -38,7 +42,8 @@ class App extends Component{
     fetch(url)
       .then(respuesta => respuesta.json())
       .then(resultado => this.setState({
-        imagenes: resultado.hits
+        imagenes: resultado.hits,
+        total: resultado.total
       }))
   }
 
@@ -50,7 +55,7 @@ class App extends Component{
   }
 
   PaginaSiguiente = () => {
-    let total = 500/this.state.cantidad
+    let total = this.state.total / this.state.cantidad
     let pagina = this.state.pagina
     if (pagina === total) return null;
     pagina ++;
@@ -58,20 +63,29 @@ class App extends Component{
   }
 
   render(){
+    const useStyles = ({
+      myHeader:{
+        color:white,
+        backgroundColor:'#192168'
+      }
+    });
+    
     return(
     <>
-      <header className="jumbotron bg-dark text-light m-3">
-        <img src={Logo} style={{width:'100px',
-                                backgroundColor:'#192168'
-                                }} />
-        <h1>Buscador PIXABAY</h1>
-        {/* Pasamos la funcion BuscarDatos mediante PROPS*/}
-        <Buscador BuscarDatos={this.BuscarDatos} /> 
+      <header class={useStyles.myHeader}>
+        <Card variant="outlined">
+          <img src={Logo}/>
+          <h1>Buscador PIXABAY</h1>
+          {this.state.total}
+          {/* Pasamos la funcion BuscarDatos mediante PROPS*/}
+          <Buscador BuscarDatos={this.BuscarDatos} /> 
+        </Card>
       </header>
       <main>
         {/*Pasamos el Array de objetos mediante PROPS y dejamos que Resultado haga el mapeo*/}
           <Resultado 
             imagenes={this.state.imagenes}
+            PaginaActual = {this.state.pagina}
             PaginaAnterior={this.PaginaAnterior}
             PaginaSiguiente={this.PaginaSiguiente}
           />
