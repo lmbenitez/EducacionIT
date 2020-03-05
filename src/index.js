@@ -1,23 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'; 
+import ReactDOM from 'react-dom'; 
+import './index.css'; 
+import App from './App'; 
 
-///importamos los componentes necesarios para crear la conexion con el Store de Redux
-import { Provider } from 'react-redux';
-import store from './store';
+import { Provider } from 'react-redux'; 
+import store from './store';  
 
-///Asignamos las props del Provedor englobando toda la aplicacion
-const MiApp = () => (
-    <Provider store={store}>
-        <App />
-    </Provider>
-)
+const Application = () => ( 
+    <Provider store={store}> 
+        <App /> 
+    </Provider> 
+); 
 
-ReactDOM.render(<MiApp />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<Application />, document.getElementById('root')); 

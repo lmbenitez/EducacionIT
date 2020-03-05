@@ -1,15 +1,15 @@
-import {connect} from 'react-redux';
-import {palabraEnviada} from '../store/Reducers';
-import React from 'react';
+import React from 'react'
+import {connect} from 'react-redux'; 
+import { palabraEnviada } from '../store/Reducers'; 
 
-const palabraGuardada = ({palabra}) => (
-    <p>{palabra}</p>
-);
+const PalabraGuardada = ({ palabra }) => ( 
+    <output>{palabra}</output> 
+); 
 
-function mapStateToProps(state) {
-    return{
-        palabra: palabraEnviada(state)
-    }
-}
+function mapStateToProps(state) { 
+    return { 
+        palabra: palabraEnviada(state) 
+    } 
+} 
 
-export default connect(mapStateToProps)(palabraGuardada);
+export default connect(mapStateToProps)(PalabraGuardada); 

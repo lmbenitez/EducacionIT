@@ -1,15 +1,12 @@
-import React from 'react';
-import './App.css';
+import React from 'react'; 
+import Form from './components/Form'; 
+import PalabraGuardada from './components/Palabra'; 
 
-///importamos los componentes Form y Palabra
-  import Form from './components/Form';
-  import Palabra from './components/Palabra';
+const App = _ =>( 
+    <div className="App"> 
+        <Form/> 
+        <PalabraGuardada/> 
+    </div> 
+); 
 
-  const App = _ =>(
-    <>
-      <Form />
-      <Palabra />
-    </>
-)
-
-export default App;
+export default App; 

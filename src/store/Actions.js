@@ -1,6 +1,6 @@
-export const agregarPalabra = (palabra) => {
-    return {
-        type: 'AGREGAR_PALABRA',
-        palabra:palabra
-    }
-}
+export const cambiarPalabra = (palabra) => { 
+    return { 
+        type: 'MODIFY_WORD', 
+        palabra: palabra 
+    } 
+}; 
