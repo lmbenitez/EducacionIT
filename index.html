@@ -4,17 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 	<title>Maquetacion</title>
+	<link rel="stylesheet" href="icomoon/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
 	<header id="header">
 		<h1>Maquetacion Avanzada</h1>
 		<div class="social-media">
-			<a class="facebook" href="https://facebook.com"></a>
-			<a class="twitter" href="https://twitter.com"></a>
-			<a class="instagram" href="https://instagram.com"></a>
-			<a class="youtube" href="https://youtube.com"></a>
-			<a class="whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
+			<a class="icon-facebook" href="https://facebook.com"></a>
+			<a class="icon-twitter" href="https://twitter.com"></a>
+			<a class="icon-instagram" href="https://instagram.com"></a>
+			<a class="icon-youtube" href="https://youtube.com"></a>
+			<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
 		</div>
 		<nav>
 			<button id="menu">&equiv; Menú</button>
@@ -48,7 +49,7 @@
 					Disculpe las molestias, pero el elemento VIDEO NO es Compatible con su Navegador.
 				</video>
 				<footer>
-					<p><strong>Autor:</strong> Cristian Racedo - Patente Pendiente</p>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
@@ -56,44 +57,65 @@
 					<h1>Elementos de Medición</h1>
 				</header>
 				<p>Existen dos elementos en HTML5 que permiten marcar un seguimiento, estos son <strong> &lt;progress&gt; &amp; &lt;meter&gt;</strong> que permite evaluar en nivel de realizacion de una tarea y los valores finales en comparacion, respectivamente</p>
-				<progress value="40" min="0" max="100">
-					Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
-				</progress>
-				<ul>
-					<li>
+				<ul class="muestra">
+					<h2>Elemento Progress</h2> 
+					<li>Valor sin definir
+						<progress>
+							Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
+						</progress> 
+					</li>
+					<li>Valor Definido
+						<progress value="40" min="0" max="100">
+							Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
+						</progress> 
+					</li>
+				</ul>
+				<ul class="muestra"> 
+					<h2>Elemeto Meter</h2>
+					<li>Valor cercano al optimo superior al maximo
 						<meter 	value="90" 
 								min="0" 
 								max="100"
 								low="40"
 								high="70"
-								optimum="90"></meter> HTML
+								optimum="90"></meter> 
 					</li>
-					<li>
+					<li>Valor intermedio entre maximo y minimo
 						<meter 	value="60" 
 								min="0" 
 								max="100"
 								low="40"
 								high="70"
-								optimum="90"></meter> CSS
+								optimum="90"></meter>  
 					</li>
-					<li>
+					<li>Valor por debajo del minimo lejos del optimo
 						<meter 	value="30" 
 								min="0" 
 								max="100"
 								low="40"
-								high="79"
-								optimum="90"></meter> JS
+								high="70"
+								optimum="90"></meter> 
 					</li>
 				</ul>
 				<footer>
-					<p><strong>Autor:</strong></p>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Titulo</h1>
+					<h1>Colores</h1>
 				</header>
-				<p></p>
+				<p>los colores se representan en el Navegador mediante <strong> Sintesis Aditiva </strong>, es decir que los colores se forman gracias a la combinacion de fuentes de luz <strong>Roja - Verde - Azul</strong></p>
+				<div class="muestra">	
+					<div class="color" id="color">
+						Nombre: <br/>navy; <br/>(144 colores)</div>
+					<div class="color" id="rgb">
+						RGB: <br/>rgb(25,33,104); <br/>(16.777.216)</div>
+					<div class="color" id="hex">
+						HEX: <br/>#192168 <br/>(16.777.216);</div>
+					<div class="color" id="hsl">
+						HSL: <br/>hsl(240deg,50%,40%) <br/>(16.777.216)</div>
+				</div>
 				<footer>
 					<p><strong>Autor:</strong></p>
 				</footer>
@@ -149,11 +171,11 @@
 	</main>
 	<footer id="footer">
 		<div class="social-media">
-			<a class="facebook" href="https://facebook.com"></a>
-			<a class="twitterr" href="https://twitter.com"></a>
-			<a class="instagram" href="https://instagram.com"></a>
-			<a class="youtube" href="https://youtube.com"></a>
-			<a class="whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
+			<a class="icon-facebook" href="https://facebook.com"></a>
+			<a class="icon-twitter" href="https://twitter.com"></a>
+			<a class="icon-instagram" href="https://instagram.com"></a>
+			<a class="icon-youtube" href="https://youtube.com"></a>
+			<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
 		</div>
 		<form action="" id="contacto">
 			<label for="name">Nombre</label>
