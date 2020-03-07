@@ -1,243 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
-	<title>Maquetacion</title>
-	<link rel="stylesheet" href="icomoon/style.css">
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
-<body>
-	<header id="header">
-		<h1>Maquetacion Avanzada</h1>
-		<div class="social-media">
-			<a class="icon-facebook" href="https://facebook.com"></a>
-			<a class="icon-twitter" href="https://twitter.com"></a>
-			<a class="icon-instagram" href="https://instagram.com"></a>
-			<a class="icon-youtube" href="https://youtube.com"></a>
-			<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
-		</div>
-		<nav>
-			<button id="menu">&equiv; Menú</button>
-			<ul class="menu">
-				<li><a href="#">Inicio</a></li>
-				<li><a href="galery.html">Galeria</a></li>
-				<li><a href="products.html">Productos</a></li>
-				<li><a href="services.html">Servicios</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<article>
-			<section>
-				<header>
-					<h1>Contenido Multimedia</h1>
-				</header>
-				<p>En el elemento audio podemos especificar las fuentes del mismo, e incluso podemos utilizar un video como fuente de audio. Un factor fundamental, para que aparezca el elemento en pantalla es que especifiquemos el atributo <strong>controls</strong> </p>
-				<audio controls>
-					<source src="media/crush_40-what_im_made_of.ogg">
-					<source src="media/crush_40-what_im_made_of.wav">
-					<source src="media/crush_40-what_im_made_of.mp3">
-					Disculpe las molestias, pero el elemento AUDIO NO es Compatible con su Navegador.
-				</audio>
-				<p>En el elemento video, no es necesario especificar el atributo controls, ya que podemos utilizar JS para simular los botones de reproduccion y el video se ve igual.</p>
-				<video controls>
-					<source src="media/futbol-separacion.ogv">
-					<source src="media/futbol-separacion.avi">
-					<source src="media/futbol-separacion.mp4">
-					Disculpe las molestias, pero el elemento VIDEO NO es Compatible con su Navegador.
-				</video>
-				<footer>
-					<p><strong>Autor:</strong> Cristian Racedo</p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Elementos de Medición</h1>
-				</header>
-				<p>Existen dos elementos en HTML5 que permiten marcar un seguimiento, estos son <strong> &lt;progress&gt; &amp; &lt;meter&gt;</strong> que permite evaluar en nivel de realizacion de una tarea y los valores finales en comparacion, respectivamente</p>
-				<ul class="muestra">
-					<h2>Elemento Progress</h2> 
-					<li>Valor sin definir
-						<progress>
-							Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
-						</progress> 
-					</li>
-					<li>Valor Definido
-						<progress value="40" min="0" max="100">
-							Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
-						</progress> 
-					</li>
+	<head>
+		<meta charset="UTF-8">
+		<meta 
+			name="viewport" 
+			content="width=device-width, 
+						initial-scale=1, 
+						maximum-scale=3">
+		<title>Maquetacion</title>
+		<link rel="stylesheet" href="styles/icomoon.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
+	<body>
+		<header id="header">
+			<h1>Maquetacion Avanzada</h1>
+			<div class="social-media">
+				<a class="icon-facebook" href="https://facebook.com"></a>
+				<a class="icon-twitter" href="https://twitter.com"></a>
+				<a class="icon-instagram" href="https://instagram.com"></a>
+				<a class="icon-youtube" href="https://youtube.com"></a>
+				<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
+			</div>
+			<nav>
+				<button id="menu">&equiv; Menú</button>
+				<ul class="menu">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="galery.html">Galeria</a></li>
+					<li><a href="products.html">Productos</a></li>
+					<li><a href="services.html">Servicios</a></li>
+					<li><a href="#contacto">Contacto</a></li>
 				</ul>
-				<ul class="muestra"> 
-					<h2>Elemeto Meter</h2>
-					<li>Valor cercano al optimo superior al maximo
-						<meter 	value="90" 
-								min="0" 
-								max="100"
-								low="40"
-								high="70"
-								optimum="90"></meter> 
-					</li>
-					<li>Valor intermedio entre maximo y minimo
-						<meter 	value="60" 
-								min="0" 
-								max="100"
-								low="40"
-								high="70"
-								optimum="90"></meter>  
-					</li>
-					<li>Valor por debajo del minimo lejos del optimo
-						<meter 	value="30" 
-								min="0" 
-								max="100"
-								low="40"
-								high="70"
-								optimum="90"></meter> 
-					</li>
-				</ul>
-				<footer>
-					<p><strong>Autor:</strong> Cristian Racedo</p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Colores</h1>
-				</header>
-				<p>los colores se representan en el Navegador mediante <strong> Sintesis Aditiva </strong>, es decir que los colores se forman gracias a la combinacion de fuentes de luz <strong>Roja - Verde - Azul</strong></p>
-				<div class="muestra">	
-					<div class="color" id="color">
-						Nombre: 
-						<br/>navy; 
-						<br/>(144 colores)
+			</nav>
+		</header>
+		<main>
+			<article>
+				<section>
+					<header>
+						<h1>Contenido Multimedia</h1>
+					</header>
+					<p>En el elemento audio podemos especificar las fuentes del mismo, e incluso podemos utilizar un video como fuente de audio. Un factor fundamental, para que aparezca el elemento en pantalla es que especifiquemos el atributo <strong>controls</strong> </p>
+					<audio controls>
+						<source src="media/crush_40-what_im_made_of.ogg">
+						<source src="media/crush_40-what_im_made_of.wav">
+						<source src="media/crush_40-what_im_made_of.mp3">
+						Disculpe las molestias, pero el elemento AUDIO NO es Compatible con su Navegador.
+					</audio>
+					<p>En el elemento video, no es necesario especificar el atributo controls, ya que podemos utilizar JS para simular los botones de reproduccion y el video se ve igual.</p>
+					<video controls>
+						<source src="media/futbol-separacion.ogv">
+						<source src="media/futbol-separacion.avi">
+						<source src="media/futbol-separacion.mp4">
+						Disculpe las molestias, pero el elemento VIDEO NO es Compatible con su Navegador.
+					</video>
+					<footer>
+						<p><strong>Autor:</strong> Cristian Racedo</p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Elementos de Medición</h1>
+					</header>
+					<p>Existen dos elementos en HTML5 que permiten marcar un seguimiento, estos son <strong> &lt;progress&gt; &amp; &lt;meter&gt;</strong> que permite evaluar en nivel de realizacion de una tarea y los valores finales en comparacion, respectivamente</p>
+					<ul class="muestra">
+						<h2>Elemento Progress</h2> 
+						<li>Valor sin definir
+							<progress>
+								Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
+							</progress> 
+						</li>
+						<li>Valor Definido
+							<progress value="40" min="0" max="100">
+								Evalua el nivel de realizacion de una tarea (Su navegador no es compatible)
+							</progress> 
+						</li>
+					</ul>
+					<ul class="muestra"> 
+						<h2>Elemeto Meter</h2>
+						<li>Valor optimo superior a max
+							<meter 	value="90" 
+									min="0" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter> 
+						</li>
+						<li>Valor intermedio entre min y max
+							<meter 	value="60" 
+									min="0" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter>  
+						</li>
+						<li>Valor por debajo de min del optimo
+							<meter 	value="30" 
+									min="0" 
+									max="100"
+									low="40"
+									high="70"
+									optimum="90"></meter> 
+						</li>
+					</ul>
+					<footer>
+						<p><strong>Autor:</strong> Cristian Racedo</p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Colores</h1>
+					</header>
+					<p>los colores se representan en el Navegador mediante <strong> Sintesis Aditiva</strong>, es decir que los colores se forman gracias a la combinacion de fuentes de luz <strong>Roja - Verde - Azul</strong></p>
+					<div class="muestra">	
+						<div class="color" id="color">
+							Nombre: 
+							<br/>navy; 
+							<br/>(144 colores)
+						</div>
+						<div class="color" id="rgb">
+							RGB: 
+							<br/>rgb(25,33,104); 
+							<br/>(16.777.216)
+						</div>
+						<div class="color" id="hex">
+							HEX: 
+							<br/>#192168 
+							<br/>(16.777.216);
+						</div>
+						<div class="color" id="hsl">
+							HSL: 
+							<br/>hsl(240deg,50%,40%) 
+							<br/>(16.777.216)
+						</div>
 					</div>
-					<div class="color" id="rgb">
-						RGB: 
-						<br/>rgb(25,33,104); 
-						<br/>(16.777.216)
+					<footer>
+						<p><strong>Autor:</strong>Cristian Racedo</p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Regla @font-face</h1>
+					</header>
+					<p>
+						Mediante esta regla podemos personalizar nuestras tipografias, agregandolas a nuestra hoja de estilos utilizando el atributo <strong>src: url(mytypography)</strong>. las fuentes deben tener un formato compatible con los navegadores, estos son <strong>TTF - OTF - EOT</strong>	
+					</p>
+					<ul class="muestra">
+						<li class="typo" id="normal">@</li>
+						<li class="typo" id="italic">@</li>
+						<li class="typo" id="bold">@</li>
+					</ul>
+					<footer>
+						<p><strong>Autor:</strong>Cristian Racedo</p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Titulo</h1>
+					</header>
+					<p></p>
+					<div class="muestra transform">
+						<div  id="scale">
+							Redimensionar
+							<br/> scale(1.25)
+							<br/> unidades
+						</div>
+						<div  id="translate">
+							Desplazar
+							<br/> translate(50px)
+							<br/> px-%-rem-vw
+						</div>
+						<div  id="rotate">
+							Girar
+							<br/> rotate(-45deg)
+							<br/> grados
+						</div>
+						<div  id="skew">
+							Sesgar
+							<br/> skew()
+							<br/> grados
+						</div>
+						<div id="rotate3d">
+							rotate3d
+							<br/> rotateX(90deg)
+							<br/> rotateY(0deg)
+						</div>
 					</div>
-					<div class="color" id="hex">
-						HEX: 
-						<br/>#192168 
-						<br/>(16.777.216);
-					</div>
-					<div class="color" id="hsl">
-						HSL: 
-						<br/>hsl(240deg,50%,40%) 
-						<br/>(16.777.216)
-					</div>
-				</div>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Titulo</h1>
-				</header>
-				<p></p>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-		</article>
-		<article>
-			<section>
-				<header>
-					<h1>Titulo</h1>
-				</header>
-				<p></p>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Titulo</h1>
-				</header>
-				<p></p>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Titulo</h1>
-				</header>
-				<p></p>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Titulo</h1>
-				</header>
-				<p></p>
-				<footer>
-					<p><strong>Autor:</strong></p>
-				</footer>
-			</section>
-		</article>
-	</main>
-	<footer id="footer">
-		<div class="social-media">
-			<a class="icon-facebook" 
-				target="_blank" 
-				href="https://facebook.com">
-			</a>
-			<a class="icon-twitter" 
-				target="_blank" 
-				href="https://twitter.com">
-			</a>
-			<a class="icon-instagram" 
-				target="_blank" 
-				href="https://instagram.com">
-			</a>
-			<a class="icon-youtube" 
-				target="_blank" 
-				href="https://youtube.com">
-			</a>
-			<a class="icon-whatsapp" 
-				target="_blank" 
-				href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta">
-			</a>
-		</div>
-		<form action="" id="contacto">
-			<label for="name">Nombre</label>
-			<input 
-				type="text" 
-				name="name" 
-				id="name" 
-				placeholder="Nombre: Cristian *"
-				pattern="[A-Za-z]{3,20}"
-				title="Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres" 
-				required>
-			<div>Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres</div>
-			<label for="tel">Telefono</label>
-			<input 
-				type="tel" 
-				name="tel"
-				id="tel"
-				placeholder="Telefono: 011-2345-6789" 
-				pattern="\d{3}[\-]\d{4}[\-]\d{4}"
-				title="Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres">
-			<div>Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres</div>
-			<label for="email">Correo</label>
-			<input 
-				type="email" 
-				name="email" 
-				id="email"
-				placeholder="Correo: CristianDRacedo@hotmail.com *"
-				required>
-			<div>Escriba una direccion de correo valida con nombre de usuario seguido de un @ y luego el dominio (servidor)</div>
-			<label for="consulta">Consulta</label>
-			<textarea name="consulta" id="consulta" placeholder="Consulta: Realice su Consulta *" required></textarea>
-			<button type="submit">Consultar</button>
-		</form>
-		<div>Los campos con * son obligatorios</div>
-		<p>&copy; Todos los derechos Reservados | Cristian Racedo &amp; Compañia</p>
-	</footer>
-</body>
+					<footer>
+						<p><strong>Autor:</strong></p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Titulo</h1>
+					</header>
+					<p></p>
+					<footer>
+						<p><strong>Autor:</strong></p>
+					</footer>
+				</section>
+				<section>
+					<header>
+						<h1>Titulo</h1>
+					</header>
+					<p></p>
+					<footer>
+						<p><strong>Autor:</strong></p>
+					</footer>
+				</section>
+			</article>
+		</main>
+		<footer id="footer">
+			<div class="social-media">
+				<a class="icon-facebook" 
+					target="_blank" 
+					href="https://facebook.com">
+				</a>
+				<a class="icon-twitter" 
+					target="_blank" 
+					href="https://twitter.com">
+				</a>
+				<a class="icon-instagram" 
+					target="_blank" 
+					href="https://instagram.com">
+				</a>
+				<a class="icon-youtube" 
+					target="_blank" 
+					href="https://youtube.com">
+				</a>
+				<a class="icon-whatsapp" 
+					target="_blank" 
+					href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta">
+				</a>
+			</div>
+			<form action="" id="contacto">
+				<label for="name">Nombre</label>
+				<input 
+					type="text" 
+					name="name" 
+					id="name" 
+					placeholder="Nombre: Cristian *"
+					pattern="[A-Za-z]{3,20}"
+					title="Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres" 
+					required
+					/>
+				<div>Escriba su nombre solamente con letras y el mismo debera contener entre 3 y 20 caracteres</div>
+				<label for="tel">Telefono</label>
+				<input 
+					type="tel" 
+					name="tel"
+					id="tel"
+					placeholder="Telefono: 011-2345-6789" 
+					pattern="\d{3}[\-]\d{4}[\-]\d{4}"
+					title="Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres"
+					/>
+				<div>Escriba su numero telefonico con guiones, sin espacios, el mismo debera tener entre 6 y 20 caracteres</div>
+				<label for="email">Correo</label>
+				<input 
+					type="email" 
+					name="email" 
+					id="email"
+					placeholder="Correo: CristianDRacedo@hotmail.com *"
+					required 
+					/>
+				<div>Escriba una direccion de correo valida con nombre de usuario seguido de un @ y luego el dominio (servidor)</div>
+				<label for="consulta">Consulta</label>
+				<textarea name="consulta" id="consulta" placeholder="Consulta: Realice su Consulta *" required></textarea>
+				<button type="submit">Consultar</button>
+			</form>
+			<div>Los campos con * son obligatorios</div>
+			<p>
+				&copy; Todos los derechos Reservados
+				 | Cristian Racedo &amp; Compañia</p>
+		</footer>
+	</body>
 </html>

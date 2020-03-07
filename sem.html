@@ -3,9 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		label[for="toogle"]{
+			position: relative;
+			display: block;
+			width:4rem;
+			height: 2rem;
+			background-color: lightgrey;
+			border-radius: 1rem;
+		}
+
+		label span{
+			display:block;
+			position:absolute;
+			left:0;
+			top:0;
+			width:2rem;
+			height:2rem;
+			border-radius: 50%;
+			background-color: limegreen;
+		}
+		input[type="checkbox"]{
+			display:none;
+		}
+	
+		input[type="checkbox"]:checked + span{
+			left:2rem;
+			transition:all 1s ease;
+		}
+		input[type="checkbox"]:not(:checked) + span{
+			left:0;
+			transition:all 1s ease;
+		}
+	</style>
 </head>
 <body>
 	<header>
+		<label for="toogle">
+			<input id="toogle" type="checkbox" />
+			<span></span>
+		</label>	
 		<h1>Etiquetas Semanticas</h1> 
 		<h2>CABECERA: Contenido Introductorio ¿QUIENES SOMOS?</h2>
 		<ul>
