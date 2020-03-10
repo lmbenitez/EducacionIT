@@ -1,0 +1,30 @@
+<h1>Curso {{curso}} dictado por {{instructor}}</h1>
+<ul>
+    <li *ngFor="let a of alumnos">
+        {{a.nombre}} tiene {{a.edad}} y esta haciendo el curso de {{a.curso}}
+    </li>
+</ul>
+<img style="width:10vw;" [src]="imagenURL" />
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Curso</th>
+        <th>Accion</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of alumnos">
+            <td>{{student.nombre}}</td>
+            <td>{{student.edad}}</td>
+            <td>{{student.curso}}</td>
+            <td>
+                <button 
+                    class="btn btn-danger"
+                    [disabled]="desactivado">
+                    X
+                </button>
+            </td>  
+        </tr>
+    </tbody>
+</table>
+<app-mostrar></app-mostrar>

@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <button
+            [style.borderColor]="imagen? 'darkgreen':'darkred'"
+            (click)="cambiarBoolean()" >
+            {{!imagen?'Mostrar Imagen':'Ocultar Imagen'}}
+        </button>
+        <button
+            [class.primavera]="texto"
+            (click)="cambiarTexto()">
+            {{texto? 'Mostrar Texto':'Ocultar Texto'}}
+        </button>
+    </div>
+    <img *ngIf="imagen" [src]="imagenURL">
+    <p *ngIf="texto">{{contenido}}</p>
+</div>
+
+<input 
+    type="text"
+    #miUser>
+<button (click)="enviarButton(miUser.value)">Enviar</button>
