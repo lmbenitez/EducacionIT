@@ -1,23 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
+//Modulos Requeridos por Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 //Componentes de mi Aplicaciones
-import { UsuariosServices } from './services/user.service';
-import { UserFormComponent } from './components/user-form/user-form.component'
+
+//Servicios
+import { firebaseConfig } from './services/firebase';
+import { DbService } from './services/db.service';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserFormComponent
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [
-    UsuariosServices
+    DbService
   ],
   bootstrap: [AppComponent]
 })
