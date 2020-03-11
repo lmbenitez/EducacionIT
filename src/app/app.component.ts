@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuariosServices } from './services/user.service'
+import { UserFormComponent } from './components/user-form/user-form.component'
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosServices } from 'src/app/services/user.service';
 
 @Component({
   selector: 'userForm',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
+  usuarios = []
+
   user = {
     name: "",
     email:"",
@@ -13,12 +16,8 @@ export class UserFormComponent implements OnInit {
     zipcode: "",
     phone: ""
   }
-  constructor(){}
+  
   ngOnInit(): void {
-  }
-
-  validarForm(){
-    console.log(this.user)
   }
 }
 
