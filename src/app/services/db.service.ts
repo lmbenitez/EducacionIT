@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Mensaje} from '../models/mensaje'
+//MODELO de datos de mi aplicacion (Formato de los Datos)
+import { Mensaje } from '../models/mensaje';
 
 //Modulos para crear y vincular tablas y bases de datos de Firebase
 import { 
-  AngularFirestoreCollection, 
-  AngularFirestore 
+  AngularFirestoreCollection, //Tablas
+  AngularFirestore  //API
 } from '@angular/fire/firestore'
 
 @Injectable({

@@ -1,27 +1,43 @@
-<form action="">
+<form 
+    [formGroup]="contactForm" 
+    (ngSubmit)="Restablecer()">
     <h1>Formulario de Contacto</h1>
     <label for="nombre">
-        <input 
+        <input
             formControlName="nombre"
             type="text"
-            placeholder="Ingrese Nombre" />
+            name="nombre"
+            placeholder="Ingrese Nombre">
+        <div *ngIf="nombre.touched && nombre.invalid">
+            <p>El campo nombre es Obligatorio</p>
+            <p>Su nombre debe poseer solamente Letras</p>
+            <p>Minimamente debe ingresar 3 caracteres</p>
+            <p>No puede ingresar mas de 50 caracteres</p>
+        </div>
     </label>
     <label for="correo">
         <input 
-            type="text"
             formControlName="correo"
-            placeholder="Ingrese Correo" />
+            type="text"
+            name="correo"
+            placeholder="Ingrese Correo">
     </label>
-    <label for="">
-        <input type="text"
-        formControlName="telefono"
-        placeholder="Ingrese Telefono" />
+    <label for="telefono">
+        <input
+            formControlName="telefono" 
+            type="text"
+            name="telefono"
+            placeholder="Ingrese Telefono">
     </label> 
     <label for="mensaje">
-        <textarea name="mensaje"
-        formControlName="mensaje"
-        placeholder="Ingrese Consulta" 
+        <textarea 
+            formControlName="mensaje"
+            name="mensaje"
+            placeholder="Ingrese Consulta" 
         ></textarea>
     </label>
-    <input type="submit" class="btn">
+    <input 
+        type="submit" 
+        class="btn" 
+        (click)="guardarForm()">
 </form>

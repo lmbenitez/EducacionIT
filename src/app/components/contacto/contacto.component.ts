@@ -1,29 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
-  Validators, 
-  FormControl, 
-  FormGroup 
+  FormGroup,
+  FormControl,
+  Validators
 } from '@angular/forms';
+import { DbService } from 'src/app/services/db.service';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
-export class ContactoComponent implements OnInit {
+export class ContactoComponent {
+  contactForm: FormGroup
+  constructor(private dbservice:DbService) {
+    this.contactForm = this.crearFormGroup();
+   }
 
-  reactiveForm(){
+  crearFormGroup(){
     return new FormGroup({
-      nombre: new FormControl('',Validators.pattern('[a-zA-Z]{3,5}')),
-      Correo: new FormControl('', Validators.required),
-      telefono: new FormControl('',Validators.pattern('\d{3}[\-]\d{4}[\-]\d{4}')),
-      mensaje: new FormControl('')
-    })
+      nombre: new FormControl ('',[ 
+          Validators.required, 
+          Validators.minLength(3),
+          Validators.maxLength(50),
+          Validators.pattern('[a-zA-Z]')
+        ]),
+      correo: new FormControl ('',[
+          Validators.required
+      ]),
+      telefono: new FormControl('',
+          Validators.pattern('[0-9]')),
+      mensaje: new FormControl('',[
+          Validators.minLength(10),
+          Validators.maxLength(300)
+      ])
+    });
+  }
+  Restablecer(){
+    this.contactForm.reset();
   }
 
-  constructor() { }
+  guardarForm(){
+    alert('Datos enviados');
+    this.dbservice.guardarCollection(this.contactForm.value);
 
-  ngOnInit(): void {
   }
-
 }
