@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -22,14 +22,14 @@ export class ContactoComponent {
       nombre: new FormControl ('',[ 
           Validators.required, 
           Validators.minLength(3),
-          Validators.maxLength(50),
-          Validators.pattern('[a-zA-Z]')
-        ]),
+          Validators.maxLength(50)
+      ]),
       correo: new FormControl ('',[
           Validators.required
       ]),
       telefono: new FormControl('',
           Validators.pattern('[0-9]')),
+      
       mensaje: new FormControl('',[
           Validators.minLength(10),
           Validators.maxLength(300)
@@ -41,8 +41,28 @@ export class ContactoComponent {
   }
 
   guardarForm(){
-    alert('Datos enviados');
-    this.dbservice.guardarCollection(this.contactForm.value);
-
+    if(this.contactForm.valid){
+      this.dbservice.guardarCollection(this.contactForm.value);
+      console.log(this.contactForm.value)
+      alert('Datos enviados Satisfactoriamente')
+    } else {
+      console.log(this.contactForm.value)
+      alert ('Corrobore que todos los campos esten completados correctamente')
+    }
   }
+
+  getNombre(){
+    return this.contactForm.get('nombre')
+  }
+  getCorreo(){
+    return this.contactForm.get('correo')
+  }
+  getTelefono(){
+    return this.contactForm.get('telefono')
+  }
+  getMensaje(){
+    return this.contactForm.get('mensaje')
+  }
+
+
 }

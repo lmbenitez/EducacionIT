@@ -1,14 +1,13 @@
 <form 
     [formGroup]="contactForm" 
-    (ngSubmit)="Restablecer()">
+    (ngSubmit)="guardarForm()">
     <h1>Formulario de Contacto</h1>
     <label for="nombre">
         <input
             formControlName="nombre"
             type="text"
-            name="nombre"
             placeholder="Ingrese Nombre">
-        <div *ngIf="nombre.touched && nombre.invalid">
+        <div *ngIf="contactForm.nombre">
             <p>El campo nombre es Obligatorio</p>
             <p>Su nombre debe poseer solamente Letras</p>
             <p>Minimamente debe ingresar 3 caracteres</p>
@@ -21,6 +20,9 @@
             type="text"
             name="correo"
             placeholder="Ingrese Correo">
+        <div *ngIf="">
+            <p>El campo correo es Obligatorio</p>
+        </div>
     </label>
     <label for="telefono">
         <input
@@ -28,6 +30,10 @@
             type="text"
             name="telefono"
             placeholder="Ingrese Telefono">
+        <div *ngIf="">
+            <p>El campo telefono es Obligatorio</p>
+            <p>Escriba su numero sin puntos, guiones ni espacios</p>
+        </div>
     </label> 
     <label for="mensaje">
         <textarea 
@@ -35,9 +41,12 @@
             name="mensaje"
             placeholder="Ingrese Consulta" 
         ></textarea>
+        <div *ngIf="">
+            <p>Minimamente debe ingresar 10 caracteres</p>
+            <p>No puede ingresar mas de 300 caracteres</p>
+        </div>
     </label>
     <input 
         type="submit" 
-        class="btn" 
-        (click)="guardarForm()">
+        class="btn">
 </form>
