@@ -2,22 +2,22 @@
 	/* importaciones */
 		@import url('https://fonts.googleapis.com/css?family=Raleway|Poppins|Trade+Winds|Ubuntu&display=swap');
 		@font-face{
-			src: 	url(../fonts/starjedi.ttf),
-					url(../fonts/starjedi.otf);
 			font-family: starwars;
-			font-weight: normal;
+			font-style: normal;
+			font-weight: 300;
+			src: url(../fonts/starjedi.ttf);
 		}
 		@font-face{
-			src: 	url(../fonts/starjout.ttf),
-					url(../fonts/starjout.otf);
-			font-family: starwarsitalic;
+			font-family: starwars-italic;
 			font-style: italic;
+			font-weight: 500;
+			src: url(../fonts/starjout.ttf);
 		}
 		@font-face{
-			src: 	url(../fonts/starjhol.ttf),
-					url(../fonts/starjhol.otf);
-			font-family: starwarsbold;
-			font-weight: bold;
+			font-family: starwars-bold;
+			font-style: bold;
+			font-weight: 700;
+			src: url(../fonts/starjhol.ttf);
 		}
 	/* Pantallas sm:576px */
 		/* Estilo Principal */
@@ -48,18 +48,17 @@
 					background-color:rgba(50, 170, 150,.8);
 					text-align: center;
 				}
-
 				#header{
 					position: sticky;
 					top:0;
 					z-index: 999;
+					text-shadow: 1px 1px 5px black;
 				}
 			/* redes sociales */
 				header .social-media{
 					display: none;
 					padding:.5rem;
 				}
-
 				.social-media{
 					display: flex;
 					justify-content: space-evenly;
@@ -67,10 +66,13 @@
 					margin:auto;
 					padding:25px;
 				}
-
 				.social-media a{
 					color:white;
 					text-decoration: none;
+				}
+				.social-media a:hover{
+					transform: scale(3);
+					transition: all .25s ease-out;
 				}
 		/* Navegacion */
 			/* Formato General */
@@ -128,7 +130,7 @@
 				.menu li:hover:after{
 					content:'';
 					width:100%;
-					transition:all 1.5s ease-in-out .25s;
+					transition:all 1s ease-in-out .1s;
 				}
 		/* Cuerpo Principal */
 			/* Formato General */
@@ -149,7 +151,8 @@
 					padding-bottom: 2.5rem;
 					margin:1rem auto;
 					border-radius: 1rem;
-					box-shadow: 1px 1px 15px hsl(180deg, 50%, 30% , .5);
+					box-shadow: 1rem 1rem 1rem hsl(180deg, 50%, 30% , .8);
+					background-color: hsla(150deg, 35%, 90%, .8);
 				}
 
 				section h2{
@@ -202,6 +205,8 @@
 					flex-direction: column;
 					text-align: left;
 					list-style: none;
+					width:100%;
+					margin:1rem auto;
 					padding:0;
 				}
 
@@ -218,20 +223,22 @@
 			/* Colores */
 				.muestra{
 					display: flex;
+					flex-direction: column;
 					flex-wrap: wrap;
-					justify-content: space-around;
+					margin:.5rem auto;
 				}
 
-				.color{ 
+				.muestra div{ 
 					width:200px; 
 					height:90px; 
-					line-height: 30px; 
-					margin:5px;
+					line-height: 30px;
 					color:#ccc;
+					margin:.5rem;
 					text-align:center;
+
 				}
 				/* Ejemplos de aplicacion del Color */
-					#color{background-color:navy;}
+					#color{background-color:navy; margin;}
 					#rgb{background-color:rgb(25,33,104);}
 					#hex{background-color:#192168;}
 					#hsl{background-color:hsl(240deg,60%,25%);}
@@ -245,10 +252,10 @@
 					font-family: starwars;
 				}
 				#italic{
-					font-family: starwarsitalic;
+					font-family: starwars-italic;
 				}
 				#bold{
-					font-family: starwarsbold;
+					font-family: starwars-bold;
 				}
 			/* Transformacion */
 				.transform{
@@ -302,16 +309,19 @@
 					}
 		/* Formulario de Contacto */
 			/* Formato Contenedor */
-				#contacto{
+				#contacto,
+				#contacto + div{
 					width:80%;
 					min-width: 280px;
 					max-width: 560px;
 					margin: auto;
+					text-shadow: 1px 1px 5px black;
 				}
 			/* Formato Contenido */
 				#contacto input, 
 				#contacto textarea,
 				#contacto button{
+					position: relative;
 					margin:.25rem;
 					padding:.5rem;
 					outline: none;
@@ -338,13 +348,30 @@
 				}
 
 				#contacto input:focus,
-				#contacto textarea:focus{
+				#contacto textarea:focus,
+				#contacto input:focus:after,
+				#contacto textarea:focus:after{
+					position: relative;
 					transform:scale(1.25) translateY(-.5rem);
 					box-shadow: 1px 1px 10px black;
 					transition-property: all;
-					transition-duration: 1.5s;
+					transition-duration: 1.2s;
 				}
 
+				#contacto input:before,
+				#contacto textarea:before{
+					position:absolute;
+					bottom:0;
+					left:0;
+					display: block;
+					width:1rem;
+					height:1rem;
+					background-color: red;
+				}
+
+				#contacto input:invalid ~ button[type="submit"]{
+					background-color: darkred;
+				}
 				#contacto input:focus + div{
 					height:3rem;
 					padding: .5rem;
@@ -352,23 +379,19 @@
 					text-shadow: 2px 2px 2px black;
 					transform: translateY(-.5rem);
 						transition-property: all;
-						transition-duration: 2s;
-						transition-delay: .5s;
+						transition-duration: 1s;
 				}
 
 				#contacto button[type="submit"]{
 					color:white;
-					background: linear-gradient(
-						15deg, limegreen, darkgreen
-					);
+					background-color:darkgreen;
+					cursor: pointer;
 				}
 
 				#contacto button[type="submit"]:hover{
-					text-shadow: 1px 1px 5px black;
-					background: linear-gradient(
-						15deg, darkgreen, limegreen
-					);
-					transition:background 1s ease-out .25s;
+					text-shadow: 2px 2px 5px black;
+					background-color: limegreen;
+					transition:background .5s ease-out .25s;
 					/*property duration timingFunction delay*/
 				}
 	/* Pantallas md:768px */
@@ -378,7 +401,7 @@
 					display: none;
 				}
 				.menu{
-					width: 45%;
+					width: 50%;
 					min-width: 600px;
 				}
 				.menu,
@@ -401,13 +424,13 @@
 					display: flex;
 					flex-direction: row;
 					flex-wrap: wrap;
-					justify-content: space-between;
+					justify-content: space-evenly;
 				}
 
 				section{
-					width: 50%;
+					width: 45%;
 					overflow: auto;
-					margin: .25rem auto;
+					margin: .5rem .5rem;
 					border-radius: 1rem;
 					box-shadow: 1px 1px 5px hsl(180deg, 50%, 30% , .5);
 				}
@@ -418,21 +441,33 @@
 				article{
 					justify-content: space-between;
 				}
-
-				section{
-					width: 30%;
-					overflow: auto;
-				}
-
-				section:nth-child(even):last-child{
-					width: calc(100% - 1rem);
-				}
-		}
 	/* Pantallas xl:1200px */
 		@media screen and (min-width: 1200px) and (orientation:landscape){
+			/* Redes Sociales*/
+				header .social-media{
+					position: absolute;
+					display: flex;
+					top:0;
+					right: 0;
+				}
+				header .social-media a{
+					padding:.5rem;
+					font-size: 1rem;
+				}
+				header .social-media a:hover{
+					transform: scale(2);
+					transition: all 1s ease-out;
+				}
 			/* Cuerpo Principal */
-				article{
-					flex-wrap: wrap;
-				}	
+			article{
+				flex-wrap: wrap;
+			}
+			section{
+				width: 30%;
+				max-width: 600px;
+			}
+			section:last-child:nth-child(even){
+				width: 95%;
+			}
 		}
 /* Autor: Cristian Racedo */
