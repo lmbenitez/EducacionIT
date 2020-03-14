@@ -1,0 +1,68 @@
+//Declaracion de Variables
+	//Colores
+		@pri:#33D;
+		@snd:#CCC;
+		@trd: (@snd - @pri);
+	//Tamaños
+		@xs:100%;
+		@sm:576px;
+		@md:768px;
+		@lg:992px;
+		@xl:1200px;
+
+//Mixins parametricos (funciones)
+	.normalize(@m:0,@b:0,@p:0){
+		margin:@m;
+		border:@b;
+		padding:@p;
+	}
+	.flex(@fdir:column, @fjust:center, @fwrap:wrap){
+		display:flex;
+		flex-direction: @fdir;
+		justify-content: @fjust;
+		flex-wrap: @fwrap;
+	}
+	.boton(@col, @bgcol, @br){
+		color:@col;
+		background-color:@bgcol;
+		border-radius:@br;
+	}
+
+	#header,main,article,#footer,form{
+		.normalize(0,0,5%);
+		@media screen and (min-width: @sm){
+			.flex();
+		}
+		@media screen and (max-width: @md) and (orientation:landscape){
+			.flex(row, space-between, wrap);
+		}
+		@media screen and (max-width: @lg) and (orientation:landscape){
+			.flex(row,space-around,wrap);
+		}
+	}
+
+.grid(@n, @i:1) when (@i <= @n){
+	.col-@{i}{
+		width:percentage(@i / @n);
+	}
+	.grid(@n,@i + 1);
+}
+.grid(16);
+
+
+//CRISTRAP
+.view(@vw,@vn) when (@vw=@vw){
+	@media screen and (min-width: @vw){
+		.grid(@n, @i:1) when (@i <= @n){
+			.col-@{vn}-@{i}{
+				width:percentage(@i / @n);
+			}
+			.grid(@n,@i + 1);
+		}
+		.grid(16);
+	}
+}
+.view(@sm,sm);
+.view(@md,md);
+.view(@lg,lg);
+.view(@xl,xl);

@@ -1,0 +1,46 @@
+//Declaracion de Variables
+	@color: #ccc;
+	@backColor: #192168;
+
+//mixins (Estilos que se aplican sobre las etiquetas)
+.estilo{
+	color:@color;
+	background-color:@backColor;
+}
+//Functions (Reglas que se van a aplicar siempre que reciban parametros)
+.bordeCircular(@borde:1rem, @style:solid, @backColor:@backColor){
+	border-radius: @borde;
+	border:@borde/4 @style @backColor;
+	background-color:@backColor;
+	margin:@borde/2;
+	padding:@borde/4;
+}
+
+//Anidacion de Estilos para mayor especificidad
+#header{
+	.bordeCircular();
+	nav{
+		//Funciones de less para modificar valores
+		.bordeCircular(.5rem,dashed,@color);
+		ul{
+			li{
+				a{
+					//podemos utilzar operadores matematicos
+					color: @backColor * #030303;
+					&:first-child{
+						color:@backColor/5;
+					}
+				}
+			}
+		}
+	}
+}
+main{
+	.bordeCircular();
+}
+#footer{
+	.bordeCircular();
+	form{
+		.bordeCircular();
+	}
+}

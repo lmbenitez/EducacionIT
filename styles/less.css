@@ -1,0 +1,45 @@
+.estilo {
+  color: #ccc;
+  background-color: #192168;
+}
+#header {
+  border-radius: 1rem;
+  border: 0.25rem solid #192168;
+  background-color: #192168;
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+#header nav {
+  border-radius: 0.5rem;
+  border: 0.125rem dashed #ccc;
+  background-color: #ccc;
+  margin: 0.25rem;
+  padding: 0.125rem;
+}
+#header nav ul li a {
+  color: #4b63ff;
+}
+#header nav ul li a:first-child {
+  color: #050715;
+}
+main {
+  border-radius: 1rem;
+  border: 0.25rem solid #192168;
+  background-color: #192168;
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+#footer {
+  border-radius: 1rem;
+  border: 0.25rem solid #192168;
+  background-color: #192168;
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+#footer form {
+  border-radius: 1rem;
+  border: 0.25rem solid #192168;
+  background-color: #192168;
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
