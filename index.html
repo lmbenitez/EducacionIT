@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<title>&copy; Mi Primera Página Web</title>
 </head>
-<body>
+<body style="font-family: century gothic, segoe ui, sans-serif;">
 	<!-- Parte Visible: 
 		textos
 		imagenes
@@ -23,12 +23,55 @@
 
 	<p>Esto es un parrafo, los mismos poseen menor jerarquia que los titulos</p>
 	<p>
-		Etiquetas de Bloque <br>
+		Etiquetas de Bloque <br/>
 		Son aquellas que por defecto ocupan todo el ancho de la ventana, poseen tamaño y no pueden compartir espacio con otras etiquetas
 	</p>
 	<p>
-		Etiquetas de Linea <br>
+		Etiquetas de Linea <br/>
 		Son aquellas que ocupan una porcion de la linea y no poseen ni alto ni ancho, generalment se encuentran dentro de otra etiqueta de bloque
 	</p>	
+	<p>
+		Las <strong>rosas</strong>  
+		son <strong>rojas</strong> 
+		<br>
+		y las <em>violetas azules</em> 
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores molestias nihil illum praesentium deleniti! Distinctio doloribus voluptatibus doloremque dolor neque numquam illum enim maxime, veniam, explicabo aspernatur odio labore, corrupti.
+	</p>
+	<!--LISTAS-->
+	<!--Listas Ordenadas (Ordered)-->
+	<ol>
+		<!--Item de Lista (List Item)-->
+		<li>Introduccion HTML</li>
+		<li>Imagenes e Hipervinculos</li>
+		<li>Formularios y un poquito de PHP</li>
+		<li>Tablas, Contenido Multimedia y Acceso FTP</li>
+	</ol>
+	<!--Listas Sin Ordenar (UnOrdered)-->
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+	<!-- Etiquetas Comodin-->
+	<div style="color:lightgrey; background-color: navy; width:500px; padding: 50px;">
+		Etiqueta de Bloque sin carga semantica
+		<p>Atributos de una Etiqueta de Bloque</p>
+		<ul style="padding-left: 10px; background-color: darkslateblue;">
+			<li>Margin: Distancia que existe entre etiquetas (No suma tamaño y siempre aplica el mayor)</li>
+			<li>Border: Linea que rodea la etiqueta (suma al tamaño Final)</li>
+			<li>Padding: Distancia que existe entre el borde y el contenido de una etiqueta (suma al tamaño Final)</li>
+			<li>Content: Elementos contenidos por una etiqueta html (podemos definirle un tamaño mediante los atributos WIDTH y HEIGHT)</li>
+		</ul>
+	</div>
+	<p>
+		<span style="font-size: 24px;">E</span>tiqueta de Linea que no posee carga semantica
+	</p>
+	<ul>
+		<li>inline CSS: atributo style="reglas" - Mas Especifico</li>
+		<li>block CSS: etiqueta &lt;style&gt; &lt;/style&gt; - Menos Especifico (General - Afecta a toda la Pagina)</li>
+		<li>CSS file: Hoja de estilos vinculada mediante LINK - General (Puede afectar a multiples Paginas)</li>
+	</ul>
 </body>
 </html>
