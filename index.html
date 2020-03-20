@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 		<link rel="stylesheet" href="styles/icomoon.css">
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" href="styles/animaciones.css">
 	</head>
 	<body>
 		<header id="header">
@@ -254,9 +255,28 @@
 				</section>
 				<section>
 					<header>
-						<h1>Titulo</h1>
+						<h1>Animaciones</h1>
 					</header>
 					<p></p>
+					<div class="muestra">
+						<button class="anibutton">TRANSFORMAR</button>
+						<div class="animar">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div>
+							<button onclick="onPlay()">
+								PLAY
+							</button>
+							<button onclick="onPaused()">
+								PAUSED
+							</button>
+							<span id="lineal"></span>
+						</div>
+					</div>
 					<footer>
 						<p><strong>Autor:</strong> Cristian Racedo</p>
 					</footer>
@@ -344,5 +364,15 @@
 	<!--SCRIPTS Compilado Web de Archivos Less
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 	-->
+	<script>
+		var lineal = document.getElementById('lineal');
+		var estado = true;
+		function onPlay(){
+			lineal.style.animationPlayState = 'running';
+		}
+		function onPaused(){
+			lineal.style.animationPlayState = 'paused';
+		}
+	</script>
 	</body>
 </html>

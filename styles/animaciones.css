@@ -1,0 +1,179 @@
+/*Animaciones*/
+	button{
+	color: lightgrey;
+	background-color: darkblue;
+	border-radius: 1rem;
+	}
+
+	.anibutton:hover{
+		animation-name: girarBoton;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes girarBoton{
+		from{
+			background-color: darkblue;
+			color:lightgrey;
+			border-radius: 1rem;
+			width:100px;
+			height: 50px;
+			line-height: 50px;
+			box-shadow: 1px 1px 5px black;
+		}
+
+		to{
+			background-color: lightblue;
+			color: black;
+			border-radius: 1rem;
+			width:150px;
+			height: 75px;
+			line-height: 75px;
+			box-shadow: -20px -20px 25px black;
+			transform: translate(20px);
+		}
+	}
+
+/*Animacion titulo Principal*/
+	#header {
+		overflow: hidden;
+	}
+	#header h1{
+		animation-name: aniTitulo;
+		animation-duration: 3s;
+	}
+
+	@keyframes aniTitulo {
+		0%{
+			transform:
+				translateX(100%)
+				skewX(-15deg);
+		}
+		50%{
+			transform:
+				translateX(-38%)
+				skewX(15deg);
+		}
+		100%{
+			transform:
+				translateY(0)
+				translateX(0)
+				skewX(0);
+		}
+	}
+
+	.social-media a{
+		animation-name: saltos;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+	}
+
+	.icon-facebook{animation-delay: 1s}
+	.icon-twitter{animation-delay: 2s}
+	.icon-instagram{animation-delay: 3s}
+	.icon-youtube{animation-delay: 4s}
+	.icon-whatsapp{animation-delay: 5s}
+
+	@keyframes saltos{
+		0%{
+			transform:
+				translateY(0px);
+				transition: all 1s ease;
+		}
+		50%{
+			transform: 
+				translateY(10px);
+				transition: all 1s ease;
+		}
+		100%{
+			transform:
+				translateY(0);
+				transition: all 1s ease;
+		}
+	}
+
+	.animar{
+		position: relative;
+	}
+	.animar span{
+		display: block;
+		position: absolute;
+		top: 10px;
+		left:10px;
+		background-color: lightgrey;
+		width:10px;
+		height:10px;
+		border-radius: 50%;
+	}
+
+	.animar:hover span{
+		animation-name: sound;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+	}
+
+	.animar span:nth-child(2){
+		left:20px;
+		animation-delay: 1s;
+	}
+	.animar span:nth-child(3){
+		left:30px;
+		animation-delay: 2.5s;
+	}
+	.animar span:nth-child(4){
+		left:40px;
+		animation-delay: 3s;
+	}
+	.animar span:last-child{
+		left:50px;
+		animation-delay: 1.5s;
+	}
+	@keyframes sound {
+		0%{
+			background-color: blue;
+			transform: scaleY(2);
+		}
+		20%{
+			background-color: darkblue;
+			transform:scaleY(.5);
+		}
+		40%{
+			background-color: lightblue;
+			transform: scaleY(3);
+		}
+		60%{
+			background-color: navy;
+			transform: scaleY(.5);
+		}
+		80%{
+			background-color: slateblue;
+			transform: scaleY(4);
+		}
+		100%{
+			background-color: blue;
+			transform:scaleY(2);
+		}
+	}
+
+#lineal {
+	display: block;
+	width:100px;
+	height:100px;
+	background-color: blue;
+	animation-name: moverSpan;
+	animation-duration: 2s;
+	animation-play-state: paused;
+	animation-iteration-count: infinite;
+}
+
+@keyframes moverSpan {
+	from{
+		width:100px;
+		height: 100px;
+		transform:translate(0);
+	}
+	to{
+		transform: translate(200px);
+	}
+}
