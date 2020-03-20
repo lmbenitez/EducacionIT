@@ -10,22 +10,22 @@
 		<title>Maquetacion</title>
 		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 		<link rel="stylesheet" href="styles/icomoon.css">
-		<!--<link rel="stylesheet" type="text/css" href="styles/main.css">-->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
 	</head>
 	<body>
-		<header id="header" style="background-color: blue;" class="col-sm-16 col-md-8 col-lg-4 col-xl-3">
-			<label for="toogle"  class="button">
+		<header id="header">
+			<label for="toogle" class="button">
 				<span></span>
 			</label>
 			<h1>Maquetacion Avanzada</h1>
-			<div class="social-media col-8">
+			<div class="social-media">
 				<a class="icon-facebook" href="https://facebook.com"></a>
 				<a class="icon-twitter" href="https://twitter.com"></a>
 				<a class="icon-instagram" href="https://instagram.com"></a>
 				<a class="icon-youtube" href="https://youtube.com"></a>
 				<a class="icon-whatsapp" href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta"></a>
 			</div>
-			<nav  class="col-16">
+			<nav>
 				<button id="menu" >&equiv; Menú</button>
 				<ul class="menu">
 					<li><a href="#">Inicio</a></li>
@@ -122,7 +122,8 @@
 						<h1>Colores</h1>
 					</header>
 					<p>los colores se representan en el Navegador mediante <strong> Sintesis Aditiva</strong>, es decir que los colores se forman gracias a la combinacion de fuentes de luz <strong>Roja - Verde - Azul</strong></p>
-					<div class="muestra color">	
+					<div class="muestra color">
+						<h2>Mezclas de Colores</h2>	
 						<div  id="color">
 							Nombre: 
 							<br/>navy; 
@@ -145,7 +146,7 @@
 						</div>
 					</div>
 					<footer>
-						<p><strong>Autor:</strong>Cristian Racedo</p>
+						<p><strong>Autor:</strong> Cristian Racedo</p>
 					</footer>
 				</section>
 				<section>
@@ -156,19 +157,22 @@
 						Mediante esta regla podemos personalizar nuestras tipografias, agregandolas a nuestra hoja de estilos utilizando el atributo <strong>src: url(mytypography)</strong>. las fuentes deben tener un formato compatible con los navegadores, estos son <strong>TTF - OTF - EOT</strong>	
 					</p>
 					<ul class="muestra">
+						<h2>Fuentes de Fantasia</h2>
 						<li class="typo" id="normal">@</li>
 						<li class="typo" id="italic">@</li>
 						<li class="typo" id="bold">@</li>
 					</ul>
 					<footer>
-						<p><strong>Autor:</strong>Cristian Racedo</p>
+						<p><strong>Autor:</strong> Cristian Racedo</p>
 					</footer>
 				</section>
 				<section>
 					<header>
-						<h1>Transformaciones</h1>
+						<h1>Efectos CSS</h1>
 					</header>
 					<p>Al igual que cualquier programa de Diseño, CSS nos permite manipular las las etiquetas mediante el atributo <strong>Transform:</strong>, que puede recibir multiples valores dependiendo de las caracteristicas que quisieramos modificar.</p>
+
+					<h2>Transformaciones 2D y 3D</h2>
 					<div class="muestra transform">
 						<div  id="scale">
 							Redimensionar
@@ -202,9 +206,48 @@
 				</section>
 				<section>
 					<header>
-						<h1>Titulo</h1>
+						<h1>PreProcesador Less</h1>
 					</header>
-					<p></p>
+					<p>Pseudolenguaje CSS que permite la creacion de hojas de estilos Dinamicas, permite el uso de <strong>variables, mixins, funciones y bucles</strong> al igual que cualquier lenguaje de Programacion </p>
+					<ul class="muestra">
+						<h2>Variables</h2>
+						<li>
+							<strong>@miVariable:</strong> valor 
+							<br>
+								<strong>@color:</strong> #192168;
+							<br>
+								header{
+									<strong>color:</strong> @color;
+								}
+						</li>
+						<hr>
+						<h2>Mixins</h2>
+						<li/>
+							<strong>.mixins</strong>{atributo:valor} 
+							<br>
+								<strong>.bordes</strong>{border-radius:1rem;}
+							<br>
+								header{
+									.bordes;
+								}
+						</li>
+						<hr/>
+						<h2>Funciones y Bucles</h2>
+						<li>
+							<strong>.bucle</strong>(@parametro) when (@condicion){accion}
+							<br>
+							<li><strong>.width</strong>(@n,@i:0) when (@i < @n){
+								<li>
+									width: @i / @n;
+									<br>
+									<strong>.width(@n, @i+ 1)</strong>
+								</li>
+								}
+							<br>
+							.width(10%);
+							</li>
+						</li>
+					</div>
 					<footer>
 						<p><strong>Autor:</strong> Cristian Racedo</p>
 					</footer>

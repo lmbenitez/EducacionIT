@@ -1,0 +1,176 @@
+//Variables
+	@pri: #192168;
+	@snd: #ccc;
+	@a-name:lineal, cuadratica, trigonometrica, hiperbole, exponencial,radical;
+//Mixins parametricos (funciones)
+	.colores(@col:white, @bcol:darkblue){
+		color:@col;
+		background-color: @bcol;
+	}
+	.formas(){
+		width:50px;
+		height:50px;
+		border:1px solid lightblue;
+		border-radius: 1rem;
+	}
+	.animaciones (@name, @dur:2.5s, @dy:1s, @count:infinite, @dir:alternate) {
+		animation-name:@name;
+		animation-duration:@dur;
+		animation-delay:@dy;
+		animation-iteration-count: @count;
+		animation-direction: @dir;
+	}
+
+		*{
+			font-family: century gothic;
+			box-sizing: border-box;
+		}
+//Estructura HTML
+html{
+	scroll-behavior: smooth;
+	main{
+			background-color:lightgrey;
+			border:5px dashed black;
+		div{
+			i{
+				vertical-align: super;
+			}
+			span{
+				display: none;
+			}
+			strong{
+				display: none;
+				text-align: right;
+				line-height: 30px;
+				.colores(darken(@pri,10%),transparent);
+				z-index: 10;
+			}
+			.colores(darkblue, lightblue);
+			text-align: center;
+			line-height: 50px;
+			box-shadow: .5rem .5rem .5rem navy, 
+				.5rem .5rem .5rem lightblue inset;
+			.formas();
+			.estilos(@x:1,@i:length(@a-name),@n:nth-child,@a-name:@a-name) when(@x <= @i){
+				&:@{n}(@{x}):target{
+					.colores(@snd,darken(@pri,@x*1.1));
+					.animaciones(extract(@a-name,@x),@i/2s,.5s);
+				};
+				&:@{n}(@{x}):target strong{
+					display: block;
+				}
+				@keyframes @a-name{
+					.funcion(@n:@n,@funcion:@funcion,@pro:1,@complete:0%) when (@complete <= 100){
+						@{complete}{
+							position:relative;
+							top:extract(@funcion,@pro);
+							left:@n;
+						}
+						.funcion(@n + 5, @complete + 10);
+					}
+				}
+				.estilos(@x+ 1, @i);
+			}
+			.estilos();
+		}
+	}
+}
+
+//Animaciones CSS 
+	/*Lineal*/
+		.lineal (@x ,@i:0%) when (@i<=100){
+			@{i}{
+				position:relative;
+				top: @x+ 5;	
+				left: 5*@x;
+			}
+			.lineal(@x+ 10,@i+ 5);
+		}
+		@keyframes lineal{
+			.lineal(0px);
+		}
+	/*Cuadratica*/
+		.cuadratica (@x ,@i:0%) when (@i<=100){
+			@{i}{
+				position:relative;
+				top: pow(@x,2) + @x;	
+				left: 3*@x + 100 ;
+			}
+			.cuadratica(@x + 2 ,@i+ 5);
+		}
+		@keyframes cuadratica{
+			.cuadratica(-20px);
+		}
+	/*Trigonometrica*/
+		.trigonometrica(@x,@i:0%) when (@i <= 100){
+			@{i}{
+				position:relative;
+				top:100px * sin(@x);
+				left:@x * 5;
+			}
+			.trigonometrica(@x + 5,@i + 5);
+		}
+		@keyframes trigonometrica{
+		.trigonometrica(10px);
+		}
+	/*Hiperbole*/
+		.hiperbole(@x,@i:0%) when(@i <= 100){
+			@{i}{
+				position:relative;
+				top: 150 / @x;
+				left:@x;
+			}
+			.hiperbole(@x+ 10, @i+ 5);
+		}
+		@keyframes hiperbole {
+			.hiperbole(.5px);
+		}
+	/*Exponencial*/
+		.exponencial (@x,@i:0%) when (@i<=100){
+			@{i}{
+				position:relative;
+				top:pow(1.25px, @x);
+				left:10*@x+ 200;
+			}
+			.exponencial(@x+ 1.5,@i+ 5);
+		}	
+		@keyframes exponencial{
+			.exponencial(-7.5px);
+		}
+	/*Radical*/
+		.radical (@x,@i:0%) when (@i<=100){
+			@{i}{
+				position:relative;
+				top:sqrt(@x);
+				left:@x;
+			}
+			.radical(@x+ 10,@i+ 10);
+		}	
+		@keyframes radical{
+			.radical(25px);
+		}
+
+	/*Sombras*/
+	.sombras(@x:0,@i:0) when (@i < 360){
+		button.sombra-@{x}:hover:before, 
+		.sombra-@{x}:focus:before,
+		.sombra-@{x}:after{	
+			display: block;
+			box-shadow:floor(sin(@i)*30px) floor(cos(@i)*30px) red;
+			animation-name: boton-sombra;
+			animation-duration:2s;
+		}
+		@keyframes boton-sombra{
+			.animado (@x:@x, @i:@i) when (@x <= 100){
+				@{x}{
+				box-shadow:1px * floor(sin(@i)*@x) 1px * floor(cos(@i)*@x) lighten(#aaa,@x/10);
+				}
+			.animado(@x + 10);
+			}
+			.animado(0%);
+		}
+		
+		.sombras(@x + 10, @i+ 36);
+	}
+		.sombras();
+/*Autor: Cristian Racedo*/

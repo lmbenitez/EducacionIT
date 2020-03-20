@@ -2,9 +2,7 @@
 	//Colores
 		@pri:#33D;
 		@snd:#CCC;
-		@trd: (@snd - @pri);
 	//Tamaños
-		@xs:100%;
 		@sm:576px;
 		@md:768px;
 		@lg:992px;
@@ -22,47 +20,45 @@
 		justify-content: @fjust;
 		flex-wrap: @fwrap;
 	}
-	.boton(@col, @bgcol, @br){
+	.btn(@col, @bgcol, @br){
 		color:@col;
 		background-color:@bgcol;
 		border-radius:@br;
 	}
 
-	#header,main,article,#footer,form{
-		.normalize(0,0,5%);
-		@media screen and (min-width: @sm){
-			.flex();
-		}
-		@media screen and (max-width: @md) and (orientation:landscape){
-			.flex(row, space-between, wrap);
-		}
-		@media screen and (max-width: @lg) and (orientation:landscape){
-			.flex(row,space-around,wrap);
-		}
-	}
-
-.grid(@n, @i:1) when (@i <= @n){
-	.col-@{i}{
-		width:percentage(@i / @n);
-	}
-	.grid(@n,@i + 1);
+.button(@n, @i:777777) when(@i < @n){
+	color:darken(@n, 30%); ;
+	background-color:lighten(@n, 30%);
 }
-.grid(16);
-
-
-//CRISTRAP
-.view(@vw,@vn) when (@vw=@vw){
-	@media screen and (min-width: @vw){
-		.grid(@n, @i:1) when (@i <= @n){
-			.col-@{vn}-@{i}{
-				width:percentage(@i / @n);
-			}
+.button(@n, @i:#777) when not(@i < @n){
+	color:lighten(@n, 30%); ;
+	background-color:darken(@n, 30%);
+}
+nav{
+	.button(@pri);
+}
+//Sistema de Columnas Standard
+	.grid(@n, @i:1) when (@i < @n){
+		.col-@{i}{
+			width:percentage(@i / @n);
+		}
+		.grid(@n,@i + 1);
+	}
+	.grid(16);
+//CrisTrap: Sistema de Columnas con MediaQueries;
+	.view(@vw,@vn) when (@vw=@vw){
+		@media screen and (min-width: @vw){
+			.grid(@n, @i:1) when (@i <= @n){
+				.col-@{vn}-@{i}{
+					width:percentage(@i / @n);
+				}
 			.grid(@n,@i + 1);
+			}
+			.grid(16);
 		}
-		.grid(16);
 	}
-}
-.view(@sm,sm);
-.view(@md,md);
-.view(@lg,lg);
-.view(@xl,xl);
+//Parametros para las Grillas con MediaQueries
+	.view(@sm,sm);
+	.view(@md,md);
+	.view(@lg,lg);
+	.view(@xl,xl);
