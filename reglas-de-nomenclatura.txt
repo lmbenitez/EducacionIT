@@ -1,0 +1,20 @@
+Reglas de Nomenclatura
+- NO utilizar espacios
+	ej: "mi foto.jpg" => "mi%20foto.jpg"
++ Reemplazar espacios por Guiones - _
+	EJ: "mi-foto.jpg" => "mi-foto.jpg"
+
+- Evitar caracteres especiales (no pertenecen ingles)
+	ej:felíz-cumpleaños.jpg => fel?z-cumplea/os.jpg
+
++ Utilizar Nombres descriptivos
+	foto-0001.jpg
+	foto-9999.jpg
+	2020-03-30-191325.jpg
+	aguila-volando-01.jpg
+	logo.png
+
++ Utilizar minusculas
+	Mi-Foto.jpg
+	mi-foto.jpg
+	MI-FOTO.jpg
