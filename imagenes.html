@@ -10,10 +10,11 @@
 			padding:0;
 			font-family: century gothic, segoe ui, sans-serif;
 		}
-
+		
 		header, nav, footer{
 			text-align: center;
 		}
+
 
 		header h1, header p{
 			margin:0;
@@ -54,6 +55,26 @@
 
 		main p{
 			padding:10px;
+		}
+
+		#contacto{
+			margin:auto;
+			width:420px;
+			background-color: darkred;
+		}
+
+		#contacto input, 
+		#contacto textarea, 
+		#contacto button{
+			font-family: century gothic, sans-serif;
+			width:400px;
+			padding:5px 0; /*top - right - bottom - left*/
+			border: 0;
+		}
+
+		#contacto textarea{
+			resize: none;
+			height:90px;
 		}
 	</style>
 </head>
@@ -96,6 +117,64 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eaque ipsam ratione quaerat inventore eum blanditiis sapiente dolor totam sit! Voluptatum, soluta! Unde nemo asperiores est nostrum delectus, suscipit obcaecati!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum facilis, dolorum consequuntur culpa distinctio totam nesciunt esse eaque autem velit, nulla aut labore praesentium vel, ad. Id facilis, labore animi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora provident veniam perspiciatis nihil animi nostrum consequatur esse accusantium, qui placeat. Officiis inventore reiciendis, nobis quos! Dicta impedit aliquid odio iusto.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex quas accusantium, earum libero. Quia aut doloremque, veniam officia, deserunt animi ipsum reprehenderit consequuntur maiores perferendis cum nam debitis id.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit totam inventore cum, commodi, et labore explicabo nisi porro distinctio pariatur excepturi necessitatibus quos, sed in ab. Eligendi unde reprehenderit, perferendis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti pariatur ipsa omnis earum alias, dolore porro quos qui? Iste voluptatibus corrupti omnis, totam sint ullam soluta, sequi eos velit officia?</p>
 	</main>
 	<footer>
+		<!--Formularios: son una herramienta que permite la interaccion real, entre el usuario y el sitio, Son utilizados para el intercambio de datos.
+			consulta[query]	(Buscador) 		get
+			------------------------------------
+			registro		(inscripcion) 	post
+			sesion			(acceso) 		post
+			contacto		(consulta web) 	post
+		-->
+		<form id="contacto" action="que" method="POST">
+			<!--METHOD: indica como se va a trabajar con la informacion colocada en el formulario
+					GET: DATOS NO SON PRIORITARIOS
+						se utiliza para obtener informacion de un servidor/base de datos.
+						- menos seguro (NO ENCRIPTA LOS DATOS)
+						- info visible (BARRA DE DIRECCIONES)
+						- admite hasta 8kb
+
+					POST: DATOS SON LO MAS IMPORTANTE
+						principalmente se utiliza para enviar informacion a un servidor para su almacenamiento.
+						- mas seguro (SE ENCRIPTA AL ENVIAR)
+						- no se visualizan los datos (DIRECCION)
+						- admiten hasta 8mb
+			-->
+			
+			<!--ELEMENTOS DE FORMULARIOS
+					Etiquetas: Rotulos (LABEL) sirven para identificar el tipo de dato que tenemos que ingresar o elegir en nuestro formulario.
+					
+					Campos: (SELECT / TEXTAREA / INPUT) seccion donde el usuario manipula la informacion, para determinar los datos que se enviaran.
+				-->
+			<label for="nombre">Nombre: </label>
+			<input 	name="nombre" 
+					id="nombre" 
+					type="text"
+					placeholder="Nombre: Cristian Racedo" 
+			/>
+				<!--TIPOS DE INPUT
+						text: 		Az!9#
+						number:		123
+						email:		a@a
+						date:		06/04/20
+						password: 	*****
+						radio: 		boton de opcion unica
+						checkbox:	boton de opcion multiple
+						*reset:		reestablecer formularios
+						submit:		ejecuta el "action"
+				-->
+			<label for="email">Correo: </label>
+			<input 	name="email" 
+					id="email" 
+					type="email" 
+					placeholder="Correo: cristiandracedo@hotmail.com" 
+			/>
+			<label for="consulta">Consulta: </label>
+			<textarea 	name="consulta" 
+						id="consulta"
+						placeholder="Consulta: Realice su Consulta"></textarea>
+			<input 	type="submit" 
+					value="Realizar Consulta"/>
+			<button type="submit">Enviar Consulta</button>
+		</form>
 		<ul class="menu">
 			<li>
 				<a href="https://facebook.com/RacedoCristian" target="_blank">Facebook</a>
