@@ -60,21 +60,57 @@
 		#contacto{
 			margin:auto;
 			width:420px;
-			background-color: darkred;
+		}
+
+		#contacto label{
 		}
 
 		#contacto input, 
 		#contacto textarea, 
+		#contacto select,
 		#contacto button{
 			font-family: century gothic, sans-serif;
 			width:400px;
+			margin:2.5px;
 			padding:5px 0; /*top - right - bottom - left*/
 			border: 0;
+			border-radius: 5px;
 		}
 
 		#contacto textarea{
 			resize: none;
 			height:90px;
+		}
+
+		.danger{
+			color:white;
+			background-color: darkred
+		}
+
+		.danger:hover{
+			background-color: tomato;
+			cursor: pointer;
+		}
+
+		.success{
+			color: white;
+			background-color: darkgreen;
+		}
+
+		.success:hover{
+			background-color: limegreen;
+			cursor: pointer;
+		}
+		.contrato{
+			text-align: left;
+		}
+		#contacto .contrato input{
+			width:30px;
+		}
+
+		.contrato label{
+			display: inline-block;
+			width:150px;
 		}
 	</style>
 </head>
@@ -124,7 +160,7 @@
 			sesion			(acceso) 		post
 			contacto		(consulta web) 	post
 		-->
-		<form id="contacto" action="que" method="POST">
+		<form id="contacto" action="contacto.php" method="POST">
 			<!--METHOD: indica como se va a trabajar con la informacion colocada en el formulario
 					GET: DATOS NO SON PRIORITARIOS
 						se utiliza para obtener informacion de un servidor/base de datos.
@@ -148,7 +184,10 @@
 			<input 	name="nombre" 
 					id="nombre" 
 					type="text"
-					placeholder="Nombre: Cristian Racedo" 
+					placeholder="Nombre: Cristian Racedo"
+					pattern="[A-Z a-z]{3,50}" 
+					title="Su Nombre no puede poseer numeros y la cantidad admitida es de 3 a 50 caracteres como maximo"
+					required 
 			/>
 				<!--TIPOS DE INPUT
 						text: 		Az!9#
@@ -165,15 +204,52 @@
 			<input 	name="email" 
 					id="email" 
 					type="email" 
-					placeholder="Correo: cristiandracedo@hotmail.com" 
+					placeholder="Correo: cristiandracedo@hotmail.com"
+					required 
 			/>
+			<label for="cursos">Cursos</label>
+			<select name="cursos" id="cursos">
+				<option value="01">Fundamentos Pagina Web</option>
+				<option value="03">Maquetacion Web</option>
+				<option value="05">Maquetacion Avanzada</option>
+			</select>
 			<label for="consulta">Consulta: </label>
 			<textarea 	name="consulta" 
 						id="consulta"
-						placeholder="Consulta: Realice su Consulta"></textarea>
-			<input 	type="submit" 
-					value="Realizar Consulta"/>
-			<button type="submit">Enviar Consulta</button>
+						minlength="10"
+						maxlength="300" 
+						placeholder="Consulta: Realice su Consulta"
+						required></textarea>
+			<button class="danger" type="reset">Cancelar</button>
+			<button class="success" type="submit">Aceptar</button>
+			
+			<div class="contrato">
+				<input 	type="checkbox" 
+						name="contrato" 
+						id="acepto" 
+						value="acepto">
+				<label for="acepto">Opcion Multiple 1</label>
+				
+				
+				<input 	type="checkbox" 
+							name="contrato" 
+							id="no-acepto" 
+							value="no-acepto">
+				<label for="no-acepto">Opcion Multiple 2</label>
+				
+				<input 	type="radio" 
+						name="contrato" 
+						id="acepto" 
+						value="acepto">
+				<label for="acepto">Opcion Unica 1</label>
+				
+				
+				<input 	type="radio" 
+							name="contrato" 
+							id="no-acepto" 
+							value="no-acepto">
+				<label for="no-acepto">Opcion Unica 2</label>
+			</div>
 		</form>
 		<ul class="menu">
 			<li>

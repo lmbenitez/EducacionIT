@@ -15,7 +15,11 @@ $mensaje="
 ";
 
 // envío del mail
-mail("micorreo@midominio.com", "Consulta Web", $mensaje, "From: $nombre <$email>\nReply-To:$email\nContent-Type: text/html; charset=utf-8");
+mail("micorreo@midominio.com", "Consulta Web", $mensaje, "From: $nombre <$email>
+	\n
+	Reply-To:$email
+	\n
+	Content-Type: text/html; charset=utf-8");
 
 //Redireccionamiento a pagina Web
 header ("Location: http://www.misitio.com/mipagina.html");
