@@ -106,3 +106,16 @@
 			display: inline-block;
 			width:150px;
 		}
+
+		table, tr, td{
+			background-color: rgba(0, 120, 180, 0.5);
+		}
+
+		.patron{
+			background-image: url(img/bg-purple-pattern.jpg)
+		}
+		
+		th,td{
+			width:80px;
+			text-align: center;
+		}
