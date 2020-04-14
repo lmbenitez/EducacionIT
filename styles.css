@@ -108,6 +108,7 @@
 		}
 
 		table, tr, td{
+			margin: auto;
 			background-color: rgba(0, 120, 180, 0.5);
 		}
 
@@ -118,4 +119,39 @@
 		th,td{
 			width:80px;
 			text-align: center;
+		}
+
+		table.boca{
+			border-collapse: collapse;
+		}
+
+		.boca td{
+			height:50px;
+			border: 1px solid grey;
+			background-color: lightgrey;
+		}
+
+		.boca th{
+			height: 30px;
+			background-color: darkred;
+		}
+
+		.boca>thead th{
+			border-radius: 15px 15px 0 0;
+		}
+
+		.boca>tfoot th{
+			border-radius: 0 0 15px 15px;
+		}
+
+		iframe, video, audio{
+			display: block;
+			margin:auto;
+			border-radius: 15px;
+			width: 600px;
+			height: 300px;
+		}
+
+		audio{
+			height: 30px;
 		}
