@@ -4,6 +4,7 @@ REACTJS => Libreria JS de FrontEnd desarrollada por el equipo de Facebook
 	+Trabaja con el VirtualDOM (Document Object Model) => una copia en memoria del DOM utilizada para renderizar solamente los cambios solicitados
 	+Se utiliza para el desarrollo de SPA (single page Application)
 
+
 WEBPACK => Compilador de Proyectos/ Testing/ Empaquetado del mismo (Build)
 
 BABEL => Transpilador (Translate + Compile) traduce codigo js de ultima generacion a js compatible con cualquier navegador.
@@ -14,7 +15,14 @@ JSX => PseudoLenguaje implementado para el desarrollo en reactjs (utiliza la sin
 	--------------------------
 		DISEÑO
 
-
-
+Ciclos de VIDA de un componente
+-Mount (Creacion del Componente en el DOM)
+	render(){}
+	componentDidMount(){}
+	componentWillMount(){}
+-Update(Cambios del componente en el DOM)
+	render(){}
+-UnMount(Eliminacion del Componente en el DOM)
+	componentWillUnmount(){}
 
 
