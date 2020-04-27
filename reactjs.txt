@@ -1,0 +1,20 @@
+REACTJS => Libreria JS de FrontEnd desarrollada por el equipo de Facebook
+	+Pensada principalmente para el desarrollo de redes sociales por su performance.
+	+Reactjs es la Vista del mVc (modelo vista controlador) 
+	+Trabaja con el VirtualDOM (Document Object Model) => una copia en memoria del DOM utilizada para renderizar solamente los cambios solicitados
+	+Se utiliza para el desarrollo de SPA (single page Application)
+
+WEBPACK => Compilador de Proyectos/ Testing/ Empaquetado del mismo (Build)
+
+BABEL => Transpilador (Translate + Compile) traduce codigo js de ultima generacion a js compatible con cualquier navegador.
+
+JSX => PseudoLenguaje implementado para el desarrollo en reactjs (utiliza la sintaxis de XML dentro del codigo js)
+
+	ESTRUCTURA + FUNCIONALIDAD
+	--------------------------
+		DISEÑO
+
+
+
+
+
