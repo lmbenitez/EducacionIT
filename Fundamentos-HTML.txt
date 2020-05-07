@@ -1,0 +1,28 @@
+Diseñador Grafico
+|
+Diseñador UI/UX
+|
+Front-end{
+	Desarrollo del lado del Usuario/cliente (Vista / Interfaz)
+	Lenguajes:
+	- HTML
+	- CSS
+	- JS
+}
+|
+Administrador de DB
+|
+Back-end{
+	Desarrollo del lado del Servidor
+	(Modelo/Controlador)
+	Lenguajes:
+	- SQL
+	- PHP
+	- JAVA
+}
+|
+Full-stack{
+	Organizacion, Depuracion y Optimizacion de Codigo.
+	Lenguajes:
+	- Todos los anteriores
+}

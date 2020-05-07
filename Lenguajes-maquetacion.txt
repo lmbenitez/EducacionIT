@@ -1,0 +1,15 @@
+HTML(hyper text markup language){
+	Lenguaje de Marcado de Hipertexto
+	-ESTRUCTURA-
+	utiliza etiquetas para definir los elementos que aparecen en pantalla
+	ej: <p>soy un parrafo</p>
+	EL ORDEN DE LOS FACTORES ALTERA EL PRODUCTO
+}
+
+CSS(cascading styles sheets){
+	Hojas de Estilo en Cascada
+	- DISEÑO -
+	utiliza reglas para definir el aspecto de los elementos en pantalla.
+	ej: p{ color:blue };
+	EL ORDEN DE LOS FACTORES NO ALTERA EL PRODUCTO
+}
