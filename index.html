@@ -2,10 +2,72 @@
 <html>
 <head>
 	<!-- el Head es la parte NO visible -->
-	<title>Aprendiendo con CRISTIAN</title>
+	<meta charset="utf-8">
+	<title>Aprendiendo con Cristian</title>
 </head>
-<body>
+<body style="
+	font-family: century gothic, segoe ui, sans-serif;">
 	<!-- el Body es la parte Visible -->
-	<p>Esto es un parrafo</p>
+	<!--SINTAXIS: Como se escribe 
+		SEMANTICA: Significado o importancia que tienen los elementos -->
+	<h1>Título de Libro</h1>
+	<h2>Titulo de Capitulo</h2>
+	<h3>Subcapitulo dentro del libro</h3>
+	<h4>Muy Rara vez lo utilicen</h4>
+	<h5>Casi nunca se implementa</h5>
+	<h6>Jamas lo van a usar en su vida</h6>
+	<p>Esto es un CUMPLEAÑOS</p>
+
+	<div style="background-color: cornflowerblue;
+			width:300px; padding:20px">
+			<!--Las etiquetas poseen
+				- Margin: Distancia que existe entre nuestra etiqueta con respecto a las etiquetas hermanas. Este no suma tamaño;
+				- Border: Linea que rodea la etiqueta, se puede definir un estilo, generalmente es 0 y suma tamaño;
+				- Padding: Distancia que existe entre el borde de nuestra etiqueta y el contenido de la misma, suma tamaño;
+				- Content: Todo elemento que se encuentra dentro de las etiquetas HTML;
+
+				EJ: Width y Height => Content
+					padding y border => TAGs
+					Ancho Real = width + padding + border
+			-->
+		<p>Existen <span style="font-size: 30px;">2</span> tipos de etiquetas</p>
+		<p>
+			<strong>Las etiquetas de Bloque:</strong> 
+			<br/>
+			son aquellas que por defecto ocupan todo el ancho de la ventana, poseen tamaño 
+			<em>(ancho y alto)</em> 
+			y se manipulan como bloques. 
+		
+			No comparten espacio con otras etiquetas
+		</p>
+		<p>
+			<strong>Las etiquetas de Linea:</strong> 
+			<br>
+			Son aquellas etiquetas que ocupan solamente una porcion de la linea, no poseen un tamaño definido y pueden compartir espacio con otras etiquetas.
+		</p>
+	</div>
+	<p>
+		las <strong>rosas</strong> son <strong>rojas</strong>
+		<br>
+		y las <em>violetas azules</em>
+	</p>
+
+	<p>Existen dos tipos de Listas</p>
+	<!--Ordered List - Lista Ordenada (Numerada)-->
+	<ol>
+		<!--List Item - Item de Lista -->
+		<li>Introduccion HTML</li>
+		<li>Imagenes e Hipervinculos</li>
+		<li>Formularios y un poquito de PHP</li>
+		<li>Multimedia y acceso FTP</li>
+	</ol>
+	<!--UnOrdered List - Lista sin Ordenar -->
+	<ul style="
+		color:lightgrey;	
+		background-color: navy;">
+		<li>HTML</li>
+		<li style="color:gold;">CSS</li>
+		<li>JS</li>
+	</ul>
 </body>
 </html>
