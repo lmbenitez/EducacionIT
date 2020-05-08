@@ -1,10 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- Parte NO visible -->
 	<meta charset="utf-8">
 	<title>Maquetación</title>
 </head>
-<body>
-	
+<body><!-- Parte Visible -->
+	<header id="header">
+		<!--Contenido Introductorio-->
+		<div class="header">
+			<h1>Curso de Maquetacion</h1>
+			<p>HTML5 &amp; CSS3</p>
+		</div>
+		<nav>
+			<!--Enlaces Mas importantes-->
+			<button id="menu">&#9776;</button>
+			<ul class="menu">
+				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href="#">Galeria</a></li>
+				<li><a href="#">Contacto</a></li>
+				<li>
+					<a 
+						href="https://github.com/c215714n/EducacionIT/tree/viernes-15hs"
+						target="_blank">GitHub
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!--Contenido Principal-->
+		<article>
+			<!--Contenido Independiente-->
+			<section>
+				<!--Contenido Contextualizado-->
+				<header>
+					<h1>Seccion N°1</h1>
+				</header>
+				<p></p>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Seccion N°2</h1>
+				</header>
+				<p></p>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Seccion N°3</h1>
+				</header>
+				<p></p>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<!--Contenido de Despedida-->
+		<form action="" id="contacto" method="POST">
+			<label for="nombre">Nombre</label>
+			<input 
+				type="text" 
+				name="nombre" 
+				placeholder="Nombre:" />
+			<label for="email">Correo</label>
+			<input 
+				type="email"
+				name="email"
+				placeholder="Correo:" />
+			<label for="consulta">Consulta</label>
+			<textarea 
+				name="consulta" 
+				placeholder="Realice su consulta"></textarea>
+			<button>Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://instagram.com" target="_blank">Instagram</a>
+			<a href="https://Twitter.com" target="_blank">Twitter</a>
+			<a 
+				href="https://api.whatsapp.com/send?phone=1123456789&text=Buenas,%20quisiera%20realizar%20una%20consulta&source=&data=&app_absent=" 
+				target="_blank">Whatsapp</a>
+		</div>
+	</footer>
 </body>
 </html>
