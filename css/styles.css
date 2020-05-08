@@ -1,0 +1,86 @@
+@import url(
+	'https://fonts.googleapis.com/css?family=Poppins|Roboto|Quicksand|Raleway|Ubuntu&display=swap'
+	);
+
+*{
+	font-family: Raleway, Ubuntu, sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	padding:0;
+	border:0;
+	font-variant: small-caps;
+
+}
+
+#header, #footer, nav{
+	padding:1rem;
+	background-color:rgba(50, 50, 150, .5);
+}
+
+#menu{
+	display:none;
+}
+
+nav{
+	padding:0;
+	text-align: center;
+}
+
+.menu{
+	padding:0;
+}
+.menu li{
+	list-style: none;
+	display:inline-block;
+	text-align:center;
+	width:80px;
+}
+
+nav a{
+	color:white;
+	text-decoration: none;
+}
+
+article{
+	overflow: hidden;
+	width:95%;
+	margin:auto;
+}
+
+section{
+	width:300px;
+	padding:1rem;
+	border-radius: 1rem;
+	border:1px solid #34349c;
+	margin:15px 20px;
+	float:left;
+	/*Top Right Bottom Left*/
+}
+
+#contacto{
+	margin:auto;
+	width:420px;
+}
+
+input, textarea, #contacto button{
+	width:420px;
+	resize:none;
+}
+
+
+/*
+	Medidas Absolutas
+		px: puntos en pantalla;
+		cm: 1/100 metros;
+		in: 2.54cm (distancia);
+	Medidas Relativas
+		%: en base al elemento padre;
+		em: ancho de la M (16px);
+		ex: alto de la x;
+		rem: ancho de la M body;
+
+*/
+
