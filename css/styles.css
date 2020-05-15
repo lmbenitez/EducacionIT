@@ -136,6 +136,34 @@ input, textarea, #contacto button{
 	box-shadow: 0 0px 10px #A3D;
 }
 
+.social{
+	background-color: rgba(50, 50, 150, .5);
+	margin:5px auto;
+	width:420px;
+	border-radius: 10px;
+	text-align: center;
+	padding:5px;
+}
+
+.social a{
+	color:white;
+	text-decoration: none;
+}
+
+.social img{
+	height:30px;
+	background-color: lightgrey;
+	border-radius: 5px;
+	padding:7.5px; 
+	margin:0 10px;
+	opacity: .5;
+}
+
+.social img:hover{
+	padding:1px;
+	background-color: white;
+	opacity: 1;
+}
 
 /*
 	Medidas Absolutas
