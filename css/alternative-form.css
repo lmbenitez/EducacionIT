@@ -1,0 +1,38 @@
+ALTERNATIVE FORM
+
+#contacto{
+	margin:auto;
+	width:420px;
+	text-align: right;
+}
+
+#contacto label{
+	width:50px;
+	display: inline-block;
+	float: left;
+	text-shadow: 2px 2px 1px black;
+}
+
+input, textarea, #contacto button{
+	width:350px;
+	resize:none;
+	border:1.5px solid white;
+	outline: none;
+	border-radius: 5px;
+	padding:.2rem .5rem;
+}
+/*Focus: Accion de seleccionar un elemento - tambien llamado establecer el foco
+	a
+	input
+	textarea
+	button
+*/
+#contacto input:focus, #contacto textarea:focus{
+	border:1.5px solid purple;
+}
+
+#contacto button:hover{
+	color:#ccc;
+	background-color: purple;
+	box-shadow: 0 0px 10px #A3D;
+}
