@@ -20,6 +20,16 @@ body{
 	background-color:rgba(50, 50, 150, .5);
 }
 
+#header{
+	color:#ccc;
+	background: url(../media/bg-space.png) 
+}
+
+.header{
+	margin:0;
+	width:200px;
+}
+
 #menu{
 	display:none;
 }
@@ -37,6 +47,12 @@ nav{
 	display:inline-block;
 	text-align:center;
 	width:80px;
+}
+
+.menu li:hover{
+	background-color: #93C;
+	box-shadow: 0 0 -5px white;
+	border-radius: 15px;
 }
 
 nav a{
