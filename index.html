@@ -2,9 +2,158 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta 	name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=3">
+	<title>Maquetado Avanzado</title>
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-	
+<!--HEADER: Contenido Introductorio
+	Logo de Empresa/Nombre
+	Presentacion-->
+	<header id="header">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p class="subtitle">html5 & css3</p>
+		</div>
+	<!--NAV: Links mas Importantes
+		Ningun Link que requiera mas de 3 clicks para acceder a el, debe estar en el NAV
+		No cuentan las redes sociales-->
+		<nav>
+			<a id="menu" href="#"></a>
+			<ul class="menu">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+	</header>
+<!--MAIN: Contenido Principal
+	Los datos que busca el usuario -->
+	<main>
+	<!--ARTICLE: Contenido Independiente
+		El elemento funciona tanto dentro, como fuera del sitio, sin necesidad de un contexto para entenderlo-->
+		<article>
+		<!--SECTION: Contenido Contextualizado
+			Depende pura y exclusivamente del entorno/contexto, no funciona fuera de la pagina donde se lo aplica-->
+			<section>
+				<header>
+					<h1>Tema 1: Elementos de Medicion</h1>
+				</header>
+				<p>En HTML5 se incorporaron dos nuevas etiquetas para mostrar informacion de manera estadistica. 
+				</p>
+				<p>
+					Estos elementos son:
+				</p>
+				<p> 
+				<strong>&lt;progress&gt;</strong> 
+				 	: Indica cuanto llevamos realizado de una tarea, mientras que esta aun no este finalizada. Se implementa tanto para barras de carga como para indicar un avance respecto a cualquier tipo de actividad
+				</p>
+					<progress></progress>
+					<progress min="0" max="100" value="20"></progress> 	
+				<p> 
+				<strong>&lt;meter&gt;</strong>
+					: Indica los valores correspondientes a una actividad finalizada, como una votacion o la conclusion de un examen. A diferencia de progress se pueden establecer diferentes caracteristicas en base a los valores optimos y bajos.
+				</p>
+				<ul>
+					<h2>Evaluacion</h2>
+					<li> Nota: 100
+						<meter 
+							min="0"
+							max="100"
+							optimum="90"
+							low="30"
+							high="60"
+							value="100" 
+							></meter>
+					</li>
+					<li> Nota: 15
+						<meter 
+							min="0"
+							max="100"
+							optimum="90"
+							low="30"
+							high="60" 
+							value="15" 
+							></meter>
+					</li>
+					<li> Nota: 50
+						<meter 
+							min="0"
+							max="100"
+							optimum="90"
+							low="30"
+							high="60" 
+							value="50" 
+							></meter>
+					</li>
+				</ul>
+				<footer>
+					<p><strong>Autor:</strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2: Multimedia</h1>
+				</header>
+				<p>En HTML5 se incorporaron </p>
+				<p><strong>Autor:</strong>Cristian Racedo</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p><strong>Autor:</strong>Cristian Racedo</p>
+			</section>
+		</article>
+		<article>
+			<section>
+				<header>
+					<h1>Tema 1</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p><strong>Autor:</strong>Cristian Racedo</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p><strong>Autor:</strong>Cristian Racedo</p>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p><strong>Autor:</strong>Cristian Racedo</p>
+			</section>
+		</article>
+	</main>
+<!--FOOTER: Contenido de Despedida
+	Informacion complementaria a lo previamente publicado. copyright
+	informacion de contacto y redes sociales-->
+	<footer id="footer">
+		<form action="" id="contact">
+			<label for=""></label>
+			<input type="text">
+			<label for=""></label>
+			<input type="text">
+			<label for=""></label>
+			<input type="text">
+			<label for=""></label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<button class="success">Enviar</button>
+		</form>
+		<div class="social">
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+			<a href="https://.com" target="_blank"></a>
+		</div>
+		<p class="copy">&copy; Todos los Derechos Reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
 </body>
 </html>
