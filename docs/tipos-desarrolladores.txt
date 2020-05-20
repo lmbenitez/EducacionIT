@@ -1,0 +1,24 @@
+Front-end{
+	Desarrollo del lado del cliente/usuario
+	La parte visible de una web en el browser
+	Lenguaje:
+		HTML	=>	Estructura
+		CSS		=>	Diseño
+		JS		=>	Funcionalidad
+}
+
+Back-end{
+	Desarrollo del lado del servidor
+	Peticiones y manipulacion de datos
+	Lenguajes:
+		SQL		=>	Base de Datos
+		PHP		=>	Webs dinamicas
+		JAVA	=>	Aplicaciones Web
+}		
+
+Fullstack{
+	Desarrollo de ambos lados
+	Organizacion, optimizacion y depuracion de proyectos con equipos de trabajo
+	Lenguajes:
+		Todos los anteriores
+}

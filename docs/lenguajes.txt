@@ -1,0 +1,12 @@
+HTML (Hypertext Markup Language){
+	lenguaje de ESTRUCTURA
+	utiliza etiquetas para definir los elementos
+	EJEMPLO: <p>esto es un parrafo.</p>
+	"EL ORDEN DE LOS FACTORES ALTERA EL PRODUCTO"
+}
+CSS (Cascading Styles Sheets){
+	lenguaje de DISEÑO
+	utiliza reglas para definir el aspecto de los elementos del sitio
+	EJEMPLO: p{ color:blue; } 
+	"EL ORDEN DE LOS FACTORES NO ALTERA EL PRODUCTO"
+}
