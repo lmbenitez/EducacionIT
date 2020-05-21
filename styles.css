@@ -1,0 +1,27 @@
+*{
+	font-family: century gothic, segoe ui, sans-serif;
+}
+
+body{
+	margin:0;
+}
+
+header, footer{
+	color:#ddd;
+	background-color: darkslateblue;
+	text-align: center;
+	padding:20px;
+}
+
+form{
+	width:450px;
+	margin:25px auto;
+	padding-left:50px;
+}
+input,textarea{
+	width:400px;
+	border:0.5px solid darkslateblue;
+	padding:0;
+}
+
+
