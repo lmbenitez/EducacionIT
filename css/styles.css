@@ -65,7 +65,7 @@ nav{
 }
 
 .menu li:hover{
-	background-color: #93C;
+	background-color: purple;
 	box-shadow: 0 0 15px white;
 	border-radius: 15px;
 }
@@ -86,8 +86,7 @@ section{
 	padding:1rem;
 	border-radius: 1rem;
 	border:1px solid #34349c;
-	margin:15px 20px;
-	float:left;
+	margin:15px auto;
 	/*Top Right Bottom Left*/
 }
 
@@ -145,14 +144,20 @@ input, textarea, #contacto button{
 	background-color: rgba(50, 50, 150, .5);
 	margin:5px auto;
 	width:420px;
+	height:70px;
 	border-radius: 10px;
 	text-align: center;
 	padding:5px;
+	line-height: 60px;
 }
 
 .social a{
+	display: inline-block;
 	color:white;
 	text-decoration: none;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
 }
 
 .social img{
@@ -165,7 +170,7 @@ input, textarea, #contacto button{
 }
 
 .social img:hover{
-	padding:1px;
+	height: 60px;
 	background-color: white;
 	opacity: 1;
 }
@@ -208,3 +213,40 @@ input, textarea, #contacto button{
 			<span>Black</span>
 		</p>
 */
+
+/*
+Tipos de Display
+	Bloque: Ocupan todo el ancho (poseen medidas);
+	Linea: Ocupan una porcion de la ventana(no poseen medidas);
+	Linea-Bloque: Comparten la linea (poseen medidas);
+	Flexbox: Contenedor flexible (ajusta su contenido en base a diferente parametros);
+*/
+
+.flexbox{
+	width:80%;
+	height: 300px;
+	display: flex;
+	padding:0;
+	flex-direction:row-reverse;
+	flex-wrap:wrap;
+	justify-content: space-evenly;
+}
+
+.flexbox div{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align:center;
+	border: 1px solid darkslateblue;
+	background-color: slateblue;
+}
+
+.align{
+	align-items: center;
+}
+
+.flexbox div:hover{
+	width:150px;
+	height:150px;
+	line-height: 150px;
+}
