@@ -13,6 +13,12 @@ header, footer{
 	padding:20px;
 }
 
+.subtitle{
+	margin-top: -20px;
+	letter-spacing: 16px;
+	 
+}
+
 form{
 	width:450px;
 	margin:25px auto;
@@ -22,6 +28,7 @@ input,textarea{
 	width:400px;
 	border:0.5px solid darkslateblue;
 	padding:0;
+	font-size: 16px;
 }
 
 
