@@ -82,7 +82,7 @@ article{
 }
 
 section{
-	width:300px;
+	width:320px;
 	padding:1rem;
 	border-radius: 1rem;
 	border:1px solid #34349c;
@@ -98,7 +98,7 @@ section{
 	opacity: .9;
 	
 }
-
+/*
 #contacto{
 	margin:auto;
 	width:420px;
@@ -124,12 +124,12 @@ input, textarea, #contacto button{
 	height: 5rem;
 }
 
-/*Focus: Accion de seleccionar un elemento - tambien llamado establecer el foco
+Focus: Accion de seleccionar un elemento - tambien llamado establecer el foco
 	a
 	input
 	textarea
 	button
-*/
+
 #contacto input:focus, #contacto textarea:focus{
 	border:1.5px solid purple;
 }
@@ -139,7 +139,7 @@ input, textarea, #contacto button{
 	background-color: purple;
 	box-shadow: 0 0px 10px #A3D;
 }
-
+*/
 .social{
 	background-color: rgba(50, 50, 150, .5);
 	margin:5px auto;
@@ -215,6 +215,7 @@ input, textarea, #contacto button{
 */
 
 /*
+
 Tipos de Display
 	Bloque: Ocupan todo el ancho (poseen medidas);
 	Linea: Ocupan una porcion de la ventana(no poseen medidas);
@@ -224,7 +225,6 @@ Tipos de Display
 
 .flexbox{
 	width:80%;
-	height: 300px;
 	display: flex;
 	padding:0;
 	flex-direction:row-reverse;
@@ -233,6 +233,10 @@ Tipos de Display
 }
 
 .flexbox div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 	width: 100px;
 	height: 100px;
 	line-height: 100px;
@@ -243,10 +247,22 @@ Tipos de Display
 
 .align{
 	align-items: center;
+	height: 250px;
 }
 
-.flexbox div:hover{
-	width:150px;
-	height:150px;
-	line-height: 150px;
+.flexbox a{
+	display: block;
+	width:50px;
+	height:50px;
+	color:white;
+	text-decoration: none;
+	background-color: darkslateblue;
+	line-height: 50px;
+	text-align: center;
+}
+
+.flexbox a:hover{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
 }

@@ -1,0 +1,91 @@
+/*Estilos utilizando flexbox y pseudoclases*/
+
+article:first-child{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+article section:first-child{
+	color: white;
+	background-color: slateblue;
+}
+
+article:last-child{
+	background-color: lightgrey;
+	border-radius: 1rem;
+	padding:1rem;
+	margin:1rem;
+	box-shadow: .5rem .5rem 1rem darkslateblue;
+}
+
+.social, .social a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social img{
+	width:30px;
+	height:30px;
+}
+
+.social img:hover{
+	width:50px;
+	height: 50px;
+}
+
+
+.social a:first-child img{
+	background-color: #3b5999;
+}
+
+.social a:nth-child(2) img{
+	background-color: #e4405f;
+}
+
+.social a:nth-last-child(2) img{
+	background-color: skyblue;
+}
+
+.social a:last-child img{
+	background-color: limegreen;
+}
+
+#contacto{
+	display: flex;
+	flex-direction: column;
+	width:450px;
+	margin:1rem auto;
+}
+
+#contacto button{
+	background-color: slateblue;
+	border: .1rem solid slateblue;
+	padding:5px;
+	border-radius: .2rem;
+}
+
+#contacto button:hover{
+	border-color:slateblue;
+	background-color: slateblue;
+}
+
+article:nth-child(2) h1::first-letter{
+	font-size: 3rem;
+}
+
+article p::first-line{
+	color:darkslateblue;
+	font-weight: bold;
+}
+
+article:first-child section>p:first-letter{
+	font-size: 5rem;
+	margin-right: 1rem;
+	float:left;
+}
+
+article ul{
+	width:600px;
+}
