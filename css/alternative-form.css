@@ -1,4 +1,4 @@
-ALTERNATIVE FORM
+/*ALTERNATIVE FORM*/
 
 #contacto{
 	margin:auto;
@@ -21,12 +21,7 @@ input, textarea, #contacto button{
 	border-radius: 5px;
 	padding:.2rem .5rem;
 }
-/*Focus: Accion de seleccionar un elemento - tambien llamado establecer el foco
-	a
-	input
-	textarea
-	button
-*/
+
 #contacto input:focus, #contacto textarea:focus{
 	border:1.5px solid purple;
 }
