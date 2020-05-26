@@ -25,7 +25,7 @@
 				<li><a href="#">Link 1</a></li>
 				<li><a href="#">Link 2</a></li>
 				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
+				<li><a href="https://github.com/C215714N/EducacionIT/tree/maquetacion-martes-10hs/styles">GitHub</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -42,33 +42,49 @@
 					<h1>Tema 1: Elementos de Medicion</h1>
 				</header>
 				<p>En HTML5 se incorporaron dos nuevas etiquetas para mostrar informacion de manera estadistica. 
-				</p>
-				<p>
+				<br/>
 					Estos elementos son:
 				</p>
 				<p> 
 				<strong>&lt;progress&gt;</strong> 
 				 	: Indica cuanto llevamos realizado de una tarea, mientras que esta aun no este finalizada. Se implementa tanto para barras de carga como para indicar un avance respecto a cualquier tipo de actividad
 				</p>
-					<progress></progress>
-					<progress min="0" max="100" value="20"></progress> 	
+					<ul>
+						<li>
+							Avance: 20/100
+							<progress min="0" max="100" value="20"></progress>
+						</li>
+						<li>
+							Avance Indefinido
+							<progress id="progressBar" min="0" max="100"></progress>
+							<input 
+								onchange="ActualizarProgreso()" 
+								id="miValor" 
+								type="number" 
+								min="0"
+								max="100" 
+							/> Ingrese un Valor
+						</li>
+					</ul>
 				<p> 
 				<strong>&lt;meter&gt;</strong>
-					: Indica los valores correspondientes a una actividad finalizada, como una votacion o la conclusion de un examen. A diferencia de progress se pueden establecer diferentes caracteristicas en base a los valores optimos y bajos.
+					: Indica los valores correspondientes a una actividad finalizada, como una votacion o el valor de un examen. A diferencia de progress se pueden establecer diferentes caracteristicas en base a los valores optimos y bajos.
 				</p>
 				<ul>
-					<h2>Evaluacion</h2>
-					<li> Nota: 100
+					<caption>Evaluacion</caption>
+					<li> 
+						Nota: 90/100
 						<meter 
 							min="0"
 							max="100"
 							optimum="90"
 							low="30"
 							high="60"
-							value="100" 
-							></meter>
+							value="90" 
+						></meter> 
 					</li>
-					<li> Nota: 15
+					<li> 
+						Nota: 15/100
 						<meter 
 							min="0"
 							max="100"
@@ -76,9 +92,10 @@
 							low="30"
 							high="60" 
 							value="15" 
-							></meter>
+						></meter> 
 					</li>
-					<li> Nota: 50
+					<li> 
+						Nota: 50/100
 						<meter 
 							min="0"
 							max="100"
@@ -86,26 +103,67 @@
 							low="30"
 							high="60" 
 							value="50" 
-							></meter>
+						></meter> 
+							
 					</li>
 				</ul>
 				<footer>
-					<p><strong>Autor:</strong>Cristian Racedo</p>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
 					<h1>Tema 2: Multimedia</h1>
 				</header>
-				<p>En HTML5 se incorporaron </p>
-				<p><strong>Autor:</strong>Cristian Racedo</p>
+				<p>En HTML5 se incorporaron las etiquetas de &lt;audio&gt; y &lt;video&gt; para la implementacion de contenido multimedia, sin necesidad de algun plugin y compatibilidad con multiples formatos.</p>
+					
+				<p>
+					<strong>&lt;audio&gt;</strong>: Reproduce formatos .wav, .mp3 &amp; .ogg; asi como tambien las pistas de audio, alojadas en los archivos de video.
+				</p>	
+					<audio controls>
+						<source src="media/californication.ogv">
+						<source src="media/californication.avi">
+						<source src="media/californication.mp4">		
+					</audio>
+				<p>
+					<strong>&lt;video&gt;</strong>: Admite los formatos .avi, .mp4 &amp; .ogv. &lt;source&gt; se utiliza para definir varios origenes de archivos, en caso de incompatibilidad.
+				</p>
+					<video id="miVideo" controls>
+						<source src="media/californication.ogv">
+						<source src="media/californication.avi">
+						<source src="media/californication.mp4">		
+						Disculpe las molestias, pero su Navegador no es compatible con el elemento video
+					</video>
+					<button id="reproducir" onclick="Reproducir()">Play</button>
+				<p>
+					<strong>&lt;iframe&gt;</strong>: Utilizado para la insercion de contenido embebido en HTML de manera asincronica, es muy comun para la implementacion de mapas o videos almacenado en otros servidores.
+				</p>
+					<iframe 
+						src="https://www.youtube.com/embed/YlUKcNNmywk" 
+						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<footer>
+						<p><strong>Autor:</strong> Cristian Racedo</p>
+					</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Tema 3: Elementos Graficos</h1>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
-				<p><strong>Autor:</strong>Cristian Racedo</p>
+				<p>HTML5 ofrece nuevas herramientas para la implementacion de graficos, estas son &lt;svg&gt; &amp; &lt;canvas&gt;; en las que deberemos aplicar lenguajes como XML o JS, para la creacion de los diferentes elementos.</p>
+				<p><strong>Autor:</strong> Cristian Racedo</p>
+				<p>
+					<strong>&lt;svg&gt;</strong>: Scalable Vector Graphics, son imagenes generadas mediante calculos matematicos XML, ideales para graficos que deben implementarse en multiples tamaños sin que pierdan calidad.
+				</p>
+				<svg>
+					<rect x="10" y="10" width="50" height="50" fill="rgb(200, 0, 0)"/>
+					<rect x="30" y="30" width="50" height="50" fill="rgba(0, 0, 200, 0.5)"/>
+				</svg>
+				<p>
+					<strong>&lt;canvas&gt;</strong>: Utiliza Bitmap para crear un lienzo JS. No son escalables, pero permite el desarrollo apicaciones, mediante EventListeners. 
+				</p>
+				<canvas id="lienzo">
+					
+				</canvas>		
 			</section>
 		</article>
 		<article>
@@ -114,21 +172,21 @@
 					<h1>Tema 1</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
-				<p><strong>Autor:</strong>Cristian Racedo</p>
+				<p><strong>Autor:</strong> Cristian Racedo</p>
 			</section>
 			<section>
 				<header>
 					<h1>Tema 2</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
-				<p><strong>Autor:</strong>Cristian Racedo</p>
+				<p><strong>Autor:</strong> Cristian Racedo</p>
 			</section>
 			<section>
 				<header>
 					<h1>Tema 3</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
-				<p><strong>Autor:</strong>Cristian Racedo</p>
+				<p><strong>Autor:</strong> Cristian Racedo</p>
 			</section>
 		</article>
 	</main>
@@ -153,7 +211,9 @@
 			<a href="https://.com" target="_blank"></a>
 			<a href="https://.com" target="_blank"></a>
 		</div>
-		<p class="copy">&copy; Todos los Derechos Reservados | Cristian Racedo &amp; Compañia</p>
+		<p class="copy">&copy; Todos los Derechos Reservados |  Cristian Racedo &amp; Compañia</p>
 	</footer>
+
+	<script src="scripts/main.js"></script>
 </body>
 </html>
