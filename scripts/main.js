@@ -9,18 +9,18 @@
 //Manipulacion del Elemento Video
 	var miVideo = document.querySelector('#miVideo');
 	var reproducir = document.querySelector('#reproducir');
-	var alternar = true
+	var alternar = true;
 
 	function Reproducir(){
 			if (alternar) {
 				miVideo.play();
-				reproducir.innerHTML = 'Play';
+				reproducir.innerHTML = 'click to Pause';
 				reproducir.style.color = '#eee';
 				reproducir.style.backgroundColor = 'darkslateblue';
 				alternar = false;
 			} else {
 				miVideo.pause();
-				reproducir.innerHTML = 'Paused';
+				reproducir.innerHTML = 'click to Play';
 				reproducir.style.color = '#ccc';
 				reproducir.style.backgroundColor = 'slateblue';
 				alternar = true;
