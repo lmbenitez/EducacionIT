@@ -76,6 +76,26 @@ iframe, video, svg, canvas{
 	border-radius: .5rem;
 }
 
+#header{
+	background: linear-gradient(
+		to right,
+		hsl(260deg, 10%, 60%) 20%,
+		hsl(260deg, 10%, 30%) 40%,
+		hsl(260deg, 10%, 45%) 80%
+		)
+}
+
+section header{
+	background:
+		linear-gradient(to right, slateblue,darkslateblue), 
+		url(../media/fender.svg), 
+		url(../media/fender.png);
+	background-blend-mode: darken;
+	background-size: cover, 300px, contain;
+	background-position: center, left top, center;
+	background-repeat: no-repeat;
+}
+
 #contact input{
 	height: 1.5rem;
 	width:100%;
@@ -85,6 +105,17 @@ iframe, video, svg, canvas{
 #contact textarea{
 	height: 6rem;
 	resize: none;
+}
+
+#contact input:focus + .validation{
+	display: block;
+}
+
+.validation{
+	display: none;
+	margin-top: -.5rem;
+	padding:.25rem;
+	background-color: rgba(20,20,20,.5);
 }
 
 .social{
@@ -107,13 +138,15 @@ iframe, video, svg, canvas{
 	font-size: 1rem;
 	color:#ccc;
 	text-decoration: none;
+	border-radius: .5rem;
 }
 
 .social a:hover{
-	font-size: 3rem;
+	font-size: 2.5rem;
+	padding:.5rem;
 }
 
 .icon-facebook:hover{background-color:darkblue;}
-.icon-twitter:hover{background-color:lightblue;}
+.icon-twitter:hover{background-color:#39c;}
 .icon-instagram:hover{background-color:purple;}
 .icon-whatsapp:hover{background-color:limegreen;}

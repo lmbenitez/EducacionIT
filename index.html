@@ -214,14 +214,53 @@
 	informacion de contacto y redes sociales-->
 	<footer id="footer">
 		<form action="" id="contact">
-			<label for=""></label>
-			<input type="text">
-			<label for=""></label>
-			<input type="text">
-			<label for=""></label>
-			<input type="text">
-			<label for=""></label>
-			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<label for="nombre">Nombre:</label>
+			<input 
+				type="text" 
+				name="nombre"
+				placeholder="Nombre: Cristian Racedo" 
+				pattern="[a-zA-Z]{3,50}"
+				title="Ingrese su nombre, este debe poseer entre 3 y 50 caracteres y no debe tener simbolos ni numeros"
+				required 
+			/>
+			<div class="validation">
+				Ingrese su nombre, este debe poseer entre 3 y 50 caracteres y no debe tener simbolos ni numeros
+			</div>
+			<label for="email">Correo:</label>
+			<input 
+				type="email" 
+				name="email"
+				placeholder="Correo: CristianDRacedo@hotmail.com" 
+				required 
+			/>
+			<div class="validation">
+				Ingrese un correo valido, recuerde que este debe poseer un nombre de usuario seguido de un @ y luego el nombre del servidor. por ejemplo miusuario@miservidor.com
+			</div>
+			<label for="tel">Telefono:</label>
+			<input 
+				type="tel" 
+				name="tel"
+				placeholder="Telefono: 1123456789"
+				pattern="[0-9]{6,20}"
+				title="Ingrese su numero de telefono sin espacios ni guiones, el mismo debe contener entre 6 y 20 digitos" 
+			/>
+			<div class="validation">
+				Ingrese su numero de telefono sin espacios ni guiones, el mismo debe contener entre 6 y 20 digitos
+			</div>
+			<input
+				id="rango" 
+				type="range" 
+				min="0" 
+				max="10" />
+			<p id="valorRango"></p>
+			<label for="consulta">Consulta:</label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200"
+				placeholder="Consulta: Realice su consulta" 
+				required 
+			></textarea>
 			<button class="success">Enviar</button>
 		</form>
 		<div class="social">

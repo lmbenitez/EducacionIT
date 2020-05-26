@@ -36,3 +36,12 @@
     //Rectangulo a X=30 Y=30 con width=50
         ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
         ctx.fillRect(30, 30, 50, 50);
+
+//Manipulacion de Input de tipo Range
+	var rango = document.querySelector('#rango');
+	var valorRango = document.querySelector('#valorRango');
+
+	rango.addEventListener(
+		'change', 
+		() => valorRango.innerHTML = rango.value
+	);
