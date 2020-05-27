@@ -3,17 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Imágenes & Hipervínculos</title>
+	<style>/*Etiqueta Presentacional para codigo CSS*/
+		/*Selectores Generales*/
+		body{
+			/*Reglas aplicables*/
+			margin:0;
+			font-family:century gothic, segoe ui, sans-serif;
+			color:#ddd;
+			background-color:#012;/*Red Green Blue (0=min F=max)*/
+		}
+
+		/*selectores multiples*/
+		header, footer{
+			padding:16px;
+			text-align: center;
+			background-color: rgba(30,50,80,0.6)/*Red Green Blue (0=min 255=max)*/;
+		}
+		
+		nav{
+			margin:16px;
+			background-color: rgba(30,50,80,0.6);
+		}
+
+		/*selector de class*/
+		.menu{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+
+		.menu a{
+			color:white;
+			text-decoration: none;
+		}
+
+		.active, nav li:hover{
+			background-color: #012;
+		}
+
+		/*selectores especificos*/
+		nav li{
+			display: inline-block;
+			padding:0 10px; /*Vertical Horizontal (Top Right Bottom Left) */
+		}
+
+		/*comportamiento del elemento contenedor*/
+			main p{
+				overflow: hidden;
+				padding:16px;
+			}
+		/*comportamiento del elemento contenido*/
+			p img{
+				float:left;
+				margin-right: 16px;
+			}
+	</style>
 </head>
 <body>
 	<header><!--Contenido Introductorio-->
-		<h1>Fundamentos HTML</h1>
-		<p>Imágenes & Hipervínculos</p>
+		<h1 class="menu">Fundamentos HTML</h1>
+		<p class="menu">Imágenes & Hipervínculos</p>
 		<nav>
-			<ul>
+			<ul class="menu">
 				<!--Anchor (Hipervinculo)-->
 				<li>
 					<a href="index.html">Inicio</a><!--Ruta Relativa / Interna (Mismo sitio, diferente pagina)--></li>
-				<li>
+				<li class="active">
 					<a href="#">Galeria</a><!--Marcador / Ancla (Misma pagina, diferente seccion)-->
 				</li>
 				<li>
@@ -22,12 +77,31 @@
 			</ul>
 		</nav>
 	</header>
-	<main><!--Contenido Principal-->
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam eaque officia dignissimos molestiae sunt laborum repellendus velit earum reiciendis, voluptatum laudantium eum. Corrupti magnam eveniet, veniam minima eius neque quaerat.</p>
-		<img 
-			src="img/usm-venom-01.jpg" 
-			alt="Boceto Venom Ultimate Spider-Man">
-		<p>La etiqueta <strong>&lt;img&gt;</strong> permite insertar contenido grafico (imagenes), siempre y cuando indiquemos la ruta correcta en el atributo <em>src (source)</em>; tambien nos ofrece una alternativa, en caso que la imagen no sea accesible, con el atributo <em>alt (texto alternativo)</em> que permite definir el contenido de la misma, para que el usuario tenga nocion de la misma y que los motores de busqueda puedan indexar la misma en su base de datos; los screenreaders tambien leen el texto alternativo de las imagenes.</p>
+	<main><!--Contenido Principal-->		
+		<p>
+			<img 
+				src="img/usm-venom-01.jpg" 
+				alt="Boceto Venom Ultimate Spider-Man" 
+				style="width: 200px;" />
+			La etiqueta <strong>&lt;img&gt;</strong> permite insertar contenido grafico (imagenes), siempre y cuando indiquemos la ruta correcta en el atributo <em>src (source)</em>; tambien nos ofrece una alternativa, en caso que la imagen no sea accesible, con el atributo <em>alt (texto alternativo)</em> que permite definir el contenido de la misma, para que el usuario tenga nocion de la misma y que los motores de busqueda puedan indexarla en su base de datos; los screenreaders tambien leen el texto alternativo de las imagenes. 
+
+			Existen dos tipos de imagenes que se pueden utilizar, por un lado estan las <strong>bitmap (pixelares o mapa de bits)</strong> cuya composicion consta de una grilla de pixeles, que en conjunto representaran la imagen con posibilidad de generar profundidad de campo y cuyos formatos compatibles con el navegador son <em>jpg(joint photographic expert group), png(portable network graphics) y gif(graphics interchange format)</em>, una de las desventajas que poseen es su tamaño limitado, ya que si se estiran demasiado, se pixelan. Por otro lado existen los <strong>vectores</strong> que son imagenes generadas mediante calculos matematicos, compuestas de lineas y curvas, el formato predilecto por los navegadores es <em>svg (scalable vector graphics)</em> ya que permite que el escalado de las mismas sin perdida de calidad, pero no generan una buena profundidad de campo.
+		</p>
+		<p>
+			<img 
+				src="img/usm-venom-02.jpg" 
+				alt="Boceto Venom Ultimate Spider-Man" 
+				style="width: 200px;" />
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique autem delectus debitis dicta corporis soluta velit quia minus, distinctio tempore veniam accusantium labore fugit magni praesentium, temporibus tenetur aspernatur nihil quas ad itaque laudantium nam dolorum? Ipsam debitis ipsa quae enim consequatur aliquid, ea dolor saepe consectetur, vel illum, quidem impedit. Alias soluta vitae sequi necessitatibus, nam repellat quo facere quisquam tenetur iste ad ipsum in id impedit, velit sint provident iusto assumenda sunt. Quibusdam repudiandae quo inventore dolorum eum nostrum corrupti similique expedita tempore quisquam, reprehenderit asperiores pariatur blanditiis maiores minus vitae laudantium libero ducimus, ad dolores ipsam! Debitis.
+		</p>
+		<p>
+			<img 
+				src="img/usm-venom-03.jpg" 
+				alt="Boceto Venom Ultimate Spider-Man" 
+				style="width:200px;" />
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam consequuntur dolorem cupiditate doloremque iure animi veniam, voluptate quos. Praesentium facere veniam eveniet, officiis aliquam esse sunt error minima dolorem suscipit commodi quidem tempore recusandae hic nulla nobis cupiditate! Delectus voluptatum excepturi provident blanditiis? Velit id eos atque non assumenda natus, necessitatibus veritatis enim maxime doloremque dolorem accusantium amet quam praesentium nemo dolores cupiditate quaerat quae esse eaque. Ex corporis magnam dicta deleniti voluptatibus quasi doloremque, praesentium, architecto rerum nostrum dolor ipsa perspiciatis ab eius quas aut natus, ut tempore blanditiis in qui modi. Qui repudiandae mollitia, animi consequatur aliquam vel.
+		</p>
 	</main>
 	<footer><!--Contenido de Cierre-->
 		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia</p>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagenes</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,header,h1,.subtitulo,nav,.menu,main,section,footer{
+			border:0; 
+			padding:0; 
+			margin:0;		
+			font-family: 'century gothic',sans-serif;	
+		}
+
+		body,header,nav,.menu,section,footer{
+			color: lightgrey;
+			background-color: rgba(75,125,100,0.5);
+		}
+
+		header,main{
+			padding: 10px;
+		}
+
+		section{
+			margin:10px;
+			padding: 20px; 
+			border-radius: 15px;
+		}
+
+		header,nav,footer{
+			text-align: center;
+		}
+
+		.subtitulo{
+			letter-spacing: 12px;
+		}
+
+			ul.menu li{
+				display:inline;
+				padding: 0 10px 0 10px;
+			}
+
+			ul.menu li:hover{
+				background-color: rgb(75,125,100);
+				border-bottom-style: solid;
+				border-bottom-color: white;
+			}
+
+		a{
+			color: white;
+			text-decoration: none;
+		}
+
+		figure{
+			float: right;
+			text-align: center;
+		}
+
+		figure img{
+			width: 250px;
+			border-radius: 10px;
+		}
+
+		figcaption{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header id="menu">
+		<h1>MAPA DE BITS</h1>
+		<p class="subtitulo">PIXELARES </p>
+	</header>
+	<nav>
+		<ul class="menu">
+			<li><a href="#jpg">JPG</a></li>
+			<li><a href="#png">PNG</a></li>
+			<li><a href="#gif">GIF</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="jpg">
+			<figure>
+				<img src="img/ms-windows-me.jpg">
+				<figcaption>formato JPG</figcaption>
+			</figure>
+			<h1><a href="#menu">JPG: Joint Photographic Expert Group</a></h1>
+			<ul>
+				<li>VENTAJAS
+					<ol>
+						<li>Admiten compresion</li>
+						<li>Alta fidelidad y formato ligero</li>
+						<li>Soportan Hasta 16.777.216 colores</li>
+					</ol>
+				</li>
+				<li>DESVENTAJAS
+					<ol>
+						<li>No admiten Transparencia</li>
+						<li>Se pixelan cuando se estiran demasiado</li>
+						<li>Se veran distorcionadas si la resolucion es pequeña</li>
+					</ol>
+				</li>
+			</ul>		
+		</section>
+		<section id="png">
+			<figure>
+				<img src="img/dices.png">
+				<figcaption>formato PNG</figcaption>
+			</figure>
+			<h1><a href="#menu">PNG: Portable Network Graphics</a></h1>		
+			<ul>
+				<li>VENTAJAS
+					<ol>
+						<li>Admiten Transparencia</li>
+						<li>Alta fidelidad</li>
+						<li>Soportan Hasta 16.777.216 colores</li>
+					</ol>
+				</li>
+				<li>DESVENTAJAS
+					<ol>
+						<li>No admiten compresion</li>
+						<li>Unico recurso para presentaciones con transparencias</li>
+						<li>Formato pesado para web</li>
+					</ol>
+				</li>
+			</ul>		
+		</section>
+		<section id="gif">
+			<figure>
+				<img src="img/love-666.gif">
+				<figcaption>formato GIF</figcaption>
+			</figure>
+			<h1><a href="#menu">GIF: Graphics Interchange Format</a></h1>
+			<ul>
+				<li>VENTAJAS
+					<ol>
+						<li>Admiten compresion</li>
+						<li>Formato ligero</li>
+						<li>Admiten interpolación (Animación)</li>
+					</ol>
+				</li>
+				<li>DESVENTAJAS
+					<ol>
+						<li>Admiten hasta 256 Colores</li>
+						<li>Generalmente de Baja calidad y resolucion pequeña</li>
+						<li>No es ideal para galerias fotograficas o grandes formatos</li>
+					</ol>
+				</li>
+			</ul>		
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos reservados
+			<br>Cristian Racedo &amp; compañia</p>
+	</footer>
+</body>
+</html>
