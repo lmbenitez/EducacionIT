@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Imágenes & Hipervínculos</title>
+</head>
+<body>
+	<header><!--Contenido Introductorio-->
+		<h1>Fundamentos HTML</h1>
+		<p>Imágenes & Hipervínculos</p>
+		<nav>
+			<ul>
+				<!--Anchor (Hipervinculo)-->
+				<li>
+					<a href="index.html">Inicio</a><!--Ruta Relativa / Interna (Mismo sitio, diferente pagina)--></li>
+				<li>
+					<a href="#">Galeria</a><!--Marcador / Ancla (Misma pagina, diferente seccion)-->
+				</li>
+				<li>
+					<a href="https://github.com/c215714n/Educacionit/tree/html-miercoles-10hs">GitHub</a><!--Ruta Absoluta / Externa (Diferente sitio, diferente pagina)-->
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main><!--Contenido Principal-->
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam eaque officia dignissimos molestiae sunt laborum repellendus velit earum reiciendis, voluptatum laudantium eum. Corrupti magnam eveniet, veniam minima eius neque quaerat.</p>
+		<img 
+			src="img/usm-venom-01.jpg" 
+			alt="Boceto Venom Ultimate Spider-Man">
+		<p>La etiqueta <strong>&lt;img&gt;</strong> permite insertar contenido grafico (imagenes), siempre y cuando indiquemos la ruta correcta en el atributo <em>src (source)</em>; tambien nos ofrece una alternativa, en caso que la imagen no sea accesible, con el atributo <em>alt (texto alternativo)</em> que permite definir el contenido de la misma, para que el usuario tenga nocion de la misma y que los motores de busqueda puedan indexar la misma en su base de datos; los screenreaders tambien leen el texto alternativo de las imagenes.</p>
+	</main>
+	<footer><!--Contenido de Cierre-->
+		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
+</body>
+</html>
