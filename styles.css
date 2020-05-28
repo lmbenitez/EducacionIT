@@ -18,6 +18,10 @@ header, footer{
 	letter-spacing: 16px; 
 }
 
+nav{
+	background-color: slateblue;
+}
+
 .menu{
 	margin:0;
 	padding:0;
@@ -30,7 +34,7 @@ header, footer{
 }
 /*Accion de pasar el mouse por encima de <li>*/
 .menu li:hover{
-	background-color: slateblue;
+	background-color: darkslateblue;
 }
 
 .menu a{
