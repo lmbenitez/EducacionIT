@@ -13,9 +13,23 @@ header, footer{
 	padding:20px;
 }
 
+header h1{
+	margin: 0;
+}
+
 .subtitle{
-	margin-top: -24px;
-	letter-spacing: 16px; 
+	width:320px;
+	margin: auto;
+	letter-spacing: 12px; 
+	overflow: hidden;
+	text-align: right;
+}
+
+.subtitle span{
+	font-size: 64px;
+	line-height: 48px;
+	font-weight: bold;
+	float:right;
 }
 
 nav{
@@ -50,6 +64,7 @@ form{
 	width:450px;
 	margin:25px auto;
 	padding-left:50px;
+	text-align: left;
 }
 input,textarea,select{
 	width:400px;
@@ -67,3 +82,18 @@ textarea{
 	width:25px;
 }
 
+/*Estilos para las tablas*/
+
+table,tr,td{
+	color:#ccc;
+	background-color: rgba(80,30,160,.5);
+}
+
+td{
+	width: 80px;
+}
+/*
+	table = 80px
+	tr = 80px
+	td = 80px * 3
+*/
