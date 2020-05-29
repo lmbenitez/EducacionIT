@@ -99,3 +99,61 @@ article:first-child section>p:first-letter{
 article ul{
 	width:600px;
 }
+
+/*Pseudoelementos*/
+.pseudo h1{
+	padding:1rem;
+	color:white;
+	background-color: darkslateblue;
+}
+
+.pseudo h1::before{
+	content:'Pseudoelementos';
+}
+
+.pseudo section{
+	counter-reset: titulos;
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.pseudo div{
+	counter-reset: item;
+	background-color: rgba(160, 110, 230, .5);
+	width:360px;
+	height: 360px;
+	margin: .4rem;
+	padding:1rem;
+	border-radius: .5rem;
+	overflow: auto;
+}
+
+.pseudo h2::before{
+	counter-increment: titulos;
+	content: 'Seccion n°' counter(titulos);
+}
+
+.pseudo ul, .pseudo ol{
+	list-style: none;
+	width:320px;
+	padding:.3rem;
+}
+
+.pseudo ul{
+	counter-reset: subitem;
+}
+
+.pseudo ol>li::before{
+	counter-increment: item;
+	content:'Capitulo ' counter(item) ':'
+}
+.pseudo ul>li::before{
+	counter-increment: subitem;
+	content: 'Subcapitulo ' counter(item) '.' counter(subitem) ':';
+}
+
+.pseudo p::before{
+	content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo in perspiciatis provident labore optio necessitatibus odio nesciunt magni recusandae, sunt obcaecati excepturi ex similique, nemo, ullam quisquam impedit deserunt nam. Eius quidem quasi facilis distinctio veritatis odit accusantium sint facere vitae beatae corrupti culpa earum temporibus, animi, nemo illo ipsa dolorum atque minus magnam expedita dicta repellat eum! Autem sunt sint accusamus, pariatur quas veniam assumenda neque minus ratione quia ex dolorem maxime rerum! Maiores velit optio nostrum quod? Rem eligendi, doloremque fuga ipsum quam cumque fugiat dolore esse praesentium ea porro, incidunt optio, voluptas consequatur perspiciatis dolorum modi deserunt?';
+}
