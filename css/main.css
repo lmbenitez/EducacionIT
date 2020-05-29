@@ -59,6 +59,16 @@ article:last-child{
 	margin:1rem auto;
 }
 
+#contacto input, #contacto textarea{
+	padding:.5rem;
+	outline: none;
+}
+
+#contacto textarea{
+	height: 5rem;
+	resize: none;
+}
+
 #contacto button{
 	background-color: slateblue;
 	border: .1rem solid slateblue;
