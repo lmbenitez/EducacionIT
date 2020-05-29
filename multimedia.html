@@ -35,6 +35,7 @@
 					Estas se componen de <strong>filas y columnas</strong> como cualquier tipo de tablas, pero a la hora de integrarlas en html debemos pensar en el modelo de cajas, es decir que vamos a crear un contenedor de tabla &lt;table&gt; y dentro de este vamos a colocar las filas segun corresponda, utilizando la etiqueta &lt;tr&gt; (Table Row). Por ultimo dentro de cada fila debemos crear las celdas correspondientes a la cantidad de columnas que posea la tabla con la etiqueta &lt;td&gt; ( Table Division ).
 				</p>
 				<table>
+					<caption>Tabla</caption>
 					<tr>
 						<td>1</td>
 						<td>2</td>
@@ -53,6 +54,7 @@
 				</table>
 				<hr/>
 				<table>
+					<caption>Rutina Semanal</caption>
 					<tr>
 						<td>DIAS & HORARIOS</td>
 						<td>Lunes</td>
@@ -97,6 +99,7 @@
 					<li><strong>tfoot</strong> Es el pie de la tabla, contiene informacion complementaria al contenido principal, generalmente resultados generales, sumas o detalles</li>
 				</ul>
 				<table>
+					<caption>Ventas</caption>
 					<thead>
 						<th>Producto</th>
 						<th>Precio</th>
@@ -128,11 +131,71 @@
 						<td>$ 15600</td>
 					</tfoot>
 				</table>
+				<table>
+					<caption>Tipos de Desarrolladores</caption>
+					<thead>
+						<th>Desarrollador</th>
+						<th>Lenguajes</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">Front-End</td>
+							<td>HTML</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Back-End</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				<header>
+					<h1>Contenido Multimedia</h1>
+				</header>
+				<p>HTML5 nos ofrece la posibilidad de cargar contenido multimedia en nuestra pagina, sin necesidad de utilzar plugins o componentes ajenos al sitio, permitiendo una mejor compatibilidad con diferentes tipos de formatos.
 
+				Entre las etiquetas que incorpora se encuentran &lt;audio&gt; que admite los formatos <strong>.mp3 - .wav - .ogg</strong>, auque tambien puede reproducir las pistas de audio de una pelicula.
+
+				Por otro lado, si queremos reproducir un video en el navegador vamos a utilizar la etiqueta homonima, que admite los formatos <strong>.mp4 - .avi - .ogv</strong>
+			</p>
+			<audio src="media/live-learn.mp3" controls>
+				Lo sentimos, pero su navegador no es compatible con este elemento (AUDIO)
+			</audio>
+			<video src="media/californication.mp4" controls>
+				Lo sentimos, pero su navegador no es compatible con este elemento (VIDEO)
+			</video>
+			<p>La etiqueta iframe, nos permite insertar contenido embebido en nuestra pagina web, de manera asincronica. Se utiliza principalmente para incorporar contenido que no pertenece al sitio, como por ejemplo: videos de YouTube, mapas de GoogleMaps, diapositivas de SlideShare, etc.</p>
+			<iframe 
+				src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			<iframe 
+				src="https://www.youtube.com/embed/d_sa4Ur04QU" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
 			</section>
 		</article>
 	</main>
 	<footer>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783.9408257476846!2d-58.37612461538979!3d-34.60248583422446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1590713103806!5m2!1ses!2sar" 
+			frameborder="0" 
+			allowfullscreen=""></iframe>
 		<form action="" id="contact">
 			<label for="nombre">Nombre: </label>
 			<input type="text" name="nombre">

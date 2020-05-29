@@ -84,7 +84,7 @@ textarea{
 
 /*Estilos para las tablas*/
 
-table,tr,td{
+table,caption,tr,td{
 	color:#ccc;
 	background-color: rgba(80,30,160,.5);
 }
@@ -97,3 +97,24 @@ td{
 	tr = 80px
 	td = 80px * 3
 */
+
+/*ELEMENTOS MULTIMEDIA (linea-bloque)*/
+video,iframe,audio{
+	width:600px;
+}
+
+video,iframe{
+	height: 352px;
+	border-radius: 16px;
+}
+
+footer iframe {
+	width:450px;
+	height: 264px;
+}
+
+/*Redes sociales*/
+.social a{
+	color:white;
+	text-decoration: none;
+}
