@@ -36,6 +36,9 @@
 	<!--ARTICLE: Contenido Independiente
 		El elemento funciona tanto dentro, como fuera del sitio, sin necesidad de un contexto para entenderlo-->
 		<article>
+			<header>
+				<h1>Clase 1</h1>
+			</header>
 		<!--SECTION: Contenido Contextualizado
 			Depende pura y exclusivamente del entorno/contexto, no funciona fuera de la pagina donde se lo aplica-->
 			<section>
@@ -180,9 +183,45 @@
 			</section>
 		</article>
 		<article>
+			<header>
+				<h1>Clase 2</h1>
+			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Tema 1: Colores y Degradados</h1>
+				</header>
+				<p>
+				
+					Existen varias formas de representar colores en CSS, la <strong>nombrada</strong> ofrece hasta <em>140 colores</em> y luego tenemos las formas basadas en <strong>RGB</strong> que mezclan los canales rojo, verde y azul para obtener los colores, dando un total de <em>16.777.216 colores</em>
+				</p>
+					<div class="muestras">
+						<div style="background-color: navy">color: navy</div>
+						<div style="background-color: #192168">color: #192168</div>
+						<div style="background-color: rgb(25,33,104)">rgb( 25, 33, 104 )</div>
+						<div style="background-color: hsl(240deg, 50%, 25%)">hsl( 240deg, 50%, 25%	)</div>
+					</div>
+				<p>
+					Podemos combinar multiples fondos; imagenes, degradados, y modos de fusion, similares a como trabajariamos una imagen en algun programa de diseño como Adobe Photoshop.
+				</p>
+					<div class="muestras">
+						<div style="background: linear-gradient(slateblue, darkslateblue)">linear-gradient</div>
+						<div style="background: linear-gradient(to right, slateblue, darkslateblue)">to right</div>
+						<div style="background: linear-gradient(15deg, 
+							darkslateblue 0%, slateblue 10%, 
+							darkslateblue 25%,slateblue 35%, 
+							darkslateblue 50%, slateblue 60%, 
+							darkslateblue 75%, slateblue 85%, 
+							darkslateblue 100%)">multiple-stops %
+						</div>
+						<div style="background: radial-gradient(slateblue,darkslateblue)">radial-gradient</div>
+					</div>
+				<footer>
+					<p><strong>Autor:</strong> Cristian Racedo</p>
+				</footer>
+			</section>
+			<section>
+				<header>
+					<h1>Tema 2: Elementos de formulario</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
 				<footer>
@@ -191,16 +230,7 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
-				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
-				<footer>
-					<p><strong>Autor:</strong> Cristian Racedo</p>
-				</footer>
-			</section>
-			<section>
-				<header>
-					<h1>Tema 3</h1>
+					<h1>Tema 3:</h1>
 				</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
 				<footer>
