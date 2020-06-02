@@ -45,3 +45,8 @@
 		'change', 
 		() => valorRango.innerHTML = rango.value
 	);
+
+//Manipulacion de clases
+	function colorear(e){
+		menu.classList.add('presionado')
+	}

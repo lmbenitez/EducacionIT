@@ -10,6 +10,7 @@
 	font-family: Batman;
 }
 
+
 /*Pantallas XS(100%)*/
 	/*Reglas Generales*/
 		*{
@@ -60,7 +61,6 @@
 			width: 100%;
 			max-width: 400px;
 			color:#ccc;
-			background-color: black;
 		}
 
 		.menu{
@@ -147,7 +147,7 @@
 					transform: skewY(5deg); /*Verticalmente*/
 					transform: skew(15deg,10deg); /*X , Y*/
 				}
-				.transformaciones div:nth-child(4), .menu a:hover{
+				.transformaciones div:nth-child(4){
 					transform: translateX(1rem);
 					transform: translateY(1rem);
 					transform: translate(-2rem, -.5rem);
@@ -156,7 +156,23 @@
 					transform: rotate(-10deg);
 				}
 			/*Transformaciones 3D*/
+				.transformaciones{
+					perspective: 80px; /**/
+					perspective-origin: center; /*valor predeterminado*/
+				}
+				.transformaciones div:nth-last-child(3){
+					transform: rotateX(15deg);
+				}
+				.transformaciones div:nth-last-child(2){
+					transform: rotateY(5deg);
+				}
+				.transformaciones div:last-child{
+					transform: 	rotateZ(15deg);
+				}
 	/*Formulario*/
+		#contact{
+			background-color: transparent;
+		}
 		#contact input{
 			height: 1.5rem;
 			width:100%;
@@ -217,7 +233,120 @@
 	}
 /*Pantallas MD(768px)*/
 	@media screen and (min-width: 768px){
+		#header,.menu{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		/*Menu responsive*/
+			#menu{
+				display: none;
+			}
+			.menu li, .menu a{
+				width:100px;
+				padding:.4rem;
+				text-align: center;
+				position: relative;
+			}
+			.menu a:before, 
+			.menu a:after{
+				content: '';
+				background-color:white;
+				position:absolute;
+				width:0px;
+				height:2px;			
+			}
+			.menu a:before{
+				bottom:0;
+				left:0;
+			}
+			.menu a:after{
+				top:0;
+				right:0;
+			}
 
+			.menu a:hover:before,
+			.menu a:hover:after{
+				content: '';
+				width:100px;
+				background-color: black;
+				transition: all 1s ease-out;
+				z-index: 9999;
+			}
+
+			.menu a:hover{
+				transform:scale(1.25);
+				transition-duration: 1s ease-in;
+				z-index: 9999;
+			}
+		/*Formulario */
+			#contact *{
+				font-family: raleway;
+			}
+
+			.validation{
+				display: block;
+				margin:0;
+				padding:0;
+				border:0;
+				overflow: hidden;
+				height:0;
+			}
+
+			input,
+			textarea,
+			select{
+				margin:.2rem 0 1rem;
+			}
+
+			:focus + .validation{
+				height:auto;
+				margin: 1rem 0;
+				padding:.5rem;
+			}
+
+			:invalid + .validation{
+				background-color: darkred;
+			}
+
+			:valid + .validation{
+				background-color: darkgreen;
+			}
+
+			#contact input:focus, 
+			#contact textarea:focus, 
+			#contact select:focus,
+			:focus + .validation{
+				transform: scale(1.5) translateY(-.2rem);
+				transition: all 1.2s ease-in;
+			}
+
+			:invalid ~ .success{
+				color:white;
+				background-color: darkred;
+				transition: all 1s ease;
+			}
+
+			form:valid > .success{
+				background-color: darkgreen;
+				transition: all 1s ease;
+			}
+
+		/*Cuerpo principal*/
+		article{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+
+		article>header{
+			width:100%;
+			padding:.1rem 1rem;
+			background-color: #333;
+			margin: auto;
+		}
 	}
 /*Pantallas LG(992px)*/
 	@media screen and (min-width: 992px){
@@ -228,3 +357,7 @@
 
 	}	
 /*Autor: Cristian Racedo*/
+
+.presionado{
+	background-color: darkslateblue;
+}
