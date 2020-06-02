@@ -1,38 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;400&display=swap');
+@import url(
+	'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;400&display=swap'
+	);
 @font-face{
 	src: url(../fonts/starjedi.ttf);
 	font-family: star-wars;
 }
+@font-face{
+	src: url(../fonts/bats.ttf);
+	font-family: Batman;
+}
 
 /*Pantallas XS(100%)*/
-/*Reglas Generales*/
-	*{
-		/*
-			Content-box: Ancho final (width+padding+border)
-			Border-box: Ancho contenido(width-padding-borde
-		*/
-		box-sizing: border-box;
-		font-family: Raleway, sans-serif;
-	}
+	/*Reglas Generales*/
+		*{
+			/*
+				Content-box: Ancho final (width+padding+border)
+				Border-box: Ancho contenido(width-padding-borde
+			*/
+			box-sizing: border-box;
+			font-family: Raleway, sans-serif;
+		}
 
-	body{
-		margin:0;
-		color:#ccc;
-		background-color: #012;
-	}
+		body{
+			margin:0;
+			color:#ccc;
+			background-color: #012;
+		}
 
-	#header,#footer,main,article,section,#contact{
-		display: flex;
-		flex-direction: column;
-		background-color: rgba(100,100,100,.5);
-	}
+		#header,#footer,main,article,section,#contact{
+			display: flex;
+			flex-direction: column;
+			background-color: rgba(100,100,100,.5);
+		}
 
-	.header, nav, section, #contact{
-		min-width: 200px;
-		width: 100%;
-		max-width: 400px;
-		margin:auto;
-	}
+		.header, nav, section, #contact{
+			min-width: 200px;
+			width: 100%;
+			max-width: 400px;
+			margin:auto;
+		}
 	/*Cabecera*/
 		#header{
 		background: linear-gradient(
@@ -114,6 +120,14 @@
 		/*Tipografias*/
 			.jedi{
 				font-family: star-wars;
+				font-size: 3rem;
+				padding:0 1rem;
+			}
+
+			.batman{
+				font-family: Batman;
+				font-size: 5rem;
+				padding:0 .5rem;
 			}
 	/*Formulario*/
 		#contact input{
@@ -138,40 +152,40 @@
 			background-color: rgba(20,20,20,.5);
 		}
 	/*Redes Sociales*/
-	.social{
-		display: flex;
-		margin: 1rem auto;
-		min-width: 300px;
-		width:60%;
-		max-width: 500px;
-		height: 3rem;
-		justify-content: space-evenly;
-		align-items: center;
-	}
+		.social{
+			display: flex;
+			margin: 1rem auto;
+			min-width: 300px;
+			width:60%;
+			max-width: 500px;
+			height: 3rem;
+			justify-content: space-evenly;
+			align-items: center;
+		}
 
-	.social a{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width:3rem;
-		height: 3rem;
-		font-size: 1rem;
-		color:#ccc;
-		text-decoration: none;
-		border-radius: .5rem;
-	}
+		.social a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width:3rem;
+			height: 3rem;
+			font-size: 1rem;
+			color:#ccc;
+			text-decoration: none;
+			border-radius: .5rem;
+		}
 
-	.social a:hover{
-		font-size: 2.5rem;
-		padding:.5rem;
-	}
+		.social a:hover{
+			font-size: 2.5rem;
+			padding:.5rem;
+		}
 
-	.icon-facebook:hover{background-color:darkblue;}
-	.icon-twitter:hover{background-color:#39c;}
-	.icon-instagram:hover{background-color:purple;}
-	.icon-whatsapp:hover{background-color:limegreen;}
+		.icon-facebook:hover{background-color:darkblue;}
+		.icon-twitter:hover{background-color:#39c;}
+		.icon-instagram:hover{background-color:purple;}
+		.icon-whatsapp:hover{background-color:limegreen;}
 /*Pantallas SM(576px)*/
-	@media screen and (min-width: 576px){
+	@media screen and (min-width: 576px) {
 
 	}
 /*Pantallas MD(768px)*/
