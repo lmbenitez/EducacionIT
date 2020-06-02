@@ -14,12 +14,48 @@
 			hipervinculos, etc.	
 		-->
 	<!--Niveles de Encabezado-->
-	<h1>Titulo Principal - Libro</h1>
+	<h1 style="color:darkblue; background-color:lightgrey;">Titulo Principal - Libro</h1>
 	<h2>Titulo Secundario - Capitulo</h2>
 	<h3>Titulo nivel 3 - Subcapitulo</h3>
 	<h4>Encabezado nivel 4 - Muy dificil de implementar actualmente.</h4>
 	<h5>Encabezado nivel 5 - Casi nunca lo van a implementar.</h5>
 	<h6>Encabezado nivel 6 - Jamas lo van a usar en su vida.</h6>
-	<p>soy un parrafo</p>
+	<p>
+		Tipos de etiquetas
+		<br/><!--Break salto de linea (huerfana)-->
+		<strong>Bloque:</strong> 
+		Ocupan todo el ancho de la ventana, se les puede dar tamaño <em>(ancho y alto)</em><!--texto enfatizado--> 
+		y son relativamente faciles de manipular. No comparten espacio con otras etiquetas.
+		<br/>
+		<strong>Linea:</strong><!--contenido destacado--> 
+		Ocupan una porcion de la linea, su tamaño esta definido por su contenido, no poseen tamaño <em>(ancho y alto)</em>. Pueden compartir espacio con otras etiquetas.
+	</p>
+	<p>
+		Las <strong>rosas</strong> 
+		son <strong>rojas</strong>
+		<br/>
+		las <em>violetas azules</em>
+	</p>
+	<!--Listas en HTML-->
+	<ol style="background-color: darkslateblue; color:white;"><!--Ordered List-->
+		<li style="color:gold;">Introduccion HTML</li><!--List Item-->
+		<li>Imagenes e Hipervinculos</li>
+		<li>Formularios y un poco de PHP</li>
+		<li>Multimedia, Tablas y acceso FTP</li>
+	</ol>
+	<ul style="list-style:lower-greek;"><!--UnOrdered List-->
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+	<div style="color:slateblue; background-color: lightgrey; 
+	width:260px; padding:20px;"><!--tamaño final=width+padding+border-->
+		Etiqueta de bloque que representa una capa y sirve para organizar elementos de manera presentacional.
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquam corporis odit ipsa aspernatur cum fugiat consequatur voluptas, harum porro. Repellendus rerum voluptates similique consequatur natus assumenda provident, accusantium deleniti!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo doloremque, quae illum, consequuntur velit aut aperiam aspernatur optio veritatis beatae tempore error itaque minus placeat nisi accusantium deserunt. Voluptatibus, ullam!</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aperiam necessitatibus tempora fuga hic sint dicta, nulla, corrupti blanditiis inventore quisquam voluptas voluptatum earum at numquam, adipisci in ex eos!</p>
+		<span style="color:red">C</span>ristian 
+		<span style="color:blue;">R</span>acedo
+	</div>
 </body>
 </html>
