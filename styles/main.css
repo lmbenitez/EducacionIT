@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;400&display=swap');
+@font-face{
+	src: url(../fonts/starjedi.ttf);
+	font-family: star-wars;
+}
+
 /*Pantallas XS(100%)*/
 /*Reglas Generales*/
 	*{
@@ -93,7 +98,7 @@
 				border-radius: .5rem;
 			}
 
-			progress, meter{
+			progress, meter, input[type="range"]{
 				width:100%;
 				height: 30px;
 			}
@@ -105,6 +110,10 @@
 			width:200px;
 			height: 50px;
 			line-height: 50px;
+			}
+		/*Tipografias*/
+			.jedi{
+				font-family: star-wars;
 			}
 	/*Formulario*/
 		#contact input{

@@ -5,6 +5,7 @@
 	<meta 	name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=3">
 	<title>Maquetado Avanzado</title>
+	<link rel="icon" href="media/logo-it.png">
 	<link rel="stylesheet" href="styles/icomoon.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
@@ -223,18 +224,46 @@
 				<header>
 					<h1>Tema 2: Elementos de formulario</h1>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p>
+					HTML5 incluye inputs nuevos, entre los que destacan <strong>tel</strong>que habilita el teclado numerico en dispositivos tactiles o <strong>range</strong> que genera una barra de deslizamiento, para manipular un valor.
+				</p>
+				<ul>	
+					<li>
+						Su valor es: <span id="valorRango"></span>
+						<input
+							id="rango" 
+							type="range" 
+							min="0" 
+							max="10" 
+						/>
+					</li>
+				</ul>
 				<footer>
 					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3:</h1>
+					<h1>Tema 3: Regla @font-face</h1>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quasi, quibusdam enim doloremque? Aperiam dignissimos, est sed impedit ullam amet ipsam repudiandae minus sunt hic facilis quas recusandae itaque et officia vitae tenetur. Mollitia veritatis sed ex sequi. Animi adipisci at quibusdam ex impedit, provident enim dicta atque eveniet praesentium.</p>
+				<p>
+					
+					Cuando utilizamos fuentes en un sitio web, debemos tener en cuenta estas deben encontrarse instaladas en el dispositivo donde se visualice nuestra pagina, aquellas que entran en dicha categoria se las conoce como fuentes seguras.
+					<br>
+					<strong>ej:</strong> <span style="font-family: arial">Arial</span>
+				</p>
+				<p>
+					Existe la posibilidad de utilizar repositorios de fuentes como Google Fonts, permitiendonos elegir un listado de tipografias desde el sitio y agregandolas a nuestra hoja de estilos mediante la regla <strong>@import</strong>.
+					<br>
+					<strong>ej:</strong> <span>Raleway</span>
+				</p>
+				<p>
+					Aunque tambien podemos utilizar fuentes de Fantasia, que no se encuentren disponibles en algun otro repositorio, integrandola a nuestra hoja de estilos mediante la regla <strong>@font-face</strong>
+					<br>
+					<strong>ej:</strong> <span>Star Wars</span>
+				</p>
 				<footer>
-					<p><strong>Autor:</strong> Cristian Racedo</p>
+					<p><strong>Autor:</strong> <span class="jedi">Cristian Racedo</span></p>
 				</footer>
 			</section>
 		</article>
@@ -277,12 +306,6 @@
 			<div class="validation">
 				Ingrese su numero de telefono sin espacios ni guiones, el mismo debe contener entre 6 y 20 digitos
 			</div>
-			<input
-				id="rango" 
-				type="range" 
-				min="0" 
-				max="10" />
-			<p id="valorRango"></p>
 			<label for="consulta">Consulta:</label>
 			<textarea 
 				name="consulta"
