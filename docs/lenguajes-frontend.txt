@@ -1,0 +1,14 @@
+HTML (HyperText Markup Language){
+	Lenguaje de Marcado de Hipertexto
+	Lenguaje de ESTRUCTURA
+	utiliza etiquetas <tag>...</tag>
+	EJ: <p> esto es un parrafo </p>
+	"el orden de los factores ALTERA el producto"
+}
+CSS (Cascading Styles Sheets){
+	Hojas de Estilo en Cascada
+	Lenguaje de DISEÑO
+	utilizamos selectores { reglas }
+	EJ: p { color:blue; }
+	"el orden de los factores NO ALTERA el producto"
+}
