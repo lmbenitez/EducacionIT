@@ -129,6 +129,33 @@
 				font-size: 5rem;
 				padding:0 .5rem;
 			}
+		/*Transformaciones*/
+			.transformaciones div{
+				background-color: darkslateblue;
+				border:1px solid white;
+				border-radius: .5rem
+			}
+			/*Transformaciones 2D*/
+				.transformaciones div:nth-child(2){
+					transform: scaleX(.5); /*Horizontalmente*/
+					transform: scaleY(.5); /*Verticalmente*/
+					transform: scale(1.2); /*X , Y*/
+				}
+
+				.transformaciones div:nth-child(3){
+					transform: skewX(15deg); /*Horizontalmente*/
+					transform: skewY(5deg); /*Verticalmente*/
+					transform: skew(15deg,10deg); /*X , Y*/
+				}
+				.transformaciones div:nth-child(4), .menu a:hover{
+					transform: translateX(1rem);
+					transform: translateY(1rem);
+					transform: translate(-2rem, -.5rem);
+				}
+				.transformaciones div:nth-child(5){
+					transform: rotate(-10deg);
+				}
+			/*Transformaciones 3D*/
 	/*Formulario*/
 		#contact input{
 			height: 1.5rem;
