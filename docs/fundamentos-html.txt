@@ -1,1 +1,21 @@
-
+Front-End(cliente){
+	Desarrollo del lado del usuario
+	Parte visible de un sitio
+	Lenguajes:
+		HTML
+		CSS
+		JS
+}
+Back-End(servidor){
+	Desarrollo del lado del servidor
+	Parte No visible de un sitio
+	Lenguajes:
+		SQL
+		PHP
+		JAVA
+}
+Fullstack(depuracion){
+	Desarrollo de ambos lados
+	Lenguajes:
+		Todos los anteriores
+}
