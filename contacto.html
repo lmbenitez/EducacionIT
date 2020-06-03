@@ -71,7 +71,11 @@
 						<li><input type="number"> 	NUMERO (123)</li>
 						<li><input type="email"> 	CORREO (a@a)</li>
 						<li><input type="date"> 	FECHA (dd/mm/aaaa)</li>
-						<li><input type="password"> CONTRASEÑA (***)</li>
+						<li>
+							<input id="pass" type="password"> 
+							<button onclick="mostrarContrasena()">
+								Mostrar Contraseña</button>
+						</li>
 						<li><input type="radio"> 	OPCION UNICA</li>
 						<li><input type="checkbox"> OPCION MULTIPLE</li>
 						<li><input type="reset"> 	REESTABLECER</li>
@@ -82,7 +86,43 @@
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre: </label>
+			<input 
+				type="text" 
+				name="nombre"
+			/>
+			<label for="email">Correo: </label>
+			<input 
+				type="email" 
+				name="email"
+			/>
+			<label for="consulta">Consulta: </label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+			></textarea>
+			<input onclick="alert('gracias por realizar tu consulta')" type="submit" />
+		</form>
+		<p>&copy; Todos los derechos Reservados |
+			<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a> 
+			&amp; Compañia			
+		</p>
 	</footer>
+	<script type="text/javascript">
+		//cambia attr Type (text/password)
+		function mostrarContrasena(){
+			
+			//obtenemos el elementos con Id=pass y lo guardamos en una variable (es un valor que se reserva en la memoria y que puede cambiar)
+      		var tipo = document.getElementById("pass");
+      		//condiciones 
+		      if(tipo.type == "password"){
+		          tipo.type = "text";
+		      }else{
+		          tipo.type = "password";
+		      }
+  		}
+	</script>
 </body>
 </html>
