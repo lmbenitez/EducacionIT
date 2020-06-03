@@ -1,0 +1,56 @@
+body, #header, #footer, .menu, section{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family: century gothic, segoe ui, sans-serif;
+	color:white;
+	background-color: rgba(80, 30, 150, .5);
+}
+
+#header, #footer, main, article, section{
+	padding:16px;
+}
+
+section{
+	margin:16px;
+	border-radius: 16px;
+}
+
+.header *{
+	margin:0;
+}
+
+.menu li{
+	display: inline-block;
+	width:100px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.menu li:hover, 
+.active, 
+.send:hover{
+	background-color: darkslateblue;
+}
+
+.menu a{
+	color:white;
+	text-decoration: none;
+}
+
+#contacto, #contacto input, #contacto textarea{
+	margin:auto;
+	border:0;
+	padding:0;
+	width:450px;
+	line-height: 30px;
+	font-family: century gothic;
+}
+
+#contacto textarea{
+	height:120px;
+	resize: none;
+}
+
+
