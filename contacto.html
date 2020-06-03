@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios HTML</title>
+</head>
+<body>
+	<header id="header">
+		<div class="header">
+			<h1>Fundamentos HTML</h1>
+			<p class="subtitle">Formularios</p>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li class="active"><a href="#">Contacto</a></li>
+				<li><a href="https://github.com/c215714n/EducacionIT/tree/html-miercoles-10hs">GitHub</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<section>
+				<header>
+					<h1>¿Que son?</h1>
+				</header>
+				<p>
+				
+					Son elementos que permiten un intercambio de datos entre el cliente y el servidor, esto se realiza para acceder a determinada informacion o almacenar datos en el servidor; Esto se conoce como una interaccion real entre el cliente y el servidor. Los formularios se componen de dos elementos principales, las etiquetas <strong>&lt;label&gt;</strong> que funcionan como rotulos que indican al usuario que informacion debe ingresar, y los otro lado estan los campos de formulario <strong>&lt;input&gt; - &lt;textarea&gt; - &lt;select&gt;</strong> que permiten al usuario seleccionar o ingresar datos, en la pagina.
+				</p>
+				<div class="example">
+					<label for="name">Ingrese su nombre</label>
+					<input type="text" name="name" />
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Cuantos tipos Existen?</h1>
+				</header>
+				<p>
+					
+					Segun la finalidad del mismo, podemos mencionar dos grupos grandes de formularios; por un lado, estan los que utilizan el <em>method="GET"</em> para obtener informacion de un servidor, permite el envio de hasta 8kb; por otro lado, los que utilizan el <em>method="POST"</em> para mantener la seguridad de los datos a enviarse (la informacion se encripta) y que estos sean administrados por el servidor, ya sea para ser almacenados o reutilizados de alguna manera, permite el envio de hasta 8mb.
+				</p>
+				<div class="example">
+					<ul>
+						<li>Method GET</li>
+							<ul>
+								<li>Buscador - Consulta Query</li>
+							</ul>
+						<li>Method POST</li>
+							<ul>
+								<li>Inscripcion - Registro</li>
+								<li>Acceso - Inicio Sesion</li>
+								<li>Consulta - Contacto</li>
+							</ul>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Cuantos Tipos de Campos Existen?</h1>
+				</header>
+				<p>
+					
+					Los formularios admiten varios tipos de campos segun la informacion que debamos ingresar o seleccionar de los mismos, entre los elementos tenemos las listas desplegables &lt;select&gt; que permite marcar la opcion deseada de una lista de opciones; el campo multilinea &lt;textarea&gt; tambien conocido como caja de comentarios, utilizado para escribir en varias lineas el texto deseado; y los campos de una sola linea &lt;input&gt; que poseen diferentes tipos, segun la informacion solicitada en el formulario.
+				</p>
+				<div class="example">
+					<ul>
+						<li><input type="text"> 	TEXTO (Aa1#!)</li>
+						<li><input type="number"> 	NUMERO (123)</li>
+						<li><input type="email"> 	CORREO (a@a)</li>
+						<li><input type="date"> 	FECHA (dd/mm/aaaa)</li>
+						<li><input type="password"> CONTRASEÑA (***)</li>
+						<li><input type="radio"> 	OPCION UNICA</li>
+						<li><input type="checkbox"> OPCION MULTIPLE</li>
+						<li><input type="reset"> 	REESTABLECER</li>
+						<li><input type="submit"> 	ACCION PREDETERMINADA</li>
+					</ul>
+				</div>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
