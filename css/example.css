@@ -1,0 +1,13 @@
+h2{
+	width:100%;
+}
+.columna, .fila{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.columna{
+	flex-direction: column;
+}

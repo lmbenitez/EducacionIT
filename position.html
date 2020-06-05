@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Position</title>
+	<style>
+		body .position{
+			display: block;
+			background-color: lightgrey;
+			width: 600px;
+			height:600px;
+			margin:1rem;
+			padding:1rem;
+		}
+		.position div{
+			/*static dispone de la posicion de los elementos, segun el orden en que se hayan creado, es el valor predeterminado*/
+			width:80px;
+			padding:1rem;
+			border-radius: 1rem;
+			border:2px solid darkslateblue;
+			background-color: slateblue;
+			color:white;
+		}
+
+		.position div:nth-child(2){
+			/*La referencia para el posicionamiento es el ancestro mas proximo que no sea un elemento estatico*/
+			position:absolute;
+			bottom:1rem;
+			right:1rem; 
+		}
+		.position div:nth-child(3){
+			/*La referencia para el posicionamiento es la misma etiqueta*/
+			position: relative;
+			top:1rem;
+			left:1rem;
+		}
+		.position div:nth-last-child(2){
+			/*La referencia para el posicionamiento es la ventana del navegador*/
+			position: fixed;
+			top: 1rem;
+			right: 1rem;
+		}
+		
+		.position div:last-child{
+			/*La referencia el la posicion indicada, siempre y cuando se visualice en la ventana la etiqueta contenedora*/
+			position: sticky;
+			top:1rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="position">
+		<div>position: static</div>
+		<div>position: absolute</div>
+		<div>position: relative</div>
+		<div>position: fixed</div>
+		<div>position: sticky</div>
+	</div>
+	<div class="position">
+		<div>position: static</div>
+		<div>position: absolute</div>
+		<div>position: relative</div>
+		<div>position: fixed</div>
+		<div>position: sticky</div>
+	</div>
+		<div class="position">
+		<div>position: static</div>
+		<div>position: absolute</div>
+		<div>position: relative</div>
+		<div>position: fixed</div>
+		<div>position: sticky</div>
+	</div>
+	<div class="position">
+		<div>position: static</div>
+		<div>position: absolute</div>
+		<div>position: relative</div>
+		<div>position: fixed</div>
+		<div>position: sticky</div>
+	</div>
+</body>
+</html>
