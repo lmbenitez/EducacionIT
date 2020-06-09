@@ -1,0 +1,29 @@
+@sm:576px;
+@md:768px;
+@lg:992px;
+@xl:1200px;
+
+.grid(@n; @i:1) when (@i <= @n){
+	.col-@{i}{
+		width:percentage(@i / @n);
+		}
+	.grid (@n; @i + 1);
+}
+
+.mediaQueries(@vw; @vn){
+	@media screen and (min-width: @vw){
+		.grid (@n; @i:1) when (@i <= @n){
+			.col-@{vn}-@{i}{
+				width:percentage(@i / @n);
+			}
+			.grid (@n; @i + 1);
+		}
+		.grid(12);
+	}
+}
+
+.grid(12);
+.mediaQueries(@sm; sm);
+.mediaQueries(@md; md);
+.mediaQueries(@lg; lg);
+.mediaQueries(@xl; xl);

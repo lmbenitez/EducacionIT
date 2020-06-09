@@ -1,0 +1,82 @@
+/*Comentario hecho en less*/
+.col-1 {
+  width: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-12 {
+  width: 100%;
+}
+header {
+  background-color: #ccffdd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 0.2rem solid #05D;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 576px) {
+  header div#header {
+    width: 518.4px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header div#header {
+    width: 400px;
+  }
+}
+header div#header h1 {
+  color: #05D;
+}
+header div#header p.subtitle {
+  color: #05D;
+}
+header nav {
+  background-color: #80ffaa;
+}
+header nav #menu {
+  border: 0.2rem solid #05D;
+  border-radius: 1rem;
+}
+header nav .menu {
+  border: 0.2rem solid #05D;
+  border-radius: 1rem;
+}
+header nav .menu li a {
+  color: #CA0;
+  text-decoration: none;
+}
+footer {
+  border: 0.2rem solid #05D;
+  border-radius: 1rem;
+}

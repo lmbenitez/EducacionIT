@@ -187,12 +187,19 @@
 		#contact{
 			background-color: transparent;
 		}
-		#contact input{
+		#contact input,
+		#contact textarea,
+		#contact select,
+		.success{
+			margin:.2rem 0 1rem;
+			padding: 1rem;
 			height: 1.5rem;
 			width:100%;
-			margin:.5rem auto;
 		}
 
+		.success{
+			padding:0 1rem;
+		}
 		#contact textarea{
 			height: 6rem;
 			resize: none;
@@ -309,12 +316,6 @@
 				border:0;
 				overflow: hidden;
 				height:0;
-			}
-
-			input,
-			textarea,
-			select{
-				margin:.2rem 0 1rem;
 			}
 
 			:focus + .validation{

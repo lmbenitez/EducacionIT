@@ -1,0 +1,90 @@
+//Declaracion de Variables
+//colores
+	@primary: #05D;
+	@secondary: #CA0;
+	@third: @primary + @secondary;
+//Flexbox
+	@fd:column;
+	@fj:space-evenly;
+	@fa:flex-start;
+	@fw:wrap;
+//media queries
+	@sm:576px;
+	@md:768px;
+	@lg:992px;
+	@xl:1200px;
+/*Comentario hecho en less*/
+//Mixin
+	.rounded-corner(){
+		border: .2rem solid @primary;
+		border-radius: 1rem;
+	}
+	//Mixin Parametricos
+	.flexbox(
+		@flexJustify:center;
+		@flexAlign:center;
+		@flexDir:column;
+		@flexWrap:wrap
+		){
+			display:flex;
+			flex-direction: @flexDir;
+			justify-content: @flexJustify;
+			align-items: @flexAlign;
+			flex-wrap: @flexWrap;
+		}
+	.mediaQuery(@vw){
+		@media screen and (min-width:@vw){
+			width: if(
+				@vw > 800px, @vw/3, @vw*.9
+			);
+		}
+	}
+//Loops (bucles)
+	.grid(@n; @i:0) when (@i < @n){
+		width: 10 * @i / @n;
+		.grid(@n; @i + 5);
+	}
+
+	//ejemplo cristrap grid
+		.grilla(@n; @i:1) when (@i <= @n){
+			.col-@{i}{
+				width: percentage(@i / @n);
+			}
+			.grilla(@n; @i + 1);
+		}
+		.grilla(12);
+//Estructura anidada
+header{
+	background-color: @third;
+	.flexbox;
+	.rounded-corner;
+	div#header{
+		.mediaQuery(@sm);
+		.mediaQuery(@xl);
+		h1{
+			color:@primary;
+		}
+		p.subtitle{
+			color:@primary;
+		}
+	}
+	nav{
+		background-color:darken(@third, 15%);
+		#menu{
+			.rounded-corner;
+		}
+		.menu{
+			.rounded-corner;
+			li{
+				a{
+					color:@secondary;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	.rounded-corner;
+}
