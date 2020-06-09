@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Imagenes</title>
+</head>
+<body>
+	<div id="header">
+		<h1>Fundamentos HTML</h1>
+		<p>Imagenes &amp; Hipervinculos</p>
+	</div>
+	<div id="nav">
+		<ul>
+			<li>
+				<!--Ruta relativa / Interna -->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!--Marcadores / Anclas-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<!--Ruta absoluta / Externa-->
+				<a href="https://github.com/c215714n/educacionit/tree/html-martes-15hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</div>
+	<div id="main" style="text-align: center;">
+		<p style="text-align: left;">
+			Para trabajar con imagenes, necesitamos disponer de todos los elementos en la misma carpeta de proyecto o un servidor de archivos. 
+
+			Existen diferentes reglas para poder subir nuestro contenido a la web, como por ejemplo que
+			<strong> no deben existir espacios en los nombres de los archivos </strong>
+			que subamos ya que estos seran reemplazados por el siguiente caracter <em>%20</em>, por ende se aconseja que reemplazemos los espacios por guiones medios o bajos.
+
+			Tambien se aconseja utilizar minusculas en los nombres de los mismos, ya que la mayoria de los servidores basados en UNIX <strong>hace distincion entre mayusculas y minusculas</strong>, por lo tanto no es lo mismo escribir <em>foto-01.jpg, Foto-01.jpg, ni FOTO-01.jpg</em>.
+
+			Por ultimo, se aconseja utilizar nombres descriptivos, es decir que estos sean una refencia verbal al contenido de la imagen, por ejemplo: <em>gatito-sentado-01.jpg.</em>
+			<br>
+			Existen dos tipos de imagenes, <strong>vectoriales y mapa de bits</strong>, las primeras son calculadas matematicamente, se componen de lineas y curvas (generalmente se utilizan en programas como ILLUSTRATOR INKSCAPE o CORELDRAW) y por estos motivos no se pixelan cuando las reescalamos, <em>el formato mas comun para web es SVG</em>.
+
+			Por otro lado, las mapa de bits se componen de una grilla de pixeles finita, generalmente permiten utilizar hasta 16.777.216 colores y tienen facilidad a la hora de generar profundidad de campo, <em>los formatos mas comunes para web son JPG, PNG o GIF </em>
+		</p>
+		<div>
+			<img 
+			style="width:300px;" 
+			src="img/ih-greenhulk-01.jpg" 
+			alt="Dibujo Hulk Verde" />
+			<img src="../../../../Desktop/educacionIT.jpg" 
+			alt="Logo educacionIT">
+		</div>
+
+		<p style="background-color: lightgrey;">
+			<img 
+			style="width:300px;" 
+			src="img/ih-greenhulk-02.jpg" 
+			alt="Dibujo Hulk Verde Sombras"/>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, eveniet, fugit. Aspernatur fugit expedita eligendi consequatur rem quibusdam harum esse eos. Sequi non, ipsum, fugit molestiae nisi voluptates quibusdam neque debitis modi perferendis totam, pariatur magnam laudantium accusantium sed? Eligendi eos nobis provident quia tempora cumque nesciunt maxime labore pariatur dolore voluptas ipsa, molestiae a, architecto deserunt velit sequi natus fuga, rem quam quo ut reiciendis. Exercitationem consectetur labore, repellendus facere at, alias culpa! Debitis rerum eius beatae, sequi laborum suscipit unde eveniet quisquam nemo asperiores ad quis adipisci libero odit pariatur, quam molestiae vero? Porro exercitationem dolore maiores eveniet, quaerat hic aliquam rerum! Architecto accusamus odit sunt et vel, veritatis minima magni suscipit inventore, eveniet voluptatibus reiciendis dolorem, explicabo ipsum ratione omnis aperiam debitis hic nemo porro. Voluptates, voluptas architecto mollitia. Eius omnis, ex consectetur. Eligendi quia itaque ad dolorum amet eveniet beatae culpa hic iure omnis cupiditate rerum esse, nulla ea dolorem impedit. Fuga consectetur, animi blanditiis facere fugit assumenda similique delectus id natus voluptate ut earum ad, aliquam modi dolores? Ea neque dolor hic nemo facilis eaque nulla nisi, fugit libero! Quia doloremque accusantium delectus et totam soluta sequi ipsam minus aperiam, dolorem vel, ipsa quam quod? Asperiores, facilis ipsam distinctio, quis atque repellat totam. Fugiat quae quaerat architecto ab maiores quasi aspernatur consectetur ratione porro, vel alias quis error, ducimus officia, amet dolorem distinctio obcaecati perferendis dolores adipisci non consequatur voluptatem ex autem. Ex temporibus laudantium hic harum rerum facilis, consequatur quae molestiae, voluptatem quas, ipsa provident distinctio quod porro. Consequatur, accusantium. Explicabo perspiciatis amet, rem reiciendis quae eos voluptatum omnis distinctio. Amet pariatur dignissimos commodi laborum mollitia, ducimus voluptatum sit esse ipsum facilis doloremque, aperiam aliquam enim vero cupiditate corporis accusamus quos? Unde molestiae laudantium amet voluptatibus et distinctio earum rerum, illo facilis sunt iure.
+		</p>
+		
+	</div>
+</body>
+</html>
