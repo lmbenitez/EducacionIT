@@ -1,16 +1,15 @@
-@import url(
-	'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;400&display=swap'
-	);
-@font-face{
-	src: url(../fonts/starjedi.ttf);
-	font-family: star-wars;
-}
-@font-face{
-	src: url(../fonts/bats.ttf);
-	font-family: Batman;
-}
-
-
+/*Reglas de Importacion*/
+	@import url(
+		'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;400&display=swap'
+		);
+	@font-face{
+		src: url(../fonts/starjedi.ttf);
+		font-family: star-wars;
+	}
+	@font-face{
+		src: url(../fonts/bats.ttf);
+		font-family: Batman;
+	}
 /*Pantallas XS(100%)*/
 	/*Reglas Generales*/
 		*{
@@ -54,16 +53,24 @@
 			margin: .2rem;
 		}
 	/*Navegacion*/
+		nav{
+			position:relative;
+		}
+
 		#menu{
 			display: block;
 			height: 2rem;
 			line-height: 2rem;
 			width: 100%;
 			max-width: 400px;
-			color:#ccc;
+			transition:all 1.5s ease;
 		}
 
 		.menu{
+			position: absolute;
+			top:2rem;
+			width:100%;
+			display: none;
 			margin:0;
 			padding:0;
 			list-style:none;
@@ -79,6 +86,13 @@
 
 		.menu a:hover{
 			background-color: #111;
+		}
+
+		.presionado{
+			color:#ccc;
+			background-color: #333;
+			display: block;
+			transition: all 1s ease;
 		}
 	/*Contenido Principal*/
 		section{
@@ -243,6 +257,9 @@
 			#menu{
 				display: none;
 			}
+			.menu{
+				top:-1rem;
+			}
 			.menu li, .menu a{
 				width:100px;
 				padding:.4rem;
@@ -357,7 +374,3 @@
 
 	}	
 /*Autor: Cristian Racedo*/
-
-.presionado{
-	background-color: darkslateblue;
-}

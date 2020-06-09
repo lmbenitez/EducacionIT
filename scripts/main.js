@@ -1,12 +1,11 @@
-//Automatizacion del Elemento Progress
+//Automatizacion Elemento Progress
 	var miProgreso = document.querySelector('#progressBar');
 	var ingresar = document.querySelector('#miValor');
 
 	function ActualizarProgreso(){
 		miProgreso.value = ingresar.value;
 	}
-
-//Manipulacion del Elemento Video
+//Manipulacion Elemento Video
 	var miVideo = document.querySelector('#miVideo');
 	var reproducir = document.querySelector('#reproducir');
 	var alternar = true;
@@ -26,7 +25,6 @@
 				alternar = true;
 			}
 		}
-
 //Dibujo simple en Canvas
 	var canvas = document.querySelector('#lienzo');
 	var ctx = canvas.getContext('2d');
@@ -36,8 +34,7 @@
     //Rectangulo a X=30 Y=30 con width=50
         ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
         ctx.fillRect(30, 30, 50, 50);
-
-//Manipulacion de Input de tipo Range
+//Manipulacion Input [type="range"]
 	var rango = document.querySelector('#rango');
 	var valorRango = document.querySelector('#valorRango');
 
@@ -45,8 +42,9 @@
 		'change', 
 		() => valorRango.innerHTML = rango.value
 	);
-
-//Manipulacion de clases
-	function colorear(e){
-		menu.classList.add('presionado')
-	}
+//Manipulacion classList (menu)
+	document.querySelector('#menu').addEventListener(
+		'click', () => {
+			document.querySelector('#menu').classList.toggle('presionado');
+			document.querySelector('.menu').classList.toggle('presionado')
+		} )
