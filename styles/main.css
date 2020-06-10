@@ -18,3 +18,10 @@
 		box-sizing: border-box;
 		font-family: century gothic, segoe ui, sans-serif;
 	}
+
+	#header, #footer{
+		padding: 1rem;/*
+		rem: 	ancho de la M en root (navegador)
+		em: 	ancho de la M en el elemento padre
+		*/
+	}
