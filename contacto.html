@@ -9,8 +9,8 @@
 <body>
 	<header id="header">
 		<div class="header">
-			<h1>Fundamentos HTML</h1>
-			<p class="subtitle">Formularios</p>
+			<h1>Fundamentos Web</h1>
+			<p class="subtitle">HTML &amp; CSS</p>
 		</div>
 		<nav>
 			<ul class="menu">
@@ -23,6 +23,9 @@
 	</header>
 	<main>
 		<article>
+			<header>
+				<h1>Formularios HTML</h1>
+			</header>
 			<section>
 				<header>
 					<h1>¿Que son?</h1>
@@ -86,6 +89,55 @@
 				</div>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<section id="audio">
+				<header>
+					<h1>Elemento Audio</h1>
+				</header>
+				<p>
+					Uno de las nuevas incorporaciones que incluye HTML5 es el elemento <strong>&lt;audio&gt;</strong> que nos permite trabajar con varios formatos multimedia. Entre los principales formatos de sonido, soporta 
+					<em>.mp3, .wav, .ogg, aunque No todos los navegadores soportan este ultimo</em>; 
+					asi como tambien permite la reproduccion de elementos de video cuyos formatos compatibles se veran el la seccion <a href="#video">Elemento Video</a>
+				</p>
+				<audio src="media/live-learn.mp3" controls>
+					Lo sentimos, pero tu navegador no es compatibnle con el elemento AUDIO.
+				</audio>
+			</section>
+			<section id="video">
+				<header>
+					<h1>Elemento Video</h1>
+				</header>
+				<p>
+					Al igual que el elemento <a href="#audio">&lt;Audio&gt;</a> el elemento &lt;video&gt; se incorporo en HTML5, este admite los formatos <em>.mp4, .avi, .ogv, y al igual que sucede con el formato de audio .ogg, este tampoco es compatible con todos los navegadores</em>; tambien debemos incorporar el atributo <em>controls</em> para que estos elementos se visualicen en pantalla.
+					16:9 (ancho 1.7 > alto)
+					4:3 (ancho 1.3 > alto)
+				</p>
+				<video src="media/californication.mp4" controls>
+					Lo sentimos, pero tu navegador no es compatibnle con el elemento VIDEO.
+				</video>
+			</section>
+			<section>
+				<header>
+					<h1>Contenido EMBED</h1>
+				</header>
+				<p>
+					El contenido embebido es una categoria que se incorporo en las ultimas versiones de HTML, es probable que muchas veces incorporemos elementos de esta categoria a travez de la etiqueta <strong>&lt;iframe&gt;</strong>, tambien conocida como <em>marco flotante</em>, permitiendonos insertar contenido externo en nuestra web de manera asincoronica. Esto permite que el contenido del marco flotante no afecte a los tiempos de carga de nuestro sitio.
+				</p>
+				<iframe 
+					src="https://www.youtube.com/embed/uZj0Mbb8l60" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+				<iframe 
+					src="https://www.youtube.com/embed/hTWKbfoikeg" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">
@@ -93,21 +145,48 @@
 			<input 
 				type="text" 
 				name="nombre"
+				placeholder="Cristian"
+				pattern="[a-zA-Z]{2,50}" 
+				title="Su nombre debe contener al menos 2 caracteres y no mas de 50, tampoco debe poseer numeros, simbolos, ni espacios" 
 			/>
 			<label for="email">Correo: </label>
 			<input 
 				type="email" 
 				name="email"
+				placeholder="cristiandracedo@hotmail.com" 
 			/>
 			<label for="consulta">Consulta: </label>
 			<textarea 
 				name="consulta"
 				minlength="10"
-				maxlength="200" 
+				maxlength="200"
+				placeholder="Realice su consulta" 
 			></textarea>
 			<input class="send" onclick="alert('gracias por realizar tu consulta')" type="submit" />
+			<div class="condiciones">
+				<label for="si">
+					<input 
+						type="radio" 
+						id="si" 
+						name="contrato"
+						value="si">
+					Acepto los terminos
+				</label>
+				<label for="no">
+					<input 
+						type="radio" 
+						id="no" 
+						name="contrato"
+						value="no">
+					NO acepto los terminos		
+				</label>
+			</div>
 		</form>
-		<p>&copy; Todos los derechos Reservados |
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.616520544858!2d-58.37622858254643!3d-34.6027988428332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses-419!2sar!4v1591796607953!5m2!1ses-419!2sar" 
+			></iframe>
+		<p>
+			&copy; Todos los derechos Reservados |
 			<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a> 
 			&amp; Compañia			
 		</p>

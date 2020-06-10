@@ -31,6 +31,7 @@ section{
 .menu li:hover, 
 .active, 
 .send:hover{
+	color:white;
 	background-color: darkslateblue;
 }
 
@@ -41,11 +42,20 @@ section{
 
 #contacto, #contacto input, #contacto textarea{
 	margin:auto;
-	border:0;
+	border:none;
+	outline:none;
 	padding:0;
 	width:450px;
 	line-height: 30px;
 	font-family: century gothic;
+}
+/*div con botones radiales*/
+.condiciones{
+	text-align: center;
+}
+/*Opciones de Contrato*/
+#contacto .condiciones input{
+	width:30px;
 }
 
 #contacto textarea{
@@ -53,4 +63,16 @@ section{
 	resize: none;
 }
 
+iframe, video, audio{
+	display: block;
+	width:600px;
+	height:300px;
+	margin:16px auto;
+	border: 0;
+	border-radius: 16px;
+	box-shadow: 0 0 10px white; /*x y blur color*/
+}
 
+audio{
+	height: 50px;
+}
