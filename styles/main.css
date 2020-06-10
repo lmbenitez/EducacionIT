@@ -1,1 +1,20 @@
-
+/*Reglas Generales*/	
+	*{
+		/* Box-sizing:
+			(Content-box){ 
+				width = content (tamaño final=> content + padding + border);
+				width:300px; 
+				padding:20px; x2
+				border:5px solid black; x2
+				ancho final:350px;
+			}
+			(Border-box){
+				width = content + padding + border (contenido => width - padding - border)
+				width:300px;
+				padding:20px; x2
+				border:5px solid black; x2
+				contenido: 250px;
+			}*/
+		box-sizing: border-box;
+		font-family: century gothic, segoe ui, sans-serif;
+	}
