@@ -138,6 +138,121 @@
 				</iframe>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1>Tablas</h1>
+			</header>
+			<section>
+				<header>
+					<h1>Estructura</h1>
+				</header>
+				<p>Las tablas son elementos que nos permiten disponer informacion de manera tabular, estas se componen de filas y columnas al igual que en cualquier otro software, pero a diferencia del resto de los programas, en HTML las tablas se crean a partir del modelo de cajas, utilizando las etiquetas <strong>&lt;tabla&gt; para definir al contenedor, &lt;tr&gt; para indicar la fila y &lt;td&gt; para indicar la celda de contenido</strong> respetando la siguiente estructura.</p>
+				<ul class="example">
+					<li>table (CONTENEDOR PRINCIPAL)
+					<ul>
+						<li>tr (FILA CONTENEDORA) <!--Table Row-->
+							<ul>
+								<li>td (CELDA DE CONTENIDO) <!--Table Division--></li>
+								<li>td (SEGUNDA CELDA DE LA PRIMER FILA)</li>
+							</ul>
+						</li>
+						<li>tr (SEGUNDA FILA)
+							<ul>
+								<li>td (PRIMER CELDA DE LA SEGUNDA FILA)</li>
+								<li>td (SEGUNDA CELDA DE LA PRIMER FILA)</li>
+							</ul>
+
+						</li>
+					</ul>
+					</li>
+				</ul>
+				<table>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+					</tr>
+				</table>
+				<p>HTML5 incorpora nuevas caracteristicas semanticas a las tablas, es decir que agrega nuevas etiquetas que permiten definir el contenido de las mismas, tanto para el indexado como para la aplicacion de etilos, estas son las siguientes</p>
+				<ul>
+					<li><strong>THEAD:</strong> Cabecera de Tabla, contiene las celdas de titulos y estas se aplican con la etiqueta &lt;th&gt;</li>
+					<li><strong>TBODY:</strong> Contenido de Tabla, contiene la informacion principal de la tabla y se compone de varias filas</li>
+					<li><strong>TFOOT:</strong> Pie de Tabla, contiene informacion complementaria al cuerpo y no es obligatoria.</li>
+				</ul>
+				<table>
+					<caption>Venta de Productos</caption>
+					<thead>
+						<th>Producto</th>
+						<th>Cantidad</th>
+						<th>Precio U.</th>
+						<th>Total</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Teclado</td>
+							<td>2</td>
+							<td>540</td>
+							<td>1080</td>
+						</tr>
+						<tr>
+							<td>Monitor</td>
+							<td>1</td>
+							<td>7500</td>
+							<td>7500</td>
+						</tr>
+						<tr>
+							<td>gabinete</td>
+							<td>3</td>
+							<td>3500</td>
+							<td>10500</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th colspan="3">Total</th>
+						<td>19080</td>
+					</tfoot>
+				</table>
+				<table>
+					<caption>Desarrolladores</caption>
+					<thead>
+						<th>Areas</th>
+						<th>Lenguajes</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">Front-End</td>
+							<td>HTML</td>	
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Back-End</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">

@@ -76,3 +76,25 @@ iframe, video, audio{
 audio{
 	height: 50px;
 }
+
+.example ul, .example li {
+	padding:8px;
+	margin:8px;
+	background-color: rgba(30, 50, 80, .5);
+}
+
+table, caption, tr, td{
+	margin:auto;
+	background-color: rgba(120, 180, 15, .5);
+}
+caption{
+	border-radius: 8px 8px 0 0;/*tl tr br bl*/
+}
+td{
+	width:180px;
+}
+
+table{
+	margin: 20px auto;
+}
+
