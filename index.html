@@ -16,10 +16,17 @@
 		<nav>
 			<button id="menu">Menú Principal</button>
 			<ul class="menu">
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Acerca de</a></li>
+				<li><a href="#">Galeria</a></li>
+				<li><a href="#">Contacto</a></li>
+				<li>
+					<a 
+						href="https://github.com/c215714n/educacionit/tree/responsive-miercoles-10hs" 
+						target="_blank">
+						GitHub
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -123,20 +130,54 @@
 	</main>
 	<footer id="footer">
 		<form action="scripts/contacto.php" id="contacto" method="POST">
-			<label for="1">Label 1<input type="text" name="1" pattern="[a-zA-Z]{2,50}" required=""></label>
-			<label for="2">Label 2<input type="text" name="2" pattern="[a-zA-Z]{2,50}" required=""></label>
-			<label for="3">Label 3<input type="text" name="3" pattern="[a-zA-Z]{2,50}" required=""></label>
-			<label for="consulta"><textarea name="consulta" id="" cols="30" rows="10" minlength="10" maxlength="200" required=""></textarea></label>
+			<label for="nombre">Nombre:
+				<input 
+					type="text" 
+					name="nombre" 
+					placeholder="Cristian Racedo" 
+					pattern="[a-zA-Z]{2,50}"
+					required 
+				/>
+			</label>
+			<label for="email">Correo:
+				<input 
+					type="email" 
+					name="email"
+					placeholder="cristiandracedo@hotmail.com"  
+					required
+				/>
+			</label>
+			<label for="tel">Telefono
+				<input 
+					type="tel" 
+					name="tel" 
+					placeholder="1123456789" 
+					pattern="[0-9]{6,20}" 
+					required
+				/>
+			</label>
+			<label for="consulta">
+				<textarea 
+					name="consulta" 
+					placeholder="Pongase en contacto con Nosotros" 
+					minlength="10" 
+					maxlength="200" 
+					required
+				></textarea>
+			</label>
 			<button class="success">Enviar Consulta</button>
 		</form>
 		<div class="social">
-			<a href="https://.com" target="_blank"></a>
-			<a href="https://.com" target="_blank"></a>
-			<a href="https://.com" target="_blank"></a>
-			<a href="https://.com" target="_blank"></a>
+			<a href="https://facebook.com" target="_blank"></a>
+			<a href="https://instagram.com" target="_blank"></a>
+			<a href="https://twitter.com" target="_blank"></a>
+			<a href="https://youtube.com" target="_blank"></a>
 		</div>
-		<p>@copy; Todos los derechos reservados </p>
-		<a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a>&amp; Compañia
+		<p>@copy; Todos los derechos reservados 
+			<a href="mailto:cristiandracedo@hotmail.com">
+				Cristian Racedo 
+			</a>&amp; Compañia
+		</p>
 	</footer>
 	<script src="scripts/main.js"></script>
 </body>
