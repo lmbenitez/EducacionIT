@@ -18,10 +18,89 @@
 		box-sizing: border-box;
 		font-family: century gothic, segoe ui, sans-serif;
 	}
+	
+	body{
+		margin:0;
+	}
 
 	#header, #footer{
-		padding: 1rem;/*
-		rem: 	ancho de la M en root (navegador)
-		em: 	ancho de la M en el elemento padre
-		*/
+		padding: 1rem;
+		/* Tipos de Medidas:
+			(Absolutas: Tamaño independiente){
+				Metricas:  	mm, cm;
+				pulgadas: 	2.54cm;
+				puntos: 	1/72in - 0.35mm;
+				picas:  	12pt - 4.23mm;
+				pixel: 		puntos en pantalla (depende de la resolucion);
+			}
+			(Relativas: Dependen del contexto) {	
+				porcentaje: % de referencia al elemento padre;
+				ex: 		alto de x en el elemento padre;
+				em: 		ancho de M en el elemento padre;
+				rem: 		ancho de M en root (navegador/html);
+			}*/
+		color:#ddd;
+		background-color: darkslateblue;
+	}
+
+	.header{
+		min-width:320px;
+		width:50%;
+		max-width:640px;
+		margin:auto;
+	}
+
+	.liquid{
+		min-width:320px;
+		width:30%;
+		max-width:450px;
+	}
+
+	.col-1{width:33.3%;}
+	.col-2{width:66.6%;}
+	.col-3{width:100%;}
+
+	article{
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+
+	article header{
+		width:100%;
+	}
+
+	section{
+		min-width: 300px;
+		background-color: #ccc;
+	}
+	
+	#contacto{
+		margin:auto;
+	}
+
+	#contacto, #contacto label{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		min-width: 320px;
+		width:100%;
+		max-width: 720px;
+	}
+	
+	.menu{
+		height:0;
+		overflow: hidden;
+		list-style: none;
+		background-color: slateblue;
+	}
+
+	.mostrar{
+		display: block;
+		height: auto;
+		transition: all .5s ease;
+	}
+
+	.menu li:hover{
+		background-color: darkslateblue;
 	}
