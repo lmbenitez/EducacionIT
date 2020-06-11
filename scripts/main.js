@@ -1,14 +1,13 @@
-// escuchar el evento click del elemento #menu y agregar la clase .mostrar al elemento menu
-var mostrar = true;
-document.querySelector('#menu').addEventListener(
+
+//Menu desplegable
+	var mostrar = true;
+	document.querySelector('#menu').addEventListener(
 		'click', () => {
 			document.querySelector('.menu').classList.toggle('mostrar');
 			if (mostrar){
-				document.querySelector('#menu').innerHTML = 'Cerrar';
+				document.querySelector('#menu').innerHTML = '&times;';
 				mostrar = false;
-			}else{
-				document.querySelector('#menu').innerHTML = 'Menu Principal'
+			} else {
+				document.querySelector('#menu').innerHTML = '&equiv;'
 				mostrar = true;
-			}
-		}
-	)
+	}	}	);

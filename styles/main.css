@@ -1,106 +1,176 @@
-/*Reglas Generales*/	
-	*{
-		/* Box-sizing:
-			(Content-box){ 
-				width = content (tamaño final=> content + padding + border);
-				width:300px; 
-				padding:20px; x2
-				border:5px solid black; x2
-				ancho final:350px;
-			}
-			(Border-box){
-				width = content + padding + border (contenido => width - padding - border)
-				width:300px;
-				padding:20px; x2
-				border:5px solid black; x2
-				contenido: 250px;
-			}*/
-		box-sizing: border-box;
-		font-family: century gothic, segoe ui, sans-serif;
-	}
-	
-	body{
-		margin:0;
-	}
-
-	#header, #footer{
-		padding: 1rem;
-		/* Tipos de Medidas:
-			(Absolutas: Tamaño independiente){
-				Metricas:  	mm, cm;
+/*Mobile First*/
+	/*Contenido Teorico*/
+		/* Box-sizing:*/
+			/*(Content-box){ 
+					width = content
+					final width => content + padding + border
+					Ejemplo:
+						width:300px; 
+						padding:20px; x2
+						border:5px solid black; x2
+						final width:350px;
+				}*/
+			/*(Border-box){
+					width = content + padding + border 
+					content = width - padding - border
+					Ejemplo:
+						width:300px;
+						padding:20px; x2
+						border:5px solid black; x2
+						content: 250px;
+				}*/
+		/* Tipos de Medidas:*/
+			/*(Absolutas: Independiente del Contexto){
+				Metricas:  	mm cm;
 				pulgadas: 	2.54cm;
 				puntos: 	1/72in - 0.35mm;
 				picas:  	12pt - 4.23mm;
-				pixel: 		puntos en pantalla (depende de la resolucion);
-			}
-			(Relativas: Dependen del contexto) {	
+				pixel: 		puntos en pantalla (Depende de Resolucion);
+				}*/
+			/*(Relativas: Dependiente del contexto){
 				porcentaje: % de referencia al elemento padre;
 				ex: 		alto de x en el elemento padre;
 				em: 		ancho de M en el elemento padre;
 				rem: 		ancho de M en root (navegador/html);
-			}*/
-		color:#ddd;
-		background-color: darkslateblue;
-	}
-
-	.header{
-		min-width:320px;
-		width:50%;
-		max-width:640px;
-		margin:auto;
-	}
-
-	.liquid{
-		min-width:320px;
-		width:30%;
-		max-width:450px;
-	}
-
-	.col-1{width:33.3%;}
-	.col-2{width:66.6%;}
-	.col-3{width:100%;}
-
-	article{
-		display: flex;
-		justify-content: space-evenly;
-		flex-wrap: wrap;
-	}
-
-	article header{
-		width:100%;
-	}
-
-	section{
-		min-width: 300px;
-		background-color: #ccc;
-	}
-	
-	#contacto{
-		margin:auto;
-	}
-
-	#contacto, #contacto label{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		min-width: 320px;
-		width:100%;
-		max-width: 720px;
-	}
-	
-	.menu{
-		height:0;
-		overflow: hidden;
-		list-style: none;
-		background-color: slateblue;
-	}
-
-	.mostrar{
-		display: block;
-		height: auto;
-		transition: all .5s ease;
-	}
-
-	.menu li:hover{
-		background-color: darkslateblue;
-	}
+				}*/
+	/*Reglas Generales*/
+		*{
+			box-sizing: border-box;
+			font-family: century gothic, segoe ui, sans-serif;
+		}
+		#header, #footer{
+			padding: 1rem;
+			color: #ddd;
+			background-color: darkslateblue;
+		}
+	/*Cabecera*/
+		.header{
+			min-width: 320px;
+			width: 50%;
+			max-width: 640px;
+			margin: auto;
+		}
+		body, 
+		.header h1{
+			margin: 0;
+		}
+		.subtitle{
+			margin: 0 auto 1rem;
+			letter-spacing: .2rem;
+		}
+	/*Navegacion*/
+		nav{
+			background-color: slateblue;
+		}
+		#menu{
+			font-size: 2rem;
+			height: 2.5rem;
+			width: 2.5rem;
+		}
+		.menu{
+			height: 0;
+			overflow: hidden;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+		}
+		.menu a{
+			display: block;
+			width:100%;
+			padding:.2rem 1rem;
+			line-height: 30px;
+			color:#ccc;
+			text-decoration: none;
+		}
+		.menu a:hover{
+			background-color: darkslateblue;
+		}
+	/*Contenido Principal*/
+		article{
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			padding: .5% 2.5%;
+		}
+		article header{
+			width: 100%;
+			line-height: 1rem;
+		}
+		section{
+			margin: .5rem auto;
+			padding: 1rem;
+			width: 100%;
+			background-color: #ccc;
+		}
+	/*Formulario de Contacto*/
+		#contacto{
+			margin: auto;
+			padding: 2.5%;
+		}
+		#contacto, 
+		#contacto label{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			min-width: 300px;
+			width: 100%;
+			max-width: 900px;
+		}
+		#contacto input, 
+		#contacto textarea,
+		#contacto button.success{
+			outline: none;
+			border: none;
+			padding: .5%;
+			line-height: 1.5rem;
+		}
+		#contacto textarea{
+			height: 5rem;
+			resize: none;
+		}
+	/*Estilos Funcionalidad*/
+		/*Fluid Design*/
+			.fluid{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				background-color: mediumslateblue;
+			}
+			.fluid div{
+				text-align: center;
+				line-height:1rem;
+				border: 1px solid mediumslateblue;
+				padding:.5rem;
+				color:#ccc;
+				background-color: darkslateblue;
+			}
+		/*Liquid Design - Imagenes*/
+			.liquid{
+				text-align: center;
+			}
+			.liquid img{
+				margin: 1rem auto;
+				min-width: 200px;
+				width:30%;
+				max-width: 300px;
+			}
+		/*Responsive Design - Grillas*/
+			.col-1{width: 8.33%;}
+			.col-2{width: 16.67%;}
+			.col-3{width: 25%;}
+			.col-4{width: 33.3%;}
+			.col-5{width: 41.67%;}
+			.col-6{width: 50%;}
+			.col-7{width: 58.33%;}
+			.col-8{width: 66.67%;}
+			.col-9{width: 75%;}
+			.col-10{width: 83.3%;}
+			.col-11{width: 91.67%;}
+			.col-12{width: 100%;}
+		/*Javascript - menu desplegable*/
+			.mostrar{
+				height: auto;
+				background-color: slateblue;
+			}
+/*Autor: Cristian Racedo*/
