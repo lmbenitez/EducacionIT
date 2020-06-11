@@ -1,38 +1,4 @@
 /*Mobile First*/
-	/*Contenido Teorico*/
-		/* Box-sizing:*/
-			/*(Content-box){ 
-					width = content
-					final width => content + padding + border
-					Ejemplo:
-						width:300px; 
-						padding:20px; x2
-						border:5px solid black; x2
-						final width:350px;
-				}*/
-			/*(Border-box){
-					width = content + padding + border 
-					content = width - padding - border
-					Ejemplo:
-						width:300px;
-						padding:20px; x2
-						border:5px solid black; x2
-						content: 250px;
-				}*/
-		/* Tipos de Medidas:*/
-			/*(Absolutas: Independiente del Contexto){
-				Metricas:  	mm cm;
-				pulgadas: 	2.54cm;
-				puntos: 	1/72in - 0.35mm;
-				picas:  	12pt - 4.23mm;
-				pixel: 		puntos en pantalla (Depende de Resolucion);
-				}*/
-			/*(Relativas: Dependiente del contexto){
-				porcentaje: % de referencia al elemento padre;
-				ex: 		alto de x en el elemento padre;
-				em: 		ancho de M en el elemento padre;
-				rem: 		ancho de M en root (navegador/html);
-				}*/
 	/*Reglas Generales*/
 		*{
 			box-sizing: border-box;
@@ -135,7 +101,6 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-evenly;
-				background-color: mediumslateblue;
 			}
 			.fluid div{
 				text-align: center;
@@ -144,6 +109,15 @@
 				padding:.5rem;
 				color:#ccc;
 				background-color: darkslateblue;
+			}
+			.fluid span{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+			}
+			.fluid img{
+				height: 300px;
+				background-color: #ddd;
 			}
 		/*Liquid Design - Imagenes*/
 			.liquid{

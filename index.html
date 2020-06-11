@@ -40,7 +40,6 @@
 					<h1>Tema 1: Fluid Web Design</h1>
 				</header>
 				<p>
-					
 					<em>Utiliza porcentajes o ems en lugar de pixeles</em>, para que los elementos se adapten según el ancho de la pantalla. Si bien el resultado puede parecer atractivo en pantallas medianas, como computadoras y tablets, se producen muchos problemas en pantallas grandes y pequeñas. Por ejemplo, en televisores las imágenes se estiran mucho y en teléfonos los textos son difíciles de leer.
 					
 					Como una forma de evitar errores, <em>se puede fijar un ancho máximo y mínimo</em>. El problema es que esto hace que aparezcan áreas en blanco en pantallas grandes y barras de desplazamiento horizontal en las más pequeñas.
@@ -62,16 +61,25 @@
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2: Adaptative Web Design</h1>
+					<h1>Tema 2: Adaptive Web Design</h1>
 				</header>
 				<p>
-					
 					<em>Usa plantillas estáticas basadas en puntos de quiebre,</em> Cuando la pantalla alcanza cierto límite de tamaño, se cambia a otro diseño.
 
 					Por ejemplo, puedes diseñar una página en tres dimensiones diferentes. Cuando un usuario visite tu sitio, los archivos adaptativos detectarán el aparato que está usando y mostrarán la plantilla adecuada.
 
 					Esta aproximación podría funcionar mejor para clientes con un presupuesto reducido, ya que implica sólo desarrollar las plantillas para algunas pantallas, en vez de planificar una experiencia óptima a través de ellas. Sin embargo, ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles, un medio que crece con fuerza y gana cada vez más relevancia.
 				</p>
+				<div class="fluid">
+					<span>	
+						width: 576px (fixed)
+						<img src="assets/mockup/content-mobile.png" alt="Mobile Web Design">
+					</span>
+					<span>
+						width: 768px (fixed)
+						<img src="assets/mockup/content-tablet.png" alt="Adaptive Web Design">
+					</span>
+				</div>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
@@ -80,7 +88,20 @@
 				<header>
 					<h1>Tema 3: Responsive Web Design</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					
+					En el responsive web design el diseño y el contenido se adaptan a cada pantalla, entregando una experiencia de usuario muy similar en resoluciones bajas, altas o en formatos de distintas pulgadas.
+
+					Para lograr esto, los contenidos se ordenan en bloques que se reorganizan según las características de la pantalla y el navegador que se utiliza. Las partes y la jerarquía de los elementos se definen según una serie de parámetros, entre ellos:
+
+					<ul>
+						<li>Ancho y alto de la ventana del navegador.</li>
+						<li>Orientación del dispositivo.</li>
+						<li>Proporción entre el alto y ancho de la pantalla.</li>
+						<li>Resolución del dispositivo, es decir, la precisión del detalle en las imágenes de mapa de bits.</li>
+					</ul>
+					De esta forma el usuario ve una diagramación distinta en cada dispositivo, pero aún así puede acceder a todos los contenidos. La información se mantiene igual, pero su presentación se optimiza según el aparato y el navegador usado.
+				</p>
 				<div class="liquid">
 					<img  
 						src="assets/usm-venom-01.jpg" 

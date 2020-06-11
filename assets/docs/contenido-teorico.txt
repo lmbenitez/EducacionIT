@@ -1,0 +1,39 @@
+Box-sizing:
+	(Content-box){ 
+		width = content
+		final width => content + padding + border
+		Ejemplo:
+			width:300px; 
+			padding:20px; x2
+			border:5px solid black; x2
+			final width:350px;
+	}
+	(Border-box){
+		width = content + padding + border 
+		content = width - padding - border
+		Ejemplo:
+			width:300px;
+			padding:20px; x2
+			border:5px solid black; x2
+			content: 250px;
+				}*/
+Tipos de Medidas:
+	(Absolutas: Independiente del Contexto){
+		Metricas:	10mm - 1cm;
+		pulgadas:	2.54cm - 1in;
+		puntos:		1/72in - 0.35mm - 1pt;
+		picas:		12pt - 4.23mm - 1pc;
+		pixel:		puntos en pantalla (Depende de Resolucion);
+	}
+	(Relativas: Dependiente del Contenedor){
+		porcentaje:	valor de referencia % del padre;
+		ex:		alto de x minuscula;
+		em:		ancho de M mayuscula;
+		rem:		ancho de M en root (navegador/html);
+	}
+	(Flexibles: Dependiente del Navegador){
+		vw:		1% del ancho del viewport
+		vh:		1% del alto del viewport
+		vmin:		1% de la dimension mas pequeña
+		vmax:		1% de la dimesion mas grande
+	}
