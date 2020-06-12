@@ -1,5 +1,5 @@
 /*Diseño Responsive*/
-/*Universal extra small*/
+/*XS Universal extra small*/
 	/*Reglas Generales*/
 		*{
 			box-sizing:border-box;
@@ -95,7 +95,7 @@
 		.social a:hover img{
 			height: 2rem;
 		}
-/*Small devices*/
+/*SM Small devices*/
 	@media screen and (min-width: 576px) and (orientation:landscape){
 		#header{
 			color:#ddd;
@@ -109,15 +109,14 @@
 				display: flex;
 				flex-direction: row;
 			}
-		}
-	
-/*medium devices*/
+		}	
+/*MD medium devices*/
 	@media screen and (min-width: 768px){
 		#header{
 			background-color: mediumslateblue;
 		}
 	}
-/*large devices*/
+/*LG large devices*/
 	@media screen and (min-width: 992px){
 		#header{
 			background-color: darkslateblue;
@@ -126,7 +125,7 @@
 			width:600px;
 		}
 	}
-/*extra large devices*/
+/*XL extra large devices*/
 	@media screen and (min-width: 1200px){
 		#header{
 			color:darkslateblue;
