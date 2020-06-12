@@ -45,16 +45,72 @@
 			outline: none;
 			border-radius: .5rem;
 		}
-		.menu{
+		.menu,
+		.option,
+		.submenu{
 			display:none;
+		}
+		.menu a{
+			color:#fff;
+			text-decoration: none;
+			line-height: 1.5rem;
+			padding:.2rem 1rem;
+		}
+		.menu a:hover{
+			background-color: mediumslateblue;
+		}
+		.menu li:last-child a:hover{
+			border-radius: 0 0 .5rem .5rem;
+		}
+		.mostrar{
+			display: block;
+		}
+	/*Contenido Principal*/
+		main, article, section{
+			margin:1rem .5rem 0;
+			padding:.5rem;
+		}
+		section{
+			background-color: #ddd;
+		}
+	/*Formulario de Contacto*/
+		#contacto{
+			padding:1rem;
+		}
+	/*Redes sociales*/
+		.social,
+		.social a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			height: 2rem;
+		}
+		.social a{
+			width:2rem;
+		}
+		.social img{
+			height:1rem;
+		}
+		.social a:hover img{
+			height: 2rem;
 		}
 /*Small devices*/
 	@media screen and (min-width: 576px) and (orientation:landscape){
 		#header{
 			color:#ddd;
 			background-color: slateblue;
+		}	
+		/*Navegacion*/
+			#menu{
+				display: none;
+			}
+			.menu{
+				display: flex;
+				flex-direction: row;
+			}
 		}
-	}
+	
 /*medium devices*/
 	@media screen and (min-width: 768px){
 		#header{
@@ -66,13 +122,8 @@
 		#header{
 			background-color: darkslateblue;
 		}
-	/*Navegacion*/
-		#menu{
-			display: none;
-		}
-		.menu{
-			display: flex;
-			flex-direction: row;
+		#contacto{
+			width:600px;
 		}
 	}
 /*extra large devices*/
