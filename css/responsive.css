@@ -1,0 +1,91 @@
+/*Diseño Responsive*/
+/*Universal extra small*/
+	/*Reglas Generales*/
+		*{
+			box-sizing:border-box;
+			font-family: century gothic, sans-serif;
+		}
+
+		body,
+		#header h1, 
+		#header p,
+		.menu{
+			margin:0;
+			padding:0;
+		}
+		
+		#header,
+		#footer,
+		#contacto,
+		.menu li,
+		article,
+		section{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	/*Cabecera y Pie*/
+		#header,
+		#footer{
+			color:slateblue;
+			background-color: #ddd;
+			padding:1rem;
+		}
+	/*Navegacion*/
+		nav{
+			color:#ddd;
+			background-color: darkslateblue;
+			border-radius: .5rem
+		}
+		#menu{
+			font-size: 1.5rem;
+			width:2.5rem;
+			height: 2.5rem;
+			outline: none;
+			border-radius: .5rem;
+		}
+		.menu{
+			display:none;
+		}
+/*Small devices*/
+	@media screen and (min-width: 576px) and (orientation:landscape){
+		#header{
+			color:#ddd;
+			background-color: slateblue;
+		}
+	}
+/*medium devices*/
+	@media screen and (min-width: 768px){
+		#header{
+			background-color: mediumslateblue;
+		}
+	}
+/*large devices*/
+	@media screen and (min-width: 992px){
+		#header{
+			background-color: darkslateblue;
+		}
+	/*Navegacion*/
+		#menu{
+			display: none;
+		}
+		.menu{
+			display: flex;
+			flex-direction: row;
+		}
+	}
+/*extra large devices*/
+	@media screen and (min-width: 1200px){
+		#header{
+			color:darkslateblue;
+			background-color: #ddd
+		}
+	}
+/*Print Design*/
+	@media print {
+		nav{
+			display:none;
+		}
+	}
+/*Autor: Cristian Racedo*/
