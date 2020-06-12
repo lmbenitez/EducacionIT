@@ -4,29 +4,70 @@
 	<meta charset="UTF-8">
 	<title>dimensiones y overflow Visible</title>
 	<style>
+		*{
+			box-sizing: border-box;
+			font-family: century gothic;
+			margin: 0;
+			padding:0;
+		}
+		h2{
+			margin:1rem auto .2rem;
+			width:100%;
+			text-align: center;
+		}
 		p{
-			margin:16px;
+			margin:1%;
 			padding: 25px;
 			color: white;
 			background-color:mediumslateblue;
 		}
-
 		.flex{
 			display: flex;
+			justify-content: center;
 			flex-wrap: wrap;
 		}
-		.flex p:first-child{
-			width:50%;
+		.flex p{
+			width:45%;
 		}
-		body>p:nth-child(2){
+		.flex p:nth-child(odd):last-child{
+			width:92%;
+		}
+
+		.float p:first-child{
 			float:left;
 			width:50%;
+			margin:0 1%;
+		}
+		.overflow{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.overflow p:first-child{
+			width:92%;
+			height:75px;
+			overflow: hidden;
+		}
+		.overflow p:nth-child(2){
+			width:45%;
+		}
+		.overflow p:nth-child(3){
+			width:45%;
+			height:75px;
+		}
+		p:nth-child(2){
+			background-color: darkslateblue;
+		}
+		p:nth-child(3){
+			color: slateblue;
+			background-color: lightgrey;
 		}
 		
 	</style>
 	<link rel="stylesheet" href="css/example.css">
 </head>
 <body>
+	<h2>Display Flex</h2>
 	<div class="flex">
 		<p>
 		
@@ -41,13 +82,36 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
 		</p>
 	</div>
-	<p>
+	<hr/>
+	<h2>Float Left</h2>
+	<div class="float">
+		<p>
 		
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
-	</p>
-	<p>
-		
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
-	</p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+	</div>
+	<h2>Overflow visible &amp; hidden</h2>
+	<div class="overflow">
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+		<p>
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam, minus perspiciatis ducimus rem veritatis laborum! Cumque aliquid soluta architecto nobis porro excepturi autem corporis non maiores quod deserunt pariatur doloremque saepe optio blanditiis illum voluptatibus sapiente provident, atque officiis rem vel nostrum recusandae. Esse et, soluta minus animi quibusdam officiis ipsum sapiente maiores in harum dolores aut maxime iste laborum facere assumenda magnam labore, eum molestias id asperiores numquam, dolorum. Cum voluptatem culpa perferendis quae ipsa, assumenda repellat nam nobis quo dolorem maxime earum minima rerum ratione suscipit quisquam itaque sunt fuga architecto illo necessitatibus harum corporis eveniet sequi.
+		</p>
+	</div>
 </body>
 </html>
