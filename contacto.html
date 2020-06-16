@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+	<style>
+		/*	selectores etiqueta 	header{color:blue;}
+			selectores clase 		.header{ color:red; }
+			selectores id 			#header{ color:white; }
+		*/
+	</style>
+</head>
+<body>
+	<header	id="header">
+		<h1>Fundamentos Web</h1>
+		<p class="subtitle">HTML5 &amp; CSS3</p>
+		<nav>
+			<ul class="menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#">Contacto</a></li>
+				<li>
+					<a 
+						target="_blank" 
+						href="https://github.com/c215714n/educacionit/tree/html-martes-15hs">
+						GitHub
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1><span>F</span>ormularios</h1>
+			</header>
+			<section>
+				<header>
+					<h1>¿Que son?</h1>
+				</header>
+				<p>
+
+					Son una herramienta que permite al usuario tener una interaccion real con el servidor, es decir, que se produce un intercambio de datos y hay una respuesta en base a la informacion ingresada.
+				
+					Estos se componen de <span>2</span> elementos principales: 
+					<strong>etiquetas</strong>
+					<em>(&lt;label&gt;)</em> que permiten al usuario identificar el tipo de contenido que se debe ingresar &amp; 
+					<strong>campos</strong>
+					<em>(&lt;input&gt;&lt;textarea&gt;&lt;select&gt;)</em> que permiten al usuario el ingreso, seleccion o manipulacion de los datos.
+				</p>
+				<div class="example">
+					<label>Ingrese su Nombre</label>
+					<input type="text"/>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Como Funcionan?</h1>
+				</header>
+				<p>
+					
+					Los formularios cuentan con dos atributos principales: 
+					<strong>action</strong> el cual indica la accion predeterminada a la hora de enviar el formulario 
+					<em>(antiguamente se utilizaba el valor action="mailto:cristiandracedo@hotmail.com", pero actualmente se implementa un script en lenguaje de servidor)</em> &amp;
+					<strong>method</strong> que indica la forma en la que se van a presentar los datos, existen dos valores posibles:
+						<strong>GET </strong>
+						(metodo menos seguro, ya que no se encripta la informacion; ideal para buscadores ya que solicita los datos al servidor y lo ingresado en el formulario no es relevante. Admite hasta 8kb)
+						<strong>POST</strong> (metodo seguro, encripta los datos a enviarse y estos no son accesibles desde la barra de direcciones, los datos ingresados son prioridad y admite hasta 8mb)
+				</p>
+				<ul>
+					<caption>Method</caption>
+					<li>GET
+						<ul>
+							<li>Buscador - (Consulta Query)</li>
+						</ul>
+					</li>
+					<li>POST
+						<ul>
+							<li>Inscripcion - (Registro)</li>
+							<li>Acceso - (Inicio de Sesion)</li>
+							<li>Consulta Web - (Contacto)</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		
+	</footer>
+</body>
+</html>
