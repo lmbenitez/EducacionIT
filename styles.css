@@ -1,0 +1,68 @@
+body{
+	margin:0;
+	font-family: century gothic, sans-serif;
+}
+
+#header, #footer{
+	padding:20px;
+	color:#ccc;
+	background-color: darkslateblue;
+}
+/*
+	css .menu / html class="menu"
+	css #header / html id="header"
+*/
+.menu{
+	padding:0;
+	list-style: none;
+	background-color: slateblue;
+	text-align: center;
+}
+
+.menu li{
+	display: inline-block;
+	width:80px;
+	padding:5px;
+	line-height: 30px;
+}
+.menu li:hover, .active{
+	background-color: mediumslateblue;
+}
+
+.menu a{
+	color:#ddd;
+	text-decoration: none;
+}
+
+main, article, section{
+	padding:10px;
+}
+
+.header{
+	background-color: slateblue;
+}
+
+#contacto, #contacto input, #contacto textarea, #contacto select{
+	width:450px;
+	line-height: 30px;
+	margin: auto;
+	outline:0;
+	border:0;
+	padding:0;
+}
+#contacto select{
+	height:30px;
+}
+#contacto textarea{
+	height:120px;
+	resize: none;
+}
+
+.example{
+	background-color: darkgrey;
+	padding:10px;
+}
+
+#contacto .send{
+	background-color: mediumslateblue;
+}

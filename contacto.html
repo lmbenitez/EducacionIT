@@ -3,12 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
-	<style>
-		/*	selectores etiqueta 	header{color:blue;}
-			selectores clase 		.header{ color:red; }
-			selectores id 			#header{ color:white; }
-		*/
-	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header	id="header">
@@ -18,7 +13,7 @@
 			<ul class="menu">
 				<li><a href="index.html">Inicio</a></li>
 				<li><a href="galeria.html">Galeria</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li class="active"><a href="#">Contacto</a></li>
 				<li>
 					<a 
 						target="_blank" 
@@ -108,11 +103,39 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form action="mailto:cristiandracedo@hotmail.com" method="">
-			<input type="text">
-			<input type="email">
-			<input type="reset">
-			<input type="submit">
+		<form id="contacto" action="contacto.php" method="POST">
+			<label for="nombre">Nombre: </label>
+			<input 
+				type="text" 
+				name="nombre"
+				pattern="[a-zA-Z]{2,50}"
+				title="Su Nombre debe contener entre 2 y 50 caracteres y no debe poseer números ni símbolos" 
+				placeholder="Ingrese su Nombre" 
+				required 
+			/>
+			<label for="email">Correo: </label>
+			<input 
+				type="email"
+				name="email"
+				placeholder="Ingrese su Correo" 
+				required 
+			/>
+			<label for="nacionalidad">Nacionalidad: </label>
+			<select name="nacionalidad">
+				<option value="AR">Argentina</option>
+				<option value="BR">Brasileña</option>
+				<option value="BO">Boliviana</option>
+				<option value="CO">Colombiana</option>
+				<option value="OTRA">mas opciones...</option>
+			</select>
+			<label for="consulta">Consulta: </label>
+			<textarea 
+				name="consulta"
+				minlength="10"
+				maxlength="200" 
+				placeholder="Realice su Consulta" 
+			></textarea>
+			<input class="send" type="submit" value="Realizar Consulta">
 		</form>
 	</footer>
 </body>
