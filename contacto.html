@@ -67,7 +67,7 @@
 						(metodo menos seguro, ya que no se encripta la informacion; ideal para buscadores ya que solicita los datos al servidor y lo ingresado en el formulario no es relevante. Admite hasta 8kb)
 						<strong>POST</strong> (metodo seguro, encripta los datos a enviarse y estos no son accesibles desde la barra de direcciones, los datos ingresados son prioridad y admite hasta 8mb)
 				</p>
-				<ul>
+				<ul class="example">
 					<caption>Method</caption>
 					<li>GET
 						<ul>
@@ -83,10 +83,37 @@
 					</li>
 				</ul>
 			</section>
+			<section>
+				<header>
+					<h1>¿Tipos de Datos?</h1>
+				</header>
+				<p>
+					En los campos de formulario, podremos ingresar o seleccionar diferentes valores, representados por las siguientes etiquetas:
+					<strong>&lt;select&gt;</strong> o campo de lista desplegable, permite al usuario seleccionar un item de una lista; 
+					<strong>&lt;textarea&gt;</strong> o campo de texto multilinea, permite al usuario ingresar varias lineas de texto y por defecto es redimensionable; e 
+					<strong>&lt;input&gt;</strong> o campo de una sola linea que posee multiples tipos de datos, los cuales podemos especificar mediante el atributo <em>type="text"</em>	
+				</p>
+				<ul class="example">
+					<li><input type="text"> Texto</li>
+					<li><input type="number"> Numero</li>
+					<li><input type="email"> Correo</li>
+					<li><input type="date"> Fecha</li>
+					<li><input type="radio"> Opcion Unica</li>
+					<li><input type="checkbox"> Opcion Multiple</li>
+					<li><input type="password"> Contraseña</li>
+					<li><input type="reset"> Reset</li>
+					<li><input type="submit"> Submit</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 	<footer id="footer">
-		
+		<form action="mailto:cristiandracedo@hotmail.com" method="">
+			<input type="text">
+			<input type="email">
+			<input type="reset">
+			<input type="submit">
+		</form>
 	</footer>
 </body>
 </html>
