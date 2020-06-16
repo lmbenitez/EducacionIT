@@ -1,0 +1,87 @@
+footer #contacto input:invalid + .validation {
+  color: darkred;
+}
+footer #contacto input:valid + .validation {
+  color: darkgreen;
+}
+footer #contacto:valid .success {
+  background-color: darkgreen;
+}
+footer #contacto:invalid .success {
+  background-color: darkred;
+}
+footer .social a .facebook {
+  background-image: url("../media/facebook.png");
+}
+footer .social a .twitter {
+  background-image: url("../media/twitter.png");
+}
+footer .social a .instagram {
+  background-image: url("../media/instagram.png");
+}
+footer .social a .whatsapp {
+  background-image: url("../media/whatsapp.png");
+}
+footer .primary {
+  background-color: lightblue;
+}
+footer .text-primary {
+  color: lightblue;
+}
+footer .border-primary {
+  border-color: lightblue;
+}
+footer .secondary {
+  background-color: grey;
+}
+footer .text-secondary {
+  color: grey;
+}
+footer .border-secondary {
+  border-color: grey;
+}
+footer .success {
+  background-color: limegreen;
+}
+footer .text-success {
+  color: limegreen;
+}
+footer .border-success {
+  border-color: limegreen;
+}
+footer .warning {
+  background-color: gold;
+}
+footer .text-warning {
+  color: gold;
+}
+footer .border-warning {
+  border-color: gold;
+}
+footer .danger {
+  background-color: darkred;
+}
+footer .text-danger {
+  color: darkred;
+}
+footer .border-danger {
+  border-color: darkred;
+}
+footer .light {
+  background-color: lightgrey;
+}
+footer .text-light {
+  color: lightgrey;
+}
+footer .border-light {
+  border-color: lightgrey;
+}
+footer .dark {
+  background-color: darkgrey;
+}
+footer .text-dark {
+  color: darkgrey;
+}
+footer .border-dark {
+  border-color: darkgrey;
+}

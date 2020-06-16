@@ -10,6 +10,28 @@
 	<link rel="stylesheet" href="styles/icomoon.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/grid.css">
+	<style>	
+		/*Atributo igual a*/
+		input[type="radio"]{
+			width:30px;
+			height: 30px;
+		}
+		/*Empieza con*/
+		a[href^="https://"]{
+			color: lightgreen;
+			background-color: darkgreen;
+		}
+		/*Termina con*/
+		a[href$=".html"]{
+			color:tomato;
+			background-color: darkred;
+		}	
+		/*Contiene*/	
+		a[href*="index"]{
+			color:lightgrey;
+			background-color: darkgrey;
+		}
+	</style>
 </head>
 <body>
 <!--HEADER: Contenido Introductorio
@@ -26,8 +48,8 @@
 		<nav>
 			<button id="menu">Menu Principal</button>
 			<ul class="menu">
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
+				<li><a href="index.html">Link 1</a></li>
+				<li><a href="animaciones.html">Link 2</a></li>
 				<li><a href="#">Link 3</a></li>
 				<li><a href="https://github.com/C215714N/EducacionIT/tree/maquetacion-martes-10hs" target="_blank">GitHub</a></li>
 			</ul>

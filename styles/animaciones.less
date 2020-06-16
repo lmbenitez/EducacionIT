@@ -1,0 +1,108 @@
+//Estructura del DOM
+
+	#header{
+		.header{
+
+		}
+		nav{
+			#menu{
+
+			}
+			.menu{
+				li{
+					a{
+
+					}
+				}
+			}
+		}
+	}
+	main{
+		article{
+			section{
+				header{
+
+				}
+				p{
+
+				}
+				footer{
+
+				}
+			}
+		}
+	}
+	footer{
+		#contacto{
+			label{
+
+			}
+			input{
+				&:invalid{
+					& + .validation{
+						color:darkred;
+					}
+				}
+				&:valid{
+					& + .validation{
+						color:darkgreen;
+					}
+
+				}
+			}
+			textarea{
+				&:invalid{
+
+				}
+				&:valid{
+					
+				}
+			}
+			&:valid .success{
+				background-color: darkgreen;
+			}
+			&:invalid .success{
+				background-color: darkred;
+			}
+		}
+		.social{
+			a{
+@social: facebook, twitter, instagram, whatsapp;
+@img: "../media";
+				.redes(	@i:1,
+						@name:@social, 
+						@social:length(@social), 
+						@nth:nth-child) when (@i <= @social){
+							@red-actual:extract(@name,@i);
+						.@{red-actual}{
+							background-image: url("@{img}/@{red-actual}.png");
+						}
+					.redes(@i + 1);
+				}
+				.redes;	
+			}
+		}
+@colores: primary, secondary, success, warning, danger, light, dark;
+@valores: lightblue, grey, limegreen,gold, darkred, lightgrey,darkgrey;
+			.colores (
+					@i:1,
+					@valores:@valores,
+					@colores:@colores) when (@i <= length(@colores)){
+					@color:extract(@colores,@i);
+					@valor:extract(@valores,@i);
+				.@{color}{
+					background-color:@valor;
+				}
+				.text-@{color}{
+					color:@valor;
+				}
+				.border-@{color}{
+					border-color:@valor;
+				}
+				.colores(@i + 1);
+			}
+			.colores;
+		p{
+
+		}
+	}
