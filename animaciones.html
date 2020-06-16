@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animaciones</title>
+	<style>
+		.animaciones div{
+			width:50px;
+			height:50px;
+			margin:10px;
+			color:#ddd;
+			background-color: darkslateblue;
+			animation-name: animacion;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+		}
+		.animaciones div:first-child{
+			animation-direction: normal ;
+			animation-timing-function: ease;
+		}
+		.animaciones div:nth-child(even){
+			animation-direction: reverse;
+			animation-timing-function: ease-in;
+		}
+		.animaciones div:nth-child(odd){
+			animation-direction: alternate;
+			animation-timing-function: ease-out;
+		}
+		.animaciones div:last-child{
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+			animation-play-state: paused;
+		}
+
+		@keyframes animacion{
+			from{
+				margin:10px;
+			}
+			to{
+				margin:10px 1000px;
+			}
+		}
+
+		#cortes:hover{
+			animation-name: animacion-cortes;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-out;
+		}
+
+		@keyframes animacion-cortes {
+			0%{
+				transform: translate(0);
+				background-color:red;
+			}
+			20%{
+				transform: translate(0,-30px);
+				background-color: yellow;
+			}
+			40%{
+				transform: translate(30px, 0px);
+				background-color: green;
+			}
+			60%{
+				transform: translate(0, 30px);
+				background-color: cyan;
+			}
+			80%{
+				transform: translate(-30px, 0);
+				background-color: blue;
+			}
+			100%{
+				transform: translate(0);
+				background-color:magenta;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="animaciones">
+		<div>ease-out</div>
+		<div>ease-in</div>
+		<div></div>
+		<div id="cortes"></div>
+		<div></div>
+		<div class="cortes">linear
+			<button id="runMe">Play</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var play = true;
+		document.querySelector('#runMe').addEventListener('click', () => {
+			if (play){
+				document.querySelector('.animaciones div:last-child').classList.toggle('cortes');
+				document.querySelector('.animaciones div:last-child').style.animationPlayState = 'running';
+				play = false;
+			}else{
+				document.querySelector('.animaciones div:last-child').classList.toggle('cortes');
+				document.querySelector('.animaciones div:last-child').style.animationPlayState = 'running';
+				play = true;
+			}
+		})
+	</script>
+</body>
+</html>
