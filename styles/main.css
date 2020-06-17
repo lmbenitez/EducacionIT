@@ -1,4 +1,4 @@
-/*Mobile First*/
+/*Mobile First - XS Devices*/
 	/*Reglas Generales*/
 		*{
 			box-sizing: border-box;
@@ -95,6 +95,43 @@
 			height: 5rem;
 			resize: none;
 		}
+		#contacto .success{
+			color:#ccc;
+			cursor: pointer;
+			overflow: hidden;
+			position:relative;
+			padding:0;
+		}
+		#contacto:invalid .success{
+			background-color: darkred;
+		}
+		#contacto:valid .success{
+			background-color: darkgreen;
+		}
+		#contacto .success:before,
+		#contacto .success:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top:-350px;
+			width:5px;
+			height: 5px;
+			border-radius: 50%;
+		}
+		#contacto .success:before{
+			left:-100%;
+		}
+		#contacto .success:after{
+			right:-100%;
+		}
+		#contacto .success:hover:before,
+		#contacto .success:hover:after{
+			width:200%;
+			height:700px;
+			opacity:.5;
+			background-color: darkslateblue;
+			transition: all 1s ease-out;
+		}
 	/*Estilos Funcionalidad*/
 		/*Fluid Design*/
 			.fluid{
@@ -147,4 +184,38 @@
 				height: auto;
 				background-color: slateblue;
 			}
+/*SM Devices*/
+	@media screen and (min-width: 576px){
+		#header, #footer{
+			color: #fff;
+			background-color: slateblue;
+		}
+	}
+/*MD Devices*/
+	@media screen and (min-width: 768px){
+		#header, #footer{
+			color: mediumslateblue;
+			background-color: #ccc;
+		}
+	}
+/*LG Devices*/
+	@media screen and (min-width: 992px){
+		#header, #footer{
+			color: darkslateblue;
+			background-color: #ddd;
+		}
+	}
+/*XL Devices*/
+	@media screen and (min-width: 1200px){
+		#header, #footer{
+			padding: 1rem;
+			color: #darkslateblue;
+			background-color: #ccc;
+		}
+	}
+/*Print Design*/
+	@media print{
+
+	}
+
 /*Autor: Cristian Racedo*/
