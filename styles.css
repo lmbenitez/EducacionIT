@@ -77,7 +77,7 @@ audio{
 	height: 50px;
 }
 
-.example ul, .example li {
+.example{
 	padding:8px;
 	margin:8px;
 	background-color: rgba(30, 50, 80, .5);
