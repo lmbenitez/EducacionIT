@@ -1,0 +1,21 @@
+//Tipos de Desarrollo
+FrontEnd (cliente){
+	Lo que se ve en el Navegador
+	Lenguajes:
+	*	HTML	(Estructura)
+	*	CSS		(Diseño)
+		JS		(Funcionalidad)
+}
+BackEnd (servidor){
+	Lo que sucede en el Servidor
+	Lenguajes:
+		SQL		(Base Datos)
+		PHP		(Web Dinamicas)
+		JAVA	(Aplicaciones Web)
+}
+
+FullStack (ambos){
+	Organizacion y depuracion de Proyectos
+	Lenguajes:
+		TODOS LOS ANTERIORES
+}

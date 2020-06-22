@@ -1,0 +1,19 @@
++ W3C(world wide web Consortium) w3schools
++ WHATWG(Web Hipertext application technology working group)
+
+HTML (HyperText Markup Language){
+	"Lenguaje de Marcado de Hipertexto"
+	Utiliza Etiquetas para definir el contenido y su relacion con las demas partes.
+	EJEMPLO: (TAG)
+		<p> soy un parrafo </p>
+	"El orden de los Factores ALTERA el Producto"
+}
+
+CSS (Cascading Styles Sheets){
+	"Hojas de Estilo en Cascada"
+	Utiliza Reglas y Selectores para definir el aspecto visual de los elementos.
+	EJEMPLO: 
+		p{color:blue;}
+	"El oden de los Factores NO ALTERA el producto"
+	
+}
