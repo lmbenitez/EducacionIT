@@ -228,13 +228,13 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form action="scripts/contacto.php" id="contacto" method="POST">
+		<form name="contactForm" action="scripts/contacto.php" id="contacto" method="POST">
 			<label for="nombre">Nombre:
 				<input 
 					type="text" 
 					name="nombre" 
 					placeholder="Cristian Racedo" 
-					pattern="[a-zA-Z]{2,50}"
+					pattern="[a-z A-Z]{2,50}"
 					required 
 				/>
 			</label>
@@ -265,7 +265,7 @@
 					required
 				></textarea>
 			</label>
-			<button class="success">Enviar Consulta</button>
+			<button id="success">Enviar Consulta</button>
 		</form>
 		<div class="social">
 			<a href="https://facebook.com" target="_blank"></a>

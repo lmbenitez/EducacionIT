@@ -85,31 +85,32 @@
 		}
 		#contacto input, 
 		#contacto textarea,
-		#contacto button.success{
+		#success{
 			outline: none;
 			border: none;
 			padding: .5%;
+			height: 1.5rem;
 			line-height: 1.5rem;
 		}
 		#contacto textarea{
 			height: 5rem;
 			resize: none;
 		}
-		#contacto .success{
+		#success{
 			color:#ccc;
 			cursor: pointer;
 			overflow: hidden;
 			position:relative;
 			padding:0;
 		}
-		#contacto:invalid .success{
+		#contacto:invalid #success{
 			background-color: darkred;
 		}
-		#contacto:valid .success{
+		#contacto:valid #success{
 			background-color: darkgreen;
 		}
-		#contacto .success:before,
-		#contacto .success:after{
+		#success:before,
+		#success:after{
 			content: '';
 			display: block;
 			position: absolute;
@@ -118,20 +119,42 @@
 			height: 5px;
 			border-radius: 50%;
 		}
-		#contacto .success:before{
+		#success:before{
 			left:-100%;
 		}
-		#contacto .success:after{
+		#success:after{
 			right:-100%;
 		}
-		#contacto .success:hover:before,
-		#contacto .success:hover:after{
+		#success:hover:before,
+		#success:hover:after{
 			width:250%;
 			height:700px;
 			opacity:.2;
 			background-color: darkslateblue;
 			transition: all .5s ease-out;
 		}
+	/*Redes Sociales*/
+		.social{
+			display: flex;
+			justify-content: center;
+		}
+		.social a{
+			display: block;
+			width:32px;
+			height:32px;
+			background-image: url(../assets/social-media.png);
+			background-color: rgba(255,255,255,.5); 
+			background-size: 354px;
+			background-position: calc(0*-32px) calc(1*32px);
+		}
+		.social a:nth-child(2){background-position: calc(1*-32px) calc(1*32px)}
+		.social a:nth-child(3){background-position: calc(8*-32px) calc(1*32px)}
+		.social a:nth-child(4){background-position: calc(10*-32px) calc(1*32px)}
+		.social a:nth-child(1):hover{background-position: calc(0*-32px) calc(-1*32px)}
+		.social a:nth-child(2):hover{background-position: calc(1*-32px) calc(-1*32px)}
+		.social a:nth-child(3):hover{background-position: calc(8*-32px) calc(-1*32px)}
+		.social a:nth-child(4):hover{background-position: calc(10*-32px) calc(-1*32px)}
+
 	/*Estilos Funcionalidad*/
 		/*Fluid Design*/
 			.fluid{
@@ -181,47 +204,116 @@
 			.col-12{width: 100%;}
 		/*Relative Values - em*/
 			.em{
-				font-size: 12px;
+				font-size: 32px;
 			}
 			.em li{
-				font-size: .8rem;
+				font-size: .8em;
 			}
 		/*Javascript - menu desplegable*/
 			.mostrar{
 				height: auto;
 				background-color: slateblue;
 			}
-/*SM Devices*/
+/*SM Devices - Mobile Landscape*/
 	@media screen and (min-width: 576px){
-		#header, #footer{
-			background: url(../assets/bg-header.jpg);
-		}
+		/*Banner*/
+			#header, #footer{
+				background: url(../assets/bg-sm-header.jpg);
+			}
 	}
-/*MD Devices*/
+/*MD Devices - Tablet Portrait - Mobile Landscape*/
 	@media screen and (min-width: 768px){
-		#header, #footer{
-			color: mediumslateblue;
-			background-color: #ccc;
-		}
+		/*Banner*/
+			#header, #footer{
+				background: url(../assets/bg-md-header.jpg);
+			}
+		/*Formulario de Contacto*/
+			#contacto{
+				width:80%;
+			}
+		/*Redes Sociales*/
+			.social a{
+				width:64px;
+				height:64px;
+				background-size: 708px;
+				background-position: calc(0*-64px) calc(1*64px);
+			}
+			.social a:nth-child(2){background-position: calc(1*-64px) calc(1*64px)}
+			.social a:nth-child(3){background-position: calc(8*-64px) calc(1*64px)}
+			.social a:nth-child(4){background-position: calc(10*-64px) calc(1*64px)}
+			.social a:nth-child(1):hover{background-position: calc(0*-64px) calc(-1*64px)}
+			.social a:nth-child(2):hover{background-position: calc(1*-64px) calc(-1*64px)}
+			.social a:nth-child(3):hover{background-position: calc(8*-64px) calc(-1*64px)}
+			.social a:nth-child(4):hover{background-position: calc(10*-64px) calc(-1*64px)}
+
 	}
-/*LG Devices*/
+/*LG Devices - Tablet Landscape - Desktop Netbook*/
 	@media screen and (min-width: 992px){
-		#header, #footer{
-			color: darkslateblue;
-			background-color: #ddd;
+		/*Banner*/
+			#header, #footer{
+				background: url(../assets/bg-lg-header.jpg);
+				background-size: cover;
+				background-position: bottom center;
+			}
+			#header{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			.header{
+				margin:0;
+				width:33.3%;
+			}
+		/*Navegacion*/
+			#menu{
+				display: none;
+			}
+			nav,
+			.menu,
+			.mostrar{
+				display: flex;
+				justify-content: center;
+				height: auto;
+				align-self: flex-end;
+			}
 		}
-	}
-/*XL Devices*/
-	@media screen and (min-width: 1200px) and (max-width: 1920px){
+/*XL Devices Desktop Notebook - Smart TV*/
+	@media screen and (min-width: 1200px){
 		#header, #footer{
-			padding: 1rem;
-			color: #darkslateblue;
-			background-color: #ccc;
+			background: url(../assets/bg-xl-header.png);
+			background-size: cover;
+		}
+		/*Contenido Principal*/
+			main{
+				padding:1rem;
+			}
+			article{
+				flex-direction: row;
+				justify-content: center;
+				background-color: #ddd;
+				margin:1rem auto;
+				border-radius: 1rem
+			}
+			section{
+				width:45%;
+				margin:1rem;
+				border-radius: 1rem;
+			}
+		/*Formulario de Contacto*/
+			#contacto{
+				width:60%;
+			}
+		section:nth-child(even):last-child{
+			width:calc(90% + 1rem);
 		}
 	}
 /*Print Design*/
 	@media print{
-
+		nav{
+			display: none;
+		}
+		section{
+			page-break-after: all;
+		}
 	}
-
 /*Autor: Cristian Racedo*/
