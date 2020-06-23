@@ -101,6 +101,58 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1><span>C</span>ontenido Multimedia</h1>
+			</header>
+			<section id="audio">
+				<header>
+					<h1>Audio en la Web</h1>
+				</header>
+				<p>
+					En HTML5 se incorpora la etiqueta &lt;AUDIO&gt; que permite la utilizacion de contenido musical dentro de nuestra web, generando un reproductor a traves una API propia del navegador, sin necesidad de plugins de terceros. 
+					
+					Algunos de los formatos compatibles con la mayoria de los navegadores son <em>.mp3, .wav, .ogg</em>, asi como tambien algunos formatos de video, como los que se detallan mas adelante en la seccion <a href="#video">Video</a>
+				</p>
+				<audio src="media/live-learn.mp3" controls>
+					Lo sentimos, pero su navegador NO es compatible con este Elemento.
+				</audio>
+			</section>
+			<section id="video">
+				<header>
+					<h1>Video en la Web</h1>
+				</header>
+				<p>Al igual que el elemento <a href="#audio">Audio</a> la etiqueta &lt;VIDEO&gt; fue incorporada el HTML5, esta admite multiples formatos de pelicula como <em>.mp4, .avi, .ogv</em>, siendo este ultimo un formato opensource que no funciona en todos los navegadores.
+				A diferencia del elemento anterior, los videos cuentan con una relacion de aspecto, que generalmente se encuentra entre <strong>4:3 (ancho 1,33 veces mayor al alto) &amp; 16:9 (ancho 1,78 veces mayor al alto)</strong>
+				</p>
+				<video src="media/californication.mp4" controls>
+					Lo sentimos, pero su navegador NO es compatible con este Elemento.
+				</video>
+			</section>
+			<section>
+				<header>
+					<h1>iFrame (Marco Flotante)</h1>
+				</header>
+				<p>
+					La etiqueta &lt;iframe&gt; permite incorporar a nuestra pagina contenido <strong>EMBEBIDO</strong> de manera asincrónica, es decir que los tiempos de carga del sitio no se veran afectados por el contenido de dicha etiqueta.
+					Al igual que los elementos 
+					<a href="#audio">Audio</a> &amp; 
+					<a href="#video">Video</a> permite que podamos utilizar contenido Multimedia, pero que este alojado en otro servidor.
+				</p>
+				<iframe  
+					src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+				<iframe 
+					src="https://www.youtube.com/embed/FuMPvLWKtVE"
+					frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">
@@ -137,6 +189,13 @@
 			></textarea>
 			<input class="send" type="submit" value="Realizar Consulta">
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.3215679121345!2d-58.37733572853177!3d-34.60254227946653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1592940205995!5m2!1ses!2sar" 
+			frameborder="0" 
+			allowfullscreen="" 
+			aria-hidden="false" 
+			tabindex="0">
+		</iframe>
 	</footer>
 </body>
 </html>
