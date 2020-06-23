@@ -153,6 +153,100 @@
 				</iframe>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Es un elemento que permite organizar la informacion de manera Tabular, antiguamente eran utilzadas para el diseño y en actualidad se suelen utilizar con estos fines en los Newsletter.
+				A diferencia de cualquier otro programa, las Tablas en los navegadores se crean pensando en la estructura de cajas utilizando las siguientes etiquetas:
+			</p>
+			<ul>
+				<li><strong>TABLE:</strong> Contenedor de la Tabla</li>
+				<li><strong>TR (Table ROW):</strong> Fila de Tabla (Marca la posicion inicial de las celdas)</li>
+				<li><strong>TD (Table Division):</strong> Celda de Tabla (Se utiliza para colocar el contenido)</li>
+			</ul>
+			<table>
+				<tr>
+					<td>Fila 1 Celda 1</td>
+					<td>Fila 1 Celda 2</td>
+				</tr>
+				<tr>
+					<td>Fila 2 Celda 1</td>
+					<td>Fila 2 Celda 2</td>
+				</tr>
+			</table>
+			<p>
+				En HTML5 se cambio la implementacion de las tablas, agregando carga semantica a las mismas. Esto se debe a que, si bien, el contenido se podia organizar, no estaba definido con relacion a su contexto. Por lo tanto a la estructura conocida se incorporaron las siguientes etiquetas:
+			</p>
+			<ul>
+				<li><strong>THEAD:</strong> Representa la Cabecera de la tabla y debe contener los titulos de la misma (Obligatoria). Dentro de esta se utiliza la etiqueta &lt;TH&gt; en lugar del clasico &lt;td&gt; para las celdas</li>
+				<li><strong>TBODY:</strong> Representa el Cuerpo de la Tabla, por ende, aqui colocaremos la informacion correspondiente al contenido. En esta parte seguimos utilizando la estructura clasica de las tablas.</li>
+				<li><strong>TFOOT:</strong> Representa el Pie de la tabla y suele contener informacion complementaria al Cuerpo de la misma (Opcional), este puede contener o no Titulos</li>
+			</ul>
+			<table>
+				<caption>Venta de Productos</caption>
+				<thead>
+					<th>Productos</th>
+					<th>Cantidad</th>
+					<th>Precio</th>
+					<th>Total</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Teclado</td>
+						<td>1</td>
+						<td>1500</td>
+						<td>1500</td>
+					</tr>
+					<tr>
+						<td>Monitor</td>
+						<td>3</td>
+						<td>5600</td>
+						<td>16800</td>
+					</tr>
+					<tr>
+						<td>Gabinete</td>
+						<td>2</td>
+						<td>3800</td>
+						<td>7600</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<th colspan="3">Total</th>
+					<td>25900</td>
+				</tfoot>
+			</table>
+			<table>
+				<caption>Desarrolladores Web</caption>
+				<thead>
+					<th>Tipo</th>
+					<th>Lenguaje</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="3">FrontEnd</td>
+						<td>HTML</td>
+					</tr>
+					<tr>
+						<td>CSS</td>
+					</tr>
+					<tr>
+						<td>JS</td>
+					</tr>
+					<tr>
+						<td rowspan="3">BackEnd</td>
+						<td>SQL</td>
+					</tr>
+					<tr>
+						<td>PHP</td>
+					</tr>
+					<tr>
+						<td>JAVA</td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
 	</main>
 	<footer id="footer">
 		<form id="contacto" action="contacto.php" method="POST">

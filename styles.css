@@ -74,3 +74,37 @@
 	#contacto .send:hover{
 		background-color: slateblue;
 	}
+
+/*Diseño de Contenido Multimedia*/
+	#footer iframe{
+		display: block;
+		margin:16px auto;
+	}
+	section{
+		text-align: center;
+	}
+	section p, section ul{
+		text-align: left;
+	}
+	video, audio, iframe{
+		width:450px;
+		height:254px;
+	}
+	audio{
+		height: 30px;
+	}
+/*Diseño de Tablas*/
+	table{
+		margin:20px auto;
+	}
+	caption{
+		border-radius: 8px 8px 0 0;/*tl tr br bl*/
+		/*t=top r=right b=bottom l=left*/
+	}
+	table, caption, tr, td{
+		color:white;
+		background-color: rgba(120, 30, 180, .5);
+	}
+	td, th{
+		width:120px;
+	}
