@@ -4,21 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=3, initial-scale=1">
 	<title>Responsive Web Design</title>
-	<link 
-		rel="stylesheet" 
-		href="styles/main.css">
 </head>
 <body>
 	<header id="header">
-		<div class="header">
+		<div>
 			<h1>Responsive Web Design</h1>
-			<p class="subtitle"><strong>presenta:</strong> Cristian Racedo</p>
+			<p><strong>presenta:</strong> Cristian Racedo</p>
 		</div>
 		<nav>
 			<button id="menu">&equiv;</button>
-			<ul class="menu">
-				<li><a href="#">Inicio</a></li>
-				<li><a href="bootstrap.html">Acerca de</a></li>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="#">Acerca de</a></li>
 				<li><a href="#">Galeria</a></li>
 				<li><a href="#contacto">Contacto</a></li>
 				<li>
@@ -45,16 +42,16 @@
 					
 					Como una forma de evitar errores, <em>se puede fijar un ancho máximo y mínimo</em>. El problema es que esto hace que aparezcan áreas en blanco en pantallas grandes y barras de desplazamiento horizontal en las más pequeñas.
 				</p>
-				<div class="fluid">
-					<div class="col-12">col-12 <br/>(100%) </div>
-					<div class="col-1">col-1 <br/>(8.3%) </div>
-					<div class="col-2">col-2 <br/>(16.6%)</div>
-					<div class="col-3">col-3 <br/>(25%)</div>
-					<div class="col-6">col-6 <br/>(50%)</div>
-					<div class="col-4">col-4 <br/>(33.3%)</div>
-					<div class="col-8">col-8 <br/>(66.6%)</div>
-					<div class="col-5">col-5 <br/>(41.6%)</div>
-					<div class="col-7">col-7 <br/>(58.3%)</div>
+				<div>
+					<div >col-12 <br/>(100%) </div>
+					<div >col-1 <br/>(8.3%) </div>
+					<div >col-2 <br/>(16.6%)</div>
+					<div >col-3 <br/>(25%)</div>
+					<div >col-6 <br/>(50%)</div>
+					<div >col-4 <br/>(33.3%)</div>
+					<div >col-8 <br/>(66.6%)</div>
+					<div >col-5 <br/>(41.6%)</div>
+					<div >col-7 <br/>(58.3%)</div>
 				</div>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
@@ -71,7 +68,7 @@
 
 					Esta aproximación podría funcionar mejor para clientes con un presupuesto reducido, ya que implica sólo desarrollar las plantillas para algunas pantallas, en vez de planificar una experiencia óptima a través de ellas. Sin embargo, ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles, un medio que crece con fuerza y gana cada vez más relevancia.
 				</p>
-				<div class="fluid">
+				<div>
 					<span>	
 						width: 576px (fixed)
 						<img src="assets/mockup/content-mobile.png" alt="Mobile Web Design">
@@ -103,7 +100,7 @@
 					</ul>
 					De esta forma el usuario ve una diagramación distinta en cada dispositivo, pero aún así puede acceder a todos los contenidos. La información se mantiene igual, pero su presentación se optimiza según el aparato y el navegador usado.
 				</p>
-				<div class="liquid">
+				<div>
 					<img  
 						src="assets/usm-venom-01.jpg" 
 						alt="Dibujo Venom Ultimate Spider-Man"
@@ -137,7 +134,7 @@
 				<p>	
 					Son aquellas que tienen en cuenta el contexto donde se encuentran, son relativas a las dimensiones del contenedor donde se han definido. Por ejemplo %, es una unidad relativa, puesto que 30% de ancho no será lo mismo para un elemento situado dentro de un contenedor de 2000px de anchura o sobre un contenedor de 1000px de anchura.
 				</p>
-				<ul class="example">
+				<ul>
 					<li><strong>%: </strong>porcentaje</li>
 					<li><strong>em: </strong>Ancho de la fuente para la letra "M"</li>
 					<li><strong>rem: </strong>em basado en la fuente del Navegador</li>
@@ -154,7 +151,7 @@
 						<strong>Valor em = </strong>( dimensión objetivo / fuente contenedor )
 					</li>
 				</ul>				
-				<ul class="em">
+				<ul>
 					<li>Front-End
 						<ul>
 							<li>HTML</li>
@@ -213,7 +210,7 @@
 				<p>	
  					En muchos de los casos cuando decimos 300px en CSS corresponde con 300 puntos en la pantalla, pero no es siempre así pues habría que discutir acerca de pantallas con mayor densidad de píxeles, como las pantallas retina. En determinadas pantallas un px de CSS no tiene siempre que corresponder con un punto en la pantalla, pero no nos vamos a meter todavía en ello.
 				</p>
-				<ul class="px">
+				<ul>
 					<li>Front-End
 						<ul>
 							<li>HTML</li>
@@ -275,7 +272,7 @@
 
 					Esto se hace porque muchas páginas no están optimizadas para dispositivos móviles y se quiebran (o, al menos, se ven mal) cuando son procesadas a un ancho de viewport pequeño. El viewport virtual es una forma de resolver el problema de sitios no optimizados para móviles, logrando que se vean mejor.
 				</p>
-				<ul class="vw">
+				<ul>
 					<li>Front-End
 						<ul>
 							<li>HTML</li>
@@ -390,7 +387,7 @@
 			</label>
 			<button id="success">Enviar Consulta</button>
 		</form>
-		<div class="social">
+		<div>
 			<a href="https://facebook.com" target="_blank"></a>
 			<a href="https://instagram.com" target="_blank"></a>
 			<a href="https://twitter.com" target="_blank"></a>
@@ -402,6 +399,5 @@
 			</a>&amp; Compañia
 		</p>
 	</footer>
-	<script src="scripts/main.js"></script>
 </body>
 </html>
