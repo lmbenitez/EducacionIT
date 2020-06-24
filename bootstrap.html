@@ -10,20 +10,34 @@
 	<link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 <body class="container">
-	<header class="text-light bg-dark">
-		<div>
+	<header class="jumbotron mt-3 text-light bg-dark">
+		<div class="navbar-brand">
 			<h1>Responsive Web Design</h1>
 			<p><strong>presenta:</strong> Cristian Racedo</p>
 		</div>
-		<nav>
-			<button id="menu">&equiv;</button>
-			<ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="#">Acerca de</a></li>
-				<li><a href="#">Galeria</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-				<li>
-					<a 
+		<nav class="
+			rounded
+			navbar 
+			navbar-expand-lg 
+			bg-secondary">
+			<button 
+				class="navbar-toggler btn-outline-light" 
+				data-toggle="collapse" 
+				target="#barraMenu" 
+				aria-controls="barraMenu"
+				id="menu">&equiv;</button>
+			<ul class="collapse navbar-collapse navbar-nav btn-group" 
+			id="barraMenu">
+				<li class="nav-item btn btn-dark">
+					<a class="nav-link " href="index.html">Inicio</a></li>
+				<li class="nav-item btn btn-dark">
+					<a class="nav-link active" href="#">Acerca de</a></li>
+				<li class="nav-item btn btn-dark">
+					<a class="nav-link" href="#">Galeria</a></li>
+				<li class="nav-item btn btn-dark">
+					<a class="nav-link text-white" href="#contacto">Contacto</a></li>
+				<li class="nav-item btn btn-dark">
+					<a class="nav-link text-white" 
 						href="https://github.com/c215714n/educacionit/tree/responsive-miercoles-15hs" 
 						target="_blank">
 						GitHub
@@ -32,12 +46,12 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<article>
-			<header>
-				<h1>Clase 1</h1>
+	<main class="container">
+		<article class="row bg-light text-light">
+			<header class="w-100">
+				<h1 class="text-dark">Clase 1</h1>
 			</header>
-			<section>
+			<section class="bg-secondary rounded col-12 col-lg-6">
 				<header>
 					<h1>Tema 1: Fluid Web Design</h1>
 				</header>
@@ -46,7 +60,7 @@
 					
 					Como una forma de evitar errores, <em>se puede fijar un ancho máximo y mínimo</em>. El problema es que esto hace que aparezcan áreas en blanco en pantallas grandes y barras de desplazamiento horizontal en las más pequeñas.
 				</p>
-				<div class="row bg-light">
+				<div class="row container rounded text-center m-auto bg-primary">
 					<div class="
 						col-12 
 						col-md-6 
@@ -105,7 +119,7 @@
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="bg-secondary rounded col-12 col-lg-6">
 				<header>
 					<h1>Tema 2: Adaptive Web Design</h1>
 				</header>
@@ -116,27 +130,37 @@
 
 					Esta aproximación podría funcionar mejor para clientes con un presupuesto reducido, ya que implica sólo desarrollar las plantillas para algunas pantallas, en vez de planificar una experiencia óptima a través de ellas. Sin embargo, ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles, un medio que crece con fuerza y gana cada vez más relevancia.
 				</p>
-				<div>
-					<span class="d-none">	
+				<div class="row">
+					<span class="
+						d-flex 
+						flex-column 
+						col-12
+						col-md-4">	
 						width: 576px (fixed)
 						<img
-							class="col-12 col-md-4 col-lg-2" 
+							class="col-12" 
 							src="assets/mockup/content-mobile.png" 
-							alt="Mobile Web Design">
+							alt="Mobile Web Design"
+						/>
 					</span>
-					<span>
+					<span class="
+						d-flex 
+						flex-column 
+						col-12
+						col-md-8">
 						width: 768px (fixed)
 						<img
-							class="col-12 col-md-6 col-lg-4"  
+							class="col-12"  
 							src="assets/mockup/content-tablet.png" 
-							alt="Adaptive Web Design">
+							alt="Adaptive Web Design"
+						/>
 					</span>
 				</div>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="bg-secondary rounded m-1 col-12">
 				<header>
 					<h1>Tema 3: Responsive Web Design</h1>
 				</header>
@@ -154,20 +178,20 @@
 					</ul>
 					De esta forma el usuario ve una diagramación distinta en cada dispositivo, pero aún así puede acceder a todos los contenidos. La información se mantiene igual, pero su presentación se optimiza según el aparato y el navegador usado.
 				</p>
-				<div>
-					<img  
+				<div class="row">
+					<img class="col-12 col-md-6 col-lg-3" 
 						src="assets/usm-venom-01.jpg" 
 						alt="Dibujo Venom Ultimate Spider-Man"
 					/>
-					<img  
+					<img class="col-12 col-md-6 col-lg-3"  
 						src="assets/usm-venom-02.jpg" 
 						alt="Dibujo Venom Ultimate Spider-Man"
 					/>
-					<img  
+					<img class="col-12 col-md-6 col-lg-3"  
 						src="assets/usm-venom-03.jpg" 
 						alt="Dibujo Venom Ultimate Spider-Man"
 					/>
-					<img 
+					<img class="col-12 col-md-6 col-lg-3" 
 						src="assets/usm-venom-04.jpg" 
 						alt="Dibujo Venom Ultimate Spider-Man"
 					/>
@@ -177,13 +201,13 @@
 				</footer>
 			</section>
 		</article>
-		<article>
-			<header>
+		<article class="mt-4 rounded p-3 row bg-secondary text-white">
+			<header class="w-100">
 				<h1>Clase 2</h1>
 			</header>
-			<section>
+			<section class="col-12 col-md-6">
 				<header>
-					<h1>Tema 1: Unidades Relativas</h1>
+					<h1 class="h3">Tema 1: Unidades Relativas</h1>
 				</header>
 				<p>	
 					Son aquellas que tienen en cuenta el contexto donde se encuentran, son relativas a las dimensiones del contenedor donde se han definido. Por ejemplo %, es una unidad relativa, puesto que 30% de ancho no será lo mismo para un elemento situado dentro de un contenedor de 2000px de anchura o sobre un contenedor de 1000px de anchura.
@@ -246,9 +270,9 @@
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="col-12 col-md-6">
 				<header>
-					<h1>Tema 2: Unidades Absolutas</h1>
+					<h1 class="h3">Tema 2: Unidades Absolutas</h1>
 				</header>
 				<p>
 					Son aquellas que especifican una medida en términos absolutos, sin tener en cuenta el contexto donde se están aplicando. Por ejemplo 300px (300 píxeles) es algo bastante fijo, que tendrá un valor independientemente de dónde se haya definido. 300px son siempre eso, 300px, independientemente de si tu contenedor tiene una anchura de 2000px o de 500px.
@@ -305,9 +329,9 @@
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="col-12">
 				<header>
-					<h1>Tema 3: Unidades Flexibles (Viewport)</h1>
+					<h1 class="h3">Tema 3: Unidades Flexibles (Viewport)</h1>
 				</header>
 				<p>
 					El viewport del navegador es el área de la ventana en donde el contenido web está visible. Generalmente no es del mismo tamaño que la página renderizada, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.
@@ -368,31 +392,31 @@
 				</footer>
 			</section>
 		</article>
-		<article>
-			<header>
+		<article class="mt-4 row rounded p-3 bg-secondary text-light">
+			<header class="w-100">
 				<h1>Clase 3</h1>
 			</header>
-			<section>
+			<section class="col-12 col-md-6 col-xl-4">
 				<header>
-					<h1>Tema 1</h1>
+					<h1 class="h3">Tema 1</h1>
 				</header>
 				<p>contenido</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="col-12 col-md-6 col-xl-4">
 				<header>
-					<h1>Tema 2</h1>
+					<h1 class="h3">Tema 2</h1>
 				</header>
 				<p>contenido</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section>
+			<section class="col-12 col-md-6 col-xl-4">
 				<header>
-					<h1>Tema 3</h1>
+					<h1 class="h3">Tema 3</h1>
 				</header>
 				<p>contenido</p>
 				<footer>
@@ -401,10 +425,16 @@
 			</section>
 		</article>
 	</main>
-	<footer id="footer">
-		<form name="contactForm" action="scripts/contacto.php" id="contacto" method="POST">
+	<footer id="footer" class="jumbotron mt-3 text-light bg-dark">
+		<form 
+			class="d-flex flex-column col-12 col-md-8 m-auto p-2"
+			name="contactForm" 
+			action="scripts/contacto.php" 
+			id="contacto" 
+			method="POST">
 			<label for="nombre">Nombre:
 				<input 
+					class="col-12"
 					type="text" 
 					name="nombre" 
 					placeholder="Cristian Racedo" 
@@ -412,8 +442,10 @@
 					required 
 				/>
 			</label>
-			<label for="email">Correo:
+			<label for="email">
+				Correo:
 				<input 
+					class="col-12"
 					type="email" 
 					name="email"
 					placeholder="cristiandracedo@hotmail.com"  
@@ -422,6 +454,7 @@
 			</label>
 			<label for="tel">Telefono
 				<input 
+					class="col-12"
 					type="tel" 
 					name="tel" 
 					placeholder="1123456789" 
@@ -432,6 +465,7 @@
 			<label for="consulta">
 				Consulta: 
 				<textarea 
+					class="col-12"
 					name="consulta" 
 					placeholder="Pongase en contacto con Nosotros" 
 					minlength="10" 
@@ -439,7 +473,7 @@
 					required
 				></textarea>
 			</label>
-			<button id="success">Enviar Consulta</button>
+			<button class="btn btn-outline-info" id="success">Enviar Consulta</button>
 		</form>
 		<div>
 			<a href="https://facebook.com" target="_blank"></a>
@@ -447,8 +481,8 @@
 			<a href="https://twitter.com" target="_blank"></a>
 			<a href="https://youtube.com" target="_blank"></a>
 		</div>
-		<p>&copy; Todos los derechos reservados 
-			<a href="mailto:cristiandracedo@hotmail.com">
+		<p class="text-center">&copy; Todos los derechos reservados 
+			<a class="text-muted" href="mailto:cristiandracedo@hotmail.com">
 				Cristian Racedo 
 			</a>&amp; Compañia
 		</p>
