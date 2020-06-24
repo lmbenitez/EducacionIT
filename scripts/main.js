@@ -10,12 +10,10 @@
 				document.querySelector('#menu').innerHTML = '&equiv;'
 				mostrar = true;
 	}	}	);
-
 //Campos de Formularios
-	document.querySelector('#success').addEventListener(
+	var campos = ['nombre', 'email', 'tel', 'consulta']
+	campos.map( campo =>	(document.querySelector('#success').addEventListener(
 		'click', () => {
-			if (document.forms['contactForm']['nombre'].value == ''){
-				alert('debe ingresar un nombre')
-			}
-		}
-	)
+			if (document.forms['contactForm'][campo].value == ''){
+				alert(`debe ingresar un ${campo}`)
+}	}	)	)	);

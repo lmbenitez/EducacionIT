@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=3, initial-scale=1">
 	<title>Responsive Web Design</title>
 	<link 
 		rel="stylesheet" 
@@ -131,64 +132,186 @@
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Tema 1: Unidades Relativas</h1>
 				</header>
-				<p>contenido</p>
-					<ul class="em">
-						<li>Front-End
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>JS
-									<ul>
-										<li>Angular</li>
-										<li>Bootstrap</li>
-										<li>ReactJS</li>
-										<li>VueJS</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							Back-End
-							<ul>
-								<li>SQL
-									<ul>
-										<li>MySQL</li>
-										<li>Oracle SQL Server</li>
-										<li>Microsoft SQL Server</li>
-									</ul>
-								</li>
-								<li>PHP
-									<ul>
-										<li>Laravel</li>
-										<li>CakePHP</li>
-									</ul>
-								</li>
-								<li>JAVA</li>
-								<li>RUBY</li>
-								<li>PYTHON</li>
-							</ul>
-						</li>
-					</ul>
+				<p>	
+					Son aquellas que tienen en cuenta el contexto donde se encuentran, son relativas a las dimensiones del contenedor donde se han definido. Por ejemplo %, es una unidad relativa, puesto que 30% de ancho no será lo mismo para un elemento situado dentro de un contenedor de 2000px de anchura o sobre un contenedor de 1000px de anchura.
+				</p>
+				<ul class="example">
+					<li><strong>%: </strong>porcentaje</li>
+					<li><strong>em: </strong>Ancho de la fuente para la letra "M"</li>
+					<li><strong>rem: </strong>em basado en la fuente del Navegador</li>
+					<li><strong>ex: </strong>Altura de la fuente para la letra "x"</li>
+					<li><strong>ch: </strong>Anchura del carácter "0" (cero)</li>
+				</ul>
+				<p>
+					Lo interesante aquí es que, para el caso de las dimensiones de los elementos, podemos especificar las anchuras o alturas relativas tanto en em como en %. Si usas em serán relativas al tamaño de texto y si usas % serán relativas al tamaño del contenedor, llegando a fórmulas distintas:
+				</p>
+				<ul>
+					<li>
+						<strong>Valor % = </strong>( dimensión objetivo / dimensión contenedor ) x 100</li>
+					<li>
+						<strong>Valor em = </strong>( dimensión objetivo / fuente contenedor )
+					</li>
+				</ul>				
+				<ul class="em">
+					<li>Front-End
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JS
+								<ul>
+									<li>Angular</li>
+									<li>Bootstrap</li>
+									<li>ReactJS</li>
+									<li>VueJS</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Back-End
+						<ul>
+							<li>SQL
+								<ul>
+									<li>MySQL</li>
+									<li>Oracle SQL Server</li>
+									<li>Microsoft SQL Server</li>
+								</ul>
+							</li>
+							<li>PHP
+								<ul>
+									<li>Laravel</li>
+									<li>CakePHP</li>
+								</ul>
+							</li>
+							<li>JAVA</li>
+							<li>RUBY</li>
+							<li>PYTHON</li>
+						</ul>
+					</li>
+				</ul>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2</h1>
+					<h1>Tema 2: Unidades Absolutas</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					Son aquellas que especifican una medida en términos absolutos, sin tener en cuenta el contexto donde se están aplicando. Por ejemplo 300px (300 píxeles) es algo bastante fijo, que tendrá un valor independientemente de dónde se haya definido. 300px son siempre eso, 300px, independientemente de si tu contenedor tiene una anchura de 2000px o de 500px.
+				</p>
+				<ul>	
+					<li><strong>px: </strong>Píxeles</li>
+					<li><strong>in: </strong>Pulgadas (1 in es igual a 96px)</li>
+					<li><strong>pt: </strong>Puntos (1 pt es igual a 1/72 in)</li>
+					<li><strong>cm: </strong>Centímetros</li>
+					<li><strong>mm: </strong>Milímetros</li>
+					<li><strong>pc: </strong>Picas</li>
+				</ul>
+				<p>	
+ 					En muchos de los casos cuando decimos 300px en CSS corresponde con 300 puntos en la pantalla, pero no es siempre así pues habría que discutir acerca de pantallas con mayor densidad de píxeles, como las pantallas retina. En determinadas pantallas un px de CSS no tiene siempre que corresponder con un punto en la pantalla, pero no nos vamos a meter todavía en ello.
+				</p>
+				<ul class="px">
+					<li>Front-End
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JS
+								<ul>
+									<li>Angular</li>
+									<li>Bootstrap</li>
+									<li>ReactJS</li>
+									<li>VueJS</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Back-End
+						<ul>
+							<li>SQL
+								<ul>
+									<li>MySQL</li>
+									<li>Oracle SQL Server</li>
+									<li>Microsoft SQL Server</li>
+								</ul>
+							</li>
+							<li>PHP
+								<ul>
+									<li>Laravel</li>
+									<li>CakePHP</li>
+								</ul>
+							</li>
+							<li>JAVA</li>
+							<li>RUBY</li>
+							<li>PYTHON</li>
+						</ul>
+					</li>
+				</ul>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 3</h1>
+					<h1>Tema 3: Unidades Flexibles (Viewport)</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					El viewport del navegador es el área de la ventana en donde el contenido web está visible. Generalmente no es del mismo tamaño que la página renderizada, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.
+
+					Dispositivos con pantallas angostas muestran la página en una ventana virtual o viewport, que es usualmente más ancho que la pantalla y la comprimen de manera que pueda verse completa. El usuario podrá recorrerla y hacer zoom para ver diferentes áreas de la página.
+				</p>
+				<ul>
+					<li><strong>vw: </strong>	Ancho del viewport del navegador</li>
+					<li><strong>vh: </strong>	Altura del viewport del navegador</li>
+					<li><strong>vmin: </strong> Unidad minima del viewport (ancho o alto)</li>
+					<li><strong>vmax: </strong>Unidad maxima del viewport (alto o ancho)</li>
+				</ul>
+				<p>
+					
+					Por ejemplo, si una pantalla móvil tiene un ancho 640px, las páginas pueden ser procesadas con un viewport de 980px, y después comprimidas para que entren en 640px.
+
+					Esto se hace porque muchas páginas no están optimizadas para dispositivos móviles y se quiebran (o, al menos, se ven mal) cuando son procesadas a un ancho de viewport pequeño. El viewport virtual es una forma de resolver el problema de sitios no optimizados para móviles, logrando que se vean mejor.
+				</p>
+				<ul class="vw">
+					<li>Front-End
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JS
+								<ul>
+									<li>Angular</li>
+									<li>Bootstrap</li>
+									<li>ReactJS</li>
+									<li>VueJS</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Back-End
+						<ul>
+							<li>SQL
+								<ul>
+									<li>MySQL</li>
+									<li>Oracle SQL Server</li>
+									<li>Microsoft SQL Server</li>
+								</ul>
+							</li>
+							<li>PHP
+								<ul>
+									<li>Laravel</li>
+									<li>CakePHP</li>
+								</ul>
+							</li>
+							<li>JAVA</li>
+							<li>RUBY</li>
+							<li>PYTHON</li>
+						</ul>
+					</li>
+				</ul>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>

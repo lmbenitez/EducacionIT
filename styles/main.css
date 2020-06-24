@@ -64,10 +64,20 @@
 			line-height: 1rem;
 		}
 		section{
+			position: relative;
 			margin: .5rem auto;
-			padding: 1rem;
+			padding: 1rem 1rem 5rem;
 			width: 100%;
 			background-color: #ccc;
+		}
+		section footer{
+			position:absolute;
+			bottom:0;
+			left:0;
+			padding:1rem;
+		}
+		section footer p{
+			padding:-5rem;
 		}
 	/*Formulario de Contacto*/
 		#contacto{
@@ -144,7 +154,7 @@
 			height:32px;
 			background-image: url(../assets/social-media.png);
 			background-color: rgba(255,255,255,.5); 
-			background-size: 354px;
+			background-size: 352px;
 			background-position: calc(0*-32px) calc(1*32px);
 		}
 		.social a:nth-child(2){background-position: calc(1*-32px) calc(1*32px)}
@@ -154,7 +164,6 @@
 		.social a:nth-child(2):hover{background-position: calc(1*-32px) calc(-1*32px)}
 		.social a:nth-child(3):hover{background-position: calc(8*-32px) calc(-1*32px)}
 		.social a:nth-child(4):hover{background-position: calc(10*-32px) calc(-1*32px)}
-
 	/*Estilos Funcionalidad*/
 		/*Fluid Design*/
 			.fluid{
@@ -176,7 +185,7 @@
 				flex-wrap: nowrap;
 			}
 			.fluid img{
-				height: 300px;
+				height: 250px;
 				background-color: #ddd;
 			}
 		/*Liquid Design - Imagenes*/
@@ -186,7 +195,7 @@
 			.liquid img{
 				margin: 1rem auto;
 				min-width: 200px;
-				width:30%;
+				width:20%;
 				max-width: 300px;
 			}
 		/*Responsive Design - Grillas*/
@@ -203,12 +212,12 @@
 			.col-11{width: 91.67%;}
 			.col-12{width: 100%;}
 		/*Relative Values - em*/
-			.em{
-				font-size: 32px;
-			}
-			.em li{
-				font-size: .8em;
-			}
+			.em{font-size: 1.8em;}
+			.em li{font-size: .8em;}
+		/*Absolute Values - px*/
+			.px{font-size: 18px;}
+		/*Flexible Values - vw*/
+			.vw{font-size: 2vw;}
 		/*Javascript - menu desplegable*/
 			.mostrar{
 				height: auto;
@@ -235,7 +244,7 @@
 			.social a{
 				width:64px;
 				height:64px;
-				background-size: 708px;
+				background-size: 704px;
 				background-position: calc(0*-64px) calc(1*64px);
 			}
 			.social a:nth-child(2){background-position: calc(1*-64px) calc(1*64px)}
@@ -245,7 +254,6 @@
 			.social a:nth-child(2):hover{background-position: calc(1*-64px) calc(-1*64px)}
 			.social a:nth-child(3):hover{background-position: calc(8*-64px) calc(-1*64px)}
 			.social a:nth-child(4):hover{background-position: calc(10*-64px) calc(-1*64px)}
-
 	}
 /*LG Devices - Tablet Landscape - Desktop Netbook*/
 	@media screen and (min-width: 992px){
@@ -279,10 +287,11 @@
 		}
 /*XL Devices Desktop Notebook - Smart TV*/
 	@media screen and (min-width: 1200px){
-		#header, #footer{
-			background: url(../assets/bg-xl-header.png);
-			background-size: cover;
-		}
+		/*Cabecera y Pie*/
+			#header, #footer{
+				background: url(../assets/bg-xl-header.png);
+				background-size: cover;
+			}
 		/*Contenido Principal*/
 			main{
 				padding:1rem;
@@ -299,21 +308,30 @@
 				margin:1rem;
 				border-radius: 1rem;
 			}
+			section:nth-child(even):last-child{
+				width:calc(90% + 1rem);
+			}
 		/*Formulario de Contacto*/
 			#contacto{
 				width:60%;
 			}
-		section:nth-child(even):last-child{
-			width:calc(90% + 1rem);
-		}
 	}
 /*Print Design*/
 	@media print{
-		nav{
-			display: none;
-		}
-		section{
-			page-break-after: all;
-		}
+		/*Pagina*/
+			@page{
+				size: a4;
+			}
+		/*Elementos Ocultos*/
+			nav,
+			#contacto,
+			.social{
+				display: none;
+			}
+		/*Salto de Pagina*/
+			section header{
+			  page-break-before: always;
+			}
+
 	}
 /*Autor: Cristian Racedo*/
