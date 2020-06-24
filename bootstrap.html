@@ -4,9 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=3, initial-scale=1">
 	<title>Responsive Web Design</title>
+	<link 
+		rel="stylesheet" 
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/bootstrap.css">
 </head>
-<body>
-	<header id="header">
+<body class="container">
+	<header class="text-light bg-dark">
 		<div>
 			<h1>Responsive Web Design</h1>
 			<p><strong>presenta:</strong> Cristian Racedo</p>
@@ -42,16 +46,60 @@
 					
 					Como una forma de evitar errores, <em>se puede fijar un ancho máximo y mínimo</em>. El problema es que esto hace que aparezcan áreas en blanco en pantallas grandes y barras de desplazamiento horizontal en las más pequeñas.
 				</p>
-				<div>
-					<div >col-12 <br/>(100%) </div>
-					<div >col-1 <br/>(8.3%) </div>
-					<div >col-2 <br/>(16.6%)</div>
-					<div >col-3 <br/>(25%)</div>
-					<div >col-6 <br/>(50%)</div>
-					<div >col-4 <br/>(33.3%)</div>
-					<div >col-8 <br/>(66.6%)</div>
-					<div >col-5 <br/>(41.6%)</div>
-					<div >col-7 <br/>(58.3%)</div>
+				<div class="row bg-light">
+					<div class="
+						col-12 
+						col-md-6 
+						col-lg-4 
+						col-xl-3 
+						border">
+						col-12 <br/>(100%) 
+					</div>
+					<div class="
+						col-12 
+						col-md-6 
+						col-lg-4 
+						col-xl-3 
+						border">col-1 <br/>(8.3%) 
+					</div>
+					<div class="
+						col-6 
+						col-md-3 
+						col-lg-2 
+						col-xl-1
+						border">col-2 <br/>(16.6%)
+					</div>
+					<div class="
+						col-6 
+						col-md-3 
+						col-lg-2 
+						col-xl-1
+						border">col-3 <br/>(25%)
+					</div>
+					<div class="
+						col-4
+						col-md-2
+						col-xl-1
+						border">col-6 <br/>(50%)
+					</div>
+					<div class="
+						col-4
+						col-md-2
+						col-xl-1
+						border">col-4 <br/>(33.3%)
+					</div>
+					<div class="
+						col-4
+						col-md-2
+						col-xl-1
+						border">col-8 <br/>(66.6%)
+					</div>
+					<div class="
+						col-6 border">col-5 <br/>(41.6%)
+					</div>
+					<div class="
+						w-25 border">col-7 <br/>(58.3%)
+					</div>
 				</div>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
@@ -69,13 +117,19 @@
 					Esta aproximación podría funcionar mejor para clientes con un presupuesto reducido, ya que implica sólo desarrollar las plantillas para algunas pantallas, en vez de planificar una experiencia óptima a través de ellas. Sin embargo, ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles, un medio que crece con fuerza y gana cada vez más relevancia.
 				</p>
 				<div>
-					<span>	
+					<span class="d-none">	
 						width: 576px (fixed)
-						<img src="assets/mockup/content-mobile.png" alt="Mobile Web Design">
+						<img
+							class="col-12 col-md-4 col-lg-2" 
+							src="assets/mockup/content-mobile.png" 
+							alt="Mobile Web Design">
 					</span>
 					<span>
 						width: 768px (fixed)
-						<img src="assets/mockup/content-tablet.png" alt="Adaptive Web Design">
+						<img
+							class="col-12 col-md-6 col-lg-4"  
+							src="assets/mockup/content-tablet.png" 
+							alt="Adaptive Web Design">
 					</span>
 				</div>
 				<footer>
@@ -399,5 +453,9 @@
 			</a>&amp; Compañia
 		</p>
 	</footer>
+	<script 
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+	</script>
+	<script src="scripts/bootstrap.js"></script>
 </body>
 </html>
