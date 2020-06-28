@@ -28,7 +28,7 @@
 	/*Cabecera y Pie*/
 		#header,
 		#footer{
-			color:slateblue;
+			color:darkslateblue;
 			background-color: #ddd;
 			padding:1rem;
 		}
@@ -59,7 +59,7 @@
 		.menu a:hover{
 			background-color: mediumslateblue;
 		}
-		.menu li:last-child a:hover{
+		.mostrar li:last-child a:hover{
 			border-radius: 0 0 .5rem .5rem;
 		}
 		.mostrar{
@@ -76,6 +76,11 @@
 	/*Formulario de Contacto*/
 		#contacto{
 			padding:1rem;
+			width: 100%;
+			margin: auto;
+		}
+		textarea{
+			height: 5rem;
 		}
 	/*Redes sociales*/
 		.social,
@@ -96,41 +101,100 @@
 			height: 2rem;
 		}
 /*SM Small devices*/
-	@media screen and (min-width: 576px) and (orientation:landscape){
-		#header{
+	@media screen and (min-width: 576px){
+		#header,
+		#footer{
 			color:#ddd;
-			background-color: slateblue;
+			background-color: mediumslateblue;
 		}	
+		#header{
+			flex-direction: row;
+		}
+		.header{
+			width:50%;
+		}
 		/*Navegacion*/
+			nav{
+				background-color: transparent;
+			}
 			#menu{
 				display: none;
 			}
 			.menu{
 				display: flex;
 				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				width:100%;
+				margin:auto;
+			}
+			.menu li{
+				width:30%;
+				margin:.1rem .5rem;
+				text-align: center;
+				background-color: darkslateblue;
+			}
+		/*redes sociales*/
+			.header .social{
+				width:50%;
 			}
 		}	
 /*MD medium devices*/
 	@media screen and (min-width: 768px){
-		#header{
-			background-color: mediumslateblue;
+		#header,
+		#footer{
+			background-color: slateblue;
+		}
+		/*Navegacion*/
+		nav{
+			width:90%;
+			background-color: darkslateblue;
+		}
+		.menu{
+			justify-content: center;
+		}
+
+		.menu li{
+			margin:0;
+			width:auto;
+		}
+		#contacto{
+			width: 85%;
 		}
 	}
 /*LG large devices*/
 	@media screen and (min-width: 992px){
-		#header{
+		#header,
+		#footer{
 			background-color: darkslateblue;
 		}
 		#contacto{
-			width:600px;
+			width:75%;
 		}
 	}
 /*XL extra large devices*/
 	@media screen and (min-width: 1200px){
-		#header{
+		#header,
+		#footer{
 			color:darkslateblue;
 			background-color: #ddd
 		}
+		#header{
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		.header{
+			width:50%;
+		}
+		.header .social{
+			position:absolute;
+			top: 1rem;
+			right: 1rem;
+		}
+		nav{
+			width:50%;
+		}
+
 	}
 /*Print Design*/
 	@media print {

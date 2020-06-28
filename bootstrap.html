@@ -7,12 +7,16 @@
 		content="width=device-width, initial-scale=1, maximum-scale=3">
 	<title>Maquetación</title>
 	<link rel="icon" href="media/logo-it.png">
-	<link rel="stylesheet" href="css/responsive.css">
+	<link 
+		rel="stylesheet" 
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+		Integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+		crossorigin="anonymous">
 </head>
 <body class="container"><!--Parte Visible -->
-	<header id="header">
+	<header id="header" class="navbar bg-dark text-light">
 		<!--Contenido Introductorio-->
-		<div class="col-12 col-md-6 col-lg-4 col-xl-3 bg-primary">
+		<div class="header navbar-brand">
 			<h1>Curso de Maquetacion</h1>
 			<p>HTML5 &amp; CSS3</p>
 		</div>
@@ -22,21 +26,31 @@
 			<a href="https://Twitter.com" target="_blank"></a>
 			<a href="https://youtube.com" target="_blank"></a>
 		</div>
-		<nav>
+		<nav class="navbar-collapsse col-6">
 			<!--Enlaces Mas importantes-->
-			<button id="menu">&equiv;</button>
-			<ul class="menu">
-				<li class="active"><a href="index.html">Inicio</a></li>
-				<li><a href="#">Media Queries</a></li>
-				<li><a href="#contacto">Contacto</a></li>
+			<button class="d-none-md" id="menu">&#9776;</button>
+			<ul class="menu navbar-expand-lg navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Inicio</a></li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Media Queries</a></li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contacto">Contacto</a></li>
 				<li>
-					<a href="">Productos</a>
-					<ul class="option">
-						<li>producto - </li>
-						<li>producto - </li>
-						<li>producto - </li>
-						<li>producto - 
-							<ul class="submenu">
+					<a 
+						href="#"
+						class="nav-link dropdown-toggle" 
+						id="navbarDropdownMenuLink" 
+						data-toggle="dropdown">
+							Productos
+					</a>
+					<ul class="dropdown-menu" >
+						<li class="dropdown-item">producto - </li>
+						<li class="dropdown-item">producto - </li>
+						<li class="dropdown-item">producto - </li>
+						<li class="dropdown-toggle" id="navbarDropdownMenuSubLink" 
+						data-toggle="dropdown">producto - 
+							<ul class="dropdown-menu">
 								<li>subproducto -</li>
 								<li>subproducto -</li>
 								<li>subproducto -</li>
@@ -45,7 +59,7 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="dropdown-menu">
 					<a href="">Servicios</a>
 					<ul class="option">
 						<li>servicio - </li>
@@ -75,7 +89,7 @@
 		<!--Contenido Principal-->
 		<article class="row">
 			<!--Contenido Independiente-->
-			<section >
+			<section class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<!--Contenido Contextualizado-->
 				<header>
 					<h1>Seccion N°1</h1>
@@ -85,7 +99,7 @@
 					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
-			<section >
+			<section class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<header>
 					<h1>Seccion N°2</h1>
 				</header>
@@ -94,7 +108,7 @@
 					<p><strong>Autor:</strong> Cristian Racedo</p>
 				</footer>
 			</section>
-			<section >
+			<section class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<header>
 					<h1>Seccion N°3</h1>
 				</header>
@@ -256,5 +270,19 @@
 		<p>&copy; Todos los derechos reservados</p>
 	</footer>
 	<script src="js/scripts.js"></script>
+	
+	<!--BOOTSTRAP: Jquery - Popper - Bootstrap.min -->
+	<script 
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+		crossorigin="anonymous"></script>
+	<script 
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+		crossorigin="anonymous"></script>
+	<script 
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+		crossorigin="anonymous"></script>
 </body>
 </html>
