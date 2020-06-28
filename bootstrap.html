@@ -4,40 +4,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=3, initial-scale=1">
 	<title>Responsive Web Design</title>
-	<link 
-		rel="stylesheet" 
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 <body class="container">
 	<header class="jumbotron mt-3 text-light bg-dark">
 		<div class="navbar-brand">
-			<h1>Responsive Web Design</h1>
+			<h1 class="h2">Responsive Web Design</h1>
 			<p><strong>presenta:</strong> Cristian Racedo</p>
 		</div>
 		<nav class="
 			rounded
 			navbar 
 			navbar-expand-lg 
+			navbar-dark 
 			bg-secondary">
 			<button 
-				class="navbar-toggler btn-outline-light" 
-				data-toggle="collapse" 
-				target="#barraMenu" 
-				aria-controls="barraMenu"
-				id="menu">&equiv;</button>
-			<ul class="collapse navbar-collapse navbar-nav btn-group" 
-			id="barraMenu">
-				<li class="nav-item btn btn-dark">
-					<a class="nav-link " href="index.html">Inicio</a></li>
-				<li class="nav-item btn btn-dark">
-					<a class="nav-link active" href="#">Acerca de</a></li>
-				<li class="nav-item btn btn-dark">
-					<a class="nav-link" href="#">Galeria</a></li>
-				<li class="nav-item btn btn-dark">
-					<a class="nav-link text-white" href="#contacto">Contacto</a></li>
-				<li class="nav-item btn btn-dark">
-					<a class="nav-link text-white" 
+				class="navbar-toggler" 
+				type="button" 
+	   			data-toggle="collapse" 
+	   			data-target="#barraMenu">
+	   			&equiv;
+			</button>
+			<ul class="collapse navbar-collapse navbar-nav btn-group " id="barraMenu">
+				<li class="nav-item btn btn-secondary col-12 col-lg-3">
+					<a class="nav-link" href="index.html">Inicio</a>
+				</li>
+				<li class="nav-item btn btn-secondary col-12 col-lg-3">
+					<a class="nav-link" href="bootstrap.html">Acerca de</a>
+				</li>
+				<li class="nav-item btn btn-secondary col-12 col-lg-3">
+					<a class="nav-link" href="contact.html">Galeria</a>
+				</li>
+				<li class="nav-item btn btn-secondary col-12 col-lg-3">
+					<a class="nav-link" href="#contacto">Contacto</a>
+		        </li>
+		        <li class="nav-item btn btn-secondary col-12 col-lg-3">
+					<a class="nav-link" 
 						href="https://github.com/c215714n/educacionit/tree/responsive-miercoles-15hs" 
 						target="_blank">
 						GitHub
@@ -47,20 +49,20 @@
 		</nav>
 	</header>
 	<main class="container">
-		<article class="row bg-light text-light">
+		<article class="mt-4 rounded p-5 row bg-secondary text-white">
 			<header class="w-100">
-				<h1 class="text-dark">Clase 1</h1>
+				<h1>Clase 1</h1>
 			</header>
-			<section class="bg-secondary rounded col-12 col-lg-6">
+			<section class="col-12 col-md-6">
 				<header>
-					<h1>Tema 1: Fluid Web Design</h1>
+					<h1 class="h3">Tema 1: Fluid Web Design</h1>
 				</header>
 				<p>
 					<em>Utiliza porcentajes o ems en lugar de pixeles</em>, para que los elementos se adapten según el ancho de la pantalla. Si bien el resultado puede parecer atractivo en pantallas medianas, como computadoras y tablets, se producen muchos problemas en pantallas grandes y pequeñas. Por ejemplo, en televisores las imágenes se estiran mucho y en teléfonos los textos son difíciles de leer.
 					
 					Como una forma de evitar errores, <em>se puede fijar un ancho máximo y mínimo</em>. El problema es que esto hace que aparezcan áreas en blanco en pantallas grandes y barras de desplazamiento horizontal en las más pequeñas.
 				</p>
-				<div class="row container rounded text-center m-auto bg-primary">
+				<div class="row rounded text-center m-auto bg-primary">
 					<div class="
 						col-12 
 						col-md-6 
@@ -119,9 +121,9 @@
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section class="bg-secondary rounded col-12 col-lg-6">
+			<section class="col-12 col-md-6">
 				<header>
-					<h1>Tema 2: Adaptive Web Design</h1>
+					<h1 class="h3">Tema 2: Adaptive Web Design</h1>
 				</header>
 				<p>
 					<em>Usa plantillas estáticas basadas en puntos de quiebre,</em> Cuando la pantalla alcanza cierto límite de tamaño, se cambia a otro diseño.
@@ -130,15 +132,17 @@
 
 					Esta aproximación podría funcionar mejor para clientes con un presupuesto reducido, ya que implica sólo desarrollar las plantillas para algunas pantallas, en vez de planificar una experiencia óptima a través de ellas. Sin embargo, ofrece un bajo nivel de usabilidad y muestra una versión reducida de los contenidos en móviles, un medio que crece con fuerza y gana cada vez más relevancia.
 				</p>
-				<div class="row">
+				<div class="row justify-content-center">
 					<span class="
 						d-flex 
 						flex-column 
 						col-12
-						col-md-4">	
-						width: 576px (fixed)
+						col-md-3
+						text-center
+						text-md-left">	
+						width: 576px 
 						<img
-							class="col-12" 
+							class="col-8 col-md-12 m-auto img-thumbnail" 
 							src="assets/mockup/content-mobile.png" 
 							alt="Mobile Web Design"
 						/>
@@ -147,10 +151,12 @@
 						d-flex 
 						flex-column 
 						col-12
-						col-md-8">
-						width: 768px (fixed)
+						col-md-8
+						text-center
+						text-md-left">
+						width: 768px 
 						<img
-							class="col-12"  
+							class="col-12 img-thumbnail"  
 							src="assets/mockup/content-tablet.png" 
 							alt="Adaptive Web Design"
 						/>
@@ -160,9 +166,9 @@
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section class="bg-secondary rounded m-1 col-12">
+			<section>
 				<header>
-					<h1>Tema 3: Responsive Web Design</h1>
+					<h1 class="h3">Tema 3: Responsive Web Design</h1>
 				</header>
 				<p>
 					
@@ -201,7 +207,7 @@
 				</footer>
 			</section>
 		</article>
-		<article class="mt-4 rounded p-3 row bg-secondary text-white">
+		<article class="mt-4 rounded p-5 row bg-secondary text-white">
 			<header class="w-100">
 				<h1>Clase 2</h1>
 			</header>
@@ -392,33 +398,41 @@
 				</footer>
 			</section>
 		</article>
-		<article class="mt-4 row rounded p-3 bg-secondary text-light">
+		<article class="mt-4 row rounded p-5 bg-secondary text-light">
 			<header class="w-100">
 				<h1>Clase 3</h1>
 			</header>
-			<section class="col-12 col-md-6 col-xl-4">
+			<section class="col-12 col-md-6 col-lg-4">
 				<header>
 					<h1 class="h3">Tema 1</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. In voluptates, architecto. Asperiores culpa fuga iure quam quaerat pariatur molestiae veniam. Rerum id beatae cupiditate delectus vel iure incidunt suscipit alias.		
+				</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
-			<section class="col-12 col-md-6 col-xl-4">
+			<section class="col-12 col-md-6 col-lg-4">
 				<header>
 					<h1 class="h3">Tema 2</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+						
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, labore, placeat fuga ratione numquam molestias quas assumenda inventore vel, omnis quisquam sed veritatis ducimus tenetur corrupti ut, atque nostrum dolores!			
+				</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
-			</section>
-			<section class="col-12 col-md-6 col-xl-4">
+			</section> 
+			<section class="col-12 col-lg-4">
 				<header>
 					<h1 class="h3">Tema 3</h1>
 				</header>
-				<p>contenido</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae impedit saepe, aut. Eveniet amet quos porro, magnam mollitia dolorem modi reprehenderit voluptatem esse, facilis ipsum? Sit assumenda laborum adipisci.
+				</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
@@ -469,7 +483,7 @@
 					name="consulta" 
 					placeholder="Pongase en contacto con Nosotros" 
 					minlength="10" 
-					maxlength="200" 
+					maxlength="200"
 					required
 				></textarea>
 			</label>
@@ -487,9 +501,10 @@
 			</a>&amp; Compañia
 		</p>
 	</footer>
-	<script 
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
-	</script>
-	<script src="scripts/bootstrap.js"></script>
+	<!--Libraries-->
+		<script src="scripts/bootstrap.js"></script>
+		<script src="scripts/jquery.js"></script>
+  		<script src="scripts/bootstrap.bundle.js"></script>
+		
 </body>
 </html>
