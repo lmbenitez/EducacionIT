@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Fundamentos Web</title>
+</head>
+<body>
+	<div>
+		<h1>Fundamentos Web</h1>
+		<p>HTML5 &amp; CSS</p>
+	</div>
+	<div>
+		<ul>
+			<li>
+				<!--Ruta Relativa / Interno-->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li>
+				<!--Ruta Ancla / Marcador-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<!--Ruta Absoluta / Externo-->
+				<a href="https://github.com/c215714n/educacionit/tree/html5-lunes-15hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<p>
+
+			Las imagenes son elementos podemos incorporar en una pagina web a traves de la etiqueta <strong>img</strong> cuyos atributos mas importantes son <em>src</em>, que indica al navegador el origen del archivo que vamos a utilizar; y por otro lado <em>alt</em> que permite indicar al usuario en que consiste la imagen, en caso de que no podamos visualizarla correctamente.
+		</p>
+		<img src="img/ih-greenhulk-03.jpg" 
+			 alt="Hulk Verde (Tintas)" />
+		<p>
+			Las etiquetas <strong>img</strong> son huerfanas, por lo tanto no pueden contener otra cosa que no sea su propio contenido; pero para poder utilizarla correctamente debemos tener en cuenta ciertos criterios:
+			<br>
+			<strong>No utilizar espacios en los nombres de los archivos</strong> debido a que en las direcciones URL este caracter sera reemplazado por el siguiente <em>%20</em>, es decir que no es lo mismo nombrar una imagen como <em>"foto 01.jpg"</em> a <em>"foto_01.jpg"</em>, ya que en el primer caso el resultado interpretado por el navegador seria el siguiente <em>"foto%2001.jpg"</em>, por lo tanto se aconseja utilizar guiones (_-) en lugar de espacios.
+			<br>
+			<strong>Evitar utilizar nombres genericos o automaticos</strong> debido a su dificultad a la hora de ubicar un archivo determinado, por ejemplo, es mas facil ubicar un archivo con nombre "gatitos-jugando.jpg" que "2020-0629-162600.jpg".
+			<br>
+			<strong>Siempre utilizar minusculas</strong> ya que los servidores, basados en UNIX hacen distincion entre mayusculas y minusculas, es decir que no es lo mismo "gatitos-jugando.jpg", "Gatitos-Jugando.jpg", ni "GATITOS-JUGANDO.jpg"
+		</p>
+		<p style="background-color: lightgrey; overflow: hidden;">
+			<img style="width:300px; float:left;" 
+				src="img/usm-venom-03.jpg" 
+				alt="Ultimate Spider-Man Venom (DIBUJO)" />
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat eius, cupiditate iste similique porro officia necessitatibus ad corporis debitis ipsum perferendis, optio dolorem, delectus blanditiis totam quos sunt at.
+		</p>
+		<p>
+			<img style="width:300px;" 
+				src="img/usm-venom-04.jpg" 
+				alt="Ultimate Spider-Man Venom" />
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe itaque ratione commodi nulla, aliquid fuga provident animi unde labore magnam tempore obcaecati dolor quae accusamus consequatur. Ea, minus, magnam?
+		</p>
+	</div>
+</body>
+</html>
