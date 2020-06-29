@@ -3,19 +3,71 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*Selectores Generales*/
+			body{
+				margin:0;
+				font-family: century gothic, segoe ui,sans-serif;
+				background-color: lightgrey;
+			}
+		/*Selectores Multiples*/
+			header, footer{
+				padding:20px;
+				color:white;
+				background-color: #012; /*RGB*/
+			}
+		/*Selectores Especificos*/
+			h1, header p{
+				margin:-5px;
+			}
+			main p{
+				overflow: hidden;
+			}
+			main img{
+				width:150px;
+				float:left;
+			}
+		/*Diseño del Cuerpo*/
+			main{
+				margin:10px;
+				padding:20px;
+			}
+		/*menu horizontal*/
+			nav ul{
+				list-style: none;
+				padding:0;
+				text-align: center;
+			}
+			nav li{
+				display: inline;
+				margin:5px;
+				padding:5px;
+				background-color: #012;
+			}
+			nav a{
+				color:white;
+				text-decoration: none;
+			}
+		/*Selector de Clase*/
+			.activo, nav li:hover{
+				background-color: darkblue;
+			}
+		/*Selecto de Id*/
+			#id{...}
+	</style>
 </head>
 <body>
-	<div>
+	<header>
 		<h1>Fundamentos Web</h1>
 		<p>HTML5 &amp; CSS</p>
-	</div>
-	<div>
+	</header>
+	<nav>
 		<ul>
 			<li>
 				<!--Ruta Relativa / Interno-->
 				<a href="index.html">Inicio</a>
 			</li>
-			<li>
+			<li class="activo">
 				<!--Ruta Ancla / Marcador-->
 				<a href="#">Galeria</a>
 			</li>
@@ -24,8 +76,8 @@
 				<a href="https://github.com/c215714n/educacionit/tree/html5-lunes-15hs" target="_blank">GitHub</a>
 			</li>
 		</ul>
-	</div>
-	<div>
+	</nav>
+	<main>
 		<p>
 
 			Las imagenes son elementos podemos incorporar en una pagina web a traves de la etiqueta <strong>img</strong> cuyos atributos mas importantes son <em>src</em>, que indica al navegador el origen del archivo que vamos a utilizar; y por otro lado <em>alt</em> que permite indicar al usuario en que consiste la imagen, en caso de que no podamos visualizarla correctamente.
@@ -33,6 +85,7 @@
 		<img src="img/ih-greenhulk-03.jpg" 
 			 alt="Hulk Verde (Tintas)" />
 		<p>
+			
 			Las etiquetas <strong>img</strong> son huerfanas, por lo tanto no pueden contener otra cosa que no sea su propio contenido; pero para poder utilizarla correctamente debemos tener en cuenta ciertos criterios:
 			<br>
 			<strong>No utilizar espacios en los nombres de los archivos</strong> debido a que en las direcciones URL este caracter sera reemplazado por el siguiente <em>%20</em>, es decir que no es lo mismo nombrar una imagen como <em>"foto 01.jpg"</em> a <em>"foto_01.jpg"</em>, ya que en el primer caso el resultado interpretado por el navegador seria el siguiente <em>"foto%2001.jpg"</em>, por lo tanto se aconseja utilizar guiones (_-) en lugar de espacios.
@@ -53,6 +106,9 @@
 				alt="Ultimate Spider-Man Venom" />
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe itaque ratione commodi nulla, aliquid fuga provident animi unde labore magnam tempore obcaecati dolor quae accusamus consequatur. Ea, minus, magnam?
 		</p>
-	</div>
+	</main>
+	<footer>
+		<p>&copy; Todos los derechos reservados | Cristian Racedo &amp; Compañia</p>
+	</footer>
 </body>
 </html>
