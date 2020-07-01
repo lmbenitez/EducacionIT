@@ -16,4 +16,4 @@
 		'click', () => {
 			if (document.forms['contactForm'][campo].value == ''){
 				alert(`debe ingresar un ${campo}`)
-}	}	)	)	);
+	}	}	)	)	);

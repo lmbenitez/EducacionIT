@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive</title>
+	<link rel="stylesheet" href="styles/Bootstrap.css">
+	<style>
+		*{
+			box-sizing: border-box !important;
+			outline:none !important;
+		}
+		.bg-primary{
+			background-color: darkslateblue !important;
+		}
+		.carousel-caption{
+			text-shadow: 0 0 2px black;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-dark bg-primary navbar-expand-lg">
+		<!--Logo-->
+		<a class="navbar-brand" href="#">Bootstrap</a>
+		<!--Boton Toggle-->
+		<button 
+			class="navbar-toggler"
+			type="button"
+			data-toggle="collapse"
+			data-target="#menuDesplegable"
+				aria-controls="menuDesplegable"
+				aria-expanded="false"
+				aria-label="Menu Desplegable">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<ul id="menuDesplegable" class="offset-lg-5 col-lg-6 collapse navbar-collapse navbar-nav">
+			<li class="nav-item col-lg">
+				<a href="index.html" class="nav-link text-left">Inicio</a>
+			</li>
+			<li class="nav-item col-lg">
+				<a href="bootstrap.html" class="nav-link">Acerca de</a>
+			</li>
+			<li class="nav-item col-lg">
+				<a href="#" class="nav-link">Galeria</a>
+			</li>
+			<li class="nav-item col-lg">
+				<a href="#contactForm" class="nav-link">contacto</a>
+			</li>
+			<li class="nav-item dropdown col-lg">
+				<a 	href="#" 
+					id="masOpciones" 
+					class="nav-link dropdown-toggle"
+					type="button"
+					data-toggle="dropdown">
+					Otros Links
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="masOpciones">
+					<li class="dropdown-item">
+						<a href="https://alumni.education">Alumni</a>
+					</li>
+					<li class="dropdown-item">
+						<a href="https://getbootstrap.com">Bootstrap</a>
+					</li>
+					<li class="dropdown-item">
+						<a href="https://github.com/c215714n/educacionit/tree/responsive-miercoles-15hs">GitHub</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<header class="mt-4">
+		<!--Contenedor Slider-->
+		<div id="galeriaSlider" class="m-auto col-12 col-lg-8 carousel slide" data-ride="carousel">
+			<!--Contenido (Imagenes y texto)-->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img 
+						class="d-block w-100"
+						style="height:50vh;"	
+						src="assets/bg-md-header.jpg" alt="Mac OS X Mojave">
+					<div class="carousel-caption">
+						<p class="h3">Mac OS X Mojave</p>
+						<p>version 10.14.6</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img 
+						class="d-block w-100"
+						style="height:50vh;" 	
+						src="assets/bg-lg-header.jpg" alt="Mac OS X Lion">
+					<div class="carousel-caption">
+						<p class="h3">Mac OS X Lion</p>
+						<p>version 10.7.5</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img 
+						class="d-block w-100"
+						style="height:50vh;" 	
+						src="assets/bg-xl-header.png" alt="Mac OS X Leopard">
+					<div class="carousel-caption">
+						<p class="h3">Mac OS X Leopard</p>
+						<p>Version 10.5.8</p>
+					</div>
+				</div>
+			</div>
+			<!--Botones-->
+			<a 	href="#galeriaSlider"
+				class="carousel-control-prev" 
+				role="button"
+				data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a 	href="#galeriaSlider"
+				class="carousel-control-next" 
+				role="button"
+				data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+				<span class="sr-only">Siguiente</span>
+			</a>
+		</div>
+	</header>
+	<main>
+		
+	</main>
+	<footer class="container">
+		<form id="contactForm" class="row">
+			<div class="form-group col-12 col-lg-6">
+				<label for="nombreContacto">Nombre</label>
+				<input 
+					class="form-control" 
+					type="text" 
+					id="nombreContacto" 
+					name="nombreContacto"
+					pattern="[a-z A-Z]{2,50}" 
+					required 
+				/>
+				<div class="small">
+					Ingrese su nombre verdadero, por favor.
+				</div>
+				<div class="valid-feedback">
+					Parece que tu nombre esta escrito correctamente
+				</div>
+				<div class="invalid-feedback">
+					mmm... ¿estas seguro que es es tu verdadero nombre?
+				</div>
+			</div>
+			<div class="form-group col-12 col-lg-6">
+				<label for="apellidoContacto">Apellido</label>
+				<input 
+					class="form-control" 
+					type="text" 
+					id="apellidoContacto" 
+					name="apellidoContacto"
+					pattern="[a-z A-Z]{2,50}" 
+					required 
+				/>
+				<div class="small">Ingrese su apellido verdadero, por favor</div>
+				<div class="valid-feedback">
+					Parece que tu nombre esta escrito correctamente
+				</div>
+				<div class="invalid-feedback">
+					mmm... ¿estas seguro que es es tu verdadero nombre?
+				</div>
+			</div>
+			<div class="form-group col-12 col-lg-8">
+				<label class="sr-only" for="emailContacto">Correo</label>
+				<div class="input-group-prepend">
+					<div class="input-group-text">@</div>
+					<input 
+						class="form-control" 
+						type="email" 
+						placeholder="Correo Electronico" 
+						id="emailContacto" 
+						name="emailContacto"
+						required>
+					<div class="col-12 valid-feedback">Parece Valido</div>
+					<div class="col-12 invalid-feedback">mmm...</div>
+				</div>
+			</div>
+			<div class="form-group col-12 col-lg-4">
+				<label class="sr-only" for="emailContacto">Telefono</label>
+				<div class="input-group-prepend">
+					<div class="input-group-text">Cel</div>
+					<input 
+						class="form-control" 
+						type="number" 
+						placeholder="Telefono Celular" 
+						id="telefonoContacto" 
+						name="telefonoContacto">
+					<div class="d-block valid-feedback"></div>
+					<div class="d-block invalid-feedback"></div>
+				</div>
+			</div>
+		</form>
+		<button 
+			class="btn btn-primary"
+			type="button"
+			data-toggle="modal"
+			data-target="#infoAutor">
+			Informacion del Autor
+		</button>
+		<div 
+			class="modal fade" 
+			id="infoAutor" 
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="inforAutor"
+			aria-hidden="true">
+			<div class="modal-dialog modal-content">
+				<div class="modal-header">
+					<span class="h3">RESPONSIVE WEB DESIGN</span>
+				</div>
+				<div class="modal-body">
+					<strong>Autor:</strong> Cristian Racedo
+				</div>
+				<div class="modal-footer">
+					<button 
+						type="button" 
+						class="btn btn-primary" 
+						data-dismiss="modal">Cerrar
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/bootstrap.bundle.js"></script>
+	<script src="scripts/bootstrap.js"></script>
+	<script>
+		//Validacion input NOMBRE
+			document.querySelector('#nombreContacto').addEventListener(
+			'change', () => {
+				if(document.querySelector('#nombreContacto').checkValidity()){
+					document.querySelector('#nombreContacto').classList.add('is-valid')
+					document.querySelector('#nombreContacto').classList.remove('is-invalid')
+				} else{
+					document.querySelector('#nombreContacto').classList.add('is-invalid')
+					document.querySelector('#nombreContacto').classList.remove('is-valid')
+				}
+			}
+			)
+		//Array de Formulario
+			var camposFormulario = [
+				'nombreContacto', 
+				'apellidoContacto', 
+				'emailContacto',
+				'telefonoContacto',
+				'consultaContacto'
+			]
+			camposFormulario.map( campoForm => {
+				document.getElementById(campoForm).addEventListener(
+					'change', () => {
+						if(document.getElementById(campoForm).checkValidity()){
+							document.getElementById(campoForm).classList.add('is-valid')
+							document.getElementById(campoForm).classList.remove('is-invalid')
+						} else {
+							document.getElementById(campoForm).classList.add('is-invalid')
+							document.getElementById(campoForm).classList.remove('is-valid')
+						}
+					}
+				)
+			});
+	</script>
+</body>
+</html>
