@@ -1,0 +1,15 @@
+HTML (HyperText Markup Language){
+	"Lenguaje de Marcado de Hipertexto"
+	"Lenguaje de Estructura" - Esqueleto
+	Utiliza etiquetas para definir un contenedor y su contenido.
+		ej:	<p> soy un parrafo </p>
+		El orden de los Factores ALTERA el Producto.
+}
+
+CSS (Cascading Styles Sheets){
+	"Hojas de Estilo en Cascada"
+	"Lenguaje de Diseño" - skin (Piel)
+ 	Utiliza Reglas para definir el aspecto de los elementos en patalla.
+ 		ej: p{color:blue;}
+ 		El orden de los Factores NO ALTERA el Producto
+}

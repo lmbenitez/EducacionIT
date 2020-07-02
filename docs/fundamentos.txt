@@ -1,0 +1,21 @@
+FrontEnd(cliente){
+	Lo que se visualiza en el Navegador, ya sea Interfaz Grafica, alguna funcionalidad y cualquier otra accion/elemento que pueda reproducir el mismo.
+	Lenguajes:
+		HTML	*
+		CSS		*
+		JS
+}
+
+BackEnd(servidor){
+	Lo que sucede en el servidor, por ejemplo, las consultas con las bases de datos y resolucion de operaciones, relacionadas con las mismas.
+	Lenguajes:
+		SQL
+		PHP
+		JAVA
+}
+
+FullStack(cliente,servidor){
+	Organizacion de equipos de trabajo, optimizacion de proyectos y depuracion de errores.(Project Manager)
+	Lenguajes:
+		Todos los anteriores	
+}
