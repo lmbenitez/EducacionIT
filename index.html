@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- Version 5 -->
 <html>
 <head><!-- 
 		HEAD: Parte NO VISIBLE 
@@ -9,12 +9,51 @@
 	<meta charset="utf-8">
 	<title>Mi primer Página Web</title>
 </head>
-<body><!-- 
+<body style="font-family: century gothic, segoe ui, sans-serif;"><!-- 
 		BODY: Parte VISIBLE
 			Titulos y Textos
 			Listas e Hipervinculos
 			Tablas y Multimedia 
 		-->
+	<!--Encabezados - heading -->
+	<h1>Titulo Principal - Libro</h1>
+	<h2>Titulo Secundario - Capitulo</h2>
+	<h3>Titulo Tercer Nivel - Subcapitulo</h3>
+	<h4>Titulo Cuarto Nivel - Apartado Externo</h4>
+	<h5>Titulo Quinto Nivel - Muy dificil de implementar</h5>
+	<h6>Titulo Sexto Nivel - Jamas lo van a utilizar</h6>
+	<!--Textos-->
 	<p>soy un párrafo</p>
+	<!-- Listas -->
+		<!-- Ordenadas (Ordered Lists) -->
+		<ol>
+			<li>Introducción HTML</li>
+			<li>Imágenes e Hipervínculos</li>
+			<li>Formularios y un poquito de PHP</li>
+			<li>Tablas, multimedia y acceso FTP</li>
+		</ol>
+		<!-- Desordenadas (UnOrdered Lists) -->
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JS</li>
+		</ul>
+		<!--Teoria-->
+		<p>
+			En HTML existen dos tipos de etiquetas:
+			<br/>
+			<strong>BLOQUE: </strong>
+			Son aquellas que ocupan todo el ancho de la pantalla, se les puede dar tamaño y no comparten espacio con otras etiquetas. 
+			 <em>(Generalmente son CONTENEDORES)</em>
+			<br/>
+			<strong>LINEA: </strong>
+			Son aquellas que ocupan una porcion de la linea, no se les puede dar tamaño, pero pueden compartir espacios con otras etiquetas similares. 
+			<em>(Generalmente corresponden al CONTENIDO)</em>	
+		</p>
+		<div style="color:lightgrey; background-color: indigo; padding:20px; width:600px;"><!--Bloque: sin carga semantica (DIVISION)-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, placeat? Voluptate mollitia illo dicta sed quam dignissimos alias consectetur ut placeat, obcaecati, cupiditate nesciunt voluptates ipsa quasi. Iure, optio voluptates.</p>
+			<p style="color:gold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum molestiae voluptas quia cupiditate cumque excepturi voluptatum suscipit corporis laboriosam eos, fuga similique provident dolor, incidunt ipsum quos doloremque officiis quam!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eius eveniet, dicta nemo tenetur molestiae consectetur. Minus eius ut, expedita, porro eos error. Ipsa cum quos blanditiis et, eum recusandae.</p>
+		</div>
 </body>
 </html>
