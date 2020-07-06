@@ -1,0 +1,80 @@
+body{
+	margin:0;
+	font-family: candara, segoe ui, sans-serif;
+}
+
+header, footer{
+	padding:10px;
+	color:lightgrey;
+	background-color: darkslateblue;
+}
+
+#header h1, #header p{
+	margin:-10px;
+	text-align: center;
+}
+
+.menu{
+	padding:0;
+	text-align: center;
+	list-style: none;
+	background-color: slateblue;
+	border-radius: 30px;
+}
+
+.menu li{
+	display: inline-block;
+	width:80px;
+	line-height: 30px
+}
+
+.menu li:hover{
+	background-color: mediumslateblue;
+}
+
+.menu a{
+	color:lightgrey;
+	text-decoration: none;
+}
+
+main, article, section{
+	margin:10px;
+	padding:10px;
+}
+
+article{
+	background-color: #ddd;
+	border-radius: 10px;
+}
+
+.example{
+	padding:10px;
+	list-style: none;
+	color:white;
+	background-color: #333;
+}
+
+/*Formulario Contacto*/
+	#contacto, 
+	#contacto input, 
+	#contacto textarea,
+	#contacto select, 
+	#contacto button{
+		width:600px;
+		margin:auto;
+		outline:none;
+		border:0;
+		padding:0;
+		resize: none;
+		line-height: 20px;
+		font-family: candara, sans-serif;
+	}
+
+	#contacto textarea{
+		height:120px;
+	}
+
+	#contacto button:hover{
+		color:white;
+		background-color: slateblue;
+	}
