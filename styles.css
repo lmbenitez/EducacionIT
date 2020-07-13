@@ -3,7 +3,7 @@ body{
 	font-family: candara, segoe ui, sans-serif;
 }
 
-header, footer{
+#header, footer{
 	padding:10px;
 	color:lightgrey;
 	background-color: darkslateblue;
@@ -77,4 +77,9 @@ article{
 	#contacto button:hover{
 		color:white;
 		background-color: slateblue;
+	}
+/*Tablas*/
+	table, caption,tr,td{
+		color:#ccc;
+		background-color: rgba(10,90,60,0.5);
 	}

@@ -93,6 +93,86 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que nos permiten organizar la informacion de manera tabular y al igual que en cualquier ambito, estas se componen de filas y columnas, pero a diferencia de cualquier otro programa, estas NO se crean a partir de la cantidad de filas y columnas totales, sino que se crean a partir del modelo de cajas.
+			</p>
+			<section id="clasica">
+				<header>
+					<h1>Estructura Clasica</h1>
+				</header>
+				<p>
+
+					Antes de la llegada de HTML5, los navegadores no podian diferenciar los tipos de estructura dentro del elemento. Este impedimento obligaba a los desarrolladores a utilizar otras herramientas para distiguir la estructura la misma de manera visual.
+					<br/>
+				</p>
+				<ul class="example">
+					<li><strong>Table (Contenedor de la tabla):</strong> etiqueta necesaria para crear la tabla</li>
+					<li><strong>tr (Fila de Tabla):</strong> etiqueta que indica la fila en la que nos ubicamos (Contenedor)</li>
+					<li><strong>td (Division/Celda):</strong> etiqueta donde colocaremos el contenido de la tabla, de manera segmentada</li>
+				</ul>
+				<table>
+					<tr>
+						<td>f.1 c.1</td>
+						<td>f.1 c.2</td>
+						<td>f.1 c.3</td>
+					</tr>
+					<tr>
+						<td>f2 c1</td>
+						<td>f2 c2</td>
+						<td>f2 c3</td>
+					</tr>
+					<tr>
+						<td>f3-c1</td>
+						<td>f3-c2</td>
+						<td>f3-c4</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<header>
+					<h1>Estructura Semantica</h1>
+				</header>
+				<p>
+					Con la llegada de HTML5, se incorporaron nuevas etiquetas ademas de las mostradas anteriormente en la seccion <a href="#clasica">Estructura Clasica</a>, con el fin de poder diferenciar las partes de una tabla y optimizar las herramientas para SEO.
+				</p>
+				<ul class="example">
+					<li><strong>THEAD (Cabecera): </strong> etiqueta que reemplaza al <em>tr</em> y contiene los titulos de la tabla, dentro de la misma en lugar de <em>td</em> utilizamos celdas de titulo <strong>th</strong>.</li>
+					<li><strong>TBODY (Cuerpo): </strong> etiqueta que contiene la informacion principal y mantiene la estructura clasica de tabla.</li>
+					<li><strong>TFOOT (pie): </strong> etiqueta opcional que sirve para complementar la informacion mostrada en el cuerpo de la tabla.</li>
+				</ul>
+				<table>
+					<caption>Venta de Productos</caption>
+					<thead>
+						<th>Producto</th>
+						<th>Precio</th>
+						<th>Cant.</th>
+						<th>Total</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Teclado</td>
+							<td>800</td>
+							<td>3</td>
+							<td>2400</td>
+						</tr>
+						<tr>
+							<td>Monitor</td>
+							<td>5600</td>
+							<td>2</td>
+							<td>11200</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th colspan="3">Total</th>
+						<td>13600</td>
+					</tfoot>
+				</table>
+			</section>
+		</article>
 	</main>
 	<footer>
 		<form id="contacto" onsubmit="alert('gracias por enviar su consulta')" action="contacto.php" method="POST">
