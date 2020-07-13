@@ -171,6 +171,77 @@
 						<td>13600</td>
 					</tfoot>
 				</table>
+				<table> 
+					<caption>Desarrolladores</caption>
+					<thead>
+						<th>Tipo</th>
+						<th>Lenguaje</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">Front-End</td>
+							<td>HTML</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">Back-End</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</article>
+		<article>
+			<header>
+				<h1>Multimedia en la Web</h1>
+			</header>
+			<p>A lo largo de los años existieron multiples formas de agregar este tipo de contenido a las paginas de internet, pero con el avance de las API's incorporadas a los navegadores se logro implementar este tipo de contenido de manera nativa.</p>
+			<section>
+				<header>
+					<h1>Contenido Embebido</h1>
+				</header>
+				<p>
+					
+					La etiqueta <strong>iframe</strong> fue la precursora de los contenidos de tipo <em>embed</em>, los cuales corresponden a elementos que insertamos dentro de nuestra pagina y no pertenecen al universo de HTML, aunque tambien pueden corresponder a contenido compartido desde otra web. La caracteristica principal de esta etiqueta es la asicronicidad, debido a que los tiempos de carga de dicho elemento no afectan a los tiempos de carga del sitio.
+				</p>
+				<iframe 
+					src="https://www.youtube.com/embed/zJBzHQawsjs?list=RDzJBzHQawsjs" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+				<iframe 
+					src="https://www.youtube.com/embed/aVfQMRHCGKY" frameborder="0" 
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+			</section>
+			<section>
+				<header>
+					<h1>Audio &amp; Video</h1>
+				</header>
+				<p>
+					HTML5 incorpora <span class="importante">2</span> nuevas etiquetas para la reproduccion de contenido multimedia, estas son <strong>Audio</strong> que admite formatos como <em>.mp3, .wav , .ogg</em> &amp; <strong>video</strong> que admite formatos como <em>.mp4, .avi , .ogv</em>. Se agregaron al standard debido a los problemas de compatibilidad y la necesidad de instalar plugins por parte de los navegadores para reproducir este tipo de contenido, pero en caso de los navegadores NO compatibles con estos elementos, nos permite dejar un mensaje al cliente por dichos inconvenientes.
+				</p>
+				<audio src="media/live-learn.mp3" controls>
+					Lo sentimos, pero tu navegador NO es compatible con el Elemento	AUDIO.
+				</audio>
+				<video src="media/californication.mp4" controls>
+					Lo sentimos, pero tu navegador NO es compatible con el Elemento	VIDEO.
+					16/9 	(ancho 1.78 > alto)
+					4/3		(ancho 1.33 > alto)
+				</video>
 			</section>
 		</article>
 	</main>
@@ -198,6 +269,14 @@
 				required></textarea>
 			<button>Enviar Consulta</button>
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0685411487716!2d-58.37805708502092!3d-34.60242828045981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1594672405866!5m2!1ses!2sar" 
+			width="400" 
+			height="300" 
+			frameborder="0" 
+			aria-hidden="false" 
+			tabindex="0">
+		</iframe>
 	</footer>
 </body>
 </html>

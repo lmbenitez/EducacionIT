@@ -83,3 +83,18 @@ article{
 		color:#ccc;
 		background-color: rgba(10,90,60,0.5);
 	}
+	table{
+		margin:20px auto; /*Top Right Bottom Left*/
+	}
+	caption{
+		border-radius:8px 8px 0 0;/*tl tr br bl*/
+	}
+	td{
+		width:100px;
+	}
+
+	iframe, video{
+		width:450px;
+		height: 300px;
+		border-radius: 15px;
+	}
