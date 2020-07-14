@@ -1,0 +1,22 @@
+FrontEnd (cliente) {
+	Desarrollo del lado del Cliente, todo lo que pueda el navegador. Diseño UI/UX, Funcionalidad Basica, basicamente lo visible.
+	
+	Lenguajes:
+		HTML
+		CSS
+		JS
+}
+BackEnd (servidor) {
+	Desarrollo del lado del Servidor, toda funcionalidad o peticion que dependa de este. Consulta a una Base de datos, acceso al servidor, operaciones que dependan del servidor.
+
+	Lenguajes:
+		SQL
+		PHP
+		JAVA
+}
+FullStack (ambos){
+	Organizacion de equipos de trabajos, optimizacion y depuracion de codigo. Project Manager
+
+	Lenguajes:
+		Todos los anteriores 
+}

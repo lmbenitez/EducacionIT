@@ -1,0 +1,15 @@
+HTML (HyperText Markup Language) {
+	Lenguaje de Marcado de Hipertexto (ESTRUCTURA)
+		Utiliza Etiquetas para la creacion y connotacion de elementos con relacion a su contexto.
+	Ejemplo:	
+		<p> soy un parrafo </p>
+		"El orden de los Factores ALTERA el Producto"
+}
+
+CSS (Cascading Styles Sheets) {
+	Hojas de Estilo en Cascada (DISEÑO)
+		Utiliza Reglas para indicar al navegador como se deben visualizar los elementos en pantalla.
+	Ejemplo:
+		p{ color:blue; }
+		"El orden de los Factores NO ALTERA el Producto"
+}
