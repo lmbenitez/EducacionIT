@@ -38,19 +38,21 @@
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1: </h1>
+					<h1>Tema 1: Contenido Multimedia</h1>
 				</header>
-				<p>lorem100</p>
+				<p>
+					HTML5 incorpora dos nuevos elementos para la reproduccion de este tipo de contenido, por un lado tenemos <strong>&lt;audio&gt;</strong>
+				</p>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
 			</section>
 			<section>
 				<header>
-					<h1>Tema 2: Nuevos Elementos Estadisticos</h1>
+					<h1>Tema 2: Elementos Estadisticos</h1>
 				</header>
 				<p>
-					Con la llegada de HTML5 se incorporaron 2 nuevos elementos para la utilizacion de valores estadisticos o de medicion. Estos son <strong>&lt;progress&gt;</strong> que se utiliza para representar el avance o la evolucion respecto a una tarea que se lleve a cabo; y <strong>&lt;meter&gt;</strong> que se utiliza para la representacion de valores estadisticos o comparativos de una tarea o actividad finalizada.
+					Con la llegada de HTML5 se incorporaron 2 nuevos elementos para la utilizacion de valores estadisticos o de medicion. Estos son <strong>&lt;progress&gt;</strong> que se utiliza para representar el avance o la evolucion respecto a una tarea que se lleve a cabo, pero que todavia no haya finalizado; y <strong>&lt;meter&gt;</strong> que se utiliza para la representacion de valores estadisticos o comparativos de una tarea o actividad finalizada.
 				</p>
 				<ul class="example">
 					<li>
@@ -68,7 +70,6 @@
 									max="100" 
 									value="20"></progress>
 								<input 
-									onchange="cambiarProgress()"
 									min="0"
 									max="100" 
 									id="progressInput" 
@@ -128,7 +129,7 @@
 					<h1>Tema 3: API's de Dibujos</h1>
 				</header>
 				<p>
-					Los navegadores integran dos potentes herramientas a la hora de trabajar con imagenes/dibujos, estas son <strong>&lt;svg&gt;</strong> que utiliza <em>XML</em> para crear graficos vectoriales (imagenes calculadas matematicamente, compuestas de lineas y curvas) en nuestra web; por otro lado <strong>canvas</strong> permite al desarrollador crear graficos mapa de bits (imagenes diagramadas mediante una grilla, que permite la generacion de campos de profundidad mediante la disposicion de los puntos/pixeles) mediante la utilizacion de <em>JS</em>
+					Los navegadores integran dos potentes herramientas a la hora de trabajar con imagenes/dibujos, estas son <strong>&lt;svg&gt;</strong> que utiliza <em>XML</em> para crear graficos vectoriales (imagenes calculadas matematicamente, compuestas de lineas y curvas) en nuestra web; por otro lado <strong>&lt;canvas&gt;</strong> permite al desarrollador crear graficos mapa de bits (imagenes diagramadas utilizando una grilla, que permite la generacion de campos de profundidad con la disposicion de los puntos/pixeles) mediante la utilizacion de <em>JS</em>
 				</p>
 				<div class="example">
 					<figure>
@@ -141,10 +142,6 @@
 					</figure>
 				</div>
 				<svg style="width:200px; height:200px; border:1px solid black;">
-					<line 
-						x1="200" y1="0" 
-						x2="0" y2="200" 
-						stroke="darkgreen" stroke-width="10"/>
 					<rect 	
 						x="10" y="10" 
 						width="100" height="100" 
@@ -152,8 +149,13 @@
 					<circle 
 						r="50" cx="110" cy="110" 
 						fill="rgba(0,80,120,.5)"/>
-				</svg>
-				<canvas id="jsCanvas" style="width:200px; height:200px; border:1px solid black;">
+					<line 
+						x1="200" y1="0" 
+						x2="0" y2="200" 
+						stroke="darkgreen" stroke-width="10"/>
+					<text x="150" y="190" fill="none" stroke="black">XML</text>
+					</svg>
+				<canvas id="jsCanvas" width="200" height="200" style="border:1px solid black;">
 				</canvas>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
