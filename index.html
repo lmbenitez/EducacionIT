@@ -4,13 +4,56 @@
 	<meta charset="utf-8">
 	<title>Mi Primer Página Web</title>
 </head>
-<body>
+<body style="font-family: century gothic, segoe ui, candara, sans-serif;">
+	<!-- Encabezados -->
 	<h1>Titulo Principal - Empresa</h1>
 	<h2>Titulo Secundario - Servicios</h2>
 	<h3>Titulo de Tercer Nivel - Categoria</h3>
 	<h4>Titulo Dificil de implementar</h4>
 	<h5>Titulo con jerarquia complicada</h5>
 	<h6>Titulo que jamas van a usar en su vida</h6>
+	<!-- Parrafos -->
 	<p>soy un párrafo</p>
+	<p>soy otro parrafo</p>
+	<!-- Listas -->
+	<ol><!-- Ordered List -->
+		<li>Fundamentos HTML</li><!-- List Item -->
+		<li>Imágenes e Hipervínculos</li>
+		<li>Formularios y un poco de PHP</li>
+		<li>Tablas, Multimedia y acceso FTP</li>
+	</ol>
+	<ul><!-- UnOrdered List -->
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+	<p>
+		
+		Existen dos tipos de etiquetas principales en base a su representacion en el navegador.
+		<br/><!-- Break - Etiqueta Huerfana -->
+		<strong>De Bloque: </strong><!-- Texto destacado -->
+		Son aquellas que por defecto ocupan todo el ancho de su contenedor, se les puede dar tamaño 
+		<em> (ancho y alto) </em><!-- Texto Enfatizado -->, 
+		generan un salto de linea al utilizarlas y ademas son faciles de manipular.
+		<br/>
+		<strong>De Linea: </strong>
+		Son aquellas que ocupan una porcion de la linea, su tamaño esta ajustado automaticamente a lo que ocupe su contenido 
+		<em> (ancho y alto) </em>, 
+		dificilmente se les puede agregar margen, pueden compartir espacio con otras etiquetas del mismo tipo y no se puede modificar su tamaño.
+	</p>
+	<p>
+		las <strong>rosas</strong> 
+		son <strong>rojas</strong> 
+		y las <em>violetas azules</em>
+	</p>
+	<p style="color:lightgrey; background-color: darkslateblue; margin-top:50px; padding:20px;">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ea, fuga dolorum molestias ex vitae adipisci rerum, tempora est error. Repellat atque iure, aliquam veritatis consequuntur eos porro. Dolorum, in.
+	</p>
+	<ul style="list-style: lower-greek; background-color: tomato; width:300px; padding:50px;">
+		<li>Margin: Distancia que separa a las etiquetas (NO SUMA TAMAÑO)</li>
+		<li>Border: Linea que rodea a las etiquetas, por defecto es 0 (SUMA TAMAÑO)</li>
+		<li style="background-color: darkred;">Padding: Distancia que existe entre el contenido y el borde (SUMA TAMAÑO)</li>
+		<li>Content: El espacio donde colocamos el contenido de nuestra etiqueta (SE LE ASIGNA TAMAÑO)</li>
+	</ul>
 </body>
 </html>
