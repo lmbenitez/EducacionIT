@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<!--comentario HTML-->
 	<meta charset="UTF-8">
 	<title>Fundamentos Web</title>
+	<style>
+		/*selectores General*/
+		body{
+			margin:0;
+			font-family: candara, segoe ui, century gothic, sans-serif;
+		}
+		/*selectores Multiples*/
+		header, footer{
+			color:#ccc;
+			background-color: #012;/*RGB*/
+			padding:10px;
+		}
+		/*Selectores Especificos*/
+		nav li{
+			list-style: none;
+			display: inline;
+			padding:10px;
+			margin:5px;
+			background-color:#012;
+		}
+		nav a{
+			color:#ccc;
+			text-decoration: none;
+		}
+		/*selector de Clase y Pseudoclase*/
+		.active, nav li:hover{
+			background-color: #369;
+		}
+		/*Estilo del cuerpo*/
+		main{
+			padding:20px;
+			text-align: center;
+		}
+		main p{
+			padding:10px;
+			text-align: left;
+		}
+		p img{
+			margin-right: 10px;
+		}	
+		/*selector id*/
+		#header h1, #header p{
+			margin:0;
+		}
+	</style>
 </head>
 <body>
-	<div id="header">
+	<header id="header">
 		<h1>Fundamentos Web</h1>
 		<p>HTML5 &amp; CSS3</p>
-	</div>
-	<div>
+	</header>
+	<nav>
 		<ul>
 			<li>
 				<!-- Ruta Relativa / Interna -->
 				<a href="index.html">Inicio</a>
 			</li>
-			<li>
+			<li class="active">
 				<!-- Ruta Marcador / Ancla -->
 				<a href="#">Galeria</a>
 			</li>
@@ -24,8 +70,8 @@
 				<a href="https://github.com/c215714n/educacionit/tree/html5-jueves-19hs" target="_blank">GitHub</a>
 			</li>
 		</ul>
-	</div>
-	<div>
+	</nav>
+	<main>
 		<!-- 
 			src = Ubicacion de la imagen 
 			alt = Texto alternativo / aparece cuando la imagen no se puede mostrar 
@@ -34,14 +80,21 @@
 		<img src="img/ih-greenhulk-02.jpg" alt="Entintado Green Hulk (Comic Incredible Hulk)" style="width: 300px;" />
 		<img src="img/ih-greenhulk-03.jpg" alt="Coloreado Green Hulk (Comic Incredible Hulk)" style="width: 300px;" />
 		<p style="background-color: lightgrey; overflow: hidden;">
-			<img src="img/usm-venom-02.jpg" alt="Venom Ultimate Spider-Man" style="width:100px;float:right;"> 
+			<img src="img/usm-venom-02.jpg" alt="Venom Ultimate Spider-Man" style="width:100px;float:left;"> 
 			<!--Huerfana /lineaBloque-->
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed possimus eaque ratione non voluptatum error, eligendi corporis molestiae ut quibusdam nihil eos ipsa exercitationem necessitatibus ea dolores ad totam aspernatur impedit dolore tenetur doloremque. Expedita obcaecati, quia inventore vitae commodi minus! Facilis, totam! Numquam veritatis voluptas voluptatem quis possimus aperiam esse, labore minus est, voluptatum tempore. Enim nulla cupiditate culpa reprehenderit animi blanditiis accusantium earum pariatur vero, officia laborum officiis autem. Exercitationem maiores explicabo officia illum, laboriosam architecto consectetur repudiandae provident natus doloremque? Architecto praesentium hic magnam. Inventore, nobis quo accusantium, earum veritatis quaerat eveniet explicabo ducimus incidunt fugit officiis, odit perferendis reiciendis unde voluptas reprehenderit architecto aperiam quia optio! Sed, non. Delectus sed consectetur, voluptatibus nihil rem sit temporibus, iste quod! Labore minus expedita explicabo voluptate aliquam cumque obcaecati cum dolore, deserunt illo officiis, ullam omnis reiciendis sint unde, amet architecto repudiandae. Autem soluta, molestias, quasi temporibus assumenda quae ullam dolor aliquid error accusantium explicabo quos inventore totam odio eaque adipisci qui architecto dolorum sequi ducimus, illum impedit maiores, dolorem debitis! Minus, placeat. Nisi aut dignissimos cumque dolore eaque, aspernatur dicta quaerat? Praesentium a facere et repellendus, labore inventore laborum, accusantium hic iusto officia, libero dolore distinctio adipisci saepe.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptas mollitia doloribus molestiae ab, magni eius tempore laborum fuga earum quae placeat odit nihil ut? Voluptatem dolore quo eveniet sit.
 
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, accusantium odit? Repellendus odit, repudiandae quisquam quia, perspiciatis sit aut velit sapiente adipisci quaerat impedit facilis, nostrum aliquid? Maiores iure, voluptas!
 
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere soluta itaque, odio magnam error nostrum, laboriosam nesciunt repellendus. Ratione incidunt eos adipisci error ab cum voluptatem, ut, velit dolorum itaque?
 		</p>
-	</div>
+	</main>
+	<footer>
+		<p>
+			&copy; Todos los derechos reservados
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a> &amp; Compañia.
+		</p>
+	</footer>
 </body>
 </html>
