@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 	<meta charset="UTF-8">
 	<title>Maquetado Avanzado</title>
+	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 	<!--HEADER: Contenido Introductorio-->
@@ -44,6 +45,20 @@
 					HTML5 incorpora dos nuevos elementos para la reproduccion de este tipo de contenido, por un lado tenemos <strong>&lt;audio&gt;</strong> que admite formatos como <em>.mp3 - .wav - .ogg</em>, aunque tambien admite formatos de video. 
 					Por otro lado el elemento <strong>&lt;video&gt;</strong> admite formatos <em>.mp4 - .avi - .ogv</em>.
 				</p>
+				<div class="container">
+					<video autoplay muted>
+						<source src="assets/media/californication.ogv"/>
+						<source src="assets/media/californication.avi"/>
+						<source src="assets/media/californication.mp4"/>
+						Lo sentimos pero el elemento Video NO es compatible con tu Navegador
+					</video>
+					<div class="content">
+						<h2>Californication</h2>
+						<p>
+							Séptimo álbum de estudio de la banda estadounidense de rock alternativo y funk rock Red Hot Chili Peppers. Rick Rubin lo produjo y Warner Bros. Records lo lanzó al mercado el 8 de junio de 1999.
+						</p>
+					</div>
+				</div>
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
@@ -196,7 +211,7 @@
 			</section>
 		</article>
 	</main>
-	<footer>
+	<footer id="footer">
 		<form action="" id="contact">
 			<label for="contactName">Nombre: </label>
 			<input 
@@ -235,7 +250,11 @@
 			<a href="https://3.com" target="_blank">Red 3</a>
 			<a href="https://4.com" target="_blank">Red 4</a>
 		</div>
-		<p>&copy; Todos los derechos Reservados | <a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a> &amp; Compañia</p>
+		<p>
+			&copy; Todos los derechos Reservados | 
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
 	</footer>
 	<script src="scripts/main.js"></script>
 </body>

@@ -1,3 +1,81 @@
 /*Maquetado Avanzado*/
-
+	/*Reglas Generales*/
+		@import url(
+			'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&family=Ubuntu:wght@300&display=swap'
+			);
+		*{
+			box-sizing: border-box;
+			font-family: Roboto, Ubuntu, sans-serif;
+		}
+		body{
+			margin: 0;
+		}
+	/*Encabezado y Pie de Pagina*/
+		#header, #footer{
+			padding:1rem; /*Ancho M contenedor Raiz(HTML)*/
+			color:white;
+			text-shadow: 0 0 5px black; /*-x+ -y+ blur color*/
+			background: linear-gradient(
+				to right,
+				hsl(0,50%,20%), 
+				hsl(0,50%,60%)
+				), 
+			    url(../assets/bg-md-header.jpg),
+			    url(../assets/bg-xl-header.png)
+			;
+			background-position: top center;
+			background-size:cover; 
+			background-blend-mode:hard-light, soft-light;
+				/*
+					Colores
+						rojo  		= 0/360
+						amarillo 	= 60
+						verde 		= 120
+						cyan 		= 180
+						azul  		= 240
+						magenta 	= 300
+					saturacion
+						Gris 		= 0%
+						opaco 		= 50%
+						Brillante 	= 100%
+					Brillo
+						negro 	= 0% 
+						color 	= 50%
+						blanco 	= 100%
+				*/
+				/*
+					Nombre: 140 colores
+					-------
+					16777216 colores
+					hexadecimal: #rrggbb; ej:#192168;
+					rgb: rbg(25,32,104);
+					hsl: hue saturation light; hsl(color, intensidad, luminosidad)
+				*/
+		}
+		#footer{
+			background-position: bottom center;
+		}
+	/*Video con texto*/
+		.container{
+			position:relative;
+			width:600px;
+			height:450px;
+			overflow: hidden;
+		}
+		.content,
+		.container video{
+			position:absolute;
+			width:100%;
+			color:white;
+			background-color: hsla(240, 30%, 30%,.5);
+		}
+		.content{
+			bottom:-1000px;
+			transition: all 1s ease;
+		}
+		.container:hover .content{
+			left:0;
+			bottom:0;
+			padding:1rem;
+		}
 /*Autor: Cristian Racedo*/
