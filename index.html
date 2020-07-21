@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 	<meta charset="UTF-8">
 	<title>Maquetado Avanzado</title>
+	<link rel="stylesheet" href="styles/icomoon.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -20,12 +21,12 @@
 		<nav>
 			<button id="menu">&equiv;</button>
 			<ul class="menu">
-				<li class="active"><a href="#">Inicio</a></li>
-				<li><a href="about.html">Acerca de</a></li>
-				<li><a href="#contact">Contacto</a></li>
+				<li class="active"><a href="#"> Inicio</a></li>
+				<li><a href="about.html"> Acerca de</a></li>
+				<li><a href="#contact"> Contacto</a></li>
 				<li>
 					<a 
-						href="https://github.com/c215714n/educacionit/tree/maquetado-lunes-15hs.html" 
+						href="https://github.com/c215714n/educacionit/tree/maquetado-lunes-19hs" 
 						target="_blank">GitHub
 					</a>
 				</li>
@@ -184,9 +185,20 @@
 			</header>
 			<section>
 				<header>
-					<h1>Tema 1</h1>
+					<h1>Tema 1: Colores CSS</h1>
 				</header>
-				<p>lorem100</p>
+				<p>
+					Existen multiples formas de utilzar color en la web, la mas sensilla es <strong>Color Names</strong>, que admite hasta 140 colores diferentes; otras utilizan la sinstesis aditiva, combinando los canales <em>Rojo, Verde y Azul</em> para la obtencion de tonalidades, como <strong>RGB(red,green,blue)</strong> o <strong>Hexadecimal #rrggbb</strong>, siendo la unica diferencia, la notacion de los colores. 
+					Por ultimo, se incorporo el modelo de progresion con <strong>HSL(hue°,saturation%,lightness%)</strong> donde se puede elegir un valor de color del circulo cromatico, variando entre saturacion e iluminacion del mismo.
+				</p>
+				<div class="example">
+					<div id="color" class="color">color: DarkSlateBlue</div>
+					<div id="rgb" class="color">rgb(72,61,139)</div>
+					<div id="hex" class="color">hex: #483D8B</div>
+					<div id="hsl" class="color">hsl(248,39%,39%)</div>
+					<div class="color linear">linear-gradient</div>
+					<div class="color radial">radial-gradient</div>
+				</div>			
 				<footer>
 					<p><strong>Autor: </strong>Cristian Racedo</p>
 				</footer>
@@ -245,10 +257,10 @@
 			<button class="contactSubmit">Realizar Consulta</button>
 		</form>
 		<div class="social">
-			<a href="https://1.com" target="_blank">Red 1</a>
-			<a href="https://2.com" target="_blank">Red 2</a>
-			<a href="https://3.com" target="_blank">Red 3</a>
-			<a href="https://4.com" target="_blank">Red 4</a>
+			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>
+			<a href="https://twitter.com" class="icon-twitter" target="_blank"></a>
+			<a href="https://instagram.com" class="icon-instagram" target="_blank"></a>
+			<a href="https://wa.me/0123456789" class="icon-whatsapp" target="_blank"></a>
 		</div>
 		<p>
 			&copy; Todos los derechos Reservados | 

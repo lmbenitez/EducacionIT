@@ -27,4 +27,18 @@
 			ctx.strokeStyle = 'black';//Color de Linea
 			ctx.font = "16px Century gothic"; //Tipografia
 			ctx.strokeText("JavaScript", 110, 190); //(Texto,X,Y)
+	//Menu desplegable
+		var menuAbierto = true;
+		document.querySelector('#menu').addEventListener(
+			'click', () => {
+				document.querySelector('.menu').classList.toggle('show');
+				if(menuAbierto){
+					document.querySelector('#menu').innerHTML = '&times;'
+					menuAbierto = false;
+				} else {
+					document.querySelector('#menu').innerHTML = '&equiv;'
+					menuAbierto = true;
+				}
+			}
+		)
 /*Autor: Cristian Racedo*/

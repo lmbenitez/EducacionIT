@@ -1,81 +1,221 @@
+
 /*Maquetado Avanzado*/
-	/*Reglas Generales*/
-		@import url(
-			'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&family=Ubuntu:wght@300&display=swap'
-			);
-		*{
-			box-sizing: border-box;
-			font-family: Roboto, Ubuntu, sans-serif;
+	/*Mobile First*/
+		/*Reglas Generales*/
+			@import url(
+				'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&family=Ubuntu:wght@300&display=swap'
+				);
+			*{
+				box-sizing: border-box;
+				font-family: Roboto, Ubuntu, sans-serif;
+			}
+			body{
+				margin: 0;
+			}
+			#header,
+			#footer,
+			#contact,
+			.menu,
+			main,
+			article,
+			section{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+			}
+		/*Encabezado y Pie de Pagina*/
+			#header, #footer{
+				padding:1rem; /*Ancho M contenedor Raiz(HTML)*/
+				color:white;
+				text-shadow: 0 0 5px black; /*-x+ -y+ blur color*/
+				background: linear-gradient(
+					to right,
+					hsl(0,50%,20%), 
+					hsl(0,50%,60%)
+					), 
+				    url(../assets/bg-md-header.jpg),
+				    url(../assets/bg-xl-header.png)
+				;
+				background-position: top center;
+				background-size:cover; 
+				background-blend-mode:hard-light, soft-light;
+			}
+			#footer{
+				width:100%;
+				background-position: bottom center;
+			}
+		/*Navegacion*/
+			nav{
+				width:100%;
+			}
+			#menu{
+				width:3rem;
+				line-height:2.5rem;
+				font-size: 2.5rem;
+			}
+			.menu{
+				overflow: hidden;
+				display: none;
+				margin:0;
+				padding: 0;
+				list-style: none;
+				background-color: hsl(0,30%,10%)
+			}
+			.menu li,
+			.menu a{
+				display: block;
+				padding:.2rem .5rem;
+				color:white;
+				width:100%;
+				text-decoration: none;
+			}
+			.menu a:hover{
+				background-color: hsl(0,60%, 50%)
+			}
+			.show{
+				display: block;
+				height:auto;
+			}
+		/*Contenido Principal*/
+			main,
+			article,
+			section{
+				padding:.25rem .5rem;
+			}
+			/*Video con texto*/
+				.container{
+					position:relative;
+					width:100%;
+					padding-top:75%;
+					overflow: hidden;
+				}
+				.content,
+				.container video{
+					position:absolute;
+					width:100%;
+					color:white;
+					background-color: hsla(240, 30%, 30%,.5);
+				}
+				.container video{
+					top:0;
+				}
+				.content{
+					bottom:-1000px;
+					transition: all 1s ease;
+				}
+				.container:hover .content{
+					left:0;
+					bottom:0;
+					padding:1rem;
+				}
+			/*Estilos de Muestras*/
+				.example{
+					width:100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
+					padding:1rem;
+					color: white;
+					background-color: hsl(0,30%,30%);
+				}
+				.example li{
+					width:100%;
+					max-width: 300px;
+					list-style: none;
+					display: flex;
+					justify-content: space-evenly;
+					flex-direction: column;
+				}
+				/*Elementos Estadisticos*/
+					.example progress,
+					.example meter{
+						margin-top: -.2rem;
+						height: 2rem;
+						width: 100%;
+					}
+					.example ::-webkit-meter-optimum-value{background:linear-gradient( skyblue,darkblue);}
+					.example ::-webkit-meter-suboptimum-value{background:linear-gradient( limegreen,darkgreen);}
+					.example ::-webkit-meter-even-less-good-value{background:linear-gradient(tomato,darkred);}
+				/*Colores CSS*/
+					.color{
+						width:100%;
+						max-width: 230px;
+						margin:.5rem;
+						padding:.5rem;
+						border:.2rem solid;
+						color:white;
+					}
+					#color{background-color: darkslateblue;}
+					#rgb{background-color:rgb(72,61,139);}
+					#hex{background-color:#483D8B;}
+					#hsl{background-color:hsl(248,39%,39%);}
+					.linear{
+						max-width:490px; 
+						background:linear-gradient(to right, slateblue, darkslateblue);
+					}
+					.radial{
+						max-width:490px; 
+						background:radial-gradient(circle, slateblue,darkslateblue);
+					}
+		/*formulario de Contacto*/
+			#contact{
+				width:100%;
+			}
+			#contact input, 
+			#contact select, 
+			#contact textarea,
+			#contact button{
+				width:100%;
+				border:.2rem solid white;
+			}
+			#contact textarea{
+				resize: none;
+				height: 4rem;
+			}
+			.contactSubmit{
+				color:darkred;
+				background-color: white;
+				font-size: 1.2rem;
+			}
+			.contactSubmit:hover{
+				color:white;
+				background-color: transparent;
+			}			
+		/*Redes sociales*/
+			.social{
+				display: flex;
+				justify-content: center;
+				margin:auto;
+			}
+			.social a{
+				margin:.5rem;
+				color:white;
+				font-size: 2rem;
+				text-decoration: none;
+			}
+			.social a:hover{
+				text-shadow: .1rem .1rem .2rem white;
+			}
+			.icon-facebook:hover:before{color:darkblue;}
+			.icon-twitter:hover:before{color:skyblue;}
+			.icon-instagram:hover:before{color:purple;}
+			.icon-whatsapp:hover:before{color:limegreen;}
+	/*Mobile landscape*/
+		@media screen and (min-width:576px){
+
+		}	
+	/*Tablets*/
+		@media screen and (min-width:768px){
+
 		}
-		body{
-			margin: 0;
-		}
-	/*Encabezado y Pie de Pagina*/
-		#header, #footer{
-			padding:1rem; /*Ancho M contenedor Raiz(HTML)*/
-			color:white;
-			text-shadow: 0 0 5px black; /*-x+ -y+ blur color*/
-			background: linear-gradient(
-				to right,
-				hsl(0,50%,20%), 
-				hsl(0,50%,60%)
-				), 
-			    url(../assets/bg-md-header.jpg),
-			    url(../assets/bg-xl-header.png)
-			;
-			background-position: top center;
-			background-size:cover; 
-			background-blend-mode:hard-light, soft-light;
-				/*
-					Colores
-						rojo  		= 0/360
-						amarillo 	= 60
-						verde 		= 120
-						cyan 		= 180
-						azul  		= 240
-						magenta 	= 300
-					saturacion
-						Gris 		= 0%
-						opaco 		= 50%
-						Brillante 	= 100%
-					Brillo
-						negro 	= 0% 
-						color 	= 50%
-						blanco 	= 100%
-				*/
-				/*
-					Nombre: 140 colores
-					-------
-					16777216 colores
-					hexadecimal: #rrggbb; ej:#192168;
-					rgb: rbg(25,32,104);
-					hsl: hue saturation light; hsl(color, intensidad, luminosidad)
-				*/
-		}
-		#footer{
-			background-position: bottom center;
-		}
-	/*Video con texto*/
-		.container{
-			position:relative;
-			width:600px;
-			height:450px;
-			overflow: hidden;
-		}
-		.content,
-		.container video{
-			position:absolute;
-			width:100%;
-			color:white;
-			background-color: hsla(240, 30%, 30%,.5);
-		}
-		.content{
-			bottom:-1000px;
-			transition: all 1s ease;
-		}
-		.container:hover .content{
-			left:0;
-			bottom:0;
-			padding:1rem;
+	/*Small Desktop*/
+		@media screen and (min-width:992px){
+
+		}	
+	/*Desktop*/
+		@media screen and (min-width:1200px){
+
 		}
 /*Autor: Cristian Racedo*/
