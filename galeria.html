@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!--Comentario HTML-->
+	<meta charset="UTF-8">
+	<title>Fundamentos Web</title>
+	<style>
+		/*selectores generales*/
+			body{
+				margin:0;
+				font-family: candara, segoe ui, century gothic, sans-serif;
+			}
+			nav{
+				background-color: darkslateblue;
+			}
+		/*selectores especificos*/
+			header p{
+				margin-top:-30px;
+			}
+			nav li{
+				display: inline;
+				padding:10px;
+				border-right: 1px solid white;
+			}
+			nav a{
+				color:white;
+				text-decoration: none;
+			}
+		/*selectores multiples*/
+			main, main li, main p, footer p{
+				padding:10px;
+			}
+		/*selectores de Clase*/
+			.example{
+				text-align: center;
+				background-color: darkgrey;
+			}
+		/*selectores de Id*/
+			#header, #footer{
+				padding:5px;
+				color:whitesmoke;
+				background-color: slateblue;
+			}
+		/*Pseudoclase - estado de un elemento*/
+			nav li:hover, .active{
+				background-color: #35A;
+			}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>Fundamentos Web</h1>
+		<p> &lt;HTML&gt; CSS</p>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<!--Ruta Relativa / Interna-->
+				<a href="index.html">Inicio</a>
+			</li>
+			<li class="active">
+				<!--Actualiza la Pagina-->
+				<a href="#">Galeria</a>
+			</li>
+			<li>
+				<!--Ruta Ancla / marcador-->
+				<a href="#contacto">Contacto</a>
+			</li>
+			<li>
+				<!--Rutas Absolutas / Externa-->
+				<a href="https://github.com/c215714n/educacionit/tree/html5-martes-19hs" target="_blank">GitHub</a>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aut blanditiis rerum maxime ut porro distinctio, eaque officiis. Odio rem ullam sunt fugiat veniam adipisci voluptatum accusamus laboriosam possimus illum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic doloribus, beatae eligendi iste ipsam! Hic quam sapiente, illo laborum cum repellendus quisquam accusantium dolor, ratione rerum soluta vero voluptate.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At placeat voluptatum magni a enim culpa reiciendis, dolor error, eius et veritatis vel consequatur aut eaque. Quibusdam quod atque laudantium asperiores?</p>
+		<div class="example">
+			<img src="img/usm-scorpion-01.jpg" alt="Ultimate Spiderman - Scorpion (Lapiz)" style="height:300px; margin:10px;" />
+			<img src="img/usm-scorpion-02.jpg" alt="Ultimate Spiderman - Scorpion (Tinta)" style="height:300px; margin:10px;" />
+			<img src="img/usm-scorpion-03.jpg" alt="Ultimate Spiderman - Scorpion (Color)" style="height:300px; margin:10px;" />
+		</div>
+		<ul class="example">
+			<li>
+				Evitar utilizar espacios en los nombres de las imagenes, es preferible utilizar guiones para separar palabras. Esto se debe a que los navegadores traducen el caracter de espacio a 
+				<strong> %20</strong>.
+			</li>
+			<li>
+				Utilizar nombres descriptivos para facilitar la localizacion de las imagenes por parte del desarrollador. Es mucho mas facil encontrar una imagen con nombre <em>"perros-jugando.jpg"</em> a encontrar <em>"2020-0721-201600000.jpg"</em>.
+			</li>
+			<li>
+				Utilizar minusculas para reducir las posibilidad de cometer errores de tipado, como por ejemplo: <strong>perros-jugando.jpg - Perros-Jugando.jpg - PERROS-JUGANDO.jpg</strong> son 3 imagenes totalmente diferentes para el navegador
+			</li>
+		</ul>
+		<p class="example" style="padding:10px; overflow: hidden;">
+			
+			<img src="img/ih-greenhulk-03.jpg" alt="Incredible Hulk - coloreado" style="width:100px; float: left; margin-right: 10px;">
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi amet fugit ducimus exercitationem rem, itaque explicabo veniam iusto doloremque velit mollitia odit sed, quas atque eius quam id ab. Tempora.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia doloremque minima deleniti ad eos consectetur sint accusantium pariatur blanditiis similique incidunt quibusdam, aut modi non quod eius sit, aliquid eveniet.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur commodi, aut vitae excepturi quos amet eaque autem voluptate ea vel necessitatibus libero delectus neque repellat facilis aliquid. Obcaecati, beatae aliquid!
+		</p>
+	</main>
+	<footer id="footer">
+		<p id="contacto">
+			&copy; Todos los derechos Reservados 
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+		</p>
+	</footer>
+</body>
+</html>
