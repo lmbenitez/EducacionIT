@@ -6,7 +6,7 @@
 		$consulta 	=	$_POST['consulta'];	//¡¡Buenas Tardes, America!!
 
 	// cuerpo del mail
-		$mensaje="
+		$mensaje	= "
 			<strong>Nombre:</strong> $nombre <br/>
 			<strong>email:</strong> $email <br/>
 			<strong>consulta:</strong> $consulta <br/>

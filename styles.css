@@ -1,0 +1,61 @@
+body{
+	margin:0;
+	font-family: berlin sans, calibri, verdana, sans-serif;
+}
+/*Encabezado y Pie*/
+#header, #footer{
+	color:floralwhite;
+	background-color: firebrick;
+	padding:10px;
+}
+#header a, #footer a{
+	color:floralwhite;
+	text-decoration: none;
+}
+/*Navegacion */
+.menu{
+	list-style: none;
+	margin:0;
+	padding:0;
+	background-color: tomato;
+	text-align: center;
+}
+.menu li{
+	display: inline-block;
+	width:60px;
+	padding:4px;
+}
+.menu li:hover{
+	background-color: darkred;
+}
+/*Cuerpo Principal*/
+header h1, header p{
+	margin:0;
+	text-align: center;
+}
+main,article{
+	padding:5px;
+}
+/*Formulario de Contacto*/
+#contacto{
+	margin:auto;
+	width:400px;
+}
+#contacto input,
+#contacto textarea,
+#contacto select{
+	width:400px;
+	margin:0;
+	border:0;
+	padding:0;
+	font-family: calibri, verdana, sans-serif;
+}
+.enviar:hover{
+	color:white;
+	background-color: darkred;
+}
+.example{
+	list-style: none;
+	padding:15px;
+	background-color: #FCA;
+}

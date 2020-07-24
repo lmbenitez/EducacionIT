@@ -5,7 +5,7 @@
 	<title>Fundamentos Web</title>
 	<!--Icono PNG-->
 	<link rel="icon" href="img/cr-logo.png">
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header id="header">
@@ -106,7 +106,11 @@
 		</article>
 	</main>
 	<footer id="footer">
-		<form id="contacto" action="contacto.php" method="POST">
+		<form 
+			onsubmit="alert('Gracias por enviar su consulta')" 
+			id="contacto" 
+			action="contacto.php" 
+			method="POST">
 			<label for="nombre">Nombre: </label>
 			<input 
 				type="text" 
@@ -130,6 +134,7 @@
 				required 
 			></textarea>
 			<input 
+				class="enviar" 
 				type="submit"
 				value="Realizar Consultar" />
 		</form>
