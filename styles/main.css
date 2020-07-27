@@ -168,6 +168,60 @@
 						margin:0;
 						font-size: 3rem;
 					}
+				/*Transformaciones*/
+					.transform div,
+					.transform span{
+						width:100px;
+						height:100px;
+						margin:1rem;
+						border: .2rem solid;
+						text-align: center;
+						background-color: darkslateblue;
+
+					}
+				/*Transformaciones 2D*/
+					/*Escalar*/
+						.transform div:hover:first-child{
+							transform:scaleX(); /*horizontal*/
+							transform:scaleY(); /*vertical*/
+							transform:scale(2.5); /*x , y*/
+						}
+					/*Desplazar*/
+						.transform div:hover:nth-child(2){
+							transform: translateX(); /*horizontal*/
+							transform: translateY(); /*vertical*/
+							transform: translate(0, -15px); /*x, y*/
+						}
+					/*Rotar*/
+						.transform div:hover:nth-child(3){
+							transform: rotate(-15deg);/*inclinacion deg*/
+							transform-origin: center; /*x y*/
+						}
+					/*Sesgar*/
+						.transform div:hover:nth-last-child(3){
+							transform: skewX();/*horizontal*/
+							transform: skewY();/*vertical*/
+							transform: skew(15deg, 5deg);/*x, y*/
+						}
+					/*Multiples transformaciones*/
+						.transform div:hover:nth-last-child(2){
+							transform: 
+								scale(1.5, 2) 
+								skew(15deg, 10deg)
+								translate(10px);
+						}
+				/*Transformaciones 3d*/
+					.transform{
+						perspective: 100px;
+						perspective-origin: top center;
+					}
+					/*Rotacion 3d*/
+						.transform span{
+							transform: rotateX();
+							transform: rotateY(-30deg);
+							transform: rotateZ();
+						}
+
 		/*formulario de Contacto*/
 			#contact{
 				width:100%;
