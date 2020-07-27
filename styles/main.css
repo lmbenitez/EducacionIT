@@ -1,4 +1,3 @@
-
 /*Maquetado Avanzado*/
 	/*Mobile First*/
 		/*Reglas Generales*/
@@ -158,6 +157,16 @@
 					.radial{
 						max-width:490px; 
 						background:radial-gradient(circle, slateblue,darkslateblue);
+					}
+				/*Regla Font-face*/
+					@font-face{
+						src: url(../assets/fonts/starjedi.ttf);
+						font-family: star jedi;
+					}
+					.font{
+						font-family: star jedi;
+						margin:0;
+						font-size: 3rem;
 					}
 		/*formulario de Contacto*/
 			#contact{
