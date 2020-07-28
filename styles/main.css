@@ -168,7 +168,7 @@
 						margin:0;
 						font-size: 3rem;
 					}
-				/*Transformaciones*/
+				/*Transformaciones 2D*/
 					.transform div,
 					.transform span{
 						width:100px;
@@ -179,7 +179,6 @@
 						background-color: darkslateblue;
 
 					}
-				/*Transformaciones 2D*/
 					/*Escalar*/
 						.transform div:hover:first-child{
 							transform:scaleX(); /*horizontal*/
@@ -216,15 +215,16 @@
 						perspective-origin: top center;
 					}
 					/*Rotacion 3d*/
-						.transform span{
+						.transform span:hover{
 							transform: rotateX();
 							transform: rotateY(-30deg);
 							transform: rotateZ();
 						}
-
 		/*formulario de Contacto*/
 			#contact{
 				width:100%;
+				max-width: 480px;
+				margin:auto;
 			}
 			#contact input, 
 			#contact select, 
@@ -232,6 +232,7 @@
 			#contact button{
 				width:100%;
 				border:.2rem solid white;
+				outline:none;
 			}
 			#contact textarea{
 				resize: none;
@@ -245,7 +246,37 @@
 			.contactSubmit:hover{
 				color:white;
 				background-color: transparent;
-			}			
+			}	
+			#contact:valid .contactSubmit{
+				color:limegreen;
+			}
+			#contact :focus{
+				transform: translateY(-1rem) scale(1.1);
+			}
+			#contact focus:invalid{
+				border:.2rem solid tomato;
+			}		
+			#contact :focus:valid{
+				border:.2rem solid limegreen;
+			}	
+			/*Texto Validacion*/	
+				.validate{
+					height:0;
+					overflow: hidden;
+					background-color: darkgrey;
+					transition: all 1s ease-in-out;
+				}
+				:focus + .validate{
+					padding:1rem;
+					height:auto;
+					transform: translateY(-.7rem) scale(1.1);
+				}
+				:focus:invalid + .validate{
+					background-color: darkred;
+				}
+				:focus:valid + .validate{
+					background-color: darkgreen;
+				}
 		/*Redes sociales*/
 			.social{
 				display: flex;
@@ -265,20 +296,76 @@
 			.icon-twitter:hover:before{color:skyblue;}
 			.icon-instagram:hover:before{color:purple;}
 			.icon-whatsapp:hover:before{color:limegreen;}
-	/*Mobile landscape*/
+	/*SMall Devices (SM)*/
 		@media screen and (min-width:576px){
 
 		}	
-	/*Tablets*/
+	/*MeDium Devices (MD)*/
 		@media screen and (min-width:768px){
-
+			/*Navegacion*/
+				#menu{
+					display: none;
+				}
+				.menu{
+					display:flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					text-align: center;
+					overflow: visible;
+				}
+				.menu li, .menu a{
+					width:120px;
+					transition: all .5s ease-out; 
+				}
+				.menu a:hover{
+					transform: scale(1.5);
+					border-radius: .2rem;
+					box-shadow: 0 0 10px;
+				}
+			/*Cuerpo Principal*/
+				article{
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					margin:auto;
+					border-top: .2rem solid black;
+					background-color: white;
+				}
+				main{
+					background-color: black;
+				}
+				article:first-child{
+					border:none;
+				}
+				article .header{
+					width:80%;
+					color:white;
+					background-color: darkred;
+				}
+				section{
+					width:80%;
+					max-width: 720px;
+					margin:1rem auto;
+					border-left: .5rem solid tomato;
+				}
 		}
-	/*Small Desktop*/
+	/*LarGe Devices (LG)*/
 		@media screen and (min-width:992px){
-
+			
 		}	
-	/*Desktop*/
+	/*eXtraLarge Devices (XL)*/
 		@media screen and (min-width:1200px){
-
+			/*Cabecera*/
+				#header{
+					flex-direction: row;
+				}
+				#header .header{
+					width:30%;
+				}
+			/*Navegacion*/
+				nav{
+					width:70%;
+					align-self: flex-end;
+				}
 		}
 /*Autor: Cristian Racedo*/

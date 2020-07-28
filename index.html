@@ -245,7 +245,14 @@
 				<header>
 					<h1>Tema 1</h1>
 				</header>
-				<p></p>
+				<p>
+					Las transformaciones de CSS, son efectos similares a los que se aplican en los programas de diseño, permitiendonos modificar la apariencia de las etiquetas sin afectar al flujo del documento. Es decir que podemos 
+					<strong>
+					 desplazar, escalar, rotar, sesgar y darle perspectiva 
+					</strong>
+					a las etiquetas que querramos 
+					 sin afectar a los demas elementos del DOM.
+				</p>
 				<div class="example transform">
 					<div>scale()</div>
 					<div>translate()</div>
@@ -291,29 +298,44 @@
 			<input 
 				type="text" 
 				id="contactName" 
-				name="contactName" 
+				name="contactName"
+				pattern="[a-z A-Z]{2,50}"
+				placeholder="Nombre: Cristian" 
 				required 
 			/>
+			<div class="validate">
+				Su Nombre debe poseer entre 3 y 50 caracteres y solamente debera contener letras, sin numeros, ni simbolos.
+			</div>
 			<label for="contactEmail">Correo: </label>
 			<input 
-				type="text" 
+				type="email" 
 				id="contactEmail" 
-				name="contactEmail" 
+				name="contactEmail"
+				placeholder="Correo: Cristiandracedo@hotmail.com" 
 				required 
 			/>
+			<div class="validate">
+				Debe escribir una direccion de correo valida, contando con nombre de usuario y, seguido de un @, el nombre del dominio. ej: info@mail.com 
+			</div>
 			<label for="contactTel">Telefono: </label>
 			<input 
-				type="text" 
+				type="tel" 
 				id="contactTel" 
-				name="contactTel" 
+				name="contactTel"
+				pattern="[0-9]{6,20}"
+				placeholder="Telefono: 01123456789" 
 				required 
 			/>
+			<div class="validate">
+				Escriba su numero de telefono sin guiones, ni simbolos. El mismo debera contener entre 6 y 20 caracteres
+			</div>
 			<label for="contactConsult">Consulta: </label>
 			<textarea  
 				id="contactConsult" 
 				name="contactConsult" 
 				minlength="10" 
 				maxlength="200" 
+				placeholder="Realice su Consulta" 
 				required
 			></textarea>
 			<button class="contactSubmit">Realizar Consulta</button>
