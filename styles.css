@@ -1,0 +1,72 @@
+body{
+	margin:0;
+	font-family: candara, sans-serif;
+}
+/*Cabecera y Pie de Pagina*/
+	#header, #footer, .header{
+		color: #eee;
+		background-color: darkslateblue;
+		padding:5px; 
+	}
+	.header h1, 
+	.header p{
+		margin: 0;
+		letter-spacing: 4px;
+		text-align: center;
+	}
+	#header a,
+	#footer a{
+		color:#eee;
+		text-decoration: none;
+	}
+/*Navegacion*/
+	.menu{
+		margin:0;
+		padding:0;
+		list-style: none;
+		text-align: center;
+		background-color: slateblue;
+	}
+	.menu li{
+		display: inline-block;
+		width:80px;
+		line-height: 30px;
+	}
+	.menu li:hover{
+		background-color: mediumslateblue;
+	}
+/*Contenido Principal*/
+	main, article{
+		margin:16px;
+		padding:8px;
+	}
+	article{
+		background-color: lightgrey;
+	}
+	.example{
+		color:#eee;
+		background-color: #333;
+		padding:10px;
+		list-style: none;
+	}
+/*Formulario de Contacto*/
+	#contacto{
+		width:420px;
+		margin: auto;
+	}
+	#contacto label{
+		display: none;
+	}
+	#contacto input,
+	#contacto textarea{
+		margin:5px 0;
+		border:none;
+		padding:10px;
+		width:400px;
+		font-family: candara, sans-serif;
+		font-size: 18px;
+	}
+	#contacto textarea{
+		resize: none;
+		height: 90px;
+	}
