@@ -53,6 +53,7 @@ body{
 	#contacto{
 		width:420px;
 		margin: auto;
+		overflow: hidden;
 	}
 	#contacto label{
 		display: none;
@@ -69,4 +70,8 @@ body{
 	#contacto textarea{
 		resize: none;
 		height: 90px;
+	}
+	#contacto button{
+		float: right;
+		padding: 10px;
 	}
