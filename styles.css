@@ -47,14 +47,18 @@ main,article{
 	width:400px;
 	margin:0;
 	border:0;
-	padding:0;
+	padding: 10px;
 	font-family: calibri, verdana, sans-serif;
+}
+#contacto .enviar{
+	width:420px;
 }
 .enviar:hover{
 	color:white;
 	background-color: darkred;
 }
 .example{
+	border-left: 4px solid tomato;
 	list-style: none;
 	padding:15px;
 	background-color: #FCA;
