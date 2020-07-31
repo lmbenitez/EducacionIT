@@ -104,11 +104,166 @@
 				</ul>
 			</section>
 		</article>
+		<article>
+			<header>
+				<h1>Tablas HTML</h1>
+			</header>
+			<p>
+				Son elementos que permiten organizar la informacion de manera 
+				<em> tabular </em>, 
+				al igual que en cualquier ambito, las mismas se componen de 
+				<strong> filas y columnas </strong>,
+				pero a diferencia de la mayoria de los programas que utilizan tablas, 
+				<strong> HTML </strong> permite crear las mismas utilizando el modelo de cajas y por defecto las mismas no poseen bordes como la mayoria de los elementos dentro de la pagina.
+			</p>
+			<section>
+				<header>
+					<h1>¿Como estan compuestas?</h1>
+				</header>
+				<p>
+					Originalmente, antes de <strong> HTML5 </strong> se organizaban en bloques de contenido.
+					creabamos un contenedor de tipo 
+					<strong> TABLE </strong>
+					y dentro del mismo utilizabamos un contenedor de tipo <strong> TR (Table Row)</strong>, 
+					el cual es fundamental para las divisiones horizontales. Por ultimo, para colocar la informacion se utiliza una 
+					<em> etiqueta de contenido </em>
+					<strong>TD (Table Division)</strong>. 
+				</p>
+				<table class="example">
+					<tr>
+						<td>fila 1 celda 1</td>
+						<td>fila 1 celda 2</td>
+						<td>fila 1 celda 3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+				</table>
+				<hr/>
+				<table class="example">
+					<tr>
+						<td>Turno</td>
+						<td>Lunes</td>
+						<td>Martes</td>
+						<td>Miercoles</td>
+						<td>Jueves</td>
+						<td>Viernes</td>
+					</tr>
+					<tr>
+						<td>Mañana</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>Curso</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Tarde</td>
+						<td></td>
+						<td>Curso</td>
+						<td>Curso</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Noche</td>
+						<td>Curso</td>
+						<td>Curso</td>
+						<td></td>
+						<td></td>
+						<td>Curso</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<header>
+					<h1>¿Poseen Estructura Semantica?</h1>
+				</header>
+				<p>
+					HTML5 incorporo una nueva estructura de tablas, que permite la organizacion del contenido de
+					<em> manera semantica </em>
+					incorporando las etiquetas
+					<strong> THEAD </strong> para la cabecera de tabla, la misma contiene los titulos y en lugar de utilizar td para las celdas utiliza
+					<strong> TH (Table Heading)</strong> para cada titulo.
+					<strong> TBODY </strong> se utiliza para contener la informacion principal de la tabla, en esta etiqueta se aplica la estructura clasica de las tablas, y por ultimo
+					<strong> TFOOT </strong> es una etiqueta opcional que se utiliza para contener un detalle de la tabla, como por ejemplo la sumatoria de totales o una aclaracion respecto de la misma.
+					Es importante tener en cuenta que tanto <strong>TBODY </strong> como <strong> TFOOT </strong> tambien pueden poseer titulos.
+				</p>
+				<table class="example">
+					<thead>
+						<th>Producto</th>
+						<th>Cantidad</th>
+						<th>Precio U.</th>
+						<th>Total</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>teclado</td>
+							<td>2</td>
+							<td>800</td>
+							<td>1600</td>
+						</tr>
+						<tr>
+							<td>monitor</td>
+							<td>3</td>
+							<td>5600</td>
+							<td>16800</td>
+						</tr>
+						<tr>
+							<td>gabinete</td>
+							<td>1</td>
+							<td>3500</td>
+							<td>3500</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<th colspan="3">Total</th>
+						<td>21900</td>
+					</tfoot>
+				</table>
+				<hr>
+				<table class="example">
+					<thead>
+						<th>Desarrollador</th>
+						<th>Lenguaje</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="3">FrontEnd</td>
+							<td>HTML</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+						</tr>
+						<tr>
+							<td>JS</td>
+						</tr>
+						<tr>
+							<td rowspan="3">BackEnd</td>
+							<td>SQL</td>
+						</tr>
+						<tr>
+							<td>PHP</td>
+						</tr>
+						<tr>
+							<td>JAVA</td>
+						</tr>
+						<tr>
+							<td>FullStack</td>
+							<td>Todos</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
 			onsubmit="alert('Gracias por enviar su consulta')" 
-			id="contacto" 
+			id="contacto"
+			class="contacto" 
 			action="contacto.php" 
 			method="POST">
 			<label for="nombre">Nombre: </label>
@@ -136,7 +291,8 @@
 			<input 
 				class="enviar" 
 				type="submit"
-				value="Realizar Consultar" />
+				value="Realizar Consultar" 
+			/>
 		</form>
 	</footer>
 </body>

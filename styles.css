@@ -63,3 +63,17 @@ main,article{
 	padding:15px;
 	background-color: #FCA;
 }
+
+table.example,
+.example tr,
+.example td{	
+	padding:5px;
+	text-align: right;
+	color:white;
+	background-color: rgba(120,30,50,0.5);
+}
+
+.example th,
+.example td{
+	width:80px;
+}
