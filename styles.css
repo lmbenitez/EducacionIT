@@ -34,12 +34,14 @@ header h1, header p{
 	text-align: center;
 }
 main,article{
+	width:90%;
+	margin:auto;
 	padding:5px;
 }
 /*Formulario de Contacto*/
 #contacto{
 	margin:auto;
-	width:400px;
+	width:420px;
 }
 #contacto input,
 #contacto textarea,
@@ -58,12 +60,14 @@ main,article{
 	background-color: darkred;
 }
 .example{
+	width:600px;
+	margin:auto;
 	border-left: 4px solid tomato;
 	list-style: none;
 	padding:15px;
 	background-color: #FCA;
 }
-
+/*Tablas HTML*/
 table.example,
 .example tr,
 .example td{	
@@ -76,4 +80,27 @@ table.example,
 .example th,
 .example td{
 	width:80px;
+}
+/*Multimedia*/
+.example audio,
+.example video,
+.example iframe{
+	display: block;
+	margin:16px auto;
+	width:532px;
+	height: 300px;
+	border:none;
+	border-radius: 32px;
+	box-shadow: 0 0 5px white;
+}
+.example audio{
+	height: 30px;
+}
+
+#footer iframe{
+	display: block;
+	border:none;
+	margin: 15px auto;
+	width:420px;
+	height: 315px;
 }

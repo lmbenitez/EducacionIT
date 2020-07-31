@@ -24,7 +24,7 @@
 	<main>
 		<!--Contenido Principal-->
 		<article>
-			<header>
+			<header class="menu">
 				<h1>Formularios HTML</h1>
 			</header>
 			<p>
@@ -105,7 +105,7 @@
 			</section>
 		</article>
 		<article>
-			<header>
+			<header class="menu">
 				<h1>Tablas HTML</h1>
 			</header>
 			<p>
@@ -258,6 +258,78 @@
 				</table>
 			</section>
 		</article>
+		<article>
+			<header class="menu">
+				<h1>Contenido Multimedia</h1>
+			</header>
+			<p>
+				Existen diferentes formas de agregar contenido multimedia dentro de nuestra pagina, estos metodos existen desde el comienzo de internet, pero han ido evolucionando y con la incorporacion del nuevo standard <strong>HTML5</strong> se agregaron nuevas formas de hacerlo de manera nativa.
+			</p>
+			<section>
+				<header>
+					<h1>¿Contenido Embebido?</h1>
+				</header>
+				<p>
+					La etiqueta que nos permite incorporar elementos de manera 
+					<em> asincronica </em>
+					a nuestra pagina web es
+					<strong> iFrame (inline-frame) </strong>
+					el cual, hoy en dia, pertenece a una categoria conocida como
+					<strong> EMBED </strong>
+					que hace referencia a todo tipo de elementos que no pertecen al 
+					<em> sitio (HTML) </em> 
+					pero se pueden incorporar en el mismo.
+				</p>
+				<div class="example">
+					<iframe 
+						src="https://www.youtube.com/embed/VmEitwqNW8k" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+					<iframe 
+						src="https://www.youtube.com/embed/hTWKbfoikeg"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Sonidos en la Web?</h1>
+				</header>
+				<p>
+					Con el nuevo standard, ya no es necesario utilizar etiquetas como la
+					<em> mencionada anteriormente </em> para la reproduccion de archivos multimedia dentro de nuestra pagina. Ya que la etiqueta
+					<strong> AUDIO </strong> permite utilizar un reproductor intregado para la reproduccion de formatos de audio como 
+					<em> mp3, wav, ogg </em>, aunque tambien admite los formatos que se especifican en el elemento 
+					<strong> VIDEO </strong>. 
+				</p>
+				<div class="example">
+					<audio src="media/live-learn.mp3" controls>
+						Lo sentimos, pero tu navegador no es compatible con el elemento AUDIO.
+					</audio>
+				</div>
+			</section>
+			<section>
+				<header>
+					<h1>¿Video Incorporado, sin plugins?</h1>
+				</header>
+				<p>
+					Antiguamente para la reproduccion de videos en las paginas web era necesario la implementacion de plugins como <em> FLASH </em>, el cual utilizaba <strong> YouTube </strong> en la version mas antigua de la plataforma. con la llegada de <strong> HTML5 </strong> no es necesario instalar ningun elemento externo, ya que los navegadores compatibles la etiqueta 
+					<strong> VIDEO </strong>
+					ya incorporan un reproductor de manera nativa.
+					Los formatos compatible con dicho elemento son <em> mp4, webm, avi</em>
+				</p>
+				<div class="example">
+					<video src="media/cant-stop.mp4" controls>
+						Lo sentimos, pero tu navegador no es compatible con el elemento VIDEO.
+					</video>
+					<video src="media/by-the-way.mp4" controls>
+						Lo sentimos, pero tu navegador no es compatible con el elemento VIDEO.
+					</video>
+				</div>
+			</section>
+		</article>
 	</main>
 	<footer id="footer">
 		<form 
@@ -294,6 +366,10 @@
 				value="Realizar Consultar" 
 			/>
 		</form>
+		<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1220.6981447756905!2d-58.376149841288516!3d-34.60243380844153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3n%20IT!5e0!3m2!1ses!2sar!4v1596155260595!5m2!1ses!2sar" 
+			aria-hidden="false">
+		</iframe>
 	</footer>
 </body>
 </html>
