@@ -41,6 +41,9 @@
 				background-size:cover; 
 				background-blend-mode:hard-light, soft-light;
 			}
+			.header h1, .header p{
+				margin:0;
+			}
 			#footer{
 				width:100%;
 				background-position: bottom center;
@@ -53,6 +56,7 @@
 				width:3rem;
 				line-height:2.5rem;
 				font-size: 2.5rem;
+				transition: all 1s ease-out;
 			}
 			.menu{
 				overflow: hidden;
@@ -60,7 +64,8 @@
 				margin:0;
 				padding: 0;
 				list-style: none;
-				background-color: hsl(0,30%,10%)
+				background-color: hsl(0,30%,10%);
+				transition:all 1s ease;
 			}
 			.menu li,
 			.menu a{
@@ -71,11 +76,12 @@
 				text-decoration: none;
 			}
 			.menu a:hover{
-				background-color: hsl(0,60%, 50%)
+				background-color: hsl(0,60%, 50%);
 			}
 			.show{
 				display: block;
 				height:auto;
+				transition: all 1s ease;
 			}
 		/*Contenido Principal*/
 			main,
@@ -327,26 +333,29 @@
 					flex-direction: row;
 					flex-wrap: wrap;
 					justify-content: space-around;
-					margin:auto;
+					width:80%;
+					margin:1rem auto;
 					border-top: .2rem solid black;
 					background-color: white;
 				}
 				main{
-					background-color: black;
+					background-color: hsl(0,30%,10%);
 				}
 				article:first-child{
 					border:none;
 				}
 				article .header{
-					width:80%;
+					width:100%;
+					padding:0 .5rem;
 					color:white;
 					background-color: darkred;
 				}
 				section{
-					width:80%;
+					width:100%;
 					max-width: 720px;
 					margin:1rem auto;
 					border-left: .5rem solid tomato;
+					background-color: hsl(0,30%,90%)
 				}
 		}
 	/*LarGe Devices (LG)*/
@@ -366,6 +375,20 @@
 				nav{
 					width:70%;
 					align-self: flex-end;
+				}
+			/*Contenido Principal*/
+				article{
+					width:100%;
+				}
+				section{
+					max-width: 600px;
+				}
+				section:last-child{
+					flex-direction: row;
+				}
+				section:last-child header,
+				section:last-child footer{
+					width:100%;
 				}
 		}
 /*Autor: Cristian Racedo*/
