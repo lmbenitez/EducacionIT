@@ -1,0 +1,87 @@
+//Variables
+@color: white;
+@bg-color: #f364f0;
+@sm: 576px;
+@md: 768px;
+/*comentario css*/
+header{
+	color:@color;
+	background-color: @bg-color;
+}
+.menu{
+	display: flex;
+	list-style: none;
+}
+
+#header{
+	.border-radius;
+	.header{
+		width:@sm * 3 / 4;
+		color:@bg-color;
+	}
+	nav{
+		.menu{
+			li{
+				a{
+					color:lighten(@bg-color, 30%);
+					&:hover{
+						color:multiply(@bg-color, #103);
+					}
+					&:before{
+
+					}
+					&:after{
+
+					}
+				}
+			}
+		}
+	}
+}
+#footer{
+	.border-radius;
+}
+//mixins ()
+	.border-radius(){
+		color: transparent;
+		border: 1px solid @color;
+		border-radius: 1rem;
+	}
+//mixin parametrico
+	.flex (
+		@jc:space-evenly,
+		@ai: flex-start,
+		@fw:wrap,
+		@fd: row,
+		@d:flex
+		){
+			justify-content: @jc;
+			align-items:@ai;
+			flex-wrap: @fw;
+			flex-direction:@fd;
+			display: @d;
+			//Condicionales
+			width: if((@fd = column),100%, 50%);
+	}
+
+#header{
+	.flex;
+}
+#footer{
+	#contact{
+		.flex(center, flex-start,
+			nowrap,column);
+	}
+}
+
+@colors: red, green blue;
+//bucles
+.size(@n, @i:1) when (@i < @n){
+	width:@i * 5px;
+	.size(@n, @i + 5)
+}
+
+.button{
+	background-color: extract(@colors, 1);
+	.size(20);
+}

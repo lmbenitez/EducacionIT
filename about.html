@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+	<meta charset="UTF-8">
+	<title>Maquetado Avanzado</title>
+	<link rel="stylesheet" href="styles/icomoon.css">
+	<link rel="stylesheet" href="styles/less.css">
+</head>
+<body>
+	<!--HEADER: Contenido Introductorio-->
+	<header id="header" class="gradient-dark">
+		<div class="header">
+			<h1>Maquetado Avanzado</h1>
+			<p>
+				<strong>presenta: </strong>
+				Cristian Racedo
+			</p>
+		</div>
+		<!--NAV: Enlaces Principales-->
+		<nav>
+			<button id="menu">&equiv;</button>
+			<ul class="menu">
+				<li class="active"><a href="#"> Inicio</a></li>
+				<li class="border-left bg-danger"><a href="about.html"> Acerca de</a></li>
+				<li><a href="#contact"> Contacto</a></li>
+				<li>
+					<a 
+						href="https://github.com/c215714n/educacionit/tree/maquetado-lunes-19hs" 
+						target="_blank">GitHub
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header class="header">
+				<h1>Clase 1</h1>
+			</header>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 1: Contenido Multimedia</h1>
+				</header>
+				<p>
+					HTML5 incorpora dos nuevos elementos para la reproduccion de este tipo de contenido, por un lado tenemos <strong>&lt;audio&gt;</strong> que admite formatos como <em>.mp3 - .wav - .ogg</em>, aunque tambien admite formatos de video. 
+					Por otro lado el elemento <strong>&lt;video&gt;</strong> admite formatos <em>.mp4 - .avi - .ogv</em>.
+				</p>
+				<div class="container">
+					<video autoplay muted>
+						<source src="assets/media/californication.ogv"/>
+						<source src="assets/media/californication.avi"/>
+						<source src="assets/media/californication.mp4"/>
+						Lo sentimos pero el elemento Video NO es compatible con tu Navegador
+					</video>
+					<div class="content">
+						<h2>Californication</h2>
+						<p>
+							Séptimo álbum de estudio de la banda estadounidense de rock alternativo y funk rock Red Hot Chili Peppers. Rick Rubin lo produjo y Warner Bros. Records lo lanzó al mercado el 8 de junio de 1999.
+						</p>
+					</div>
+				</div>
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 2: Elementos Estadisticos</h1>
+				</header>
+				<p>
+					Con la llegada de HTML5 se incorporaron 2 nuevos elementos para la utilizacion de valores estadisticos o de medicion. Estos son <strong>&lt;progress&gt;</strong> que se utiliza para representar el avance o la evolucion respecto a una tarea que se lleve a cabo, pero que todavia no haya finalizado; y <strong>&lt;meter&gt;</strong> que se utiliza para la representacion de valores estadisticos o comparativos de una tarea o actividad finalizada.
+				</p>
+				<ul class="example">
+					<li>
+						<span>Elemento Progress</span>
+						<ul>
+							<li>
+								<span>sin <em>value</em></span>
+								<progress></progress>
+							</li>
+							<li>
+								<span>con <em>value</em></span>
+								<progress 
+									id="progressValue" 
+									min="0" 
+									max="100" 
+									value="20"></progress>
+								<input 
+									min="0"
+									max="100" 
+									id="progressInput" 
+									type="number" />
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Elemento Meter</span>
+						<!--
+							min<=value<=max
+							low<=high<=optimum
+						-->
+						<ul>
+							<li>
+								<span>value <= low</span>
+								<meter 
+								min="0" 
+									max="100" 
+									value="30" 
+									low="40" 
+									high="70"
+									optimum="90">
+								</meter>
+							</li>
+							<li>
+								<span>low < value <= high</span>
+								<meter 
+									min="0" 
+									max="100" 
+									value="60" 
+									low="40" 
+									high="70"
+									optimum="90">
+								</meter>
+							</li>
+							<li>
+								<span>low < high < value <=optimum</span>
+								<meter 
+									min="0" 
+									max="100" 
+									value="90" 
+									low="40" 
+									high="70"
+									optimum="90">
+								</meter>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 3: API's de Dibujos</h1>
+				</header>
+				<p>
+					Los navegadores integran dos potentes herramientas a la hora de trabajar con imagenes/dibujos, estas son <strong>&lt;svg&gt;</strong> que utiliza <em>XML</em> para crear graficos vectoriales (imagenes calculadas matematicamente, compuestas de lineas y curvas) en nuestra web; por otro lado <strong>&lt;canvas&gt;</strong> permite al desarrollador crear graficos mapa de bits (imagenes diagramadas utilizando una grilla, que permite la generacion de campos de profundidad con la disposicion de los puntos/pixeles) mediante la utilizacion de <em>JS</em>
+				</p>
+				<div class="example">
+					<figure>
+						<img style="width:150px;" src="assets/css.svg" alt="Logo CSS Grafico Vectorial">
+						<figcaption>Grafico Vectorial</figcaption>
+					</figure>
+					<figure>
+						<img style="width:150px;" src="assets/css.png" alt="Logo CSS Mapa de Bits">
+						<figcaption>Mapa de Bits</figcaption>
+					</figure>
+				</div>
+				<svg style="width:200px; height:200px; border:1px solid black;">
+					<rect 	
+						x="10" y="10" 
+						width="100" height="100" 
+						fill="#C30"/>
+					<circle 
+						r="50" cx="110" cy="110" 
+						fill="rgba(0,80,120,.5)"/>
+					<line 
+						x1="200" y1="0" 
+						x2="0" y2="200" 
+						stroke="darkgreen" stroke-width="10"/>
+					<text x="150" y="190" fill="none" stroke="black">XML</text>
+					</svg>
+				<canvas id="jsCanvas" width="200" height="200" style="border:1px solid black;">
+				</canvas>
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 2</h1>
+			</header>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 1: Colores CSS</h1>
+				</header>
+				<p>
+					Existen multiples formas de utilzar color en la web, la mas sensilla es <strong>Color Names</strong>, que admite hasta 140 colores diferentes; otras utilizan la sinstesis aditiva, combinando los canales <em>Rojo, Verde y Azul</em> para la obtencion de tonalidades, como <strong>RGB(red,green,blue)</strong> o <strong>Hexadecimal #rrggbb</strong>, siendo la unica diferencia, la notacion de los colores. 
+					Por ultimo, se incorporo el modelo de progresion con <strong>HSL(hue°,saturation%,lightness%)</strong> donde se puede elegir un valor de color del circulo cromatico, variando entre saturacion e iluminacion del mismo.
+				</p>
+				<div class="example">
+					<div id="color" class="color">color: DarkSlateBlue</div>
+					<div id="rgb" class="color">rgb(72,61,139)</div>
+					<div id="hex" class="color">hex: #483D8B</div>
+					<div id="hsl" class="color">hsl(248,39%,39%)</div>
+					<div class="color linear">linear-gradient</div>
+					<div class="color radial">radial-gradient</div>
+				</div>			
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 2: Regla @font-face</h1>
+				</header>
+				<p>
+					Cuando trabajamos con tipografias, podemos elegir entre aquellas que suelen estar instaladas en la mayoria de los equipos, conocidas como 
+					<em> fuentes seguras </em>, 
+					<em> repositorios de fuentes </em> 
+					como 
+					<strong> Google Fonts </strong>
+					, donde podemos seleccionar un listado de tipografias para implementar en nuestro sitio mediante la regla <strong>@import</strong>.
+					Asi como tambien se pueden implementar 
+					<em> fuentes de fantasia </em>
+					mediante la regla
+					<strong> @font-face </strong>,
+					donde deberemos indicar la ubicacion y el nombre que recibira la fuente que tengamos en nuestro sitio.
+				</p>
+				<div class="example">
+					<p class="font">Star Wars</p>
+				</div>
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p>lorem100</p>
+				<footer>
+					<p><strong>Autor: </strong>Cristian Racedo</p>
+				</footer>
+			</section>
+		</article>
+		<article>
+			<header class="header">
+				<h1>Clase 3</h1>
+			</header>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 1: Transformaciones</h1>
+				</header>
+				<p>
+					Las transformaciones de CSS, son efectos similares a los que se aplican en los programas de diseño, permitiendonos modificar la apariencia de las etiquetas sin afectar al flujo del documento. Es decir que podemos 
+					<strong>
+					 desplazar, escalar, rotar, sesgar y darle perspectiva 
+					</strong>
+					a las etiquetas que querramos 
+					 sin afectar a los demas elementos del DOM.
+				</p>
+				<div class="example transform">
+					<div>scale()</div>
+					<div>translate()</div>
+					<div>rotate()</div>
+					<div>Skew()</div>
+					<div>Transform: 
+						scale()
+						skew()
+						translate();
+					</div>
+					<span> Perspective</span>
+				</div>
+				<footer>
+					<address>
+						<strong>Autor: </strong>
+						<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+					</address>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 2</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address><strong>Autor: </strong><a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a></address>
+				</footer>
+			</section>
+			<section class="col-24 col-md-12 col-xl-8">
+				<header>
+					<h1>Tema 3</h1>
+				</header>
+				<p></p>
+				<footer>
+					<address><strong>Autor: </strong><a href="mailto:cristiandracedo@hotmail.com">Cristian Racedo</a></address>
+				</footer>
+			</section>
+		</article>
+	</main>
+	<footer id="footer">
+		<form action="" id="contact">
+			<label for="contactName">Nombre: </label>
+			<input 
+				type="text" 
+				id="contactName" 
+				name="contactName"
+				pattern="[a-z A-Z]{2,50}"
+				placeholder="Nombre: Cristian" 
+				required 
+			/>
+			<div class="validate">
+				Su Nombre debe poseer entre 3 y 50 caracteres y solamente debera contener letras, sin numeros, ni simbolos.
+			</div>
+			<label for="contactEmail">Correo: </label>
+			<input 
+				type="email" 
+				id="contactEmail" 
+				name="contactEmail"
+				placeholder="Correo: Cristiandracedo@hotmail.com" 
+				required 
+			/>
+			<div class="validate">
+				Debe escribir una direccion de correo valida, contando con nombre de usuario y, seguido de un @, el nombre del dominio. ej: info@mail.com 
+			</div>
+			<label for="contactTel">Telefono: </label>
+			<input 
+				type="tel" 
+				id="contactTel" 
+				name="contactTel"
+				pattern="[0-9]{6,20}"
+				placeholder="Telefono: 01123456789" 
+				required 
+			/>
+			<div class="validate">
+				Escriba su numero de telefono sin guiones, ni simbolos. El mismo debera contener entre 6 y 20 caracteres
+			</div>
+			<label for="contactConsult">Consulta: </label>
+			<textarea  
+				id="contactConsult" 
+				name="contactConsult" 
+				minlength="10" 
+				maxlength="200" 
+				placeholder="Realice su Consulta" 
+				required
+			></textarea>
+			<button class="contactSubmit">Realizar Consulta</button>
+		</form>
+		<div class="social">
+			<a href="https://facebook.com" class="icon-facebook" target="_blank"></a>
+			<a href="https://twitter.com" class="icon-twitter" target="_blank"></a>
+			<a href="https://instagram.com" class="icon-instagram" target="_blank"></a>
+			<a href="https://wa.me/0123456789" class="icon-whatsapp" target="_blank"></a>
+		</div>
+		<p>
+			&copy; Todos los derechos Reservados | 
+			<a href="mailto:cristiandracedo@hotmail.com"> Cristian Racedo </a>
+			&amp; Compañia
+		</p>
+	</footer>
+	<script src="scripts/main.js"></script>
+</body>
+</html>

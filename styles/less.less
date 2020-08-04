@@ -1,0 +1,110 @@
+//Colores
+	@colorNames: 
+		primary, 
+		secondary, 
+		light, 
+		dark, 
+		success, 
+		danger, 
+		warning, 
+		alert;
+	@colorValues:
+		#124,
+		#AAA,
+		#DDD,
+		#333,
+		#3C2,
+		#C32,
+		#AA3,
+		#5CC;
+//Tamaños
+	@w: 100%;
+	@sm: 576px;
+	@md: 768px;
+	@lg: 992px;
+	@xl: 1200px;
+
+//Sistema de grillas
+	.grid(@n, @i:1) when (@i <= @n){
+		.col-@{i}{
+			width: percentage(@i / @n);
+		}
+		.grid(@n, @i + 1);
+	}
+	.grid(24);
+//Grilla responsive
+	.mediaQuery (@vn, @vw){
+		@media screen and (min-width: @vw){
+			.grid(@n, @i:1) when (@i <= @n){
+				.col-@{vn}-@{i}{
+					width:percentage(@i / @n);
+				}
+				.grid (@n, @i + 1);
+			}
+			.grid(24);
+		}
+	}
+	.mediaQuery(sm, @sm);
+	.mediaQuery(md,@md);
+	.mediaQuery(lg,@lg);
+	.mediaQuery(xl,@xl);
+
+//Colores para Texto
+	.colores(
+		@i:1,
+		@colorNames:@colorNames,
+		@colorValues: @colorValues
+		) when (@i <= length(@colorNames)){
+			@color:extract(@colorNames, @i);
+			@value:extract(@colorValues, @i);
+			.text-@{color}{
+				color:@value;
+			}
+			.bg-@{color}{
+				background-color: @value;
+			}
+			.border-@{color}{
+				border-color: @value;
+			}
+			.gradient-@{color}{
+				background: linear-gradient(
+					lighten(@value, 30%),
+					darken(@value, 30%)
+				);
+			}
+		.colores(@i + 1);		
+	}
+	.colores;
+
+//Normalize
+	.normalize (@m, @p, @b){
+		margin:@m;
+		padding:@p;
+		border:@b;
+	}
+	@x: 1rem;
+	@borderNames: 
+		top, 
+		right, 
+		bottom, 
+		left,
+		full;
+	@radius: 
+		@x @x 0 0, 
+		0 @x @x 0, 
+		0 0 @x @x, 
+		@x 0 0 @x,
+		@x;
+	.borders(
+		@r:@radius, 
+		@i:1, 
+		@bn:@borderNames
+	) when (@i <= length(@bn)){
+		@name:extract(@bn, @i);
+		@value:extract(@r, @i);
+		.border-@{name}{
+			border-radius: @value;
+		}
+		.borders(@r; @i + 1);
+	}
+	.borders;
