@@ -43,12 +43,7 @@ body{
 	article{
 		background-color: lightgrey;
 	}
-	.example{
-		color:#eee;
-		background-color: #333;
-		padding:10px;
-		list-style: none;
-	}
+
 /*Formulario de Contacto*/
 	#contacto{
 		width:420px;
@@ -74,4 +69,27 @@ body{
 	#contacto button{
 		float: right;
 		padding: 10px;
+	}
+/*Tablas HTML*/
+	.table,
+	.table caption, 
+	.table tr,
+	.table td{
+		margin:auto;
+		color:#ccc;
+		background-color: rgba(220, 120, 0, .5); 
+	}
+	.table caption{
+		margin-top: 16px;
+		border-radius: 12px 12px 0 0; /*TopLeft TopRight BottomRight BottomLeft*/
+	}
+	.table td,
+	.table th{
+		width: 100px;
+	}
+	.example{
+		color:#eee;
+		background-color: #333;
+		padding:10px;
+		list-style: none;
 	}
